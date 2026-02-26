@@ -10,14 +10,23 @@ A comprehensive suite of Claude Code skills for academic research, covering the 
 
 - **Deep Research** — 10-agent research team with Socratic guided mode
 - **Academic Paper** — 10-agent paper writing with chapter-by-chapter planning
-- **Academic Paper Reviewer** — Multi-perspective peer review (Editor-in-Chief + 3 dynamic reviewers)
-- **Academic Pipeline** — Full pipeline orchestrator coordinating all skills
+- **Academic Paper Reviewer** — Multi-perspective peer review (EIC + 3 dynamic reviewers + Devil's Advocate)
+- **Academic Pipeline** — Full 9-stage pipeline orchestrator with integrity verification and Socratic revision coaching
 
-### Full Pipeline
+### Full Pipeline (v2.0)
 
 ```
-Research (socratic/full) → Write (plan/full) → Review (full/guided) → Revise → Finalize
+Research → Write → Integrity Check → Review (5-person) → Socratic Coaching
+  → Revise → Re-Review → Re-Revise → Final Integrity Check → Finalize
 ```
+
+**v2.0 Key Improvements:**
+1. Mandatory user confirmation checkpoint after every stage
+2. Pre-review integrity verification — 100% reference & data validation
+3. Two-stage review with Devil's Advocate
+4. Socratic revision coaching between review and revision stages
+5. Final integrity verification before publication
+6. Output: MD + DOCX → ask LaTeX → confirm → PDF
 
 ---
 
@@ -173,15 +182,16 @@ You: "進度" or "status"
 
 #### Academic Paper Reviewer
 ```
-"審查這篇論文" → full mode
+"審查這篇論文" → full mode (EIC + R1/R2/R3 + Devil's Advocate)
 "引導我改進這篇論文" → guided mode
 "檢查研究方法" → methodology-focus mode
+"驗收修訂" → re-review mode
 ```
 
 #### Academic Pipeline (Orchestrator)
 ```
 "我想做一篇完整的研究論文" → full pipeline from Stage 1
-"我已經有論文，幫我審查" → mid-entry at Stage 3
+"我已經有論文，幫我審查" → mid-entry at Stage 2.5 (integrity first)
 "我收到審稿意見了" → mid-entry at Stage 4
 ```
 
@@ -246,9 +256,9 @@ You: "進度" or "status"
 | Formatter | LaTeX/DOCX/PDF output |
 | **Socratic Mentor** | **Chapter-by-chapter guided planning (new in v2.0)** |
 
-### Academic Paper Reviewer (v1.0)
+### Academic Paper Reviewer (v1.1)
 
-6-agent multi-perspective review:
+7-agent multi-perspective review:
 
 | Agent | Role |
 |-------|------|
@@ -257,19 +267,33 @@ You: "進度" or "status"
 | Methodology Reviewer | Research design, statistics, reproducibility |
 | Domain Reviewer | Literature coverage, theoretical framework |
 | Perspective Reviewer | Cross-disciplinary, practical impact |
+| **Devil's Advocate Reviewer** | **Core thesis challenge, logical fallacy detection, strongest counter-argument (new in v1.1)** |
 | Editorial Synthesizer | Consensus analysis, revision roadmap |
 
-### Academic Pipeline (v1.0)
+**Modes:** full, re-review (verification), quick, methodology-focus, guided
 
-Lightweight orchestrator coordinating the full pipeline:
+### Academic Pipeline (v2.0)
+
+9-stage orchestrator with integrity verification, two-stage review, and Socratic coaching:
 
 | Stage | Skill | Purpose |
 |-------|-------|---------|
 | 1. RESEARCH | deep-research | Clarify RQ, find literature |
 | 2. WRITE | academic-paper | Draft the paper |
-| 3. REVIEW | academic-paper-reviewer | Multi-perspective review |
+| **2.5. INTEGRITY** | **integrity_verification_agent** | **100% reference & data verification** |
+| 3. REVIEW | academic-paper-reviewer | 5-person review (EIC + R1/R2/R3 + Devil's Advocate) |
+| → | *Socratic Revision Coaching* | *Guide user through review feedback* |
 | 4. REVISE | academic-paper | Address review comments |
-| 5. FINALIZE | academic-paper | Format conversion |
+| 3'. RE-REVIEW | academic-paper-reviewer | Verification review of revisions |
+| → | *Socratic Residual Coaching* | *Guide user through remaining issues (if Major)* |
+| 4'. RE-REVISE | academic-paper | Final revision (if needed) |
+| **4.5. FINAL INTEGRITY** | **integrity_verification_agent** | **100% final verification (zero issues required)** |
+| 5. FINALIZE | academic-paper | MD + DOCX → ask LaTeX → confirm → PDF |
+
+**Pipeline guarantees:**
+- Every stage requires user confirmation checkpoint
+- Integrity verification (Stage 2.5 + 4.5) cannot be skipped
+- Reproducible — standardized process with full audit trail
 
 ---
 
@@ -301,6 +325,13 @@ HEEACT — Higher Education Evaluation and Accreditation Council of Taiwan
 ---
 
 ## Changelog
+
+### v2.0 (2026-02)
+- **academic-pipeline v2.0**: 5→9 stages, mandatory integrity verification, two-stage review, Socratic revision coaching, reproducibility guarantees
+- **academic-paper-reviewer v1.1**: +Devil's Advocate Reviewer (7th agent), +re-review mode (verification), +post-review Socratic coaching
+- New agent: `integrity_verification_agent` — 100% reference/data verification with audit trail
+- New agent: `devils_advocate_reviewer_agent` — 8-dimension thesis challenger
+- Output order: MD + DOCX → ask LaTeX → confirm → PDF
 
 ### v1.0 (2026-02)
 - Initial release
