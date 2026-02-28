@@ -85,7 +85,7 @@ cd /path/to/your/project
 mkdir -p .claude/skills
 
 # Clone the skills
-git clone https://github.com/YOUR_USERNAME/academic-research-skills.git .claude/skills/academic-research-skills
+git clone https://github.com/Imbad0202/academic-research-skills.git .claude/skills/academic-research-skills
 ```
 
 Then copy the `.claude/CLAUDE.md` content into your project's `.claude/CLAUDE.md` (merge with existing if you have one).
@@ -94,7 +94,7 @@ Then copy the `.claude/CLAUDE.md` content into your project's `.claude/CLAUDE.md
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/academic-research-skills.git
+git clone https://github.com/Imbad0202/academic-research-skills.git
 
 # Navigate to the project
 cd academic-research-skills
@@ -312,7 +312,7 @@ This work is licensed under [CC-BY-NC 4.0](https://creativecommons.org/licenses/
 **Attribution format:**
 ```
 Based on Academic Research Skills by Cheng-I Wu (HEEACT)
-https://github.com/YOUR_USERNAME/academic-research-skills
+https://github.com/Imbad0202/academic-research-skills
 ```
 
 ---
@@ -325,6 +325,10 @@ HEEACT — Higher Education Evaluation and Accreditation Council of Taiwan
 ---
 
 ## Changelog
+
+### v2.0.1 (2026-03)
+- **Simplify 4 SKILL.md** (-371 lines, -16.5%): remove cross-skill duplication, inline templates → file references, redundant routing tables, duplicate mode selection sections
+- Fix revision loop cap contradiction between academic-paper and academic-pipeline
 
 ### v2.0 (2026-02)
 - **academic-pipeline v2.0**: 5→9 stages, mandatory integrity verification, two-stage review, Socratic revision coaching, reproducibility guarantees
