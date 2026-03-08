@@ -1,239 +1,239 @@
-# Plagiarism Detection Protocol — Phase D 原創性驗證協議
+# Plagiarism Detection Protocol — Phase D Originality Verification Protocol
 
-本文件定義 `integrity_verification_agent` 的 Phase D（原創性驗證）完整執行協議，包含逐段比對、自我抄襲檢查、AI 生成文字特徵偵測，以及嚴重度分級與工具限制聲明。
-
----
-
-## Phase D 概述：原創性驗證（Originality Verification）
-
-Phase D 的目的是在論文送審前和修訂完成後，對正文內容進行原創性篩查。與 Phase A-C 聚焦「引用與數據是否正確」不同，Phase D 聚焦「正文本身是否為原創撰寫」。
-
-**核心原則：啟發式篩查，非最終判定。** 本協議使用 WebSearch 進行公開文獻比對，結果為初步篩查信號，不等同於專業抄襲檢測軟體的結論。
+This document defines the complete execution protocol for `integrity_verification_agent`'s Phase D (originality verification), including paragraph-level comparison, self-plagiarism check, AI-generated text characteristic detection, severity grading, and tool limitation disclaimers.
 
 ---
 
-## D1：逐段原創性比對（Paragraph-Level Originality Check）
+## Phase D Overview: Originality Verification
 
-### D1.1 特徵句擷取
+Phase D's purpose is to perform originality screening on body text content before paper submission for review and after revision completion. Unlike Phases A-C which focus on "whether citations and data are correct," Phase D focuses on "whether the body text itself is originally written."
 
-```
-對論文正文的每個段落：
-1. 辨識段落主題與核心論點
-2. 擷取 1-2 句「特徵句」（characteristic sentences）
-   - 優先選擇：含具體數據、專有名詞、獨特論點的句子
-   - 避免選擇：通用學術套話（如 "This study aims to..."）
-3. 記錄特徵句的段落位置（§ + 段落序號）
-```
-
-### D1.2 WebSearch 比對
-
-```
-對每個擷取的特徵句：
-1. 將特徵句（或其關鍵片段）作為 WebSearch 查詢
-   - 搜尋詞：用引號框住連續 8-12 字的關鍵片段
-   - 補充搜尋：移除引號搜尋相近表述
-2. 檢視搜尋結果前 5-10 筆
-3. 比對原文與搜尋結果的文字相似度
-```
-
-### D1.3 比對結果分級
-
-| 分級 | 代碼 | 定義 | 判定標準 |
-|------|------|------|---------|
-| 原創 | `ORIGINAL` | 未在公開文獻中找到相似表述 | WebSearch 無相關匹配 |
-| 通用知識 | `COMMON_KNOWLEDGE` | 該知識為領域內廣泛接受的事實 | 多個來源以不同方式表述相同事實 |
-| 改寫 | `PARAPHRASE` | 與某來源表達相同觀點，但措辭明顯不同 | 語義相近但句構、用詞有顯著差異，且有引用 |
-| 近似匹配 | `CLOSE_MATCH` | 與某來源的措辭高度相似，僅替換少數詞彙 | 句構幾乎相同，僅替換同義詞或調換語序 |
-| 逐字抄襲 | `VERBATIM` | 與某來源的文字完全相同或幾乎相同 | 連續 20+ 字完全一致，且未以引號標示引用 |
-
-### D1.4 抽查率要求
-
-| 運行模式 | 最低抽查率 | 說明 |
-|---------|-----------|------|
-| Mode 1（pre-review） | **30%** | 所有正文段落中至少 30% 被檢查 |
-| Mode 2（final-check） | **50%** | 所有正文段落中至少 50% 被檢查 |
-
-**抽查策略**：
-- 優先檢查：Literature Review、Background、Discussion 等高風險段落
-- 必須涵蓋：每個主要章節至少抽查 1 個段落
-- 隨機補充：在優先段落之外，隨機抽取段落以達到最低抽查率
-- 修訂段落：Mode 2 中，所有修訂過程中新增或大幅修改的段落必須 100% 檢查
+**Core principle: Heuristic screening, not final determination.** This protocol uses WebSearch for publicly available literature comparison. Results are preliminary screening signals and do not equate to conclusions from professional plagiarism detection software.
 
 ---
 
-## D2：自我抄襲檢查（Self-Plagiarism Check）
+## D1: Paragraph-Level Originality Check
 
-### D2.1 作者既有發表搜尋
-
-```
-前置條件：使用者提供作者姓名
-
-對每位作者（或主要作者）：
-1. WebSearch 搜尋："作者姓名" + 研究領域關鍵詞
-2. 識別作者的既有發表清單（Google Scholar profile 優先）
-3. 記錄與當前論文主題相關的既有發表
-```
-
-### D2.2 比對項目
+### D1.1 Characteristic Sentence Extraction
 
 ```
-將當前論文與作者既有發表進行比對（聚焦以下區域）：
-1. 方法論描述（Methodology）：
-   - 研究設計的描述是否與前作逐字相同？
-   - 數據收集與分析方法的敘述是否直接複製？
-2. 結果敘述（Results narrative）：
-   - 結果的文字描述是否重複使用？
-   - 表格/圖表的描述文字是否相同？
-3. 理論框架（Theoretical Framework）：
-   - 文獻回顧的段落是否整段搬移？
+For each paragraph in the paper body text:
+1. Identify the paragraph's topic and core argument
+2. Extract 1-2 "characteristic sentences"
+   - Priority selection: Sentences containing specific data, proper nouns, or unique arguments
+   - Avoid: Generic academic boilerplate (e.g., "This study aims to...")
+3. Record the characteristic sentence's paragraph location (section + paragraph number)
 ```
 
-### D2.3 合法自引 vs. 自我抄襲判別標準
+### D1.2 WebSearch Comparison
 
-| 情境 | 判定 | 說明 |
-|------|------|------|
-| 引用前作並以新語言重新闡述 | **合法自引** | 學術常態，有引用且有改寫 |
-| 引用前作但逐字搬移原文 | **自我抄襲** | 即使有引用，大量逐字複製仍不可接受 |
-| 未引用前作但內容高度相似 | **自我抄襲** | 隱瞞與前作的關係 |
-| 使用前作的數據但重新分析 | **合法** | 二次分析（secondary analysis）是合法的研究方法，需明確說明 |
-| 方法論沿用前作的標準化描述 | **灰色地帶** | 標準化實驗流程的描述允許高度相似，但建議引用前作 |
+```
+For each extracted characteristic sentence:
+1. Use the characteristic sentence (or key fragment) as a WebSearch query
+   - Search term: Enclose 8-12 consecutive words in quotation marks
+   - Supplementary search: Remove quotes to check for paraphrased versions
+2. Review the top 5-10 search results
+3. Compare text similarity between original and search results
+```
+
+### D1.3 Comparison Result Grading
+
+| Grade | Code | Definition | Determination Criteria |
+|-------|------|-----------|----------------------|
+| Original | `ORIGINAL` | No similar expression found in public literature | WebSearch returns no related matches |
+| Common Knowledge | `COMMON_KNOWLEDGE` | The knowledge is a widely accepted fact in the field | Multiple sources express the same fact in different ways |
+| Paraphrase | `PARAPHRASE` | Expresses same viewpoint as a source but with clearly different wording | Semantically similar but significantly different sentence structure and word choice, with citation |
+| Close Match | `CLOSE_MATCH` | Highly similar wording to a source, with only a few words substituted | Nearly identical sentence structure, with only synonym substitutions or word order changes |
+| Verbatim | `VERBATIM` | Identical or nearly identical text to a source | 20+ consecutive identical words without quotation marks |
+
+### D1.4 Sampling Rate Requirements
+
+| Operating Mode | Minimum Sampling Rate | Description |
+|---------------|----------------------|------------|
+| Mode 1 (pre-review) | **30%** | At least 30% of all body text paragraphs checked |
+| Mode 2 (final-check) | **50%** | At least 50% of all body text paragraphs checked |
+
+**Sampling strategy**:
+- Priority check: Literature Review, Background, Discussion and other high-risk sections
+- Must cover: At least 1 paragraph sampled from each major chapter
+- Random supplement: Beyond priority paragraphs, randomly sample paragraphs to reach minimum sampling rate
+- Revised paragraphs: In Mode 2, all paragraphs newly added or substantially modified during revision must be checked 100%
 
 ---
 
-## D3：AI 生成文字特徵偵測（AI-Generated Text Indicators）
+## D2: Self-Plagiarism Check
 
-**重要聲明：本節為提醒清單（checklist），非判定工具。** AI 文字偵測技術尚不成熟，任何基於文字特徵的判斷都有高度的偽陽性風險。以下指標僅供參考，不作為最終判定依據。
-
-### D3.1 典型 AI 寫作模式指標
-
-| # | 指標 | 描述 | 觀察方式 |
-|---|------|------|---------|
-| 1 | 過度平滑（Excessive smoothness） | 全文語句流暢度異常均勻，缺乏自然寫作的節奏變化 | 比較不同章節的寫作風格是否過度一致 |
-| 2 | 缺乏具體細節（Lack of specificity） | 論述停留在概念層面，缺少具體數字、案例、個人研究經驗 | 檢查是否有 "for example" 後接泛泛而談的內容 |
-| 3 | 公式化轉折語（Formulaic transitions） | 大量使用 "Furthermore," "Moreover," "It is worth noting that" 等轉折 | 統計轉折語的種類與頻率 |
-| 4 | 對稱結構過多（Excessive parallelism） | 段落結構高度對稱（如每段都是：論點→證據→小結） | 觀察段落結構是否機械式重複 |
-| 5 | 立場模糊（Hedging overload） | 過度使用 "may," "could," "might," "it is possible that" 迴避明確立場 | 檢查作者是否在自己的研究結果上也過度對沖 |
-| 6 | 引用與論述脫節（Citation-argument gap） | 引用文獻但未將引用內容與自身論點有機結合 | 移除引用後，段落論證是否仍然成立 |
-
-### D3.2 處理方式
+### D2.1 Author's Existing Publications Search
 
 ```
-如果論文觸發 2 個以上的 AI 寫作指標：
-1. 在驗證報告中標記為「AI 寫作特徵提醒」
-2. 列出觸發的具體指標和對應段落
-3. 不做「是否為 AI 生成」的判定
-4. 建議使用者自行檢視標記段落，確認是否需要調整寫作風格
+Prerequisite: User provides author name(s)
+
+For each author (or primary author):
+1. WebSearch: "author name" + research area keywords
+2. Identify author's existing publication list (Google Scholar profile preferred)
+3. Record existing publications related to the current paper's topic
+```
+
+### D2.2 Comparison Items
+
+```
+Compare current paper with author's existing publications (focus on these areas):
+1. Methodology descriptions:
+   - Is the research design description verbatim identical to prior work?
+   - Are data collection and analysis method descriptions directly copied?
+2. Results narratives:
+   - Are textual descriptions of results reused?
+   - Are table/figure description texts identical?
+3. Theoretical framework:
+   - Are literature review paragraphs transferred wholesale?
+```
+
+### D2.3 Legitimate Self-Citation vs. Self-Plagiarism Determination Criteria
+
+| Scenario | Determination | Description |
+|----------|--------------|------------|
+| Cites prior work and restates in new language | **Legitimate self-citation** | Normal academic practice — has citation and paraphrasing |
+| Cites prior work but verbatim copies original text | **Self-plagiarism** | Even with citation, extensive verbatim copying is unacceptable |
+| Content highly similar to prior work without citing it | **Self-plagiarism** | Conceals relationship with prior work |
+| Uses prior work's data but re-analyzes | **Legitimate** | Secondary analysis is a legitimate research method — must clearly state this |
+| Methodology reuses prior work's standardized description | **Gray area** | Standardized experimental procedure descriptions allow high similarity, but citing prior work is recommended |
+
+---
+
+## D3: AI-Generated Text Characteristic Detection
+
+**Important disclaimer: This section is a checklist, not a determination tool.** AI text detection technology is not yet mature, and any judgment based on text characteristics has a high false-positive risk. The following indicators are for reference only and should not serve as the basis for final determination.
+
+### D3.1 Typical AI Writing Pattern Indicators
+
+| # | Indicator | Description | Observation Method |
+|---|-----------|------------|-------------------|
+| 1 | Excessive smoothness | Abnormally uniform sentence fluency throughout, lacking natural writing rhythm variation | Compare whether writing style across chapters is overly consistent |
+| 2 | Lack of specificity | Arguments remain at conceptual level, lacking specific numbers, cases, or personal research experience | Check for "for example" followed by vague content |
+| 3 | Formulaic transitions | Heavy use of "Furthermore," "Moreover," "It is worth noting that" and similar transitions | Count the variety and frequency of transition phrases |
+| 4 | Excessive parallelism | Highly symmetric paragraph structures (e.g., every paragraph follows: claim -> evidence -> summary) | Observe whether paragraph structure mechanically repeats |
+| 5 | Hedging overload | Excessive use of "may," "could," "might," "it is possible that" to avoid definitive positions | Check whether author over-hedges even on their own research results |
+| 6 | Citation-argument gap | Literature is cited but the cited content is not organically integrated with the author's arguments | Remove citations — does the paragraph's argument still hold? |
+
+### D3.2 Handling Approach
+
+```
+If the paper triggers 2 or more AI writing indicators:
+1. Flag in the verification report as "AI writing characteristic alert"
+2. List the specific indicators triggered and corresponding paragraphs
+3. Do NOT make a "whether it is AI-generated" determination
+4. Recommend the user review the flagged paragraphs and consider adjusting writing style
 ```
 
 ---
 
-## 嚴重度分級
+## Severity Grading
 
-| 等級 | 代碼 | 定義 | 觸發條件 |
-|------|------|------|---------|
-| **危急** | `CRITICAL` | 嚴重學術不端，足以撤稿 | 逐字抄襲（>20 字連續相同且未引用）；偽造引用（引用不存在的來源支持抄襲內容） |
-| **嚴重** | `SERIOUS` | 顯著的原創性問題，需大幅修改 | 多處近似改寫（close paraphrase）未引用來源；大量自我抄襲未聲明 |
-| **中等** | `MODERATE` | 個別段落需要改寫 | 個別段落改寫不充分（1-2 處 `CLOSE_MATCH`）；方法論描述與前作過度相似 |
-| **輕微** | `MINOR` | 不影響學術誠信，但建議改善 | 通用學術套話使用過多；AI 寫作特徵提醒（僅作資訊，不影響判決） |
+| Level | Code | Definition | Trigger Conditions |
+|-------|------|-----------|-------------------|
+| **Critical** | `CRITICAL` | Severe academic misconduct, sufficient for retraction | Verbatim plagiarism (>20 consecutive identical words without citation); fabricated citations (citing nonexistent sources to support plagiarized content) |
+| **Serious** | `SERIOUS` | Significant originality problems, requiring major revisions | Multiple close paraphrases without citing sources; extensive undisclosed self-plagiarism |
+| **Moderate** | `MODERATE` | Individual paragraphs need rewriting | Individual paragraphs inadequately paraphrased (1-2 instances of `CLOSE_MATCH`); methodology description overly similar to prior work |
+| **Minor** | `MINOR` | Does not affect academic integrity but improvement recommended | Excessive generic academic boilerplate; AI writing characteristic alerts (informational only, does not affect verdict) |
 
-### 嚴重度與判決的對應
+### Severity-to-Verdict Mapping
 
-| 嚴重度 | 對判決的影響 |
-|--------|------------|
-| CRITICAL | 即刻 FAIL，列為最高優先修正項 |
-| SERIOUS | FAIL，必須修正後重新驗證 |
-| MODERATE | FAIL，必須修正 |
-| MINOR | 不影響 PASS/FAIL 判決，附註於報告中 |
-
----
-
-## 工具限制聲明
-
-本協議的原創性驗證有以下固有限制，使用者必須知悉：
-
-| # | 限制 | 說明 |
-|---|------|------|
-| 1 | **非專業抄襲檢測軟體** | 本協議使用 WebSearch 進行啟發式比對，非 Turnitin、iThenticate 等專業工具，無法計算精確的文字重複率 |
-| 2 | **覆蓋範圍有限** | 僅能比對公開可搜尋的文獻（open access、預印本、網頁），無法搜尋付費牆後的全文資料庫 |
-| 3 | **語言限制** | 跨語言抄襲（如翻譯後抄襲）難以偵測 |
-| 4 | **抽查而非全查** | 受限於效率，僅抽查 30%-50% 段落，存在漏檢風險 |
-| 5 | **時間敏感性** | 搜尋結果會隨時間變化，新發表的文獻可能不在搜尋範圍內 |
-| 6 | **AI 偵測不可靠** | D3 的 AI 寫作指標為啟發式提醒，偽陽性率高，不應作為判定依據 |
-
-**建議**：本協議的結果為初步篩查，建議在正式投稿前搭配專業抄襲檢測工具（如 Turnitin / iThenticate）進行完整查重。
+| Severity | Impact on Verdict |
+|---------|-----------------|
+| CRITICAL | Immediate FAIL, listed as highest priority correction item |
+| SERIOUS | FAIL, must fix and re-verify |
+| MODERATE | FAIL, must fix |
+| MINOR | Does not affect PASS/FAIL verdict, noted in report |
 
 ---
 
-## 輸出格式範本
+## Tool Limitation Disclaimer
+
+This protocol's originality verification has the following inherent limitations that users must be aware of:
+
+| # | Limitation | Description |
+|---|-----------|------------|
+| 1 | **Not professional plagiarism detection software** | This protocol uses WebSearch for heuristic comparison, not Turnitin, iThenticate, or other professional tools — cannot calculate precise text overlap rates |
+| 2 | **Limited coverage** | Can only compare publicly searchable literature (open access, preprints, web pages) — cannot search full-text databases behind paywalls |
+| 3 | **Language limitation** | Cross-language plagiarism (e.g., plagiarism via translation) is difficult to detect |
+| 4 | **Sampling, not exhaustive** | Limited by efficiency, only 30%-50% of paragraphs are sampled — missed detection risk exists |
+| 5 | **Time sensitivity** | Search results change over time; newly published literature may not be in search scope |
+| 6 | **AI detection unreliable** | D3's AI writing indicators are heuristic alerts with high false-positive rates and should not serve as determination basis |
+
+**Recommendation**: This protocol's results serve as preliminary screening. It is recommended to use professional plagiarism detection tools (such as Turnitin / iThenticate) for complete duplicate checking before formal submission.
+
+---
+
+## Output Format Template
 
 ```markdown
-## Phase D：原創性驗證結果
+## Phase D: Originality Verification Results
 
-### 驗證參數
-- 運行模式：[Mode 1 pre-review / Mode 2 final-check]
-- 正文段落總數：X
-- 抽查段落數：Y（抽查率：Z%）
-- 作者自我抄襲檢查：[已執行 / 未執行（未提供作者資訊）]
+### Verification Parameters
+- Operating mode: [Mode 1 pre-review / Mode 2 final-check]
+- Total body text paragraphs: X
+- Paragraphs sampled: Y (sampling rate: Z%)
+- Author self-plagiarism check: [Executed / Not executed (author information not provided)]
 
-### D1 逐段比對結果摘要
+### D1 Paragraph-Level Comparison Results Summary
 
-| 分級 | 段落數 | 佔比 |
-|------|--------|------|
+| Grade | Paragraph Count | Proportion |
+|-------|----------------|-----------|
 | ORIGINAL | X | X% |
 | COMMON_KNOWLEDGE | X | X% |
 | PARAPHRASE | X | X% |
 | CLOSE_MATCH | X | X% |
 | VERBATIM | X | X% |
 
-### D2 自我抄襲檢查結果
+### D2 Self-Plagiarism Check Results
 
-| # | 當前論文段落 | 既有發表 | 相似類型 | 判定 |
-|---|-------------|---------|---------|------|
-| 1 | §X.X, ¶Y | Author (Year), Title | 方法論描述相似 | 合法自引 / 自我抄襲 |
+| # | Current Paper Paragraph | Existing Publication | Similarity Type | Determination |
+|---|------------------------|---------------------|----------------|--------------|
+| 1 | §X.X, paragraph Y | Author (Year), Title | Methodology description similar | Legitimate self-citation / Self-plagiarism |
 
-### D3 AI 寫作特徵提醒
+### D3 AI Writing Characteristic Alerts
 
-| # | 指標 | 觸發段落 | 說明 |
-|---|------|---------|------|
-| 1 | [指標名稱] | §X.X | [具體觀察] |
+| # | Indicator | Triggered Paragraph | Description |
+|---|-----------|---------------------|------------|
+| 1 | [Indicator name] | §X.X | [Specific observation] |
 
-觸發指標數：X / 6（[低於閾值，不予標記 / 達到閾值，建議使用者檢視]）
+Indicators triggered: X / 6 ([Below threshold, not flagged / Threshold reached, user review recommended])
 
-### Phase D 問題清單
+### Phase D Issue List
 
-| # | 嚴重度 | 類型 | 位置 | 問題描述 | 匹配來源 | 建議處理 |
-|---|--------|------|------|---------|---------|---------|
-| 1 | CRITICAL | VERBATIM | §X.X, ¶Y | 連續 N 字與來源相同 | [URL] | 改寫或加引號標示直接引用 |
-| 2 | SERIOUS | CLOSE_MATCH | §X.X, ¶Y | 措辭高度相似，僅替換少數詞彙 | [URL] | 改寫並加上引用 |
-| 3 | MODERATE | 自我抄襲 | §X.X, ¶Y | 方法論描述與前作逐字相同 | Author (Year) | 改寫並引用前作 |
+| # | Severity | Type | Location | Issue Description | Matching Source | Recommended Action |
+|---|----------|------|----------|------------------|----------------|-------------------|
+| 1 | CRITICAL | VERBATIM | §X.X, paragraph Y | N consecutive words identical to source | [URL] | Rewrite or add quotation marks for direct quote |
+| 2 | SERIOUS | CLOSE_MATCH | §X.X, paragraph Y | Highly similar wording, only a few words substituted | [URL] | Rewrite and add citation |
+| 3 | MODERATE | Self-plagiarism | §X.X, paragraph Y | Methodology description verbatim identical to prior work | Author (Year) | Rewrite and cite prior work |
 
-### 工具限制聲明
+### Tool Limitation Disclaimer
 
-> 本原創性驗證使用 WebSearch 進行啟發式比對，非專業抄襲檢測軟體（如 Turnitin / iThenticate）。覆蓋範圍僅限公開可搜尋的文獻，抽查率為 [Z]%，存在漏檢風險。本結果為初步篩查，建議在正式投稿前搭配專業抄襲檢測工具進行完整查重。
+> This originality verification uses WebSearch for heuristic comparison and is not professional plagiarism detection software (such as Turnitin / iThenticate). Coverage is limited to publicly searchable literature, with a sampling rate of [Z]%, and there is a risk of missed detection. These results serve as preliminary screening; it is recommended to use professional plagiarism detection tools for complete duplicate checking before formal submission.
 ```
 
 ---
 
-## 與其他 Phase 的關係
+## Relationship with Other Phases
 
-| Phase | 聚焦 | 與 Phase D 的關係 |
-|-------|------|------------------|
-| Phase A：參考文獻驗證 | 參考文獻是否存在、正確 | A 驗證來源，D 驗證正文；若 D 發現 VERBATIM 且無引用，可能連帶發現 A3 的懸空引用問題 |
-| Phase B：引用脈絡驗證 | 引用是否準確反映原文 | B 檢查「引用了的內容是否正確」，D 檢查「未引用的內容是否原創」 |
-| Phase C：數據驗證 | 統計數據是否正確 | C 和 D 互補：C 驗數據，D 驗文字 |
+| Phase | Focus | Relationship with Phase D |
+|-------|-------|--------------------------|
+| Phase A: Reference Verification | Whether references exist and are correct | A verifies sources, D verifies body text; if D finds VERBATIM without citation, it may also reveal A3 dangling citation issues |
+| Phase B: Citation Context Verification | Whether citations accurately reflect original text | B checks "whether cited content is correct," D checks "whether uncited content is original" |
+| Phase C: Data Verification | Whether statistical data is correct | C and D are complementary: C verifies data, D verifies text |
 
 ---
 
-## 可復現性要求
+## Reproducibility Requirements
 
-為確保原創性驗證過程可復現：
+To ensure the originality verification process is reproducible:
 
-1. **搜尋策略標準化**：每個特徵句使用相同的搜尋模板
-   - 搜尋詞 1：`"關鍵片段"（8-12 字，含引號）`
-   - 搜尋詞 2：`關鍵詞組合（無引號，比對改寫）`
+1. **Standardized search strategy**: Use the same search template for each characteristic sentence
+   - Search term 1: `"key fragment" (8-12 words, in quotes)`
+   - Search term 2: `keyword combination (without quotes, to match paraphrases)`
 
-2. **判定標準明確化**：每個分級（ORIGINAL ~ VERBATIM）都有清晰的判定標準，不依賴主觀感覺
+2. **Explicit determination criteria**: Each grade (ORIGINAL through VERBATIM) has clear determination criteria, not relying on subjective feeling
 
-3. **完整記錄**：每個抽查段落的搜尋詞、搜尋結果、判定理由都記錄在 Audit Trail 中
+3. **Complete records**: Search terms, search results, and determination rationale for each sampled paragraph are recorded in the Audit Trail
 
-4. **時間戳**：報告附上執行時間，因為搜尋結果會隨時間變化
+4. **Timestamps**: Report includes execution time, as search results change over time

@@ -1,317 +1,318 @@
-# Preregistration Template — OSF 標準 21 項預註冊模板
+# Preregistration Template — OSF Standard 21-Item Preregistration Template
 
 ## Purpose
-基於 OSF Standard Pre-Data Collection Registration 格式的填空模板。研究者在資料蒐集前填寫此模板，完成後上傳至預註冊平台（如 OSF Registries）。
+A fill-in template based on the OSF Standard Pre-Data Collection Registration format. Researchers complete this template before data collection and upload it to a preregistration platform (e.g., OSF Registries).
 
 ---
 
-## 使用說明
+## Instructions
 
-1. 在資料蒐集**之前**填寫此模板
-2. `[必填]` 標記為必要項目，`[選填]` 為建議但非必要
-3. 若某項目不適用，請寫「不適用」並簡述原因
-4. 填寫完成後，至 [OSF Registries](https://osf.io/registries) 建立預註冊
-5. 預註冊一旦提交即不可修改（可設定 embargo period）
-
----
-
-## A. Study Information（研究資訊）
-
-### 1. Title [必填]
-> 研究標題（Study Title）
-
-```
-[填入描述性研究標題]
-```
-
-### 2. Authors [必填]
-> 研究團隊（Research Team）
-
-| 姓名 | 機構 | 角色 | ORCID |
-|------|------|------|-------|
-| [姓名] | [機構] | [PI / Co-PI / RA] | [ORCID] |
-| [姓名] | [機構] | [角色] | [ORCID] |
-
-### 3. Research Questions [必填]
-> 主要研究問題（Main Research Questions）
-
-```
-RQ1: [填入主要研究問題]
-RQ2: [填入次要研究問題，如有]
-```
-
-### 4. Hypotheses [必填]
-> 預先陳述的假設（Pre-specified Hypotheses）
-> 請明確陳述方向性預測（directional prediction）
-
-```
-H1: [填入假設 1，含預期方向]
-    例：接受 X 處理的學生在 Y 測驗上的分數顯著高於控制組
-
-H2: [填入假設 2，如有]
-
-H3: [填入假設 3，如有]
-```
+1. Complete this template **before** data collection
+2. Items marked `[Required]` are mandatory; `[Optional]` are recommended but not required
+3. If an item is not applicable, write "Not applicable" and briefly explain why
+4. After completion, go to [OSF Registries](https://osf.io/registries) to create a preregistration
+5. Once submitted, preregistrations cannot be modified (an embargo period can be set)
 
 ---
 
-## B. Design Plan（研究設計）
+## A. Study Information
 
-### 5. Study Type [必填]
-> 研究設計類型（Study Design）
+### 1. Title [Required]
+> Study Title
 
-- [ ] Experiment（實驗研究）
+```
+[Enter descriptive study title]
+```
+
+### 2. Authors [Required]
+> Research Team
+
+| Name | Institution | Role | ORCID |
+|------|-------------|------|-------|
+| [Name] | [Institution] | [PI / Co-PI / RA] | [ORCID] |
+| [Name] | [Institution] | [Role] | [ORCID] |
+
+### 3. Research Questions [Required]
+> Main Research Questions
+
+```
+RQ1: [Enter main research question]
+RQ2: [Enter secondary research question, if any]
+```
+
+### 4. Hypotheses [Required]
+> Pre-specified Hypotheses
+> Please state directional predictions clearly
+
+```
+H1: [Enter hypothesis 1, including expected direction]
+    Example: Students receiving treatment X will score significantly higher
+    on test Y than the control group
+
+H2: [Enter hypothesis 2, if any]
+
+H3: [Enter hypothesis 3, if any]
+```
+
+---
+
+## B. Design Plan
+
+### 5. Study Type [Required]
+> Study Design
+
+- [ ] Experiment
   - [ ] Between-subjects
   - [ ] Within-subjects
   - [ ] Mixed design
   - [ ] Factorial design: ___ x ___
-- [ ] Observational study（觀察性研究）
+- [ ] Observational study
   - [ ] Cross-sectional
   - [ ] Longitudinal / Cohort
   - [ ] Case-control
-- [ ] Survey（調查研究）
-- [ ] Other: [說明]
+- [ ] Survey
+- [ ] Other: [Describe]
 
 ```
-[詳細描述研究設計]
+[Describe study design in detail]
 ```
 
-### 6. Randomization [選填]
-> 隨機化程序（Randomization Procedure）
+### 6. Randomization [Optional]
+> Randomization Procedure
 
 ```
-隨機化方法：[簡單隨機 / 分層隨機 / 集群隨機 / 區組隨機 / 不適用]
-隨機化單位：[個人 / 班級 / 學校 / 不適用]
-隨機化工具：[亂數表 / 電腦程式 / 抽籤 / 不適用]
-分配比例：[1:1 / 2:1 / 其他]
+Randomization method: [Simple random / Stratified random / Cluster random / Block random / Not applicable]
+Randomization unit: [Individual / Class / School / Not applicable]
+Randomization tool: [Random number table / Computer program / Lottery / Not applicable]
+Allocation ratio: [1:1 / 2:1 / Other]
 ```
 
-### 7. Blinding [選填]
-> 盲法（Blinding / Masking）
+### 7. Blinding [Optional]
+> Blinding / Masking
 
 ```
-盲法程度：[無盲法 / 單盲 / 雙盲 / 三盲]
-被遮蔽的對象：[參與者 / 研究者 / 評估者 / 不適用]
-盲法維持方式：[說明如何維持盲法]
-解盲時機：[說明何時解盲]
+Blinding level: [No blinding / Single-blind / Double-blind / Triple-blind]
+Blinded parties: [Participants / Researchers / Assessors / Not applicable]
+Blinding maintenance: [Describe how blinding is maintained]
+Unblinding timing: [Describe when unblinding occurs]
 ```
 
-### 8. Study Design / Conditions [必填]
-> 各組別/條件的具體描述
+### 8. Study Design / Conditions [Required]
+> Specific description of each group/condition
 
 ```
-實驗組/條件 1：[詳細描述介入內容、時長、頻率]
-實驗組/條件 2：[如有]
-控制組：[詳細描述控制條件]
-```
-
----
-
-## C. Sampling Plan（抽樣計畫）
-
-### 9. Existing Data [必填]
-> 是否使用既有資料（Existing Data Declaration）
-
-- [ ] 尚未蒐集任何資料（Registration prior to creation of data）
-- [ ] 已有資料但尚未查看（Registration prior to any human observation of the data）
-- [ ] 已查看部分資料（Registration prior to accessing the data）
-- [ ] 已使用資料進行初步分析（Registration following analysis of the data）
-
-```
-[說明資料狀態與你對資料的了解程度]
-```
-
-### 10. Data Collection Procedures [必填]
-> 資料蒐集程序
-
-```
-蒐集方式：[線上問卷 / 實體問卷 / 訪談 / 實驗 / 檔案資料 / 其他]
-蒐集工具：[問卷名稱 / 量表名稱 / 實驗軟體]
-蒐集地點：[線上 / 教室 / 實驗室 / 其他]
-蒐集時程：[起迄日期]
-蒐集者：[誰負責蒐集]
-```
-
-### 11. Sample Size [必填]
-> 計畫蒐集的樣本數
-
-```
-目標樣本數：[N = ]
-各組樣本數：[實驗組 n = , 控制組 n = ]
-```
-
-### 12. Sample Size Rationale [必填]
-> 樣本數決定依據
-
-```
-方法：[Power analysis / 先前研究慣例 / 可行性限制 / 其他]
-
-Power analysis 參數（如適用）：
-- 效果量（effect size）：[d = / f = / r = ]
-- 效果量來源：[先行研究 / meta-analysis / pilot study]
-- 顯著水準（alpha）：[.05 / .01]
-- 統計檢定力（power）：[.80 / .90]
-- 檢定類型：[t-test / ANOVA / regression / 其他]
-- 計算工具：[G*Power / R / 其他]
-- 計算結果：需要至少 N = [  ] 人
-
-過度蒐集比例：[考慮流失率 ___%, 實際目標 N = ]
-```
-
-### 13. Stopping Rule [必填]
-> 何時停止蒐集資料
-
-```
-停止規則：
-- [ ] 達到目標樣本數即停止
-- [ ] 達到指定時間即停止（截止日：[日期]）
-- [ ] 達到目標 power 即停止（sequential analysis）
-- [ ] 其他：[說明]
+Experimental group/Condition 1: [Describe intervention content, duration, frequency in detail]
+Experimental group/Condition 2: [If any]
+Control group: [Describe control condition in detail]
 ```
 
 ---
 
-## D. Variables（變項）
+## C. Sampling Plan
 
-### 14. Manipulated Variables [必填，實驗研究]
-> 操弄/自變項（Independent Variables）
+### 9. Existing Data [Required]
+> Existing Data Declaration
 
-```
-自變項 1：[名稱]
-操作型定義：[如何操弄]
-水準：[水準 1 / 水準 2 / ...]
-
-自變項 2：[如有]
-```
-
-### 15. Measured Variables [必填]
-> 測量/依變項（Dependent Variables）
+- [ ] No data have been collected yet (Registration prior to creation of data)
+- [ ] Data exist but have not been examined (Registration prior to any human observation of the data)
+- [ ] Some data have been examined (Registration prior to accessing the data)
+- [ ] Data have been used for preliminary analysis (Registration following analysis of the data)
 
 ```
-主要依變項：[名稱]
-操作型定義：[如何測量]
-測量工具：[量表名稱 / 測驗名稱]
-信效度：[引用信效度文獻]
-
-次要依變項：[如有]
-
-共變項/控制變項：[如有]
+[Describe data status and your level of familiarity with the data]
 ```
 
-### 16. Indices [必填]
-> 各變項的具體計分方式
+### 10. Data Collection Procedures [Required]
+> Data Collection Procedures
 
 ```
-變項 1 計分：
-- 題目：[哪些題目]
-- 計分方式：[加總 / 平均 / 因素分數 / 其他]
-- 反向計分題：[哪些題目需反向計分]
-- 處理方式：[如何處理缺漏值]
-
-變項 2 計分：[同上格式]
+Collection method: [Online survey / Paper survey / Interview / Experiment / Archival data / Other]
+Collection instruments: [Questionnaire name / Scale name / Experimental software]
+Collection location: [Online / Classroom / Laboratory / Other]
+Collection timeline: [Start and end dates]
+Data collectors: [Who is responsible for collection]
 ```
 
----
-
-## E. Analysis Plan（分析計畫）
-
-### 17. Statistical Models [必填]
-> 主要統計分析方法
+### 11. Sample Size [Required]
+> Planned sample size
 
 ```
-假設 1 的分析：
-- 統計方法：[independent t-test / ANOVA / regression / HLM / SEM / 其他]
-- 詳細說明：[模型規格，如 DV ~ IV + covariate + (1|cluster)]
-
-假設 2 的分析：[同上格式]
+Target sample size: [N = ]
+Sample size per group: [Experimental group n = , Control group n = ]
 ```
 
-### 18. Transformations [選填]
-> 資料轉換計畫
+### 12. Sample Size Rationale [Required]
+> Basis for sample size determination
 
 ```
-計畫的轉換：
-- [ ] 不進行轉換
-- [ ] Log 轉換：適用於 [哪些變項]，觸發條件 [偏態 > ]
-- [ ] 標準化（Z-score）
-- [ ] 其他：[說明]
+Method: [Power analysis / Prior research conventions / Feasibility constraints / Other]
+
+Power analysis parameters (if applicable):
+- Effect size: [d = / f = / r = ]
+- Effect size source: [Prior study / Meta-analysis / Pilot study]
+- Significance level (alpha): [.05 / .01]
+- Statistical power: [.80 / .90]
+- Test type: [t-test / ANOVA / Regression / Other]
+- Calculation tool: [G*Power / R / Other]
+- Calculation result: Minimum required N = [  ]
+
+Oversampling rate: [Accounting for ___% attrition, actual target N = ]
 ```
 
-### 19. Inference Criteria [必填]
-> 統計推論標準
+### 13. Stopping Rule [Required]
+> When to stop data collection
 
 ```
-顯著水準：alpha = [.05 / .01 / .005]
-多重比較校正：[Bonferroni / Holm / FDR / 不適用]
-效果量報告：[Cohen's d / eta-squared / R² / 其他]
-信賴區間：[95% CI / 99% CI]
-單尾/雙尾檢定：[雙尾 / 單尾，附理由]
-```
-
-### 20. Data Exclusion [必填]
-> 資料排除標準
-
-```
-排除標準：
-- [ ] 注意力檢查未通過（具體標準：[                ]）
-- [ ] 作答時間過短/過長（標準：< [  ] 分鐘 或 > [  ] 分鐘）
-- [ ] 極端值（定義：[> 3 SD / IQR 方法 / 其他]）
-- [ ] 未完成率 > [  ]%
-- [ ] 其他：[說明]
-
-排除後處理：
-- 報告排除前後的樣本數
-- 比較排除樣本與保留樣本的基本特徵
-```
-
-### 21. Exploratory Analyses [選填]
-> 計畫中的探索性分析
-
-```
-探索性分析（非主要假設，但計畫進行）：
-1. [分析描述]
-2. [分析描述]
-
-這些分析將在論文中明確標記為「探索性」。
+Stopping rule:
+- [ ] Stop when target sample size is reached
+- [ ] Stop at specified date (Deadline: [Date])
+- [ ] Stop when target power is reached (sequential analysis)
+- [ ] Other: [Describe]
 ```
 
 ---
 
-## F. Other（其他）
+## D. Variables
 
-### 倫理審查 [選填]
-```
-IRB 審查狀態：[已通過 / 審查中 / 免除 / 不適用]
-IRB 編號：[                ]
-審查機構：[                ]
-```
+### 14. Manipulated Variables [Required for experiments]
+> Independent Variables
 
-### 資料可用性 [選填]
 ```
-資料是否公開：[是 / 否 / 部分公開]
-資料存放位置：[OSF / Dataverse / 其他]
-存放時機：[論文發表後 / 研究完成後 / 其他]
+Independent variable 1: [Name]
+Operational definition: [How it is manipulated]
+Levels: [Level 1 / Level 2 / ...]
+
+Independent variable 2: [If any]
 ```
 
-### 補充材料 [選填]
+### 15. Measured Variables [Required]
+> Dependent Variables
+
 ```
-- [ ] 問卷/量表全文
-- [ ] 刺激材料
-- [ ] 分析程式碼
-- [ ] Power analysis 報告
-- [ ] Pilot study 結果
+Primary dependent variable: [Name]
+Operational definition: [How it is measured]
+Measurement instrument: [Scale name / Test name]
+Reliability and validity: [Cite reliability/validity literature]
+
+Secondary dependent variable: [If any]
+
+Covariates/Control variables: [If any]
+```
+
+### 16. Indices [Required]
+> Specific scoring method for each variable
+
+```
+Variable 1 scoring:
+- Items: [Which items]
+- Scoring method: [Sum / Mean / Factor score / Other]
+- Reverse-scored items: [Which items need reverse scoring]
+- Missing data handling: [How to handle missing values]
+
+Variable 2 scoring: [Same format as above]
 ```
 
 ---
 
-## 提交前確認
+## E. Analysis Plan
 
-- [ ] 所有 [必填] 項目都已填寫
-- [ ] 假設陳述明確且可檢驗
-- [ ] 分析方法與假設對應
-- [ ] 排除標準在資料蒐集前已確定
-- [ ] 已區分驗證性分析與探索性分析
-- [ ] 已確認 IRB 審查狀態
-- [ ] 已選定預註冊平台（推薦 OSF Registries）
+### 17. Statistical Models [Required]
+> Primary statistical analysis methods
 
-> 填寫完成後，前往 [OSF Registries](https://osf.io/registries) 提交預註冊。
+```
+Analysis for Hypothesis 1:
+- Statistical method: [Independent t-test / ANOVA / Regression / HLM / SEM / Other]
+- Detailed description: [Model specification, e.g., DV ~ IV + covariate + (1|cluster)]
+
+Analysis for Hypothesis 2: [Same format as above]
+```
+
+### 18. Transformations [Optional]
+> Data transformation plan
+
+```
+Planned transformations:
+- [ ] No transformations
+- [ ] Log transformation: Applied to [which variables], trigger condition [skewness > ]
+- [ ] Standardization (Z-score)
+- [ ] Other: [Describe]
+```
+
+### 19. Inference Criteria [Required]
+> Statistical inference criteria
+
+```
+Significance level: alpha = [.05 / .01 / .005]
+Multiple comparison correction: [Bonferroni / Holm / FDR / Not applicable]
+Effect size reporting: [Cohen's d / eta-squared / R² / Other]
+Confidence interval: [95% CI / 99% CI]
+One-tailed/Two-tailed test: [Two-tailed / One-tailed, with justification]
+```
+
+### 20. Data Exclusion [Required]
+> Data exclusion criteria
+
+```
+Exclusion criteria:
+- [ ] Failed attention check (Specific criteria: [                ])
+- [ ] Response time too short/long (Criteria: < [  ] minutes or > [  ] minutes)
+- [ ] Outliers (Definition: [> 3 SD / IQR method / Other])
+- [ ] Incomplete rate > [  ]%
+- [ ] Other: [Describe]
+
+Post-exclusion procedures:
+- Report pre- and post-exclusion sample sizes
+- Compare characteristics of excluded vs. retained samples
+```
+
+### 21. Exploratory Analyses [Optional]
+> Planned exploratory analyses
+
+```
+Exploratory analyses (not primary hypotheses, but planned):
+1. [Analysis description]
+2. [Analysis description]
+
+These analyses will be explicitly labeled as "exploratory" in the paper.
+```
+
+---
+
+## F. Other
+
+### Ethics Review [Optional]
+```
+IRB review status: [Approved / Under review / Exempt / Not applicable]
+IRB number: [                ]
+Reviewing institution: [                ]
+```
+
+### Data Availability [Optional]
+```
+Will data be made public: [Yes / No / Partially]
+Data repository: [OSF / Dataverse / Other]
+Timing: [After publication / After study completion / Other]
+```
+
+### Supplementary Materials [Optional]
+```
+- [ ] Full questionnaire/scale
+- [ ] Stimulus materials
+- [ ] Analysis code
+- [ ] Power analysis report
+- [ ] Pilot study results
+```
+
+---
+
+## Pre-Submission Checklist
+
+- [ ] All [Required] items have been completed
+- [ ] Hypotheses are clearly stated and testable
+- [ ] Analysis methods correspond to hypotheses
+- [ ] Exclusion criteria were established before data collection
+- [ ] Confirmatory and exploratory analyses have been distinguished
+- [ ] IRB review status has been confirmed
+- [ ] Preregistration platform has been selected (OSF Registries recommended)
+
+> After completion, go to [OSF Registries](https://osf.io/registries) to submit the preregistration.

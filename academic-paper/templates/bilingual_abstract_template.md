@@ -1,7 +1,7 @@
-# Bilingual Abstract Template — 雙語摘要範本
+# Bilingual Abstract Template
 
 ## Usage
-Use this template when writing bilingual abstracts (English + 繁體中文). Each version must be independently composed — not a translation of the other.
+Use this template when writing bilingual abstracts (English + Traditional Chinese). Each version must be independently composed — not a translation of the other.
 
 ---
 
@@ -25,27 +25,27 @@ Use this template when writing bilingual abstracts (English + 繁體中文). Eac
 
 ---
 
-## 中文摘要
+## Chinese Abstract (zh-TW)
 
-### [論文標題]
+### [Paper Title in Chinese]
 
-[**研究背景**——1-2 句：說明研究背景脈絡與所探討的問題。]
+[**Research Background** — 1-2 sentences: Describe the research context and the problem being investigated.]
 
-[**研究目的**——1 句：明確陳述研究目的或研究問題。]
+[**Research Purpose** — 1 sentence: Clearly state the research objective or research question.]
 
-[**研究方法**——1-2 句：描述研究方法、資料來源及分析策略。]
+[**Research Method** — 1-2 sentences: Describe the research methodology, data sources, and analytical strategy.]
 
-[**研究發現**——2-3 句：呈現主要研究結果，包含具體數據或關鍵發現。]
+[**Research Findings** — 2-3 sentences: Present the main research results, including specific data or key findings.]
 
-[**研究意義**——1-2 句：闡述研究貢獻、實務意涵或理論價值。]
+[**Research Significance** — 1-2 sentences: Explain the research contribution, practical implications, or theoretical value.]
 
-**關鍵詞**：[關鍵詞一]、[關鍵詞二]、[關鍵詞三]、[關鍵詞四]、[關鍵詞五]、[關鍵詞六]（選填）、[關鍵詞七]（選填）
+**Keywords**: [Keyword 1], [Keyword 2], [Keyword 3], [Keyword 4], [Keyword 5], [Keyword 6] (optional), [Keyword 7] (optional)
 
-*目標字數：300-500 字*
+*Target word count: 300-500 Chinese characters*
 
 ---
 
-## Quality Checklist / 品質檢核
+## Quality Checklist
 
 | Check | EN | zh-TW |
 |-------|:--:|:-----:|
@@ -67,7 +67,7 @@ Use this template when writing bilingual abstracts (English + 繁體中文). Eac
 ### Independence Test
 Your abstracts are truly independent if:
 - Sentence structures differ between languages
-- Chinese version uses natural Chinese academic phrasing (not 翻譯腔)
+- The Chinese version uses natural Chinese academic phrasing (not translationese)
 - Minor details may be grouped or reordered to suit each language's conventions
 - Both versions stand alone as complete summaries
 

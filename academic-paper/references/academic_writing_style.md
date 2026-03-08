@@ -1,4 +1,4 @@
-# Academic Writing Style Guide — 學術寫作風格指南
+# Academic Writing Style Guide
 
 Used by `draft_writer_agent` and `peer_reviewer_agent`.
 
@@ -165,24 +165,24 @@ although, despite, while, granted that, notwithstanding
 
 ## Chinese Academic Writing (zh-TW) Conventions
 
-### 語域
-- 使用書面語，避免口語表達
-- 偏好主動語態（中文較少使用被動）
-- 短句為主，避免過長從句
-- 使用「本研究」而非「我們」
+### Register
+- Use written/formal language; avoid colloquial expressions
+- Prefer active voice (Chinese rarely uses passive)
+- Mainly short sentences; avoid overly long subordinate clauses
+- Use "this study" (ben yan jiu) rather than "we" (wo men)
 
-### 常見學術用語
-| 英文 | 中文 |
+### Common Academic Expressions
+| English | Romanized Chinese |
 |------|------|
-| This study aims to | 本研究旨在 |
-| The findings indicate | 研究結果顯示 |
-| It is worth noting | 值得注意的是 |
-| In conclusion | 綜上所述 |
-| Based on the above analysis | 根據上述分析 |
-| Further research is needed | 未來研究可進一步探討 |
+| This study aims to | Ben Yan Jiu Zhi Zai |
+| The findings indicate | Yan Jiu Jie Guo Xian Shi |
+| It is worth noting | Zhi De Zhu Yi De Shi |
+| In conclusion | Zong Shang Suo Shu |
+| Based on the above analysis | Gen Ju Shang Shu Fen Xi |
+| Further research is needed | Wei Lai Yan Jiu Ke Jin Yi Bu Tan Tao |
 
-### 避免翻譯腔
-- ❌「被發現是」→ ✅「結果顯示」
-- ❌「這是因為」→ ✅「原因在於」
-- ❌「在...方面」→ ✅ 直接陳述
-- ❌「值得被指出的是」→ ✅「值得注意的是」
+### Avoiding Translationese
+- Incorrect: "was found to be" (bei fa xian shi) → Correct: "Results show" (jie guo xian shi)
+- Incorrect: "This is because" (zhe shi yin wei) → Correct: "The reason lies in" (yuan yin zai yu)
+- Incorrect: "In the aspect of..." (zai...fang mian) → Correct: State directly
+- Incorrect: "It is worth being pointed out that" (zhi de bei zhi chu de shi) → Correct: "It is worth noting that" (zhi de zhu yi de shi)

@@ -1,6 +1,6 @@
 ---
 name: deep-research
-description: "Universal deep research agent team. 10-agent pipeline for rigorous academic research on any topic. 6 modes: full research, quick brief, paper review, lit-review, fact-check, and Socratic guided research dialogue. Covers research question formulation, Socratic mentoring, methodology design, systematic literature search, source verification, cross-source synthesis, APA 7.0 report compilation, editorial review, devil's advocate challenges, and ethics review. Triggers on: research, deep research, 研究, 深度研究, literature review, 文獻回顧, fact-check, 事實查核, guide my research, 引導我研究, 幫我想清楚, help me think through."
+description: "Universal deep research agent team. 10-agent pipeline for rigorous academic research on any topic. 6 modes: full research, quick brief, paper review, lit-review, fact-check, and Socratic guided research dialogue. Covers research question formulation, Socratic mentoring, methodology design, systematic literature search, source verification, cross-source synthesis, APA 7.0 report compilation, editorial review, devil's advocate challenges, and ethics review. Triggers on: research, deep research, literature review, fact-check, guide my research, help me think through."
 metadata:
   version: "2.2"
   last_updated: "2025-03-05"
@@ -19,7 +19,7 @@ Research the impact of AI on higher education quality assurance
 
 **Socratic mode:**
 ```
-引導我研究少子化對私立大學的影響
+Guide my research on the impact of declining birth rates on private universities
 ```
 
 **Execution:**
@@ -37,15 +37,14 @@ Research the impact of AI on higher education quality assurance
 ### Trigger Keywords
 
 **English**: research, deep research, literature review, systematic review, fact-check, evidence synthesis, methodology, APA report, academic analysis, policy analysis, guide my research, help me think through
-**中文**: 研究, 深度研究, 文獻回顧, 系統性回顧, 事實查核, 證據綜合, 方法論, 學術分析, 政策分析, 引導我研究, 幫我想清楚
 
 ### Socratic Mode Trigger Keywords
 
-以下關鍵詞直接啟動 `socratic` mode（而非預設的 `full` mode）：
-- 「引導我研究」「guide my research」
-- 「幫我想清楚」「help me think through」
-- 「帶我思考」「help me figure out」
-- 「我不確定要研究什麼」「I'm not sure what to research」
+The following keywords directly activate `socratic` mode (instead of the default `full` mode):
+- "guide my research"
+- "help me think through"
+- "help me figure out"
+- "I'm not sure what to research"
 
 ### Does NOT Trigger
 
@@ -76,23 +75,23 @@ Research the impact of AI on higher education quality assurance
 
 ## Mode Selection Guide
 
-詳細指南見 `references/mode_selection_guide.md`。
+See `references/mode_selection_guide.md` for the detailed guide.
 
 ```
-使用者輸入
+User Input
     |
-    +-- 已有清楚的研究問題？
-    |   +-- Yes --> 需要完整報告？
+    +-- Already have a clear research question?
+    |   +-- Yes --> Need a full report?
     |   |           +-- Yes --> full mode
-    |   |           +-- No --> 只需文獻？
+    |   |           +-- No --> Only need literature?
     |   |                      +-- Yes --> lit-review mode
     |   |                      +-- No --> quick mode
-    |   +-- No --> 想被引導思考？
+    |   +-- No --> Want to be guided through thinking?
     |              +-- Yes --> socratic mode
-    |              +-- No --> full mode (Phase 1 會互動)
+    |              +-- No --> full mode (Phase 1 will be interactive)
     |
-    +-- 已有文本要審查？ --> review mode
-    +-- 只需事實查核？ --> fact-check mode
+    +-- Already have text to review? --> review mode
+    +-- Only need fact-checking? --> fact-check mode
 ```
 
 ---
@@ -213,69 +212,69 @@ User: "Research [topic]"
 
 ## Socratic Mode: GUIDED RESEARCH DIALOGUE
 
-核心原則：以 Q1 國際期刊主編的視角，透過蘇格拉底式詰問引導使用者自行釐清研究問題。絕不直接給出答案，而是透過追問讓使用者自己想清楚。
+Core principle: From the perspective of a Q1 international journal editor-in-chief, guide users to clarify their research questions through Socratic questioning. Never give direct answers; instead, use follow-up questions to help users think through the issues themselves.
 
-詳細 agent 定義見 `agents/socratic_mentor_agent.md`。
-提問框架見 `references/socratic_questioning_framework.md`。
+See `agents/socratic_mentor_agent.md` for the detailed agent definition.
+See `references/socratic_questioning_framework.md` for the questioning framework.
 
 ```
-User: "引導我研究 [topic]" / "Guide my research on [topic]"
+User: "Guide my research on [topic]"
      |
-=== Layer 1: PROBLEM FRAMING（對應 Phase 1 前半）===
+=== Layer 1: PROBLEM FRAMING (corresponds to first half of Phase 1) ===
      |
-     +-> [socratic_mentor_agent] -> 追問研究動機、問題界定
-         [research_question_agent] -> 提供 FINER 引導框架
-         - "你真正想回答的問題是什麼？"
-         - "為什麼這個問題重要？對誰重要？"
-         - "如果你的研究成功了，世界會有什麼不同？"
-         每輪萃取 [INSIGHT: ...]
-         至少 2 輪對話才進入 Layer 2
+     +-> [socratic_mentor_agent] -> Follow-up on research motivation and problem definition
+         [research_question_agent] -> Provide FINER guidance framework
+         - "What is the question you truly want to answer?"
+         - "Why does this question matter? To whom?"
+         - "If your research succeeds, how would the world be different?"
+         Extract [INSIGHT: ...] each round
+         At least 2 rounds of dialogue before entering Layer 2
      |
-=== Layer 2: METHODOLOGY REFLECTION（對應 Phase 1 後半）===
+=== Layer 2: METHODOLOGY REFLECTION (corresponds to second half of Phase 1) ===
      |
-     +-> [socratic_mentor_agent] -> 追問方法論選擇的理由
-         [devils_advocate_agent] -> Layer 2 結束時挑戰方法論假設
-         - "你打算用什麼方式回答這個問題？為什麼？"
-         - "有沒有一種完全不同的方法也能回答你的問題？"
-         - "你的方法最大的弱點是什麼？"
-         至少 2 輪對話才進入 Layer 3
+     +-> [socratic_mentor_agent] -> Follow-up on rationale for methodology choices
+         [devils_advocate_agent] -> Challenge methodology assumptions at end of Layer 2
+         - "How do you plan to answer this question? Why this approach?"
+         - "Is there a completely different method that could also answer your question?"
+         - "What is the biggest weakness of your method?"
+         At least 2 rounds of dialogue before entering Layer 3
      |
-=== Layer 3: EVIDENCE DESIGN（對應 Phase 2-3）===
+=== Layer 3: EVIDENCE DESIGN (corresponds to Phase 2-3) ===
      |
-     +-> [socratic_mentor_agent] -> 追問證據策略
-         - "什麼樣的證據能讓你確信你的結論？"
-         - "什麼證據會讓你改變結論？"
-         - "你最擔心找不到什麼？"
-         至少 2 輪對話才進入 Layer 4
+     +-> [socratic_mentor_agent] -> Follow-up on evidence strategy
+         - "What kind of evidence would convince you of your conclusion?"
+         - "What evidence would make you change your conclusion?"
+         - "What are you most worried about not finding?"
+         At least 2 rounds of dialogue before entering Layer 4
      |
-=== Layer 4: CRITICAL SELF-EXAMINATION（對應 Phase 5）===
+=== Layer 4: CRITICAL SELF-EXAMINATION (corresponds to Phase 5) ===
      |
-     +-> [socratic_mentor_agent] -> 追問限制和風險
-         [devils_advocate_agent] -> 挑戰結論假設
-         - "你的研究假設了什麼？如果這些假設不成立呢？"
-         - "一個持相反觀點的人會怎麼反駁你？"
-         - "你的研究可能造成什麼負面影響？"
-         至少 2 輪對話才進入 Layer 5
+     +-> [socratic_mentor_agent] -> Follow-up on limitations and risks
+         [devils_advocate_agent] -> Challenge conclusion assumptions
+         - "What does your research assume? What if those assumptions don't hold?"
+         - "How would someone with the opposite view refute you?"
+         - "What negative impact could your research have?"
+         At least 2 rounds of dialogue before entering Layer 5
      |
-=== Layer 5: SIGNIFICANCE & CONTRIBUTION（結尾）===
+=== Layer 5: SIGNIFICANCE & CONTRIBUTION (conclusion) ===
      |
-     +-> [socratic_mentor_agent] -> 追問 "so what?"
-         - "讀者為什麼應該在乎你的發現？"
-         - "你的研究改變了我們對這個問題的哪些理解？"
-         至少 1 輪對話
+     +-> [socratic_mentor_agent] -> Follow-up on "so what?"
+         - "Why should readers care about your findings?"
+         - "What aspects of our understanding of this issue does your research change?"
+         At least 1 round of dialogue
      |
-     +-> 彙整所有 [INSIGHT] 為 Research Plan Summary
-         可直接 handoff 到 academic-paper (plan mode)
+     +-> Compile all [INSIGHT]s into Research Plan Summary
+         Can directly hand off to academic-paper (plan mode)
 ```
 
-### Socratic Mode 對話管理規則
+### Socratic Mode Dialogue Management Rules
 
-- 每層至少 2 輪對話才進入下一層（Layer 5 至少 1 輪）
-- 使用者可隨時要求跳到下一層
-- Mentor 每次回應控制在 200-400 字
-- 如果 10 輪後無收斂 → 建議切換到 `full` mode（見 Failure Paths F6）
-- 對話超過 15 輪 → 自動彙整 INSIGHT 並結束
-- 使用者要求直接給答案 → 溫和拒絕，解釋引導式學習的價值
+- At least 2 rounds of dialogue per layer before moving to the next (Layer 5 requires at least 1)
+- Users can request to skip to the next layer at any time
+- Mentor responses limited to 200-400 words
+- If no convergence after 10 rounds -> suggest switching to `full` mode (see Failure Paths F6)
+- If dialogue exceeds 15 rounds -> automatically compile INSIGHTs and end
+- If user requests direct answers -> gently decline, explain the value of guided learning
 
 ---
 
@@ -294,47 +293,47 @@ User: "引導我研究 [topic]" / "Guide my research on [topic]"
 
 ## Failure Paths
 
-所有模式的失敗情境、觸發條件和處理策略，詳見 `references/failure_paths.md`。
+See `references/failure_paths.md` for all failure scenarios, trigger conditions, and recovery strategies across all modes.
 
-關鍵失敗路徑摘要：
+Key failure path summary:
 
-| 失敗情境 | 觸發條件 | 處理策略 |
+| Failure Scenario | Trigger Condition | Recovery Strategy |
 |---------|---------|---------|
-| RQ 無法收斂 | Phase 1 / Layer 1 超過多輪仍模糊 | 提供 3 個候選 RQ 或建議 lit-review |
-| 文獻不足 | bibliography_agent 找到 < 5 sources | 擴大搜尋策略、替代關鍵詞 |
-| 方法論不匹配 | RQ 類型與方法能力不符 | 退回 Phase 1，建議 3 個替代方法 |
-| Devil's Advocate CRITICAL | 發現致命邏輯漏洞 | STOP，說明問題，要求修正 |
-| Ethics BLOCKED | 嚴重倫理問題 | STOP，列出問題和修復路徑 |
-| Socratic 不收斂 | > 10 輪未收斂 | 建議切換 full mode |
-| 使用者中途放棄 | 明確表示不想繼續 | 儲存進度，提供重新進入路徑 |
-| 只有中文文獻 | 英文搜尋為空 | 切換到中文學術資料庫 |
+| RQ cannot converge | Phase 1 / Layer 1 exceeds multiple rounds while still vague | Provide 3 candidate RQs or suggest lit-review |
+| Insufficient literature | bibliography_agent finds < 5 sources | Expand search strategy, alternative keywords |
+| Methodology mismatch | RQ type misaligned with method capability | Return to Phase 1, suggest 3 alternative methods |
+| Devil's Advocate CRITICAL | Fatal logical flaw discovered | STOP, explain the issue, require correction |
+| Ethics BLOCKED | Serious ethical issue | STOP, list issues and remediation path |
+| Socratic non-convergence | > 10 rounds without convergence | Suggest switching to full mode |
+| User abandons mid-process | Explicitly states they don't want to continue | Save progress, provide re-entry path |
+| Only Chinese-language literature | English search returns empty | Switch to Chinese academic databases |
 
 ---
 
 ## Handoff Protocol: deep-research → academic-paper
 
-研究完成後，可將以下材料交接給 `academic-paper`：
+After research is complete, the following materials can be handed off to `academic-paper`:
 
-1. **Research Question Brief**（from research_question_agent）
-2. **Methodology Blueprint**（from research_architect_agent）
-3. **Annotated Bibliography**（from bibliography_agent）
-4. **Synthesis Report**（from synthesis_agent）
-5. **[If socratic mode] INSIGHT Collection 和 Research Plan Summary**
+1. **Research Question Brief** (from research_question_agent)
+2. **Methodology Blueprint** (from research_architect_agent)
+3. **Annotated Bibliography** (from bibliography_agent)
+4. **Synthesis Report** (from synthesis_agent)
+5. **[If socratic mode] INSIGHT Collection and Research Plan Summary**
 
-**觸發方式**：使用者說「現在幫我寫論文」或「write a paper based on this」
+**Trigger**: User says "now help me write a paper" or "write a paper based on this"
 
-`academic-paper` 的 `intake_agent` 會自動偵測已有材料並跳過冗餘步驟：
-- 有 RQ Brief → 跳過 topic scoping
-- 有 Bibliography → 跳過 literature search
-- 有 Synthesis → 加速 findings / discussion 撰寫
+`academic-paper`'s `intake_agent` will automatically detect available materials and skip redundant steps:
+- Has RQ Brief -> skip topic scoping
+- Has Bibliography -> skip literature search
+- Has Synthesis -> accelerate findings / discussion writing
 
-詳細銜接範例見 `examples/handoff_to_paper.md`。
+See `examples/handoff_to_paper.md` for a detailed handoff example.
 
 ---
 
 ## Full Academic Pipeline
 
-完整流程見 `academic-pipeline/SKILL.md`。
+See `academic-pipeline/SKILL.md` for the complete workflow.
 
 ---
 
@@ -368,9 +367,9 @@ User: "引導我研究 [topic]" / "Guide my research on [topic]"
 | `references/socratic_questioning_framework.md` | 6 types of Socratic questions + 30+ prompt patterns | socratic_mentor |
 | `references/failure_paths.md` | 12 failure scenarios with triggers and recovery paths | all agents |
 | `references/mode_selection_guide.md` | Mode selection flowchart and comparison table | orchestrator |
-| `references/irb_decision_tree.md` | IRB 決策樹 + 台灣流程 + 高教速查 | ethics_review, research_architect |
-| `references/equator_reporting_guidelines.md` | EQUATOR 報告指南映射 | research_architect, report_compiler |
-| `references/preregistration_guide.md` | 預註冊決策樹 + 平台 + checklist | research_architect |
+| `references/irb_decision_tree.md` | IRB decision tree + Taiwan process + HE quick reference | ethics_review, research_architect |
+| `references/equator_reporting_guidelines.md` | EQUATOR reporting guideline mapping | research_architect, report_compiler |
+| `references/preregistration_guide.md` | Preregistration decision tree + platforms + checklist | research_architect |
 
 ---
 
@@ -381,7 +380,7 @@ User: "引導我研究 [topic]" / "Guide my research on [topic]"
 | `templates/research_brief_template.md` | Quick mode output format |
 | `templates/literature_matrix_template.md` | Source x Theme analysis matrix |
 | `templates/evidence_assessment_template.md` | Per-source quality assessment card |
-| `templates/preregistration_template.md` | OSF 標準 21 項預註冊模板 |
+| `templates/preregistration_template.md` | OSF standard 21-item preregistration template |
 
 ---
 
@@ -392,7 +391,7 @@ User: "引導我研究 [topic]" / "Guide my research on [topic]"
 | `examples/exploratory_research.md` | Full 6-phase pipeline walkthrough |
 | `examples/systematic_review.md` | PRISMA-style literature review |
 | `examples/policy_analysis.md` | Applied comparative policy research |
-| `examples/socratic_guided_research.md` | Complete Socratic mode multi-turn dialogue (12 rounds, traditional Chinese) |
+| `examples/socratic_guided_research.md` | Complete Socratic mode multi-turn dialogue (12 rounds) |
 | `examples/handoff_to_paper.md` | deep-research full mode handoff to academic-paper |
 | `examples/review_mode.md` | Review mode: 3-agent review pipeline for policy recommendation text |
 | `examples/fact_check_mode.md` | Fact-check mode: source verification of HEI claims with per-claim verdicts |
@@ -401,7 +400,7 @@ User: "引導我研究 [topic]" / "Guide my research on [topic]"
 
 ## Output Language
 
-跟隨使用者語言。學術術語保留英文。Socratic mode 中英混用自然對話。
+Follows the user's language. Academic terminology kept in English. Socratic mode uses natural conversational style.
 
 ---
 

@@ -1,18 +1,18 @@
-# Example: 高等教育論文完整審查
+# Example: Higher Education Paper Full Review
 
-本範例展示 `academic-paper-reviewer` 的完整 Phase 0-2 流程，模擬審查一篇題為「少子化對台灣私立大學經營策略之影響：多重個案研究」的論文。
+This example demonstrates the complete Phase 0-2 workflow of `academic-paper-reviewer`, simulating the review of a paper titled "Impact of Declining Birth Rates on Management Strategies of Taiwan's Private Universities: A Multiple Case Study."
 
 ---
 
-## 模擬論文摘要
+## Simulated Paper Abstract
 
-> **標題**：少子化對台灣私立大學經營策略之影響：多重個案研究
+> **Title**: Impact of Declining Birth Rates on Management Strategies of Taiwan's Private Universities: A Multiple Case Study
 >
-> **摘要**：本研究探討少子化趨勢下台灣私立大學的經營策略轉型。以 6 所面臨不同程度招生壓力的私立大學為個案，透過半結構式訪談（N=24，含校長、副校長、院長、招生主管）及文件分析，採用 Eisenhardt (1989) 的多重個案研究法進行跨個案分析。研究發現三種策略類型：(1) 差異化策略——聚焦特色發展，(2) 轉型策略——跨足非傳統教育市場，(3) 退場策略——有序縮減規模。研究進一步以 Porter 的競爭策略理論與資源基礎觀點 (RBV) 解釋策略選擇差異。本研究對台灣高教政策制定者和私校管理者提供實務意涵。
+> **Abstract**: This study investigates the management strategy transformation of Taiwan's private universities under the declining birth rate trend. Using 6 private universities facing different levels of enrollment pressure as cases, the study employed semi-structured interviews (N=24, including presidents, vice presidents, deans, and enrollment directors) and document analysis, applying Eisenhardt's (1989) multiple case study method for cross-case analysis. Three strategy types were identified: (1) differentiation strategy — focusing on distinctive development, (2) transformation strategy — branching into non-traditional education markets, (3) exit strategy — orderly downsizing. The study further used Porter's competitive strategy theory and Resource-Based View (RBV) to explain differences in strategy selection. This study provides practical implications for Taiwan's higher education policymakers and private university administrators.
 >
-> **關鍵詞**：少子化、私立大學、經營策略、多重個案研究、台灣高等教育
+> **Keywords**: declining birth rate, private universities, management strategy, multiple case study, Taiwan higher education
 >
-> **全文約 12,000 字，引用文獻 67 篇**
+> **Full text approximately 12,000 words, 67 references cited**
 
 ---
 
@@ -20,27 +20,27 @@
 
 ### Field Analysis Report
 
-#### 論文基本資訊
-- **標題**：少子化對台灣私立大學經營策略之影響：多重個案研究
-- **摘要長度**：約 200 字
-- **全文長度**：約 12,000 字
-- **引用文獻數**：67 篇
+#### Paper Basic Information
+- **Title**: Impact of Declining Birth Rates on Management Strategies of Taiwan's Private Universities: A Multiple Case Study
+- **Abstract length**: Approximately 200 words
+- **Full text length**: Approximately 12,000 words
+- **Number of references**: 67
 
-#### 領域分析
+#### Field Analysis
 
-| 維度 | 分析結果 |
-|------|---------|
-| Primary Discipline | 高等教育管理（Higher Education Management） |
-| Secondary Disciplines | 策略管理（Strategic Management）、教育政策（Education Policy）、人口學（Demography） |
-| Research Paradigm | 質性研究（Qualitative） |
-| Methodology Type | 多重個案研究（Multiple Case Study） |
-| Target Journal Tier | Q2 — 論文品質中上，個案研究設計完整，但國際推廣性有限 |
-| Paper Maturity | 修訂稿（Revised draft）— 結構完整，但某些論述可再精煉 |
+| Dimension | Analysis Result |
+|-----------|----------------|
+| Primary Discipline | Higher Education Management |
+| Secondary Disciplines | Strategic Management, Education Policy, Demography |
+| Research Paradigm | Qualitative |
+| Methodology Type | Multiple Case Study |
+| Target Journal Tier | Q2 — Above-average paper quality, complete case study design, but limited international generalizability |
+| Paper Maturity | Revised draft — Complete structure, but some arguments could be further refined |
 
-#### 建議目標期刊（Top 3）
-1. **Studies in Higher Education** — 高教領域頂刊，接受質性研究，但需要更強的理論貢獻
-2. **Higher Education** — 接受多元方法論和區域研究，國際讀者群廣泛
-3. **Higher Education Policy** — 政策導向，適合台灣高教政策議題
+#### Recommended Target Journals (Top 3)
+1. **Studies in Higher Education** — Top journal in higher education, accepts qualitative research, but requires stronger theoretical contribution
+2. **Higher Education** — Accepts diverse methodologies and regional studies, broad international readership
+3. **Higher Education Policy** — Policy-oriented, suitable for Taiwan higher education policy topics
 
 #### Reviewer Configuration Cards
 
@@ -48,53 +48,53 @@
 
 ### Reviewer Configuration Card #1
 
-**角色**：EIC
-**身份描述**：*Higher Education* (Springer) 副主編，專長大學治理與組織變革研究，曾主編東亞高等教育專題特刊，對少子化議題有跨國比較研究經驗。
-**審查焦點**：
-  1. 論文對國際讀者的吸引力 — 台灣個案如何產生跨國比較價值
-  2. 原創性 — 在少子化已有大量文獻的情況下，本文的新貢獻是什麼
-  3. 整體結構和論述的連貫性
-**會特別在意的點**：「台灣經驗是否被框架為更廣泛的理論洞見，而非純粹的在地描述」
-**可能的盲點**：對台灣高教政策的細節可能不夠熟悉
+**Role**: EIC
+**Identity Description**: *Higher Education* (Springer) Associate Editor, specializing in university governance and organizational change research, previously edited a special issue on East Asian higher education, with cross-national comparative research experience on declining birth rates.
+**Review Focus**:
+  1. Paper's appeal to international readers — How Taiwan's case generates cross-national comparative value
+  2. Originality — Given the extensive existing literature on declining birth rates, what is this paper's new contribution
+  3. Overall structural and argumentative coherence
+**Will particularly care about**: "Whether the Taiwan experience is framed as broader theoretical insight, rather than purely local description"
+**Possible blind spots**: May not be sufficiently familiar with the details of Taiwan's higher education policies
 
 ---
 
 ### Reviewer Configuration Card #2
 
-**角色**：Peer Reviewer 1（方法論）
-**身份描述**：質性研究方法論專家，專長多重個案研究設計（受 Yin 和 Eisenhardt 影響），曾在教育和組織管理領域發表多篇方法論反思文章。
-**審查焦點**：
-  1. Eisenhardt (1989) 方法的遵循度 — 是否真正跨個案分析，還是 6 個獨立個案的並列
-  2. 抽樣策略 — 理論抽樣的邏輯是否清楚、6 所大學的選擇標準
-  3. 資料分析的透明度 — coding 過程、主題萃取的可追蹤性
-**會特別在意的點**：「半結構式訪談的訪談大綱是否附在附錄、資料飽和的論證是否充分」
-**可能的盲點**：對台灣私校的具體處境可能缺乏直覺理解
+**Role**: Peer Reviewer 1 (Methodology)
+**Identity Description**: Qualitative research methodology expert, specializing in multiple case study design (influenced by Yin and Eisenhardt), with multiple published methodological reflection articles in education and organizational management.
+**Review Focus**:
+  1. Eisenhardt (1989) method compliance — Whether true cross-case analysis is conducted, or just 6 independent cases placed side by side
+  2. Sampling strategy — Logic of theoretical sampling, selection criteria for the 6 universities
+  3. Data analysis transparency — Coding process, traceability of theme extraction
+**Will particularly care about**: "Whether the semi-structured interview guide is included in the appendix, whether data saturation is adequately argued"
+**Possible blind spots**: May lack intuitive understanding of the specific circumstances of Taiwan's private universities
 
 ---
 
 ### Reviewer Configuration Card #3
 
-**角色**：Peer Reviewer 2（領域）
-**身份描述**：台灣高等教育政策研究者，專長私校退場機制、大學合併，與教育部高教政策有長期合作經驗，熟悉《私立學校法》修正和退場條例。
-**審查焦點**：
-  1. 政策脈絡的準確性 — 引用的法規和政策是否正確、是否是最新版本
-  2. 文獻回顧 — 是否涵蓋台灣少子化與高教的關鍵文獻（含中文文獻）
-  3. 三種策略分類的學術貢獻 — 與既有分類有何不同
-**會特別在意的點**：「退場策略」的描述是否與實際退場案例一致、是否考慮了 2022 年《私立高級中等以上學校退場條例》
-**可能的盲點**：可能過於聚焦台灣脈絡，忽略國際比較的價值
+**Role**: Peer Reviewer 2 (Domain)
+**Identity Description**: Taiwan higher education policy researcher, specializing in private university exit mechanisms and university mergers, with long-term collaboration with the Ministry of Education on higher education policy, familiar with the Private School Act amendments and the Exit Act.
+**Review Focus**:
+  1. Policy context accuracy — Whether cited regulations and policies are correct and up-to-date
+  2. Literature review — Whether key literature on Taiwan's declining birth rates and higher education is covered (including Chinese-language literature)
+  3. Academic contribution of the three strategy types — How they differ from existing classifications
+**Will particularly care about**: Whether the "exit strategy" description is consistent with actual exit cases, whether the 2022 "Act for the Exit of Private Senior Secondary Schools and Above" is considered
+**Possible blind spots**: May focus too much on the Taiwan context, overlooking the value of international comparison
 
 ---
 
 ### Reviewer Configuration Card #4
 
-**角色**：Peer Reviewer 3（跨領域/實務）
-**身份描述**：策略管理學者，專長組織轉型與衰退管理（organizational decline），以 Porter 五力分析和 RBV 為主要理論工具，研究領域橫跨企業和非營利組織。
-**審查焦點**：
-  1. Porter 競爭策略和 RBV 在高教脈絡的適用性 — 大學不是企業，理論借用是否適當
-  2. 策略分類的理論基礎 — 三種策略是歸納自數據還是預設自理論
-  3. 組織衰退理論的缺席 — 為何不使用 Cameron & Zammuto 或 Weitzel & Jonsson 的衰退模型
-**會特別在意的點**：「作者將企管理論機械性地套用到大學，是否考慮了大學作為 organized anarchy 的獨特性質」
-**可能的盲點**：對台灣高教的制度脈絡較不熟悉
+**Role**: Peer Reviewer 3 (Cross-disciplinary/Practical)
+**Identity Description**: Strategic management scholar, specializing in organizational transformation and decline management (organizational decline), using Porter's Five Forces and RBV as primary theoretical tools, with research spanning corporate and nonprofit organizations.
+**Review Focus**:
+  1. Applicability of Porter's competitive strategy and RBV in the higher education context — Universities are not corporations; is the theoretical borrowing appropriate
+  2. Theoretical basis of strategy classification — Are the three strategies inductively derived from data or preset from theory
+  3. Absence of organizational decline theory — Why Cameron & Zammuto or Weitzel & Jonsson decline models are not used
+**Will particularly care about**: "Whether the authors mechanically apply business management theory to universities, considering the unique nature of universities as organized anarchies"
+**Possible blind spots**: Less familiar with the institutional context of Taiwan's higher education
 
 ---
 
@@ -103,7 +103,7 @@
 ### EIC Review Report
 
 #### Reviewer Identity
-*Higher Education* (Springer) 副主編，大學治理與組織變革研究專家。
+*Higher Education* (Springer) Associate Editor, university governance and organizational change research expert.
 
 #### Overall Recommendation
 **Major Revision**
@@ -112,28 +112,28 @@
 4/5
 
 #### Summary Assessment
-本文探討一個在東亞高教政策中具有高度時效性的議題——少子化如何迫使私立大學重新思考其經營策略。研究採用多重個案研究法，訪談 6 所大學的高層管理者，歸納出三種策略類型。整體而言，研究設計合理、資料豐富，但論文的主要弱點在於理論貢獻不夠明確：三種策略分類在概念上並不新穎，且論文未能充分說明台灣經驗如何推進更廣泛的高教管理理論。對於 *Higher Education* 的國際讀者群而言，論文需要更好地將台灣個案框架為具有跨國比較價值的理論洞見。
+This paper examines a highly timely topic in East Asian higher education policy — how declining birth rates are forcing private universities to rethink their management strategies. The study uses a multiple case study method, interviewing senior administrators at 6 universities, and inductively identifies three strategy types. Overall, the research design is sound and data is rich, but the paper's main weakness lies in unclear theoretical contribution: the three strategy types are not conceptually novel, and the paper fails to adequately explain how the Taiwan experience advances broader higher education management theory. For *Higher Education*'s international readership, the paper needs to better frame the Taiwan case as a theoretical insight with cross-national comparative value.
 
 #### Strengths
-1. **S1: 時效性與實務價值**：少子化是東亞高教面臨的共同挑戰（日本、韓國、台灣），論文直接回應了一個迫切的政策議題。
-2. **S2: 豐富的經驗資料**：24 位高層管理者的深度訪談，涵蓋不同壓力程度的 6 所大學，資料來源多元。
-3. **S3: 清晰的結構**：論文結構完整，研究問題到結論的邏輯線索清楚。
+1. **S1: Timeliness and practical value**: Declining birth rates are a common challenge for East Asian higher education (Japan, Korea, Taiwan), and the paper directly addresses an urgent policy issue.
+2. **S2: Rich empirical data**: In-depth interviews with 24 senior administrators, covering 6 universities with different pressure levels, drawing from diverse data sources.
+3. **S3: Clear structure**: Complete paper structure with a clear logical thread from research questions to conclusions.
 
 #### Weaknesses
-1. **W1: 理論貢獻不明確**：三種策略類型（差異化、轉型、退場）在策略管理文獻中是常見分類。論文需要更明確地說明，這三種策略在高教脈絡中有何獨特意涵，不只是把企管分類套到大學上。建議增加一段「Theoretical Contribution」的討論。
-2. **W2: 國際可推廣性不足**：論文幾乎完全聚焦台灣脈絡，但缺少與日本、韓國或其他面臨類似問題的國家的比較。即使不做實證比較，討論中也應點出跨國意涵。
-3. **W3: 標題和摘要過於描述性**：標題可以更突出理論角度（如策略理論的貢獻），而非只是描述研究主題。
+1. **W1: Unclear theoretical contribution**: The three strategy types (differentiation, transformation, exit) are common classifications in strategic management literature. The paper needs to more clearly explain what unique implications these three strategies have in the higher education context, rather than just applying business classifications to universities. Suggest adding a "Theoretical Contribution" discussion paragraph.
+2. **W2: Insufficient international generalizability**: The paper focuses almost entirely on the Taiwan context, but lacks comparison with Japan, Korea, or other countries facing similar issues. Even without empirical comparison, the discussion should address cross-national implications.
+3. **W3: Title and abstract too descriptive**: The title could better highlight the theoretical angle (such as strategy theory contribution) rather than just describing the research topic.
 
 #### Questions for Authors
-1. 你認為這三種策略類型是台灣特有的，還是在其他少子化國家也會出現？如果是後者，你的理論框架能否預測在什麼條件下會出現哪種策略？
-2. 在討論中，你能否更明確地回答：Porter 的競爭策略理論在應用到大學時，需要做什麼修正？
+1. Do you believe these three strategy types are unique to Taiwan, or would they also appear in other countries with declining birth rates? If the latter, can your theoretical framework predict which strategy would emerge under what conditions?
+2. In the discussion, can you more explicitly address: what modifications does Porter's competitive strategy theory require when applied to universities?
 
 ---
 
 ### Methodology Review Report (Peer Reviewer 1)
 
 #### Reviewer Identity
-質性研究方法論專家，專長多重個案研究設計。
+Qualitative research methodology expert, specializing in multiple case study design.
 
 #### Overall Recommendation
 **Minor Revision**
@@ -142,42 +142,42 @@
 5/5
 
 #### Summary Assessment
-作者選擇 Eisenhardt (1989) 的多重個案研究法是合適的，6 所大學的選擇有明確的理論抽樣邏輯（不同壓力程度）。半結構式訪談加文件分析的三角驗證增加了研究的可信賴性。然而，跨個案分析的呈現可以更加系統化——目前有些地方讀起來更像是 6 個獨立個案的並列，而非真正的跨個案模式比較。此外，資料分析過程的透明度可以提升，特別是 coding 從原始資料到三種策略類型的推導軌跡。
+The author's choice of Eisenhardt's (1989) multiple case study method is appropriate, and the selection of 6 universities has clear theoretical sampling logic (different pressure levels). Semi-structured interviews combined with document analysis triangulation increases the study's trustworthiness. However, the cross-case analysis presentation could be more systematic — currently some sections read more like 6 independent cases placed side by side rather than true cross-case pattern comparison. Additionally, the transparency of the data analysis process could be improved, particularly the coding trail from raw data to the three strategy types.
 
 #### Strengths
-1. **S1: 理論抽樣設計合理**：選擇不同招生壓力程度的 6 所大學（2 所輕微、2 所中度、2 所嚴重），符合 Eisenhardt 建議的 polar type 選擇邏輯。
-2. **S2: 多重資料來源**：結合訪談、校務文件、教育部統計，達成方法論三角驗證。
-3. **S3: 受訪者層級適當**：訪談校長、副校長、院長、招生主管，涵蓋策略決策的不同層級。
+1. **S1: Sound theoretical sampling design**: Selecting 6 universities with different enrollment pressure levels (2 mild, 2 moderate, 2 severe) follows Eisenhardt's recommended polar type selection logic.
+2. **S2: Multiple data sources**: Combining interviews, institutional documents, and Ministry of Education statistics achieves methodological triangulation.
+3. **S3: Appropriate respondent level**: Interviewing presidents, vice presidents, deans, and enrollment directors covers different levels of strategic decision-making.
 
 #### Weaknesses
-1. **W1: 跨個案分析不夠系統**：
-   **問題**：文中的 findings 按策略類型呈現，但缺少 Eisenhardt (1989) 建議的 within-case analysis → cross-case pattern 的二階段呈現。
-   **為什麼重要**：讀者無法看到每所大學的完整圖像，也無法判斷跨個案模式是否有足夠的證據基礎。
-   **建議**：增加一個 within-case summary 表格（每所大學 1 段），然後再做 cross-case 的模式比較。
-   **嚴重度**：Major
+1. **W1: Insufficiently systematic cross-case analysis**:
+   **Problem**: The findings are presented by strategy type, but lack Eisenhardt's (1989) recommended two-stage presentation of within-case analysis -> cross-case patterns.
+   **Why it matters**: Readers cannot see the complete picture of each university, nor judge whether cross-case patterns have sufficient evidence base.
+   **Suggestion**: Add a within-case summary table (1 paragraph per university), then conduct cross-case pattern comparison.
+   **Severity**: Major
 
-2. **W2: Coding 過程透明度不足**：
-   **問題**：論文提到使用 thematic analysis，但未說明 coding 的具體步驟（初始編碼 → 聚焦編碼 → 主題萃取），也未提供 codebook 或編碼範例。
-   **為什麼重要**：影響研究的可追蹤性和可信賴性。
-   **建議**：增加一段方法論細節，說明 coding 階段，並在附錄提供 codebook 摘要。
-   **嚴重度**：Major
+2. **W2: Insufficient coding process transparency**:
+   **Problem**: The paper mentions using thematic analysis but does not describe specific coding steps (initial coding -> focused coding -> theme extraction), nor provides a codebook or coding examples.
+   **Why it matters**: Affects the study's traceability and trustworthiness.
+   **Suggestion**: Add a methodology detail section describing coding stages, and provide a codebook summary in the appendix.
+   **Severity**: Major
 
-3. **W3: 資料飽和論證缺失**：
-   **問題**：24 位受訪者是否達到理論飽和？論文未論證。
-   **為什麼重要**：質性研究的抽樣大小需要論證，而非只靠數字。
-   **建議**：說明在第幾位受訪者後不再出現新的主題，或解釋 6 所大學 x 4 人的抽樣邏輯如何確保飽和。
-   **嚴重度**：Minor
+3. **W3: Missing data saturation argument**:
+   **Problem**: Was theoretical saturation achieved with 24 respondents? The paper does not argue this.
+   **Why it matters**: The sample size in qualitative research needs to be justified, not just by numbers.
+   **Suggestion**: Explain after which respondent no new themes emerged, or explain how the 6 universities x 4 people sampling logic ensures saturation.
+   **Severity**: Minor
 
 #### Questions for Authors
-1. 訪談大綱是否附在附錄？如果沒有，能否提供？
-2. 是否有使用質性分析軟體（如 NVivo）？如果有，請在方法論中標示。
+1. Is the interview guide included in the appendix? If not, can it be provided?
+2. Was qualitative analysis software (such as NVivo) used? If so, please indicate in the methodology section.
 
 ---
 
 ### Domain Review Report (Peer Reviewer 2)
 
 #### Reviewer Identity
-台灣高等教育政策研究者，私校退場機制專家。
+Taiwan higher education policy researcher, private university exit mechanism expert.
 
 #### Overall Recommendation
 **Major Revision**
@@ -186,51 +186,51 @@
 5/5
 
 #### Summary Assessment
-作者選擇了一個對台灣高教至關重要的議題。資料收集的廣度和深度值得肯定。然而，文獻回顧有幾個重要的遺漏，且政策脈絡的描述需要更新——特別是 2022 年《私立高級中等以上學校退場條例》通過後，退場機制已有根本性改變。此外，三種策略分類雖然有啟發性，但與既有台灣高教研究的分類缺少明確的比較和定位。
+The author has chosen a topic of vital importance to Taiwan's higher education. The breadth and depth of data collection are commendable. However, the literature review has several important omissions, and the policy context description needs updating — particularly since the 2022 passage of the "Act for the Exit of Private Senior Secondary Schools and Above" fundamentally changed the exit mechanism. Additionally, while the three strategy types are insightful, they lack clear comparison and positioning against existing classifications in Taiwan higher education research.
 
 #### Strengths
-1. **S1: 直面敏感議題**：私校退場在台灣是政治敏感的議題，作者願意直接探討，並且能取得校長級別的訪談，非常不容易。
-2. **S2: 涵蓋不同壓力程度的學校**：不只看面臨退場的學校，也看壓力較輕的學校如何預防性調整，視角比多數研究更全面。
-3. **S3: 實務意涵具體**：對私校管理者和教育部政策制定者的建議具體且可操作。
+1. **S1: Directly confronting a sensitive topic**: Private university exit is a politically sensitive topic in Taiwan. The author's willingness to directly investigate, and ability to obtain president-level interviews, is very impressive.
+2. **S2: Covering schools with different pressure levels**: Not just looking at schools facing exit, but also examining how schools with less pressure make preventive adjustments, offering a more comprehensive perspective than most studies.
+3. **S3: Specific practical implications**: Recommendations for private university administrators and Ministry of Education policymakers are specific and actionable.
 
 #### Weaknesses
-1. **W1: 政策脈絡需要更新**：
-   **問題**：論文引用的退場相關法規停留在 2018 年的版本，但 2022 年 5 月已通過《私立高級中等以上學校退場條例》，根本性改變了退場機制（包括專案輔導學校的認定標準、停辦時程、教職員工安置等）。
-   **為什麼重要**：如果資料收集在 2022 年之前，需要明確標示；如果在之後，必須反映新法規的影響。
-   **建議**：更新政策脈絡段落，明確標示資料收集時間點與退場條例的關係。
-   **嚴重度**：Critical
+1. **W1: Policy context needs updating**:
+   **Problem**: The exit-related regulations cited in the paper are from the 2018 version, but the "Act for the Exit of Private Senior Secondary Schools and Above" was passed in May 2022, fundamentally changing the exit mechanism (including criteria for designating schools for special guidance, suspension timelines, faculty/staff placement, etc.).
+   **Why it matters**: If data collection occurred before 2022, this needs to be clearly stated; if after, it must reflect the new legislation's impact.
+   **Suggestion**: Update the policy context section, clearly stating the relationship between data collection timeline and the Exit Act.
+   **Severity**: Critical
 
-2. **W2: 遺漏關鍵中文文獻**：
-   **問題**：以下重要文獻未被引用：
-   - 戴曉霞 (2020) 關於台灣高教市場化的研究
-   - 楊瑩 (2019) 關於品質保證與退場機制的研究
-   - 教育部高教深耕計畫的成效評估報告
-   **為什麼重要**：這些是理解台灣私校策略選擇的關鍵脈絡文獻。
-   **建議**：補充以上文獻，並整合到文獻回顧的相關段落中。
-   **嚴重度**：Major
+2. **W2: Missing key Chinese-language literature**:
+   **Problem**: The following important references are not cited:
+   - Tai, H.H. (2020) on Taiwan's higher education marketization
+   - Yang, Y. (2019) on quality assurance and exit mechanisms
+   - Ministry of Education's Higher Education Sprout Project effectiveness evaluation report
+   **Why it matters**: These are key contextual references for understanding Taiwan's private university strategy choices.
+   **Suggestion**: Add the above references and integrate them into relevant sections of the literature review.
+   **Severity**: Major
 
-3. **W3: 策略分類與既有研究的定位不清**：
-   **問題**：台灣高教研究中已有類似的策略分類（如轉型、整併、退場三分法），但論文未明確比較自己的分類與既有分類的異同。
-   **為什麼重要**：讀者無法判斷本研究的增量貢獻。
-   **建議**：在討論中增加一段，比較本研究的分類與既有分類，說明本研究的新發現。
-   **嚴重度**：Major
+3. **W3: Unclear positioning of strategy classification against existing research**:
+   **Problem**: Taiwan's higher education research already has similar strategy classifications (such as the transformation, merger, exit trichotomy), but the paper does not clearly compare its classification with existing ones.
+   **Why it matters**: Readers cannot judge this study's incremental contribution.
+   **Suggestion**: Add a paragraph in the discussion comparing this study's classification with existing ones, explaining this study's new findings.
+   **Severity**: Major
 
 #### Missing Key References
-- 戴曉霞 (2020). 台灣高等教育市場化與品質保證. *教育研究集刊*.
-- 楊瑩 (2019). 高等教育品質保證制度與退場機制. *高等教育*.
-- 教育部 (2023). 高教深耕計畫第二期成效報告.
+- Tai, H.H. (2020). Marketization and quality assurance in Taiwan's higher education. *Bulletin of Educational Research*.
+- Yang, Y. (2019). Quality assurance systems and exit mechanisms in higher education. *Higher Education*.
+- Ministry of Education (2023). Higher Education Sprout Project Phase 2 Effectiveness Report.
 - Mok, K.H. & Han, X. (2023). Transforming higher education in East Asia. *Higher Education Policy*.
 
 #### Questions for Authors
-1. 資料收集的確切時間是什麼時候？是在《私立高級中等以上學校退場條例》通過之前還是之後？
-2. 6 所個案學校中，是否有已被列為「專案輔導學校」的？這是否影響了策略選擇？
+1. Exactly when was the data collected? Was it before or after the passage of the "Act for the Exit of Private Senior Secondary Schools and Above"?
+2. Among the 6 case universities, were any designated as "schools under special guidance"? Did this affect their strategy choice?
 
 ---
 
 ### Perspective Review Report (Peer Reviewer 3)
 
 #### Reviewer Identity
-策略管理學者，專長組織轉型與衰退管理。
+Strategic management scholar, specializing in organizational transformation and decline management.
 
 #### Overall Recommendation
 **Major Revision**
@@ -239,31 +239,31 @@
 4/5
 
 #### Summary Assessment
-作者使用 Porter 競爭策略和 RBV 來分析大學的策略選擇，這是一個有趣的跨領域嘗試。然而，從策略管理的角度看，這兩個理論框架的應用有些表面化——Porter 的競爭策略預設一個自由市場環境，但台灣私立大學高度受政府管制，「競爭」的含義與企業截然不同。更重要的是，論文忽略了組織衰退理論（organizational decline theory），這才是最直接相關的理論框架。
+The author uses Porter's competitive strategy and RBV to analyze university strategy choices, which is an interesting cross-disciplinary attempt. However, from a strategic management perspective, the application of these two theoretical frameworks is somewhat superficial — Porter's competitive strategy assumes a free market environment, but Taiwan's private universities are highly government-regulated, and the meaning of "competition" is fundamentally different from business. More importantly, the paper overlooks organizational decline theory, which is the most directly relevant theoretical framework.
 
 #### Strengths
-1. **S1: 跨領域理論借用的嘗試值得肯定**：將策略管理理論應用到高教管理，有潛力產出有趣的跨領域洞見。
-2. **S2: 三種策略類型的歸納有經驗基礎**：不是先驗的理論分類，而是從資料中萃取的，具有紮根性。
-3. **S3: 對實務管理者的直接價值**：策略選擇的決策因素分析對私校管理者有即時的參考價值。
+1. **S1: Cross-disciplinary theoretical borrowing attempt is commendable**: Applying strategic management theory to higher education management has potential for generating interesting cross-disciplinary insights.
+2. **S2: Three strategy types are empirically grounded**: Not an a priori theoretical classification, but extracted from data, possessing groundedness.
+3. **S3: Direct value for practical administrators**: The decision factor analysis for strategy choices has immediate reference value for private university administrators.
 
 #### Weaknesses
-1. **W1: Porter 競爭策略框架在高教脈絡的適用性未經論證**：
-   **問題**：Porter 的差異化/成本領導/集中化策略預設了自由市場中的競爭者。但台灣的大學市場高度管制——學費受限、招生名額受控、退場由政府主導。在這種環境下，「競爭策略」的含義需要根本性的重新定義。
-   **為什麼重要**：如果不討論理論的適用邊界，論文的理論貢獻會被質疑為「機械性套用」。
-   **建議**：增加一段「Theoretical Contextualization」，討論 Porter 框架在高度管制市場中的修正。可以參考 Jongbloed (2003) 關於高教市場化光譜的研究。
-   **嚴重度**：Critical
+1. **W1: Applicability of Porter's competitive strategy framework to the higher education context is not justified**:
+   **Problem**: Porter's differentiation/cost leadership/focus strategies presuppose competitors in a free market. But Taiwan's university market is highly regulated — tuition is capped, enrollment quotas are controlled, exits are government-led. In such an environment, the meaning of "competitive strategy" requires fundamental redefinition.
+   **Why it matters**: Without discussing the theory's applicability boundaries, the paper's theoretical contribution will be questioned as "mechanical application."
+   **Suggestion**: Add a "Theoretical Contextualization" section discussing modifications to Porter's framework in highly regulated markets. Reference Jongbloed (2003) on the spectrum of higher education marketization.
+   **Severity**: Critical
 
-2. **W2: 忽略組織衰退理論**：
-   **問題**：面臨少子化的大學本質上是一個「組織衰退」（organizational decline）的過程。Cameron & Zammuto (1983) 和 Weitzel & Jonsson (1989) 的衰退階段模型可以更好地解釋為何不同大學採取不同策略——可能是因為它們處於衰退的不同階段。
-   **為什麼重要**：引入衰退理論可以將「策略選擇」從靜態分類變為動態過程，大幅提升理論貢獻。
-   **建議**：不需要完全替換 Porter/RBV，但建議加入組織衰退理論作為補充框架，特別是在解釋「為什麼不同大學選擇不同策略」時。
-   **嚴重度**：Major
+2. **W2: Organizational decline theory overlooked**:
+   **Problem**: Universities facing declining birth rates are essentially undergoing "organizational decline." Cameron & Zammuto's (1983) and Weitzel & Jonsson's (1989) decline stage models can better explain why different universities adopt different strategies — possibly because they are at different stages of decline.
+   **Why it matters**: Introducing decline theory can transform "strategy choice" from a static classification into a dynamic process, significantly enhancing theoretical contribution.
+   **Suggestion**: No need to completely replace Porter/RBV, but suggest adding organizational decline theory as a supplementary framework, especially when explaining "why different universities choose different strategies."
+   **Severity**: Major
 
-3. **W3: 「大學即企業」的隱性假設**：
-   **問題**：論文隱含地將大學視為理性的策略行為者（rational strategic actor），但大學是典型的「organized anarchy」（Cohen & March, 1974）——目標模糊、技術不確定、參與流動。在這樣的組織中，「策略」的形成方式與企業很不同，更接近 Mintzberg 的 emergent strategy 而非 deliberate strategy。
-   **為什麼重要**：如果不反思這個假設，論文的分析可能過度理性化了大學的決策過程。
-   **建議**：在討論中加入一段反思，討論「大學的策略是否真的是有意識的選擇」。
-   **嚴重度**：Major
+3. **W3: Implicit assumption of "university as enterprise"**:
+   **Problem**: The paper implicitly treats universities as rational strategic actors, but universities are typical "organized anarchies" (Cohen & March, 1974) — goals are ambiguous, technology is uncertain, participation is fluid. In such organizations, "strategy" is formed very differently from businesses, closer to Mintzberg's emergent strategy rather than deliberate strategy.
+   **Why it matters**: Without reflecting on this assumption, the analysis may over-rationalize university decision-making processes.
+   **Suggestion**: Add a reflective paragraph in the discussion on "whether university strategies are truly conscious choices."
+   **Severity**: Major
 
 #### Cross-Disciplinary Reading Recommendations
 - Cameron, K.S. & Zammuto, R.F. (1983). Matching managerial strategies to conditions of decline. *Human Resource Management*, 22(4), 359-375.
@@ -273,8 +273,8 @@
 - Mintzberg, H. (1987). The strategy concept I: Five Ps for strategy. *California Management Review*, 30(1), 11-24.
 
 #### Questions for Authors
-1. 在你的 6 所個案中，策略是高層主動制定的（deliberate strategy），還是在面對環境變化時逐漸形成的（emergent strategy）？這個區分對你的結論有影響嗎？
-2. 你是否考慮過大學作為非營利組織，其「退場策略」與企業的「退出市場」有根本性的不同——大學退場涉及學生受教權、教職員工安置等公共利益問題？
+1. In your 6 cases, was the strategy formulated proactively by senior leadership (deliberate strategy), or did it gradually emerge in response to environmental changes (emergent strategy)? Does this distinction affect your conclusions?
+2. Have you considered that as a nonprofit organization, the "exit strategy" of universities is fundamentally different from corporate "market exit" — university exit involves student educational rights, faculty/staff placement, and other public interest issues?
 
 ---
 
@@ -288,54 +288,54 @@
 
 | Reviewer | Role | Recommendation | Confidence |
 |----------|------|---------------|------------|
-| EIC | *Higher Education* 副主編 | Major Revision | 4/5 |
-| Reviewer 1 | 質性方法論專家 | Minor Revision | 5/5 |
-| Reviewer 2 | 台灣高教政策研究者 | Major Revision | 5/5 |
-| Reviewer 3 | 策略管理學者 | Major Revision | 4/5 |
+| EIC | *Higher Education* Associate Editor | Major Revision | 4/5 |
+| Reviewer 1 | Qualitative methodology expert | Minor Revision | 5/5 |
+| Reviewer 2 | Taiwan higher education policy researcher | Major Revision | 5/5 |
+| Reviewer 3 | Strategic management scholar | Major Revision | 4/5 |
 
 #### Consensus Analysis
 
-**[CONSENSUS-4]**（所有 reviewer 同意）：
-1. 研究主題具有時效性和重要性
-2. 資料收集的廣度和深度值得肯定
-3. 理論貢獻需要更加明確
+**[CONSENSUS-4]** (All reviewers agree):
+1. The research topic is timely and significant
+2. The breadth and depth of data collection are commendable
+3. Theoretical contribution needs to be more clearly articulated
 
-**[CONSENSUS-3]**（3/4 reviewer 同意）：
-1. 論文需要更好的國際/跨領域定位（EIC + R2 + R3）
-2. 策略分類需要與既有分類做比較（EIC + R2 + R3）
+**[CONSENSUS-3]** (3/4 reviewers agree):
+1. The paper needs better international/cross-disciplinary positioning (EIC + R2 + R3)
+2. Strategy classification needs comparison with existing classifications (EIC + R2 + R3)
 
-**分歧 1: 方法論的嚴重度**
-- **R1 觀點**：方法論基本可接受，只需 Minor Revision（補充 within-case analysis 和 codebook）
-- **R2/R3 觀點**：方法論層面沒有重大問題（他們的 Major 來自其他面向）
-- **Editor's Resolution**：採納 R1 的建議作為方法論補充，將其列為 P1 修改項目，但不因此升級整體嚴重度。R1 的 confidence 為 5/5，且其方法論意見在專業範圍內，應予以尊重。
+**Disagreement 1: Severity of methodology issues**
+- **R1 view**: Methodology is basically acceptable, only needs Minor Revision (supplement within-case analysis and codebook)
+- **R2/R3 view**: No major methodology issues (their Major comes from other aspects)
+- **Editor's Resolution**: Adopt R1's suggestions as methodology supplements, listed as P1 revision items, but this alone does not escalate the overall severity. R1's confidence is 5/5, and their methodology opinion is within their area of expertise and should be respected.
 
-**分歧 2: 理論框架的處理**
-- **R3 觀點**：Porter 框架不適合高教脈絡，應加入組織衰退理論
-- **R2 觀點**：理論框架問題次要，主要問題是政策脈絡和文獻
-- **Editor's Resolution**：R3 的觀點有理論基礎且具體。不要求完全替換框架，但要求作者 (1) 論證 Porter 在高教的適用邊界，(2) 將組織衰退理論加入作為補充視角。
+**Disagreement 2: Handling of theoretical framework**
+- **R3 view**: Porter's framework is not suitable for the higher education context; organizational decline theory should be added
+- **R2 view**: Theoretical framework issue is secondary; main problems are policy context and literature
+- **Editor's Resolution**: R3's viewpoint has theoretical basis and is specific. Do not require complete framework replacement, but require the author to (1) justify Porter's applicability boundaries in higher education, (2) add organizational decline theory as a supplementary perspective.
 
 #### Decision Rationale
-本論文探討一個重要且及時的議題，資料收集紮實。然而，四位 reviewer 均同意論文的理論貢獻需要顯著加強。核心問題有三：(1) 政策脈絡需要更新至 2022 退場條例；(2) 理論框架的適用性需要更充分的論證，且應補充組織衰退理論；(3) 跨個案分析的方法論呈現需要更系統化。這些修改需要大幅改寫文獻回顧和討論章節，因此建議 Major Revision。
+This paper investigates an important and timely topic with solid data collection. However, all four reviewers agree that the paper's theoretical contribution needs to be significantly strengthened. There are three core issues: (1) the policy context needs to be updated to the 2022 Exit Act; (2) the theoretical framework's applicability requires more thorough justification, and organizational decline theory should be added; (3) the cross-case analysis methodology presentation needs to be more systematic. These revisions require substantial rewriting of the literature review and discussion chapters, hence the recommendation of Major Revision.
 
 #### Revision Roadmap
 
-**Priority 1 — 結構性修改（預估工時：10-14 天）**
-- [ ] R1: 更新政策脈絡至 2022 退場條例（來源：R2-W1, Critical）
-- [ ] R2: 論證 Porter/RBV 在高教管制市場的適用邊界（來源：R3-W1, Critical）
-- [ ] R3: 加入組織衰退理論作為補充框架（來源：R3-W2, Major）
-- [ ] R4: 增加 within-case summary + 系統化 cross-case 分析（來源：R1-W1, Major）
+**Priority 1 — Structural Revisions (Estimated effort: 10-14 days)**
+- [ ] R1: Update policy context to the 2022 Exit Act (Source: R2-W1, Critical)
+- [ ] R2: Justify Porter/RBV applicability boundaries in the regulated higher education market (Source: R3-W1, Critical)
+- [ ] R3: Add organizational decline theory as a supplementary framework (Source: R3-W2, Major)
+- [ ] R4: Add within-case summary + systematic cross-case analysis (Source: R1-W1, Major)
 
-**Priority 2 — 內容補充（預估工時：5-7 天）**
-- [ ] S1: 補充遺漏的中文文獻（來源：R2-W2, Major）
-- [ ] S2: 比較本研究分類與既有分類（來源：R2-W3 + EIC-W1, Major）
-- [ ] S3: 增加國際比較的討論段落（來源：EIC-W2, Major）
-- [ ] S4: 補充 coding 過程和 codebook（來源：R1-W2, Major）
-- [ ] S5: 反思「大學即理性策略行為者」的假設（來源：R3-W3, Major）
+**Priority 2 — Content Supplementation (Estimated effort: 5-7 days)**
+- [ ] S1: Supplement missing Chinese-language literature (Source: R2-W2, Major)
+- [ ] S2: Compare this study's classification with existing classifications (Source: R2-W3 + EIC-W1, Major)
+- [ ] S3: Add international comparison discussion section (Source: EIC-W2, Major)
+- [ ] S4: Supplement coding process and codebook (Source: R1-W2, Major)
+- [ ] S5: Reflect on the "university as rational strategic actor" assumption (Source: R3-W3, Major)
 
-**Priority 3 — 文字與格式（預估工時：2-3 天）**
-- [ ] 改善標題，突出理論角度（來源：EIC-W3）
-- [ ] 增加資料飽和論證（來源：R1-W3）
-- [ ] 附上訪談大綱（來源：R1-Q1）
-- [ ] 修正引用格式小問題
+**Priority 3 — Text and Formatting (Estimated effort: 2-3 days)**
+- [ ] Improve title to highlight theoretical angle (Source: EIC-W3)
+- [ ] Add data saturation argument (Source: R1-W3)
+- [ ] Attach interview guide (Source: R1-Q1)
+- [ ] Fix minor citation format issues
 
-**Revision Deadline**：建議 6-8 週
+**Revision Deadline**: Recommended 6-8 weeks

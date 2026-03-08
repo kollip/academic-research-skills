@@ -1,472 +1,478 @@
-# Example: 完整 Pipeline 對話紀錄
+# Example: Full Pipeline Conversation Log
 
-## 情境說明
+## Scenario Description
 
-**使用者類型**：教育研究所碩士生，第一次寫學術論文
-**主題**：少子化對台灣私立大學招生策略的影響
-**目標**：完成一篇可投稿的 IMRaD 論文
-**語言**：繁體中文（摘要雙語）
-
----
-
-## 使用者輸入
-
-```
-我想寫一篇關於少子化對台灣私立大學招生策略影響的論文，
-從頭到尾幫我，我是第一次寫學術論文，不太確定流程。
-```
+**User type**: Master's student in Education, first time writing an academic paper
+**Topic**: The impact of declining birthrate on enrollment strategies of private universities in Taiwan
+**Goal**: Complete a submission-ready IMRaD paper
+**Language**: Traditional Chinese (bilingual abstract)
 
 ---
 
-## Pipeline 執行紀錄
-
-### Orchestrator: 啟動偵測
+## User Input
 
 ```
-偵測結果：
-- 材料：無（從零開始）
-- 目標：完整流程
-- 進入點：Stage 1 (RESEARCH)
-- 使用者偏好：第一次寫論文 --> 推薦引導模式
-
-推薦 Pipeline 配置：
-
-  Stage 1 RESEARCH: socratic -- 第一次做研究，蘇格拉底式引導幫你想清楚
-  Stage 2 WRITE:    plan     -- 逐章節引導你規劃論文結構
-  Stage 3 REVIEW:   full     -- 完整 4 人審查，模擬真實投稿體驗
-  Stage 4 REVISE:   revision -- 根據審查意見逐項修改
-  Stage 5 FINALIZE: format   -- 轉換為你需要的格式（LaTeX/DOCX/PDF）
-
-你可以隨時調整任何 stage 的 mode。要開始嗎？
+I want to write a paper on the impact of declining birthrate on enrollment
+strategies of private universities in Taiwan. Help me from start to finish.
+This is my first time writing an academic paper and I'm not sure about the process.
 ```
 
-**使用者**：好的，開始吧！
+---
+
+## Pipeline Execution Log
+
+### Orchestrator: Launch Detection
+
+```
+Detection results:
+- Materials: None (starting from scratch)
+- Goal: Full workflow
+- Entry point: Stage 1 (RESEARCH)
+- User preference: First time writing a paper --> recommend guided mode
+
+Recommended Pipeline Configuration:
+
+  Stage 1 RESEARCH: socratic -- First time doing research, Socratic guidance to help you think through
+  Stage 2 WRITE:    plan     -- Chapter-by-chapter guidance to plan your paper structure
+  Stage 3 REVIEW:   full     -- Complete 4-person review, simulating real submission experience
+  Stage 4 REVISE:   revision -- Item-by-item revision based on review comments
+  Stage 5 FINALIZE: format   -- Convert to your desired format (LaTeX/DOCX/PDF)
+
+You can adjust any stage's mode at any time. Ready to begin?
+```
+
+**User**: Yes, let's start!
 
 ---
 
 ### Stage 1: RESEARCH (socratic mode)
 
 ```
-進入 Stage 1 (RESEARCH) -- 使用 deep-research socratic mode
+Entering Stage 1 (RESEARCH) -- using deep-research socratic mode
 
-載入 deep-research SKILL.md...
-啟動 socratic_mentor_agent...
+Loading deep-research SKILL.md...
+Launching socratic_mentor_agent...
 ```
 
-**Socratic Mentor**：你提到「少子化對私立大學招生策略的影響」。在我們開始之前，我想先了解幾件事：
+**Socratic Mentor**: You mentioned "the impact of declining birthrate on private university enrollment strategies." Before we begin, I'd like to understand a few things:
 
-1. 你為什麼對這個主題感興趣？是因為你觀察到了什麼現象嗎？
-2. 當你說「招生策略」，你心裡想的是哪一種？網路行銷？獎學金？科系調整？還是全部？
+1. Why are you interested in this topic? Did you observe some phenomenon?
+2. When you say "enrollment strategies," what kind are you thinking of? Online marketing? Scholarships? Program adjustments? Or all of the above?
 
-**使用者**：我觀察到很多私立大學開始做一些以前不會做的事，像是到高中辦說明會、降低入學門檻、開很多新科系。我想知道這些策略到底有沒有效。
+**User**: I've noticed that many private universities are starting to do things they wouldn't have done before, like hosting information sessions at high schools, lowering admission thresholds, and opening many new programs. I want to know if these strategies actually work.
 
-**Socratic Mentor**：很好的觀察。你提到了三種策略：推廣活動、入學標準調整、科系新設。
+**Socratic Mentor**: Great observation. You mentioned three types of strategies: outreach activities, admission standard adjustments, and new program establishment.
 
-那我追問一下：你說的「有沒有效」，是指什麼？新生註冊率提高？學生素質維持？還是學校存活下來？不同的「效」會導向完全不同的研究問題。
+Let me follow up: What do you mean by "actually work"? Higher freshmen enrollment rate? Maintaining student quality? The school surviving? Different definitions of "working" lead to completely different research questions.
 
-**使用者**：我覺得最重要的是新生註冊率，畢竟招不到學生什麼都不用談了。
+**User**: I think the most important thing is the freshmen enrollment rate — if you can't recruit students, nothing else matters.
 
-**Socratic Mentor**：
-[INSIGHT: 研究焦點 = 招生策略對新生註冊率的實際效果]
+**Socratic Mentor**:
+[INSIGHT: Research focus = actual effectiveness of enrollment strategies on freshmen enrollment rate]
 
-好，那再深入一步。如果你的研究結論是「某些策略確實能提高註冊率」，這對誰有用？私立大學的校長？教育部的政策制定者？還是高中生的家長？
+Good. Let's go deeper. If your research conclusion is "certain strategies can indeed improve enrollment rates," who would find this useful? Private university presidents? Ministry of Education policymakers? Or parents of high school students?
 
-不同的讀者群，你的論文寫法會很不一樣。
+Different target audiences will significantly change how you write your paper.
 
-**使用者**：主要是給大學管理者看的，讓他們知道哪些策略值得投資。
+**User**: Primarily for university administrators, so they know which strategies are worth investing in.
 
-*（socratic 對話持續 8 輪，涵蓋 5 個 Layer...）*
+*(Socratic dialogue continues for 8 rounds, covering 5 Layers...)*
 
-**Socratic Mentor -- 最終彙整**：
+**Socratic Mentor -- Final Summary**:
 
 ```
 Research Plan Summary
 
-研究問題：
-  在少子化趨勢下，台灣私立大學採用的招生策略（推廣活動、
-  入學標準調整、科系新設）對新生註冊率的影響為何？
-  哪些策略對不同類型的私立大學（一般/技職）最有效？
+Research question:
+  Under the declining birthrate trend, what is the impact of enrollment
+  strategies (outreach activities, admission standard adjustments, new
+  program establishment) adopted by private universities in Taiwan on
+  freshmen enrollment rates? Which strategies are most effective for
+  different types of private universities (general/technical-vocational)?
 
-方法論：
-  混合方法（Mixed Methods）
-  - 量化：教育部公開資料分析（109-113 學年度）
-  - 質化：3-5 所私立大學招生主管深度訪談
+Methodology:
+  Mixed Methods
+  - Quantitative: Ministry of Education open data analysis (academic years 109-113)
+  - Qualitative: In-depth interviews with enrollment directors at 3-5 private universities
 
-目標期刊等級：TSSCI
+Target journal level: TSSCI
 
-已萃取的 INSIGHT（8 條）：
-  [INSIGHT 1] 研究焦點 = 招生策略對新生註冊率的實際效果
-  [INSIGHT 2] 讀者群 = 大學管理者
-  [INSIGHT 3] 三種策略維度：推廣、入學標準、科系調整
-  [INSIGHT 4] 需要控制變項：學校地理位置、學校規模、學費水準
-  [INSIGHT 5] 方法選擇：混合方法（量化趨勢 + 質化脈絡）
-  [INSIGHT 6] 量化資料來源：教育部校務資訊公開平臺
-  [INSIGHT 7] 最大限制：無法取得個別學校的行銷預算數據
-  [INSIGHT 8] 研究貢獻：為資源有限的私立大學提供證據基礎的策略建議
+Extracted INSIGHTs (8):
+  [INSIGHT 1] Research focus = actual effectiveness of enrollment strategies on freshmen enrollment rate
+  [INSIGHT 2] Target audience = university administrators
+  [INSIGHT 3] Three strategy dimensions: outreach, admission standards, program adjustment
+  [INSIGHT 4] Need control variables: school geographic location, school size, tuition level
+  [INSIGHT 5] Method choice: mixed methods (quantitative trends + qualitative context)
+  [INSIGHT 6] Quantitative data source: MOE University Information Disclosure Platform
+  [INSIGHT 7] Major limitation: cannot obtain individual schools' marketing budget data
+  [INSIGHT 8] Research contribution: provide evidence-based strategy recommendations for resource-limited private universities
 ```
 
-接著由 bibliography_agent 執行文獻搜尋、source_verification_agent 驗證來源...
+Then bibliography_agent executes literature search, source_verification_agent verifies sources...
 
-**Stage 1 完成產出物：**
-- RQ Brief（含 FINER 評分）
-- Methodology Blueprint（混合方法設計）
-- Annotated Bibliography（22 筆文獻，APA 7.0）
-- Synthesis Report（主題綜合分析 + 研究缺口）
+**Stage 1 Deliverables:**
+- RQ Brief (with FINER scoring)
+- Methodology Blueprint (mixed methods design)
+- Annotated Bibliography (22 references, APA 7.0)
+- Synthesis Report (thematic synthesis + research gaps)
 
 ---
 
-### Orchestrator: Stage 1 --> 2 轉場
+### Orchestrator: Stage 1 --> 2 Transition
 
 ```
-Stage 1 (RESEARCH) 完成！
+Stage 1 (RESEARCH) Complete!
 
-產出物：
-- RQ Brief：聚焦於私立大學三種招生策略對註冊率的影響
-- Methodology Blueprint：混合方法（量化 MOE 資料 + 質化訪談）
-- Annotated Bibliography：22 筆文獻（17 中文 + 5 英文）
-- Synthesis Report：識別 3 個研究缺口
+Deliverables:
+- RQ Brief: Focused on three enrollment strategies' impact on enrollment rates at private universities
+- Methodology Blueprint: Mixed methods (quantitative MOE data + qualitative interviews)
+- Annotated Bibliography: 22 references (17 Chinese + 5 English)
+- Synthesis Report: Identified 3 research gaps
 
-下一步是 Stage 2 (WRITE)。
-因為你是第一次寫論文，我推薦用 plan mode（逐章引導）。
-規劃完大綱後，再切到 full mode 產出完整草稿。
+Next step is Stage 2 (WRITE).
+Since this is your first time writing a paper, I recommend plan mode (chapter-by-chapter guidance).
+After completing the outline, we'll switch to full mode to produce the complete draft.
 
-要繼續嗎？
+Continue?
 
-進度：[v]研究 -> [..]撰寫 -> [ ]審查 -> [ ]修訂 -> [ ]完稿
+Progress: [v]Research -> [..]Writing -> [ ]Review -> [ ]Revision -> [ ]Finalization
 ```
 
-**使用者**：繼續！
+**User**: Continue!
 
 ---
 
 ### Stage 2: WRITE (plan --> full mode)
 
 ```
-進入 Stage 2 (WRITE) -- 使用 academic-paper plan mode
+Entering Stage 2 (WRITE) -- using academic-paper plan mode
 
-載入 academic-paper SKILL.md...
-handoff 材料：RQ Brief + Bibliography + Synthesis
-intake_agent 自動偵測到 deep-research 產出，跳過冗餘的 Phase 0 問題
-啟動 socratic_mentor_agent (plan mode)...
+Loading academic-paper SKILL.md...
+handoff materials: RQ Brief + Bibliography + Synthesis
+intake_agent auto-detected deep-research output, skipping redundant Phase 0 questions
+Launching socratic_mentor_agent (plan mode)...
 ```
 
-**Plan Mode Mentor**：我看到你的 Research Plan Summary 了。研究問題很清楚。我們來逐章規劃論文。先從 Introduction 開始。
+**Plan Mode Mentor**: I've reviewed your Research Plan Summary. The research question is clear. Let's plan the paper chapter by chapter. Starting with the Introduction.
 
-你要讓讀者感受到什麼問題的急迫性？換句話說，為什麼讀者現在就該讀這篇論文？
+What sense of urgency do you want the reader to feel? In other words, why should the reader read this paper right now?
 
-**使用者**：因為少子化已經是現在進行式了，很多大學可能 5 年內就要退場。
+**User**: Because the declining birthrate is already happening — many universities might close within 5 years.
 
-**Plan Mode Mentor**：好。那你的 Introduction 的開場可以用一個具體的數字讓讀者感受到急迫性。你知道最近 5 年有多少私立大學退場或停招嗎？
+**Plan Mode Mentor**: Good. Your Introduction opening could use a specific number to convey urgency. Do you know how many private universities have closed or suspended enrollment in the past 5 years?
 
-*（plan mode 對話持續 12 輪，涵蓋 6 個章節...）*
+*(Plan mode dialogue continues for 12 rounds, covering 6 chapters...)*
 
-**Plan Mode 完成 --> 切換到 full mode**
+**Plan Mode Complete --> Switch to full mode**
 
 ```
-Chapter Plan 完成。接下來切換到 full mode 撰寫完整草稿。
+Chapter Plan complete. Switching to full mode to write the complete draft.
 
-academic-paper draft_writer_agent 根據 Chapter Plan 撰寫...
-citation_compliance_agent 驗證引用...
-abstract_bilingual_agent 撰寫雙語摘要...
+academic-paper draft_writer_agent writing based on Chapter Plan...
+citation_compliance_agent verifying citations...
+abstract_bilingual_agent writing bilingual abstract...
 ```
 
-**Stage 2 完成產出物：**
-- Paper Draft（5,200 字，IMRaD 結構，含雙語摘要）
+**Stage 2 Deliverables:**
+- Paper Draft (5,200 words, IMRaD structure, with bilingual abstract)
 
 ---
 
-### Orchestrator: Stage 2 --> 3 轉場
+### Orchestrator: Stage 2 --> 3 Transition
 
 ```
-Stage 2 (WRITE) 完成！
+Stage 2 (WRITE) Complete!
 
-產出物：
-- Paper Draft：5,200 字 IMRaD 論文
-  - 摘要（中文 420 字 + 英文 230 words）
-  - Introduction：研究背景與問題陳述
-  - Literature Review：三個主題（少子化趨勢、招生策略分類、成效評估）
-  - Methodology：混合方法設計
-  - Results：量化發現 + 質化主題
-  - Discussion：策略效果比較 + 政策建議
-  - References：22 筆（APA 7.0）
+Deliverables:
+- Paper Draft: 5,200-word IMRaD paper
+  - Abstract (Chinese 420 words + English 230 words)
+  - Introduction: Research background and problem statement
+  - Literature Review: Three themes (birthrate trends, enrollment strategy classification, effectiveness evaluation)
+  - Methodology: Mixed methods design
+  - Results: Quantitative findings + qualitative themes
+  - Discussion: Strategy effectiveness comparison + policy recommendations
+  - References: 22 entries (APA 7.0)
 
-下一步是 Stage 3 (REVIEW)。
-使用 full mode，模擬 4 位 reviewer 的完整審稿流程。
-審查完成後會產出 Editorial Decision 和 Revision Roadmap。
+Next step is Stage 3 (REVIEW).
+Using full mode, simulating a complete review process with 4 reviewers.
+After review, an Editorial Decision and Revision Roadmap will be produced.
 
-要繼續嗎？
+Continue?
 
-進度：[v]研究 -> [v]撰寫 -> [..]審查 -> [ ]修訂 -> [ ]完稿
+Progress: [v]Research -> [v]Writing -> [..]Review -> [ ]Revision -> [ ]Finalization
 ```
 
-**使用者**：好，幫我審查。
+**User**: OK, review it for me.
 
 ---
 
 ### Stage 3: REVIEW (full mode)
 
 ```
-進入 Stage 3 (REVIEW) -- 使用 academic-paper-reviewer full mode
+Entering Stage 3 (REVIEW) -- using academic-paper-reviewer full mode
 
-載入 academic-paper-reviewer SKILL.md...
-傳遞 Paper Draft 給 reviewer...
-field_analyst_agent 分析論文領域...
+Loading academic-paper-reviewer SKILL.md...
+Passing Paper Draft to reviewer...
+field_analyst_agent analyzing paper domain...
 ```
 
-**Field Analysis 結果：**
+**Field Analysis Results:**
 ```
-論文領域：教育政策 / 高等教育管理
-研究範式：Pragmatism（混合方法）
-方法類型：量化（次級資料分析）+ 質化（訪談）
+Paper domain: Education Policy / Higher Education Management
+Research paradigm: Pragmatism (mixed methods)
+Method type: Quantitative (secondary data analysis) + Qualitative (interviews)
 
 Reviewer Configuration:
-  EIC:        《教育政策論壇》主編，專長教育經濟學
-  Reviewer 1: 量化方法專家，專長教育統計與大型資料庫分析
-  Reviewer 2: 高等教育管理學者，專長大學治理與招生政策
-  Reviewer 3: 人口學家，專長少子化與勞動市場，跨領域觀點
+  EIC:        Journal of Education Policy Editor, specializing in economics of education
+  Reviewer 1: Quantitative methods expert, specializing in education statistics and large database analysis
+  Reviewer 2: Higher education management scholar, specializing in university governance and enrollment policy
+  Reviewer 3: Demographer, specializing in declining birthrate and labor market, interdisciplinary perspective
 ```
 
-*（4 位 reviewer 平行審查...editorial_synthesizer_agent 彙整...）*
+*(4 reviewers review in parallel... editorial_synthesizer_agent compiles...)*
 
-**Editorial Decision：Major Revision**
+**Editorial Decision: Major Revision**
 
 ```
-Required Revisions（必須修改）：
-R1: [Methodology] 量化分析缺少控制變項（學校規模、地理位置）
+Required Revisions:
+R1: [Methodology] Quantitative analysis lacks control variables (school size, geographic location)
     -- Reviewer 1, Priority 1
-R2: [Literature]  文獻回顧缺少 2024-2026 年的最新研究
+R2: [Literature]  Literature review missing the most recent 2024-2026 studies
     -- Reviewer 2, Priority 1
-R3: [Results]     質化訪談僅 3 所學校，樣本代表性不足
-    -- Reviewer 1 & 3 共識, Priority 2
-R4: [Discussion]  結論過於籠統，未區分一般/技職大學的差異
+R3: [Results]     Qualitative interviews with only 3 schools, sample representativeness insufficient
+    -- Reviewer 1 & 3 consensus, Priority 2
+R4: [Discussion]  Conclusions too general, need to differentiate between general/technical-vocational universities
     -- Reviewer 2, Priority 2
-R5: [Introduction] 研究缺口論證不夠鋒利，需要更具體的數據支撐
+R5: [Introduction] Research gap argumentation not sharp enough, needs more specific data support
     -- EIC, Priority 3
 ```
 
-**Stage 3 完成產出物：**
-- 4 份獨立審查報告
+**Stage 3 Deliverables:**
+- 4 independent review reports
 - Editorial Decision Letter: Major Revision
-- Revision Roadmap（5 個必修項目 + 3 個建議修改）
+- Revision Roadmap (5 required items + 3 suggested modifications)
 
 ---
 
-### Orchestrator: Stage 3 --> 4 轉場
+### Orchestrator: Stage 3 --> 4 Transition
 
 ```
-Stage 3 (REVIEW) 完成！
+Stage 3 (REVIEW) Complete!
 
-審查結果：Major Revision
-  - 5 個必須修改項目
-  - 3 個建議修改項目
-  - 最關鍵問題：量化分析的控制變項 + 文獻更新
+Review result: Major Revision
+  - 5 required revision items
+  - 3 suggested modification items
+  - Most critical issues: control variables in quantitative analysis + literature update
 
-下一步是 Stage 4 (REVISE)。
-我會將 Revision Roadmap 傳給 academic-paper revision mode，
-逐項引導你完成修訂。
+Next step is Stage 4 (REVISE).
+I'll pass the Revision Roadmap to academic-paper revision mode,
+guiding you through item-by-item revision.
 
-修訂完成後進入 Stage 3' (RE-REVIEW) 確認品質。
-最多 2 輪修訂循環。
+After revision, we'll enter Stage 3' (RE-REVIEW) to confirm quality.
+Maximum 2 revision cycles.
 
-要開始修訂嗎？
+Ready to start revision?
 
-進度：[v]研究 -> [v]撰寫 -> [v]審查 -> [..]修訂 -> [ ]完稿
+Progress: [v]Research -> [v]Writing -> [v]Review -> [..]Revision -> [ ]Finalization
 ```
 
-**使用者**：開始修訂。
+**User**: Start revision.
 
 ---
 
 ### Stage 4: REVISE (revision mode, Round 1)
 
 ```
-進入 Stage 4 (REVISE) -- 使用 academic-paper revision mode
+Entering Stage 4 (REVISE) -- using academic-paper revision mode
 
-載入 academic-paper SKILL.md (revision mode)...
-傳遞 Paper Draft + Revision Roadmap...
-peer_reviewer_agent 監督修訂品質...
+Loading academic-paper SKILL.md (revision mode)...
+Passing Paper Draft + Revision Roadmap...
+peer_reviewer_agent monitoring revision quality...
 ```
 
-**Revision 進度追蹤：**
+**Revision Progress Tracking:**
 ```
-R1: [v] 新增控制變項（學校規模、地理位置、學費水準）
-R2: [v] 補充 2024-2026 年文獻（新增 8 筆引用）
-R3: [v] 補充說明質化樣本選取策略（purposive sampling 理由）
-R4: [v] 分離一般/技職大學的分析結果，新增比較表
-R5: [v] 改寫 Introduction 第 2-3 段，加入退場學校數據
+R1: [v] Added control variables (school size, geographic location, tuition level)
+R2: [v] Supplemented 2024-2026 literature (added 8 new citations)
+R3: [v] Added explanation of qualitative sampling strategy (purposive sampling rationale)
+R4: [v] Separated general/technical-vocational university analysis results, added comparison table
+R5: [v] Rewrote Introduction paragraphs 2-3, added school closure data
 ```
 
-**Stage 4 完成產出物：**
-- Revised Draft（6,800 字，比原稿增加 1,600 字）
-- Response to Reviewers（R-A-C 格式，逐項回覆）
+**Stage 4 Deliverables:**
+- Revised Draft (6,800 words, 1,600 words more than original)
+- Response to Reviewers (R-A-C format, point-by-point response)
 
 ---
 
-### Orchestrator: Stage 4 --> 3' 轉場
+### Orchestrator: Stage 4 --> 3' Transition
 
 ```
-Stage 4 (REVISE) 完成！修訂輪次：Round 1
+Stage 4 (REVISE) Complete! Revision round: Round 1
 
-修訂成果：
-- 5/5 必修項目全部處理
-- 論文從 5,200 字擴充至 6,800 字
-- 新增 8 筆 2024-2026 年引用
-- 新增一般/技職大學比較表
-- Response to Reviewers 已完成
+Revision results:
+- 5/5 required items all addressed
+- Paper expanded from 5,200 to 6,800 words
+- Added 8 new 2024-2026 citations
+- Added general/technical-vocational university comparison table
+- Response to Reviewers completed
 
-下一步是 Stage 3' (RE-REVIEW)。
-使用 full mode 確認修訂品質。
-這是第 1 輪修訂循環（最多 2 輪）。
+Next step is Stage 3' (RE-REVIEW).
+Using full mode to confirm revision quality.
+This is revision cycle 1 (max 2 cycles).
 
-要送出 re-review 嗎？
+Submit for re-review?
 
-進度：[v]研究 -> [v]撰寫 -> [v]審查 -> [v]修訂 -> [..]再審 -> [ ]完稿
+Progress: [v]Research -> [v]Writing -> [v]Review -> [v]Revision -> [..]Re-review -> [ ]Finalization
 ```
 
-**使用者**：送出再審。
+**User**: Submit for re-review.
 
 ---
 
 ### Stage 3': RE-REVIEW (full mode, Loop 1)
 
 ```
-進入 Stage 3' (RE-REVIEW) -- Loop 1/2
+Entering Stage 3' (RE-REVIEW) -- Loop 1/2
 
-載入 academic-paper-reviewer SKILL.md...
-傳遞 Revised Draft + Response to Reviewers...
-4 位 reviewer 重新審查修訂品質...
+Loading academic-paper-reviewer SKILL.md...
+Passing Revised Draft + Response to Reviewers...
+4 reviewers re-reviewing revision quality...
 ```
 
-**Editorial Decision：Minor Revision**
+**Editorial Decision: Minor Revision**
 
 ```
-R1 回應：[v] 充分回應，控制變項分析完整
-R2 回應：[v] 文獻更新充分
-R3 回應：[v] 抽樣策略說明可接受，但建議加一句限制聲明
-R4 回應：[v] 比較分析清楚，但 Discussion 最後一段可再精煉
-R5 回應：[v] Introduction 改善明顯
+R1 response: [v] Adequately addressed, control variable analysis complete
+R2 response: [v] Literature update sufficient
+R3 response: [v] Sampling strategy explanation acceptable, but recommend adding a limitation statement
+R4 response: [v] Comparative analysis clear, but Discussion final paragraph could be further refined
+R5 response: [v] Introduction improvement significant
 
-新增建議：
-S1: Discussion 最後一段建議精煉，聚焦政策建議
-S2: 抽樣限制聲明建議移至 Methodology 的 Limitations 段
+New suggestions:
+S1: Recommend refining Discussion final paragraph, focusing on policy recommendations
+S2: Recommend moving sampling limitation statement to Methodology Limitations section
 ```
 
-**Editorial Synthesizer**：修訂品質良好。剩餘問題均為 minor，建議 Accept with Minor Revision。
+**Editorial Synthesizer**: Revision quality is good. Remaining issues are all minor. Recommend Accept with Minor Revision.
 
 ---
 
-### Orchestrator: Stage 3' --> 5 轉場
+### Orchestrator: Stage 3' --> 5 Transition
 
 ```
-Stage 3' (RE-REVIEW) 完成！
+Stage 3' (RE-REVIEW) Complete!
 
-審查結果：Minor Revision (Accept 方向)
-  - 所有必修項目通過
-  - 剩餘 2 個小型建議修改（non-blocking）
+Review result: Minor Revision (Accept direction)
+  - All required items passed
+  - 2 remaining small suggested modifications (non-blocking)
 
-因為是 Minor Revision（非 Major），可以直接進入 Stage 5 (FINALIZE)。
-小型修改會在格式化過程中一併處理。
+Since this is Minor Revision (not Major), we can proceed directly to Stage 5 (FINALIZE).
+Minor changes will be handled during the formatting process.
 
-你需要什麼格式的最終版本？
-  a) LaTeX (.tex + .bib) -- 適合投稿 TSSCI 期刊
-  b) DOCX -- 適合校內審查
-  c) PDF -- 適合分享
-  d) 全部都要
+What format do you need for the final version?
+  a) LaTeX (.tex + .bib) -- suitable for TSSCI journal submission
+  b) DOCX -- suitable for internal school review
+  c) PDF -- suitable for sharing
+  d) All of the above
 
-進度：[v]研究 -> [v]撰寫 -> [v]審查 -> [v]修訂 -> [v]再審 -> [..]完稿
+Progress: [v]Research -> [v]Writing -> [v]Review -> [v]Revision -> [v]Re-review -> [..]Finalization
 ```
 
-**使用者**：全部都要。
+**User**: All of the above.
 
 ---
 
 ### Stage 5: FINALIZE (format-convert mode)
 
 ```
-進入 Stage 5 (FINALIZE) -- 使用 academic-paper format-convert mode
+Entering Stage 5 (FINALIZE) -- using academic-paper format-convert mode
 
-載入 academic-paper SKILL.md (format-convert mode)...
-一併處理 2 個 minor revision items...
-formatter_agent 執行格式轉換...
+Loading academic-paper SKILL.md (format-convert mode)...
+Simultaneously handling 2 minor revision items...
+formatter_agent executing format conversion...
 ```
 
-**Stage 5 完成產出物：**
-- `declining_birthrate_private_university.tex` + `.bib`（LaTeX 版）
-- `declining_birthrate_private_university.docx`（DOCX 版）
-- `declining_birthrate_private_university.pdf`（PDF 版）
-- `declining_birthrate_private_university.md`（Markdown 原稿）
+**Stage 5 Deliverables:**
+- `declining_birthrate_private_university.tex` + `.bib` (LaTeX version)
+- `declining_birthrate_private_university.docx` (DOCX version)
+- `declining_birthrate_private_university.pdf` (PDF version)
+- `declining_birthrate_private_university.md` (Markdown original)
 
 ---
 
-### Orchestrator: Pipeline 完成
+### Orchestrator: Pipeline Complete
 
 ```
 +=========================================+
 |   Academic Pipeline Status              |
 +=========================================+
-| 主題：少子化對台灣私立大學招生策略的影響  |
+| Topic: Impact of Declining Birthrate on |
+|        Private University Enrollment    |
+|        Strategies in Taiwan             |
 +-----------------------------------------+
 
-  Stage 1 RESEARCH    [v] 已完成
+  Stage 1 RESEARCH    [v] Completed
     Mode: socratic
     Outputs: RQ Brief, Methodology,
              Bibliography (22 sources),
              Synthesis
 
-  Stage 2 WRITE       [v] 已完成
+  Stage 2 WRITE       [v] Completed
     Mode: plan -> full
     Outputs: Paper Draft
              (5,200 words, IMRaD)
 
-  Stage 3 REVIEW      [v] 已完成
+  Stage 3 REVIEW      [v] Completed
     Mode: full
     Decision: Major Revision
     Required Revisions: 5 items
 
-  Stage 4 REVISE      [v] 已完成
+  Stage 4 REVISE      [v] Completed
     Revision Round: 1
     Addressed: 5/5 required revisions
 
-  Stage 3' RE-REVIEW  [v] 已完成
+  Stage 3' RE-REVIEW  [v] Completed
     Loop: 1/2
     Decision: Minor Revision (Accept)
 
-  Stage 5 FINALIZE    [v] 已完成
+  Stage 5 FINALIZE    [v] Completed
     Formats: LaTeX, DOCX, PDF, Markdown
 
 +-----------------------------------------+
-| 材料清單：                               |
-|   [v] 研究問題摘要 (RQ Brief)            |
-|   [v] 方法論藍圖                         |
-|   [v] 文獻書目 (30 sources)              |
-|   [v] 綜合分析報告                       |
-|   [v] 論文草稿                           |
-|   [v] 審查報告 (4 份)                    |
-|   [v] 修訂路線圖                         |
-|   [v] 修訂稿                             |
-|   [v] 回覆審查者                         |
-|   [v] 最終論文 (4 格式)                  |
+| Materials:                              |
+|   [v] RQ Brief                          |
+|   [v] Methodology Blueprint             |
+|   [v] Bibliography (30 sources)         |
+|   [v] Synthesis Report                  |
+|   [v] Paper Draft                       |
+|   [v] Review Reports (4)               |
+|   [v] Revision Roadmap                  |
+|   [v] Revised Draft                     |
+|   [v] Response to Reviewers             |
+|   [v] Final Paper (4 formats)           |
 +-----------------------------------------+
-| 修訂歷程：                               |
-|   Round 1: Major -> 5/5 items addressed  |
-|   RE-REVIEW: Minor Revision (Accept)     |
+| Revision History:                       |
+|   Round 1: Major -> 5/5 items addressed |
+|   RE-REVIEW: Minor Revision (Accept)    |
 +-----------------------------------------+
-| Pipeline 完成！                          |
-| 最終論文：6,800 字 IMRaD                 |
-| 引用：30 筆 (APA 7.0)                   |
-| 摘要：中文 420 字 + 英文 230 words       |
+| Pipeline Complete!                      |
+| Final paper: 6,800 words, IMRaD        |
+| Citations: 30 (APA 7.0)               |
+| Abstract: Chinese 420 words +          |
+|           English 230 words            |
 +=========================================+
 
-恭喜完成！你的論文已準備好投稿。
+Congratulations on completing your paper! It's ready for submission.
 
-最終交付物：
-1. LaTeX 版：declining_birthrate_private_university.tex
-2. DOCX 版：declining_birthrate_private_university.docx
-3. PDF 版：declining_birthrate_private_university.pdf
-4. 原稿：declining_birthrate_private_university.md
+Final deliverables:
+1. LaTeX version: declining_birthrate_private_university.tex
+2. DOCX version: declining_birthrate_private_university.docx
+3. PDF version: declining_birthrate_private_university.pdf
+4. Original: declining_birthrate_private_university.md
 
-如果你之後需要：
-- 再次修改 --> 直接說「修改論文」（觸發 academic-paper revision mode）
-- 做成簡報 --> 說「做成投影片」（觸發 notebooklm-slides-generator）
-- 轉成網頁 --> 說「做成互動網頁」（觸發 report-to-website）
+If you later need to:
+- Revise again --> just say "revise the paper" (triggers academic-paper revision mode)
+- Create a presentation --> say "make slides" (triggers notebooklm-slides-generator)
+- Convert to a website --> say "make an interactive webpage" (triggers report-to-website)
 ```

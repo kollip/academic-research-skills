@@ -1,4 +1,4 @@
-# Citation Format Switcher — 多引用格式切換
+# Citation Format Switcher — Multi-Citation Format Switching
 
 Quick-reference for switching between 5 citation formats. Used by `citation_compliance_agent` and `formatter_agent`.
 
@@ -160,60 +160,60 @@ Smith, John A., and Betty C. Jones. "Article Title in Title Case."
 4. Abbreviate journal titles (NLM catalog)
 5. Use semicolons/colons for volume/page separators
 
-## 中文引用格式切換
+## Chinese Citation Format Switching
 
-### APA 7.0 中文格式
+### APA 7.0 Chinese Format
 
-完整規範詳見 `apa7_chinese_citation_guide.md`。以下為快速參考。
+For complete specifications, see `apa7_chinese_citation_guide.md`. Below is a quick reference.
 
-**中文期刊論文**：
+**Chinese journal article**:
 ```
-王大明、李小華（2024）。文章標題。期刊名稱，卷(期)，頁碼。https://doi.org/xxxxx
-```
-
-**中文書籍**：
-```
-張三（2023）。書名。出版社。
+Wang, Da-Ming, & Li, Xiao-Hua (2024). Article title. Journal Name, Volume(Issue), Pages. https://doi.org/xxxxx
 ```
 
-**政府出版品**：
+**Chinese book**:
 ```
-教育部（2024）。出版品名稱。https://url
+Zhang, San (2023). Book title. Publisher.
 ```
 
-### 中英混合文獻處理
+**Government publication**:
+```
+Ministry of Education (2024). Publication title. https://url
+```
 
-**文中引用**：
-- 中文用全形括號「（作者，年份）」
-- 英文用半形括號 (Author, Year)
-- 中文多位作者用頓號「、」，英文用 &
+### Mixed Chinese-English Reference Handling
 
-**參考文獻排序**：
+**In-text citations**:
+- Chinese uses full-width parentheses: (Author, Year)
+- English uses half-width parentheses: (Author, Year)
+- Chinese multiple authors use enumeration comma; English uses &
 
-| 方案 | 說明 | 適用情境 |
+**Reference list ordering**:
+
+| Option | Description | Applicable Scenario |
 |------|------|---------|
-| **方案 A（推薦）** | 中文在前（依筆畫排序），英文在後（依字母排序） | 多數台灣期刊的慣例 |
-| **方案 B** | 中英混合排列（依筆畫/字母統一排序） | 部分國際期刊 |
+| **Option A (Recommended)** | Chinese first (ordered by stroke count), English after (ordered alphabetically) | Convention for most Taiwan journals |
+| **Option B** | Mixed Chinese-English ordering (unified stroke count / alphabetical) | Some international journals |
 
-**同一作者有中英文著作**：分開列出，中文歸中文區，英文歸英文區。
+**Same author with both Chinese and English works**: List separately — Chinese works go in the Chinese section, English works go in the English section.
 
-### 格式轉換注意事項（中文論文）
+### Format Conversion Notes (Chinese Papers)
 
-**中文 APA → Chicago**：
-1. 出版社格式不同（APA 7 不需出版地，Chicago 需要）
-2. 標題改為「標題大寫」格式
-3. 加入腳註引用系統
+**Chinese APA → Chicago**:
+1. Publication format differs (APA 7 does not require publication location, Chicago does)
+2. Change titles to "title case" format
+3. Add footnote citation system
 
-**中文 APA → IEEE**：
-1. 加入數字編號 [N]
-2. 移除年份在作者後的位置
-3. 依引用順序（非筆畫排序）排列
+**Chinese APA → IEEE**:
+1. Add numbered labels [N]
+2. Remove year from after author position
+3. Order by citation appearance (not stroke count)
 
-**中文論文格式慣例**：
-- 多數台灣期刊使用 APA
-- 人文學科（歷史、文學）偶爾使用 Chicago
-- 工程/資訊類多使用 IEEE
-- 醫學類使用 Vancouver
+**Chinese paper format conventions**:
+- Most Taiwan journals use APA
+- Humanities disciplines (history, literature) occasionally use Chicago
+- Engineering/CS fields mostly use IEEE
+- Medical fields use Vancouver
 
 ---
 

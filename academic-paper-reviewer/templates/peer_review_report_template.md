@@ -1,15 +1,15 @@
 # Peer Review Report Template
 
-本模板供所有 reviewer agents（EIC、Reviewer 1-3）使用。每位 reviewer 使用相同的結構，但各自填入不同角度的審查內容。
+This template is used by all reviewer agents (EIC, Reviewers 1-3). Each reviewer uses the same structure but fills in review content from their respective perspectives.
 
 ---
 
-## 使用說明
+## Usage Instructions
 
-1. `[方括號]` 中的文字為說明，需替換為實際內容
-2. 每位 reviewer 必須完整填寫所有必填欄位（標記 * 的項目）
-3. Detailed Comments 按章節逐段評論，只評論與自己審查焦點相關的章節
-4. 語言跟隨論文語言（中文論文用中文審，英文論文用英文審）
+1. Text in `[brackets]` is explanatory and needs to be replaced with actual content
+2. Each reviewer must fully complete all required fields (items marked with *)
+3. Detailed Comments are section-by-section commentary; only comment on sections relevant to your review focus
+4. Language follows the paper's language (Chinese papers reviewed in Chinese, English papers in English)
 
 ---
 
@@ -19,10 +19,10 @@
 # Peer Review Report
 
 ## Manuscript Information
-- **Title**: [論文標題]
-- **Manuscript ID**: [如有，填入稿件編號]
-- **Review Date**: [審查日期]
-- **Review Round**: [第 N 輪審查]
+- **Title**: [Paper title]
+- **Manuscript ID**: [If available, enter manuscript ID]
+- **Review Date**: [Review date]
+- **Review Round**: [Round N review]
 
 ---
 
@@ -32,186 +32,186 @@
 [EIC / Peer Reviewer 1 (Methodology) / Peer Reviewer 2 (Domain) / Peer Reviewer 3 (Perspective)]
 
 ### Reviewer Identity *
-[由 field_analyst_agent 配置的身份描述]
+[Identity description configured by field_analyst_agent]
 
 ### Review Focus *
-[本次審查的核心焦點，2-3 句話]
+[Core focus of this review, 2-3 sentences]
 
 ---
 
 ## Overall Assessment *
 
 ### Recommendation *
-[選擇一項]
-- [ ] **Accept** — 可直接出版，僅需少量格式修改
-- [ ] **Minor Revision** — 需要小幅修改，修改後不需再審
-- [ ] **Major Revision** — 需要大幅修改，修改後需要再審
-- [ ] **Reject** — 不適合在此期刊出版
+[Select one]
+- [ ] **Accept** — Can be published directly, only minor formatting changes needed
+- [ ] **Minor Revision** — Minor revisions needed, no re-review after revision
+- [ ] **Major Revision** — Substantial revisions needed, re-review required after revision
+- [ ] **Reject** — Not suitable for publication in this journal
 
 ### Confidence Score *
 [1-5]
-| 分數 | 意義 |
-|------|------|
-| 5 | 完全在我的專業範圍內，我非常確信我的評估 |
-| 4 | 大部分在我的專業範圍內，有高度信心 |
-| 3 | 部分在我的專業範圍內，中等信心 |
-| 2 | 某些面向超出我的專業，對我的評估有些不確定 |
-| 1 | 大部分超出我的專業，我的意見僅供參考 |
+| Score | Meaning |
+|-------|---------|
+| 5 | Completely within my area of expertise, I am very confident in my assessment |
+| 4 | Mostly within my area of expertise, high confidence |
+| 3 | Partially within my area of expertise, moderate confidence |
+| 2 | Some aspects outside my expertise, somewhat uncertain about my assessment |
+| 1 | Mostly outside my expertise, my opinion is for reference only |
 
 ### Summary Assessment *
-[150-250 字的整體評估]
+[150-250 word overall assessment]
 
-要求：
-- 第 1-2 句：論文做了什麼（主題、方法、主要發現）
-- 第 3-4 句：整體品質評估（從你的審查焦點角度）
-- 第 5-6 句：最關鍵的優缺點
-- 最後：你的推薦理由
+Requirements:
+- Sentences 1-2: What the paper does (topic, methods, main findings)
+- Sentences 3-4: Overall quality assessment (from your review focus perspective)
+- Sentences 5-6: Most critical strengths and weaknesses
+- Final: Your recommendation rationale
 
 ---
 
 ## Strengths *
 
-列出 3-5 項論文的優點。每項必須：
-- 有具體的標題
-- 引用論文中的段落、數據或頁碼
-- 說明為什麼這是優點
+List 3-5 strengths of the paper. Each must:
+- Have a specific title
+- Cite passages, data, or page numbers from the paper
+- Explain why it is a strength
 
-### S1: [優點標題] *
-[具體描述。例如：「研究設計採用準實驗前後測控制組設計（第 X 頁），有效控制了...」]
+### S1: [Strength title] *
+[Specific description. E.g., "The research design uses a quasi-experimental pretest-posttest control group design (p. X), effectively controlling for..."]
 
-### S2: [優點標題] *
-[具體描述]
+### S2: [Strength title] *
+[Specific description]
 
-### S3: [優點標題] *
-[具體描述]
+### S3: [Strength title] *
+[Specific description]
 
-### S4: [優點標題]
-[選填]
+### S4: [Strength title]
+[Optional]
 
-### S5: [優點標題]
-[選填]
+### S5: [Strength title]
+[Optional]
 
 ---
 
 ## Weaknesses *
 
-列出 3-5 項論文的弱點。每項必須：
-- 有具體的標題
-- 說明具體的問題是什麼
-- 解釋為什麼這是問題
-- 提供具體的改善建議
+List 3-5 weaknesses of the paper. Each must:
+- Have a specific title
+- Describe the specific problem
+- Explain why it is a problem
+- Provide specific improvement suggestions
 
-### W1: [弱點標題] *
-**問題**：[具體描述問題，引用論文段落]
-**為什麼重要**：[解釋此問題的影響]
-**建議**：[具體的改善方向]
-**嚴重度**：[Critical / Major / Minor]
+### W1: [Weakness title] *
+**Problem**: [Specific description of the problem, citing paper passages]
+**Why it matters**: [Explain the impact of this problem]
+**Suggestion**: [Specific improvement direction]
+**Severity**: [Critical / Major / Minor]
 
-### W2: [弱點標題] *
-**問題**：[...]
-**為什麼重要**：[...]
-**建議**：[...]
-**嚴重度**：[Critical / Major / Minor]
+### W2: [Weakness title] *
+**Problem**: [...]
+**Why it matters**: [...]
+**Suggestion**: [...]
+**Severity**: [Critical / Major / Minor]
 
-### W3: [弱點標題] *
-**問題**：[...]
-**為什麼重要**：[...]
-**建議**：[...]
-**嚴重度**：[Critical / Major / Minor]
+### W3: [Weakness title] *
+**Problem**: [...]
+**Why it matters**: [...]
+**Suggestion**: [...]
+**Severity**: [Critical / Major / Minor]
 
-### W4: [弱點標題]
-[選填，同上格式]
+### W4: [Weakness title]
+[Optional, same format as above]
 
-### W5: [弱點標題]
-[選填，同上格式]
+### W5: [Weakness title]
+[Optional, same format as above]
 
 ---
 
 ## Detailed Comments *
 
-按論文章節逐段評論。只評論與你的審查焦點相關的章節。
+Section-by-section commentary on the paper. Only comment on sections relevant to your review focus.
 
 ### Title & Abstract
-- [評論標題的準確性和吸引力]
-- [評論摘要的結構和完整性]
+- [Assess title accuracy and appeal]
+- [Assess abstract structure and completeness]
 
 ### Introduction
-- [研究背景是否充分]
-- [研究問題/目的是否清晰]
-- [研究動機是否有說服力]
+- [Is research background sufficient]
+- [Is research question/purpose clear]
+- [Is research motivation persuasive]
 
 ### Literature Review / Theoretical Framework
-- [文獻覆蓋度]（主要由 Reviewer 2 評論）
-- [理論框架適當性]（主要由 Reviewer 2 評論）
-- [Research gap 的論證]
+- [Literature coverage] (Primarily reviewed by Reviewer 2)
+- [Theoretical framework appropriateness] (Primarily reviewed by Reviewer 2)
+- [Research gap argument]
 
 ### Methodology / Research Design
-- [研究設計的適當性]（主要由 Reviewer 1 評論）
-- [抽樣策略]
-- [資料收集]
-- [分析方法]
+- [Research design appropriateness] (Primarily reviewed by Reviewer 1)
+- [Sampling strategy]
+- [Data collection]
+- [Analysis methods]
 
 ### Results / Findings
-- [結果呈現的完整性]
-- [圖表品質]
-- [結果與研究問題的對應]
+- [Completeness of results presentation]
+- [Figure/table quality]
+- [Alignment of results with research questions]
 
 ### Discussion
-- [討論是否回應研究問題]
-- [與文獻的對話]
-- [理論和實務意涵]
-- [限制的討論]
+- [Whether discussion addresses research questions]
+- [Dialogue with the literature]
+- [Theoretical and practical implications]
+- [Discussion of limitations]
 
 ### Conclusion
-- [結論是否過度推論]
-- [未來研究方向的價值]
+- [Whether conclusions over-infer]
+- [Value of future research directions]
 
 ### References
-- [引用格式]
-- [引用文獻的品質和時效性]
+- [Citation format]
+- [Quality and recency of cited references]
 
 ---
 
 ## Questions for Authors *
 
-列出 2-4 個需要作者回應的問題。這些問題應該：
-- 不是修辭性問題，而是真正需要回答的
-- 回答可能改變論文的品質或方向
-- 具體且可回答
+List 2-4 questions requiring author response. These questions should:
+- Not be rhetorical, but genuinely need answering
+- The answer could change the paper's quality or direction
+- Be specific and answerable
 
-1. [問題 1]
-2. [問題 2]
-3. [問題 3]（選填）
-4. [問題 4]（選填）
+1. [Question 1]
+2. [Question 2]
+3. [Question 3] (Optional)
+4. [Question 4] (Optional)
 
 ---
 
 ## Minor Issues
 
-列出不影響學術品質但需要修正的小問題。
+List minor issues that don't affect academic quality but need correction.
 
-### 語言 / 文法
-- [第 X 頁第 Y 行：具體的語言問題]
+### Language / Grammar
+- [Page X, Line Y: Specific language issue]
 - [...]
 
-### 引用格式
-- [具體的引用格式問題]
+### Citation Format
+- [Specific citation format issues]
 - [...]
 
-### 圖表
-- [圖表的改善建議]
+### Figures and Tables
+- [Figure/table improvement suggestions]
 - [...]
 
-### 排版
-- [排版問題]
+### Layout
+- [Layout issues]
 - [...]
 
 ---
 
-## Dimension Scores（選填，供 synthesizer 參考）
+## Dimension Scores (Optional, for synthesizer reference)
 
-| 維度 | 分數 (1-5) | 備註 |
-|------|-----------|------|
+| Dimension | Score (1-5) | Notes |
+|-----------|------------|-------|
 | Originality | | |
 | Methodological Rigor | | |
 | Evidence Sufficiency | | |
@@ -224,42 +224,42 @@
 
 ---
 
-## 格式規範
+## Format Guidelines
 
-### 嚴重度分級
+### Severity Levels
 
-| 等級 | 定義 | 修改要求 |
-|------|------|---------|
-| **Critical** | 不修就不能接受 | Required Revision |
-| **Major** | 顯著影響論文品質 | Strongly Recommended |
-| **Minor** | 改了更好，不改也可以 | Suggested |
+| Level | Definition | Revision Requirement |
+|-------|-----------|---------------------|
+| **Critical** | Cannot be accepted without fixing | Required Revision |
+| **Major** | Significantly affects paper quality | Strongly Recommended |
+| **Minor** | Better if fixed, acceptable if not | Suggested |
 
-### 引用論文段落的方式
-
-```
-# 正確
-「作者在第 12 頁提到 'AI can replace human judgment in QA processes'，但...」
-
-# 正確
-「表 3 的數據顯示 p = 0.04，但作者未報告效果量...」
-
-# 錯誤（太泛泛）
-「方法有問題」
-「文獻回顧不夠完整」
-```
-
-### 建設性語氣範例
+### How to Cite Paper Passages
 
 ```
-# 好
-「建議作者考慮加入 X 分析，以強化對 Y 的論證。」
+# Correct
+"The author states on p. 12: 'AI can replace human judgment in QA processes,' but..."
 
-# 好
-「這個部分的論述可以更加清晰。具體來說，第 8 頁第 2 段的因果推論需要額外的證據支撐。」
+# Correct
+"The data in Table 3 shows p = 0.04, but the author does not report effect sizes..."
 
-# 不好
-「作者顯然不懂 X。」
+# Incorrect (too vague)
+"Methodology has problems"
+"Literature review is not comprehensive enough"
+```
 
-# 不好
-「這個方法是錯的。」
+### Constructive Tone Examples
+
+```
+# Good
+"The author is encouraged to consider adding X analysis to strengthen the argument for Y."
+
+# Good
+"This section's argumentation could be clearer. Specifically, the causal inference in paragraph 2, page 8 needs additional evidence support."
+
+# Bad
+"The author clearly does not understand X."
+
+# Bad
+"This method is wrong."
 ```

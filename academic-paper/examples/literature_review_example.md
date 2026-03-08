@@ -20,11 +20,11 @@ East Asian higher education systems face unprecedented enrollment challenges dri
 
 ---
 
-## 中文摘要
+## Chinese Abstract
 
-東亞高等教育體系因出生率下降與人口結構變遷面臨前所未有的招生挑戰。本文以主題式文獻回顧方式，綜整 2015 至 2025 年間發表之 58 篇經同儕審查研究，涵蓋台灣、日本、韓國及部分東南亞國家的機構調適策略。回顧結果歸納三大主題：招生管理創新、系所重組與利基特色化，以及合併與退場機制。跨主題分析揭示，在招生下滑兩年內主動啟動策略調整之學校，其成效顯著優於被動因應者。本文同時指出數個重要研究缺口：合併成效之縱貫研究不足、對教師影響之關注有限，以及學生觀點研究幾近空白。研究結果建議政策制定者應優先建立預警系統與彈性監管架構，而研究者宜採用跨國比較設計以深化對調適動態之理解。
+East Asian higher education systems face unprecedented enrollment challenges due to declining birth rates and demographic shifts. This paper employs a thematic literature review approach, synthesizing 58 peer-reviewed studies published between 2015 and 2025, covering institutional adaptation strategies in Taiwan, Japan, South Korea, and selected Southeast Asian countries. The review identifies three major themes: enrollment management innovation, program restructuring and niche specialization, and merger and exit mechanisms. Cross-thematic analysis reveals that institutions that proactively initiated strategic adjustments within two years of enrollment decline achieved significantly better outcomes than those that responded reactively. This paper also identifies several important research gaps: insufficient longitudinal studies on merger outcomes, limited attention to faculty impacts, and a near-absence of student perspective research. The findings suggest that policymakers should prioritize establishing early-warning systems and flexible regulatory frameworks, while researchers should adopt cross-national comparative designs to deepen understanding of adaptation dynamics.
 
-**關鍵詞**：招生下滑、高等教育、機構調適、東亞、人口變遷、大學合併
+**Keywords**: enrollment decline, higher education, institutional adaptation, East Asia, demographic change, university merger
 
 ---
 
@@ -46,7 +46,7 @@ This review covers peer-reviewed studies published between 2015 and 2025, focusi
 
 ### 1.3 Review Methodology
 
-A systematic search was conducted across ERIC, Scopus, Web of Science, and 華藝線上圖書館 using the terms: ("enrollment decline" OR "demographic change" OR "少子化") AND ("higher education" OR "university" OR "college") AND ("adaptation" OR "strategy" OR "merger" OR "restructuring"). After screening 312 initial hits, 58 studies met the inclusion criteria.
+A systematic search was conducted across ERIC, Scopus, Web of Science, and Airiti Library using the terms: ("enrollment decline" OR "demographic change" OR "declining birth rate") AND ("higher education" OR "university" OR "college") AND ("adaptation" OR "strategy" OR "merger" OR "restructuring"). After screening 312 initial hits, 58 studies met the inclusion criteria.
 
 ### 1.4 Organization
 
@@ -84,7 +84,7 @@ Enrollment management innovations provide short-to-medium term relief but rarely
 
 Program consolidation — merging or eliminating academic departments to concentrate resources on viable programs — represents the most structurally significant adaptation strategy. In Taiwan, the MOE's enrollment cap adjustment mechanism (2015-present) requires institutions to reduce approved enrollment quotas for programs that consistently fail to fill their allocated seats. Wu and Tsai (2023) tracked 67 Taiwanese institutions over five years and found that 234 undergraduate programs were either suspended or merged between 2018 and 2023, with humanities and social science programs disproportionately affected (accounting for 58% of closures despite representing only 31% of total programs).
 
-The human dimension of program consolidation is underexplored in the literature. Taniguchi (2024) conducted one of the few qualitative studies on faculty experiences during program closure at three Japanese national universities. Faculty members reported feelings of professional identity loss, resentment toward administrators, and anxiety about reassignment to unfamiliar disciplines. Critically, Taniguchi found that institutions that provided 18+ months of advance notice and genuine consultation achieved significantly smoother transitions than those that implemented rapid closures — yet administrative incentives often favored speed over process. In Taiwan, the Teacher Act (Jiaoshi Fa) protections for tenured faculty create additional complexity: institutions cannot simply dismiss faculty when programs close, but must offer alternative positions or negotiate voluntary separation packages, substantially increasing the cost and timeline of program consolidation (Chou & Chan, 2022).
+The human dimension of program consolidation is underexplored in the literature. Taniguchi (2024) conducted one of the few qualitative studies on faculty experiences during program closure at three Japanese national universities. Faculty members reported feelings of professional identity loss, resentment toward administrators, and anxiety about reassignment to unfamiliar disciplines. Critically, Taniguchi found that institutions that provided 18+ months of advance notice and genuine consultation achieved significantly smoother transitions than those that implemented rapid closures — yet administrative incentives often favored speed over process. In Taiwan, the Teacher Act protections for tenured faculty create additional complexity: institutions cannot simply dismiss faculty when programs close, but must offer alternative positions or negotiate voluntary separation packages, substantially increasing the cost and timeline of program consolidation (Chou & Chan, 2022).
 
 Japanese MOE-mandated enrollment cap reductions have followed a more systematic approach. Beginning in 2016, the Central Education Council recommended that national universities in metropolitan areas reduce undergraduate enrollment to redirect student flows toward regional institutions. Kaneko (2023) evaluated this policy and found it achieved modest enrollment redistribution (approximately 3% shift from metropolitan to regional institutions) but created unintended incentives for metropolitan universities to expand graduate and international programs to compensate for lost undergraduate revenue.
 

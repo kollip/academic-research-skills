@@ -1,600 +1,600 @@
-# Plan Mode 範例：逐章節引導對話
+# Plan Mode Example: Chapter-by-Chapter Guided Dialogue
 
-**主題**：數位轉型對台灣高等教育教學品質之影響：以混成學習為例
+**Topic**: The Impact of Digital Transformation on Teaching Quality in Taiwan's Higher Education: Blended Learning as a Case Study
 
-本範例展示完整的 Plan mode 流程，從 Step 0 到 Step 3，包含所有章節的引導對話、INSIGHT 萃取和最終 Chapter Plan 輸出。
+This example demonstrates the complete Plan mode workflow, from Step 0 to Step 3, including guided dialogue for all chapters, INSIGHT extraction, and the final Chapter Plan output.
 
 ---
 
 ## Step 0: Research Readiness Check
 
-### 第 1 輪
+### Round 1
 
-**Socratic Mentor**：
-歡迎來到論文規劃模式。在我們開始之前，我想先了解你目前的研究準備程度。
+**Socratic Mentor**:
+Welcome to the paper planning mode. Before we begin, I'd like to understand your current level of research readiness.
 
-請告訴我：
-1. 你目前有哪些研究資料？（文獻、數據、分析結果）
-2. 你的研究問題確定了嗎？能用一句話說清楚嗎？
-3. 你有沒有做過系統性的文獻搜尋？
+Please tell me:
+1. What research materials do you currently have? (literature, data, analysis results)
+2. Is your research question finalized? Can you state it clearly in one sentence?
+3. Have you conducted a systematic literature search?
 
-**使用者**：
-我之前用 deep-research 跑過一輪。拿到了 Annotated Bibliography（大概 30 篇文獻）、Synthesis Report，還有一組 INSIGHT Collection。我的研究問題大致是：「混成學習如何影響台灣大學生的學習成效？」不過我覺得可能太廣了。
+**User**:
+I previously ran a round with deep-research. I obtained an Annotated Bibliography (about 30 articles), a Synthesis Report, and a set of INSIGHT Collections. My research question is roughly: "How does blended learning affect the academic performance of university students in Taiwan?" But I think it might be too broad.
 
-**Socratic Mentor**：
-很好，你已經有紮實的研究基礎了。我看到你有三份重要材料：
+**Socratic Mentor**:
+Good, you already have a solid research foundation. I see you have three important materials:
 
-- Annotated Bibliography（30 篇）——文獻基礎充足
-- Synthesis Report——已有初步綜合分析
-- INSIGHT Collection——有結構化的洞見
+- Annotated Bibliography (30 articles) — sufficient literature base
+- Synthesis Report — preliminary synthesis already done
+- INSIGHT Collection — structured insights available
 
-你說得對，「混成學習如何影響學習成效」確實有點廣。我們在下一步會一起把它聚焦。先確認一下：你的研究是計畫用實證數據（問卷、訪談、學習成績）嗎？還是以文獻分析為主？
+You're right that "How does blended learning affect academic performance" is a bit broad. We'll narrow it down together in the next step. Let me confirm: Is your research planning to use empirical data (surveys, interviews, academic grades)? Or is it primarily a literature analysis?
 
-**使用者**：
-我有疫情前後三個學年的學生成績資料，來自某國立大學的通識課程。大概 1200 筆學生成績。
+**User**:
+I have student grades from three academic years spanning before and after the pandemic, from a national university's general education courses. About 1,200 student grade records.
 
-**Socratic Mentor**：
-太好了。你有量化數據，而且是縱貫性的（跨三個學年），這讓你的論文有實證基礎。我判斷你的研究準備程度是「充分」——我們可以直接進入 Step 1。
+**Socratic Mentor**:
+Excellent. You have quantitative data, and it's longitudinal (across three academic years), which gives your paper an empirical foundation. I assess your research readiness as "sufficient" — we can proceed directly to Step 1.
 
 ```
 [READINESS CHECK: PASS]
-材料：Annotated Bibliography (30 篇) + Synthesis Report + INSIGHT Collection + 學生成績資料 (n=1200)
-研究類型：實證研究（IMRaD 結構）
-準備程度：充分，可直接進入 Thesis Crystallization
+Materials: Annotated Bibliography (30 articles) + Synthesis Report + INSIGHT Collection + Student grade data (n=1200)
+Research type: Empirical study (IMRaD structure)
+Readiness level: Sufficient, can proceed directly to Thesis Crystallization
 ```
 
 ---
 
 ## Step 1: Thesis Crystallization
 
-### 第 1 輪
+### Round 1
 
-**Socratic Mentor**：
-現在讓我們把你的論文核心論點想清楚。
+**Socratic Mentor**:
+Now let's think through the core argument of your paper.
 
-你說「混成學習如何影響學習成效」——但這更像一個研究問題，不是論點。論點是你預期（或已經發現）的答案。
+You said "How does blended learning affect academic performance" — but that's more of a research question, not an argument. An argument is the answer you expect (or have already found).
 
-所以我的問題是：根據你的數據和文獻，你覺得混成學習對學習成效的影響是什麼？你敢斷言什麼？
+So my question is: Based on your data and literature, what do you think the impact of blended learning on academic performance is? What are you willing to assert?
 
-**使用者**：
-從數據來看，混成學習的學生平均成績沒有顯著低於全面實體課的學生。但有趣的是，高自主學習能力的學生在混成學習中成績反而更好，而低自主學習能力的學生成績顯著下降。
+**User**:
+From the data, students in blended learning did not have significantly lower average grades than those in fully in-person classes. But interestingly, students with high self-regulated learning ability performed even better in blended learning, while students with low self-regulated learning ability experienced a significant grade decline.
 
-**Socratic Mentor**：
-這個發現非常有趣，而且有層次。你發現了一個「調節效應」——混成學習的效果取決於學生的自主學習能力。這比單純說「混成學習有效/無效」有力得多。
+**Socratic Mentor**:
+This is a very interesting finding, and it has depth. You've discovered a "moderating effect" — the effect of blended learning depends on the student's self-regulated learning ability. This is much more powerful than simply saying "blended learning is effective/ineffective."
 
-讓我追問：
-- 一個不同意你的人會怎麼反駁？他可能會說成績差異是因為什麼其他原因？
-- 你的發現對教學實務有什麼意義？如果你是教務長，你會做什麼決策？
+Let me follow up:
+- How would someone who disagrees with you counter this? What other reasons might they attribute the grade differences to?
+- What does your finding mean for teaching practice? If you were the provost, what decision would you make?
 
-**使用者**：
-反駁的話，可能會說成績差異是因為教師的教學能力不同，或是課程設計品質不一致，不一定是混成學習本身的問題。另外，疫情期間的混成學習和常態的混成學習可能不一樣。
+**User**:
+A counterargument might be that grade differences are due to different teachers' instructional abilities, or inconsistent course design quality — not necessarily blended learning itself. Also, blended learning during the pandemic and routine blended learning may not be the same thing.
 
-如果我是教務長，我會推動混成學習，但要搭配自主學習能力的培訓，而且要監控低學習能力學生的學習狀況。
+If I were the provost, I would promote blended learning but pair it with self-regulated learning skills training, and monitor the learning status of students with low learning ability.
 
-### 第 2 輪
+### Round 2
 
-**Socratic Mentor**：
-你已經自己想到了兩個最有力的反論：（1）教師/課程差異的混淆變項、（2）疫情情境的外推性限制。這很好，代表你有自我批判意識。
+**Socratic Mentor**:
+You've already identified the two strongest counterarguments yourself: (1) teacher/course variability as a confounding factor, and (2) limited generalizability of pandemic-era contexts. This is good — it shows self-critical awareness.
 
-現在讓我幫你把論點精準化。試著用這個句型：
+Now let me help you sharpen your argument. Try to fill in this template:
 
-「本研究主張 _____，因為 _____，基於 _____。」
+"This study argues _____, because _____, based on _____."
 
-你能填上去嗎？
+Can you fill it in?
 
-**使用者**：
-「本研究主張混成學習對學習成效的影響受學生自主學習能力調節——高自主學習能力的學生從混成學習中獲益，而低自主學習能力的學生則受到負面影響。因此，大學推動混成學習時應同步強化自主學習能力的培養機制。」
+**User**:
+"This study argues that the impact of blended learning on academic performance is moderated by student self-regulated learning ability — students with high self-regulated learning ability benefit from blended learning, while students with low self-regulated learning ability are negatively affected. Therefore, universities promoting blended learning should simultaneously strengthen mechanisms for cultivating self-regulated learning skills."
 
-**Socratic Mentor**：
-很好。你的論點有三個層次：
-1. **描述性主張**：混成學習效果有差異（不是一致的好或壞）
-2. **解釋性主張**：差異來自自主學習能力的調節效應
-3. **規範性主張**：大學應搭配自主學習培訓
+**Socratic Mentor**:
+Excellent. Your argument has three layers:
+1. **Descriptive claim**: Blended learning effects vary (not uniformly good or bad)
+2. **Explanatory claim**: The variation is due to the moderating effect of self-regulated learning ability
+3. **Normative claim**: Universities should pair blended learning with self-regulated learning training
 
-這是一個完整且有力的論點。讓我萃取：
+This is a complete and powerful argument. Let me extract:
 
 ```
 [INSIGHT: thesis_statement]
-論文核心論點：混成學習對大學生學習成效的影響受學生自主學習能力調節。高自主學習能力學生在混成學習中表現優於全實體，低自主學習能力學生則表現顯著低於全實體。大學推動混成學習需同步建立自主學習能力培養機制。
-論點類型：因果（含調節效應）
-適用範圍：台灣國立大學通識課程，疫情前後三學年
-邊界條件：特定課程類型、特定大學規模、疫情脈絡可能影響外推性
+Core thesis: The impact of blended learning on university students' academic performance is moderated by self-regulated learning ability. Students with high self-regulated learning ability perform better in blended learning than in fully in-person settings, while those with low self-regulated learning ability perform significantly worse. Universities promoting blended learning must simultaneously establish self-regulated learning skill cultivation mechanisms.
+Argument type: Causal (with moderating effect)
+Applicable scope: General education courses at a Taiwanese national university, across three pre-and-post-pandemic academic years
+Boundary conditions: Specific course type, specific university size, pandemic context may affect generalizability
 ```
 
 ---
 
 ## Step 2: Chapter-by-Chapter Negotiation
 
-### Introduction（2 輪）
+### Introduction (2 rounds)
 
-#### 第 1 輪
+#### Round 1
 
-**Socratic Mentor**：
-好，讓我們進入 Introduction 的規劃。在開始之前，你需要回答 5 個核心問題：
+**Socratic Mentor**:
+Good, let's move into planning the Introduction. Before we start, you need to answer 5 core questions:
 
-1. **問題急迫性**：這個章節結束時，讀者應該理解什麼問題？
-2. **研究缺口**：你的研究填補了什麼缺口？
-3. **研究問題**：你的 RQ 是什麼？（一句話）
-4. **時機性**：為什麼現在研究這個問題？
-5. **閱讀動機**：讀者為什麼應該繼續讀下去？
+1. **Problem urgency**: By the end of this chapter, what problem should the reader understand?
+2. **Research gap**: What gap does your research fill?
+3. **Research question**: What is your RQ? (One sentence)
+4. **Timeliness**: Why study this problem now?
+5. **Reading motivation**: Why should the reader keep reading?
 
-先從第 1 題開始：讀完你的 Introduction，讀者最應該感受到什麼問題的急迫性？
+Start with question 1: After reading your Introduction, what problem urgency should the reader feel most strongly?
 
-**使用者**：
-台灣的大學在疫情後大量推動混成學習，但其實沒有人真正驗證過這對學生學習成效的影響。大家只是假設「科技進步所以一定好」，但可能忽略了不同學生群體的差異。
+**User**:
+Taiwanese universities are massively promoting blended learning post-pandemic, but nobody has actually verified its impact on student academic performance. Everyone just assumes "technology advancement means it must be good," but this may overlook differences across student groups.
 
-**Socratic Mentor**：
-很好。所以急迫性是：「政策先行，驗證不足」——大學正在大規模推動一個未經充分驗證的教學模式。這是一個很有力的開場。
+**Socratic Mentor**:
+Good. So the urgency is: "Policy ahead of evidence" — universities are massively promoting an instructional model without sufficient verification. This is a very powerful opening.
 
-讓我接著問其他問題。研究缺口是什麼？你的文獻回顧中，現有研究缺少了什麼？
+Let me continue with the other questions. What is the research gap? In your literature review, what is missing from existing research?
 
-**使用者**：
-現有研究大多在西方脈絡，或者是疫情期間的緊急遠距教學，不是常態化的混成學習。台灣本土的實證研究很少，而且幾乎沒有研究看「自主學習能力」這個調節變項。
+**User**:
+Most existing research is in Western contexts, or focuses on emergency remote teaching during the pandemic — not routine blended learning. There are very few local Taiwanese empirical studies, and almost no studies examine "self-regulated learning ability" as a moderating variable.
 
-#### 第 2 輪
+#### Round 2
 
-**Socratic Mentor**：
-好，讓我歸納你的 5 個回答，看看有沒有需要補充的：
+**Socratic Mentor**:
+Good, let me summarize your 5 answers and see if anything needs to be supplemented:
 
-1. **問題急迫性**：政策先行、驗證不足。大學大量推動混成學習但缺乏實證基礎。
-2. **研究缺口**：（a）缺乏台灣本土研究（b）缺乏常態化混成學習研究（c）缺乏調節變項分析
-3. **RQ**：混成學習對台灣大學生學習成效之影響為何？自主學習能力是否具有調節效應？
-4. **時機性**：後疫情時代，混成學習從「不得已」變成「策略選擇」，急需實證指引
-5. **閱讀動機**：如果繼續盲目推動，可能弱勢學生（低自主學習能力者）會成為隱形受害者
+1. **Problem urgency**: Policy ahead of evidence. Universities are massively promoting blended learning without an empirical foundation.
+2. **Research gap**: (a) Lack of local Taiwanese studies (b) Lack of routine blended learning studies (c) Lack of moderating variable analysis
+3. **RQ**: What is the impact of blended learning on academic performance of Taiwanese university students? Does self-regulated learning ability have a moderating effect?
+4. **Timeliness**: In the post-pandemic era, blended learning has shifted from "necessity" to "strategic choice," urgently requiring empirical guidance
+5. **Reading motivation**: If we continue promoting blindly, disadvantaged students (those with low self-regulated learning ability) may become invisible victims
 
-你的 Introduction 可以這樣開頭：
-從台灣高等教育數位轉型的政策趨勢切入 → 帶出混成學習快速擴張的現象 → 指出實證基礎薄弱的問題 → 特別強調學生差異被忽視 → 引出你的 RQ
+Your Introduction could open like this:
+Start with Taiwan's higher education digital transformation policy trends → Introduce the rapid expansion of blended learning → Point out the weak empirical foundation → Specifically highlight that student differences are being ignored → Lead into your RQs
 
-參考結構：Hook（政策數據，1 段）→ Background（混成學習定義+趨勢，2 段）→ Gap（三個缺口，1 段）→ Purpose & RQ（1 段）
+Suggested structure: Hook (policy data, 1 paragraph) → Background (blended learning definition + trends, 2 paragraphs) → Gap (three gaps, 1 paragraph) → Purpose & RQ (1 paragraph)
 
 ```
 ### Chapter Summary: Introduction
 
-**核心目的**：建立研究的急迫性和必要性，引出雙 RQ
-**核心論點**：台灣大學大量推動混成學習但缺乏本土實證，特別是學生差異的影響被忽略
-**支持證據**：
-  1. 教育部數位轉型政策推動數據
-  2. 文獻中台灣本土混成學習實證研究的缺乏
-  3. 現有研究忽略調節變項（自主學習能力）的證據
-**潛在風險**：Hook 太政策導向可能失去學術讀者興趣
-**預期字數**：800-1,000 字
-**使用者確認**：Yes
+**Core purpose**: Establish the urgency and necessity of the research, lead into dual RQs
+**Core argument**: Taiwanese universities are massively promoting blended learning but lack local empirical evidence, particularly regarding the impact of student differences
+**Supporting evidence**:
+  1. MOE digital transformation policy implementation data
+  2. The scarcity of local Taiwanese blended learning empirical research in the literature
+  3. Evidence that existing research ignores moderating variables (self-regulated learning ability)
+**Potential risk**: An overly policy-oriented hook may lose academic readers' interest
+**Expected word count**: 800-1,000 words
+**User confirmation**: Yes
 
 [INSIGHT: introduction_summary]
-Introduction 以「政策先行、驗證不足」為核心敘事，三個研究缺口（本土化、常態化、調節變項）支撐 RQ 的必要性。
+Introduction uses "policy ahead of evidence" as the core narrative, with three research gaps (localization, routinization, moderating variable) supporting the necessity of the RQs.
 ```
 
 ---
 
-### Literature Review（3 輪）
+### Literature Review (3 rounds)
 
-#### 第 1 輪
+#### Round 1
 
-**Socratic Mentor**：
-接下來是 Literature Review。5 個核心問題：
+**Socratic Mentor**:
+Next is the Literature Review. 5 core questions:
 
-1. 你要回顧哪幾個理論/概念？
-2. 這些文獻之間的關係是什麼？
-3. 現有文獻的最大缺口是什麼？
-4. 你的研究在文獻地圖中的位置？
-5. 有沒有你不同意的重要觀點？
+1. Which theories/concepts will you review?
+2. What is the relationship between these literature sources?
+3. What is the biggest gap in the existing literature?
+4. Where does your research sit in the literature map?
+5. Are there important viewpoints you disagree with?
 
-從第 1 題開始：你的文獻回顧要涵蓋哪些主題？
+Start with question 1: What topics will your literature review cover?
 
-**使用者**：
-三個主題：（1）混成學習的定義與模式（2）混成學習與學習成效的關係（3）自主學習能力的理論與測量。
+**User**:
+Three topics: (1) Definitions and models of blended learning (2) The relationship between blended learning and academic performance (3) Theory and measurement of self-regulated learning ability.
 
-**Socratic Mentor**：
-三個主題的選擇很合理，涵蓋了你論文的三個核心概念。但讓我追問：這三個主題之間的關係是什麼？它們之間有什麼共同的線索把它們串起來？你要講一個什麼故事？
+**Socratic Mentor**:
+The three topics are well chosen and cover your paper's three core concepts. But let me follow up: What is the relationship between these three topics? What common thread connects them? What story are you telling?
 
-**使用者**：
-故事是這樣的：混成學習有很多種模式（主題 1），但它對學習成效的影響不一致（主題 2），可能是因為缺少了一個關鍵因素：學生的自主學習能力（主題 3）。
+**User**:
+The story goes like this: Blended learning comes in many models (Topic 1), but its impact on academic performance is inconsistent (Topic 2), possibly because a key factor is missing: students' self-regulated learning ability (Topic 3).
 
-#### 第 2 輪
+#### Round 2
 
-**Socratic Mentor**：
-很好，你的故事線很清楚：「定義 → 爭議 → 遺漏的變項」。這是一個經典的文獻回顧敘事結構。
+**Socratic Mentor**:
+Good, your storyline is clear: "Definition → Controversy → Missing variable." This is a classic literature review narrative structure.
 
-現在讓我追問第 5 題：有沒有一篇你不同意的重要文獻？
+Now let me follow up on question 5: Is there an important paper you disagree with?
 
-**使用者**：
-有一篇常被引用的 meta-analysis（Means et al., 2013），結論是混成學習整體優於傳統教學。但我覺得那個研究把太多不同的混成學習模式混在一起了，沒有區分學生特質。
+**User**:
+There's a frequently cited meta-analysis (Means et al., 2013) that concludes blended learning is overall superior to traditional instruction. But I think that study lumped too many different blended learning models together without differentiating student characteristics.
 
-**Socratic Mentor**：
-太好了。對 Means et al. (2013) 的批判是你的文獻回顧中最有力的「轉折點」。你可以這樣寫：
+**Socratic Mentor**:
+Excellent. Your critique of Means et al. (2013) is the most powerful "turning point" in your literature review. You could write it like this:
 
-「雖然大規模的後設分析（如 Means et al., 2013）支持混成學習的整體優越性，但這些研究的方法論限制——特別是將異質性極高的混成模式合併分析、忽略學習者個體差異——使得其結論的普遍性值得商榷。」
+"Although large-scale meta-analyses (e.g., Means et al., 2013) support the overall superiority of blended learning, the methodological limitations of these studies — particularly the pooling of highly heterogeneous blended models and the neglect of individual learner differences — render the universality of their conclusions questionable."
 
-這段話同時做了三件事：肯定經典文獻 → 指出方法論問題 → 為你的研究開路。
+This paragraph simultaneously accomplishes three things: acknowledges the classic literature → identifies the methodological issue → opens the door for your research.
 
-#### 第 3 輪
+#### Round 3
 
-**Socratic Mentor**：
-讓我確認你在文獻地圖中的位置。根據我的理解：
+**Socratic Mentor**:
+Let me confirm your position in the literature map. Based on my understanding:
 
 ```
-文獻地圖：
-                        學習成效研究
+Literature Map:
+                        Academic Performance Research
                              |
               ┌──────────────┼──────────────┐
-          傳統教學          混成學習        全線上
+          Traditional    Blended Learning   Fully Online
                              |
               ┌──────────────┼──────────────┐
-         整體效果         特定族群        特定學科
-         (Means et al.)    (你的位置!)      (...)
+         Overall Effect   Specific Groups   Specific Disciplines
+         (Means et al.)   (Your position!)  (...)
                              |
                     ┌────────┼────────┐
-                高自主學習   中       低自主學習
+                High Self-Reg  Medium   Low Self-Reg
 ```
 
-你的研究在「混成學習 × 特定族群（依自主學習能力）」的交叉點。對嗎？
+Your research is at the intersection of "Blended Learning x Specific Groups (by self-regulated learning ability)." Correct?
 
-**使用者**：
-對，就是這個位置。
+**User**:
+Yes, that's exactly the position.
 
 ```
 ### Chapter Summary: Literature Review
 
-**核心目的**：建立三個概念的理論基礎，並指出整合觀點的缺口
-**核心論點**：現有混成學習成效研究忽略學習者個體差異，導致結論矛盾
-**支持證據**：
-  1. 混成學習定義的多元性（Garrison & Kanuka, 2004; Graham, 2006）
-  2. Means et al. (2013) meta-analysis 的方法論限制
-  3. 自主學習能力理論（Zimmerman, 2002; Pintrich, 2004）缺乏在混成學習脈絡的應用
-**潛在風險**：三個主題可能各自獨立，缺乏整合
-**預期字數**：2,000-2,500 字
-**使用者確認**：Yes
+**Core purpose**: Establish the theoretical foundation for three concepts and identify the gap in integrative perspectives
+**Core argument**: Existing blended learning effectiveness research ignores individual learner differences, leading to contradictory conclusions
+**Supporting evidence**:
+  1. The diversity of blended learning definitions (Garrison & Kanuka, 2004; Graham, 2006)
+  2. Methodological limitations of Means et al. (2013) meta-analysis
+  3. Self-regulated learning theory (Zimmerman, 2002; Pintrich, 2004) lacks application in blended learning contexts
+**Potential risk**: The three topics may remain independent, lacking integration
+**Expected word count**: 2,000-2,500 words
+**User confirmation**: Yes
 
 [INSIGHT: literature_review_summary]
-文獻回顧以「定義→爭議→遺漏的變項」為敘事線，三個主題串聯指向一個核心缺口：混成學習成效研究需要納入學習者自主能力作為調節變項。
+Literature review follows the narrative of "Definition → Controversy → Missing variable," with three topics connecting to a single core gap: blended learning effectiveness research needs to incorporate learner self-regulated ability as a moderating variable.
 ```
 
 ---
 
-### Methodology（2 輪）
+### Methodology (2 rounds)
 
-#### 第 1 輪
+#### Round 1
 
-**Socratic Mentor**：
-Methodology 的 5 個核心問題：
+**Socratic Mentor**:
+Methodology's 5 core questions:
 
-1. 你用什麼方法回答 RQ？
-2. 為什麼這個方法比其他方法更適合？
-3. 你的數據從哪裡來？夠嗎？
-4. 你怎麼確保研究品質？
-5. 這個方法的最大限制是什麼？
+1. What method do you use to answer the RQ?
+2. Why is this method more appropriate than alternatives?
+3. Where does your data come from? Is it sufficient?
+4. How do you ensure research quality?
+5. What is the biggest limitation of this method?
 
-**使用者**：
-量化研究。用三個學年的通識課程成績資料做準實驗設計，比較全實體班和混成班。自主學習能力用 Pintrich 的 MSLQ 量表事後收集（問卷回溯）。分析用階層回歸，看自主學習能力的調節效應。
+**User**:
+Quantitative research. I'm using a quasi-experimental design with three academic years of general education course grades, comparing fully in-person sections with blended sections. Self-regulated learning ability is measured retrospectively with Pintrich's MSLQ scale (retrospective survey). Analysis uses hierarchical regression to test the moderating effect of self-regulated learning ability.
 
-**Socratic Mentor**：
-好的，方法架構清楚。但我要追問兩個潛在的弱點：
+**Socratic Mentor**:
+Good, the methodological framework is clear. But I need to follow up on two potential weaknesses:
 
-第一：MSLQ 是事後回溯收集的。有人會質疑：學生可能因為成績好壞而改變了他們對「自主學習能力」的自我評估。你怎麼回應這個「回溯偏誤」？
+First: The MSLQ was collected retrospectively. Someone will question this: students may have adjusted their self-assessment of "self-regulated learning ability" based on their grades. How do you respond to this "retrospective bias"?
 
-第二：你的準實驗設計，學生是自己選課進入混成班或實體班的。所以可能有「自我選擇偏誤」——本來就更自主的學生選了混成班。你怎麼處理？
+Second: In your quasi-experimental design, students self-selected into blended or in-person sections. So there may be "self-selection bias" — students who are inherently more self-regulated chose the blended section. How do you address this?
 
-**使用者**：
-回溯偏誤的部分，我可以在限制中討論。但 MSLQ 問的是「一般性的學習習慣」而不是「這門課的學習」，所以受當下成績影響應該有限。自我選擇偏誤的部分，我用傾向分數配對（PSM）來處理，用入學成績和先前 GPA 作為配對變項。
+**User**:
+For retrospective bias, I can discuss it in limitations. But the MSLQ asks about "general study habits" rather than "learning in this course," so the influence of current grades should be limited. For self-selection bias, I use propensity score matching (PSM) with admission scores and prior GPA as matching variables.
 
-#### 第 2 輪
+#### Round 2
 
-**Socratic Mentor**：
-PSM 是處理自我選擇偏誤的標準做法，這會增加你方法論的可信度。回溯偏誤的解釋也合理——MSLQ 測量的是穩定特質而非狀態。
+**Socratic Mentor**:
+PSM is the standard approach for addressing self-selection bias — this will enhance your methodological credibility. The retrospective bias explanation is also reasonable — MSLQ measures stable traits, not states.
 
-你的 Methodology 可以包含這些段落：
-研究設計概述（準實驗 + 回溯問卷）→ 參與者描述（n=1200，三學年）→ 變項定義（自變項：教學模式；依變項：學期成績；調節變項：MSLQ 分數）→ 資料分析方法（描述統計 + PSM + 階層回歸）→ 研究品質（PSM 降低選擇偏誤 + MSLQ 信效度）→ 研究倫理（匿名化處理）→ 方法限制
+Your Methodology can include these sections:
+Research design overview (quasi-experimental + retrospective survey) → Participant description (n=1200, three academic years) → Variable definitions (IV: instructional mode; DV: semester grades; moderator: MSLQ scores) → Data analysis methods (descriptive statistics + PSM + hierarchical regression) → Research quality (PSM reduces selection bias + MSLQ reliability/validity) → Research ethics (anonymization) → Methodological limitations
 
 ```
 ### Chapter Summary: Methodology
 
-**核心目的**：描述研究設計和分析方法，回應潛在的方法論質疑
-**核心論點**：準實驗設計 + PSM + 階層回歸可以有效回答調節效應的 RQ
-**支持證據**：
-  1. n=1200 的樣本量足夠進行階層回歸
-  2. PSM 處理自我選擇偏誤
-  3. MSLQ 是自主學習能力的標準化測量工具
-**潛在風險**：回溯性問卷設計、單一大學的代表性
-**預期字數**：1,200-1,500 字
-**使用者確認**：Yes
+**Core purpose**: Describe the research design and analysis methods, address potential methodological critiques
+**Core argument**: Quasi-experimental design + PSM + hierarchical regression can effectively answer the moderating effect RQ
+**Supporting evidence**:
+  1. n=1200 sample size is sufficient for hierarchical regression
+  2. PSM addresses self-selection bias
+  3. MSLQ is a standardized measurement tool for self-regulated learning ability
+**Potential risk**: Retrospective survey design, single-university representativeness
+**Expected word count**: 1,200-1,500 words
+**User confirmation**: Yes
 
 [INSIGHT: methodology_summary]
-準實驗設計 + PSM + 階層回歸，三學年 n=1200。主要方法論風險：回溯性 MSLQ 和自我選擇偏誤（PSM 處理）。
+Quasi-experimental design + PSM + hierarchical regression, three academic years n=1200. Main methodological risks: retrospective MSLQ and self-selection bias (addressed by PSM).
 ```
 
 ---
 
-### Results（2 輪）
+### Results (2 rounds)
 
-#### 第 1 輪
+#### Round 1
 
-**Socratic Mentor**：
-Results 的 5 個核心問題：
+**Socratic Mentor**:
+Results' 5 core questions:
 
-1. 你最重要的發現是什麼？用一句話說。
-2. 有沒有意外的結果？
-3. 數據有沒有不支持你假設的地方？
-4. 結果怎麼呈現最清楚？
-5. 哪些結果最值得在 Discussion 深入討論？
+1. What is your most important finding? State it in one sentence.
+2. Were there any unexpected results?
+3. Were there any places where the data did not support your hypothesis?
+4. What is the clearest way to present the results?
+5. Which results are most worth discussing in depth in the Discussion?
 
-**使用者**：
-最重要的發現：混成學習對整體平均成績沒有顯著差異（p = .23），但自主學習能力和教學模式的交互作用顯著（p < .01）。高自主學習能力組在混成班的成績顯著高於實體班（d = 0.35），低自主學習能力組則顯著低於實體班（d = -0.28）。
+**User**:
+Most important finding: Blended learning had no significant effect on overall average grades (p = .23), but the interaction between self-regulated learning ability and instructional mode was significant (p < .01). The high self-regulated learning group performed significantly better in blended sections than in-person sections (d = 0.35), while the low self-regulated learning group performed significantly worse (d = -0.28).
 
-意外的是，中等自主學習能力的學生幾乎沒有差異。我本來以為會有線性關係，但其實是兩端分化。
+The surprise was that students with moderate self-regulated learning ability showed almost no difference. I expected a linear relationship, but it's actually a polarization at both ends.
 
-**Socratic Mentor**：
-兩端分化的發現比線性關係更有故事性。這表示混成學習不是「越自主越好」的簡單關係，而是有一個「門檻效應」。
+**Socratic Mentor**:
+The two-end polarization finding is more narratively compelling than a linear relationship. This suggests blended learning doesn't follow a simple "more self-regulation is always better" relationship — there's a "threshold effect."
 
-「中間群體無差異」這個發現很重要——代表混成學習對大多數學生是「無害」的，但對兩端的學生影響很大。這個發現值得用一張圖來呈現。
+The "no difference in the middle group" finding is important — it means blended learning is "harmless" for most students, but has large effects on students at both extremes. This finding deserves to be presented with a figure.
 
-你覺得用什麼圖最清楚？
+What type of figure do you think would be clearest?
 
-**使用者**：
-一張交互作用圖（interaction plot），X 軸是教學模式（實體 vs 混成），Y 軸是成績，三條線代表高/中/低自主學習能力組。
+**User**:
+An interaction plot, with instructional mode (in-person vs. blended) on the X-axis, grades on the Y-axis, and three lines representing the high/medium/low self-regulated learning groups.
 
-#### 第 2 輪
+#### Round 2
 
-**Socratic Mentor**：
-交互作用圖是呈現調節效應的標準做法，很好。除了圖之外，建議再搭配一個描述性統計表格（各組的平均數和標準差）和一個階層回歸表格。
+**Socratic Mentor**:
+The interaction plot is the standard approach for presenting moderating effects — good choice. In addition to the figure, I recommend pairing it with a descriptive statistics table (means and standard deviations for each group) and a hierarchical regression table.
 
-Results 的黃金原則記得：只報告，不解釋。
-- 先呈現整體概況（描述性統計、PSM 配對結果）
-- 再報告主效果（教學模式對成績的影響）
-- 最後報告交互作用（調節效應）
-- 用文字引導讀者看圖表的重點
+Remember the golden rule for Results: report only, don't interpret.
+- First present the overall picture (descriptive statistics, PSM matching results)
+- Then report the main effect (impact of instructional mode on grades)
+- Finally report the interaction (moderating effect)
+- Use text to guide readers to the key points in figures and tables
 
 ```
 ### Chapter Summary: Results
 
-**核心目的**：呈現三個層次的分析結果（整體→主效果→交互作用）
-**核心論點**：混成學習的整體效果不顯著，但自主學習能力的調節效應顯著，呈兩端分化模式
-**支持證據**：
-  1. 整體效果 p = .23（不顯著）
-  2. 交互作用 p < .01（顯著）
-  3. 高自主組 d = 0.35（正向）；低自主組 d = -0.28（負向）；中自主組無顯著差異
-**潛在風險**：效果量偏小，可能被質疑實務意義
-**預期字數**：1,000-1,200 字
-**使用者確認**：Yes
+**Core purpose**: Present three levels of analysis results (overall → main effect → interaction)
+**Core argument**: The overall effect of blended learning is not significant, but the moderating effect of self-regulated learning ability is significant, showing a two-end polarization pattern
+**Supporting evidence**:
+  1. Overall effect p = .23 (not significant)
+  2. Interaction p < .01 (significant)
+  3. High self-regulation group d = 0.35 (positive); Low self-regulation group d = -0.28 (negative); Middle self-regulation group no significant difference
+**Potential risk**: Small effect sizes may be questioned for practical significance
+**Expected word count**: 1,000-1,200 words
+**User confirmation**: Yes
 
 [INSIGHT: results_summary]
-核心發現為「門檻效應」：混成學習對高/低自主學習能力學生影響顯著但方向相反，中間群體無差異。三個表格/圖呈現。
+Core finding is the "threshold effect": blended learning significantly affects high/low self-regulated learning students in opposite directions, with no difference for the middle group. Three tables/figures for presentation.
 ```
 
 ---
 
-### Discussion（2 輪）
+### Discussion (2 rounds)
 
-#### 第 1 輪
+#### Round 1
 
-**Socratic Mentor**：
-Discussion 的 5 個核心問題：
+**Socratic Mentor**:
+Discussion's 5 core questions:
 
-1. 你的結果和現有文獻有什麼對話？
-2. 你的發現有什麼理論意義？
-3. 有什麼實務/政策建議？
-4. 研究限制是什麼？
-5. 未來研究方向？
+1. How does your result dialogue with existing literature?
+2. What is the theoretical significance of your findings?
+3. What practical/policy recommendations do you have?
+4. What are the research limitations?
+5. What are the future research directions?
 
-先從文獻對話開始：你的「整體無差異但有調節效應」的發現，和 Means et al. (2013) 的結論有什麼關係？
+Start with the literature dialogue: How does your finding of "no overall difference but a moderating effect" relate to Means et al.'s (2013) conclusion?
 
-**使用者**：
-Means et al. 說混成學習整體優於傳統教學，但我的結果是整體無差異。不過我覺得不是矛盾——而是他們的 meta-analysis 把正向和負向的影響平均掉了。如果分開看不同學生群體，可能也會看到類似的分化。
+**User**:
+Means et al. said blended learning is overall superior to traditional instruction, but my result shows no overall difference. However, I don't think this is a contradiction — rather, their meta-analysis averaged out the positive and negative effects. If you look at different student groups separately, you might see similar polarization.
 
-**Socratic Mentor**：
-這個解讀非常有洞察力。你不是在推翻 Means et al.，而是在「解構」他們的結論。你可以這樣論述：
+**Socratic Mentor**:
+This interpretation is very insightful. You're not overturning Means et al. — you're "deconstructing" their conclusion. You could argue it like this:
 
-「本研究的發現並非與 Means et al. (2013) 矛盾，而是提供了更細緻的解讀。當整體平均掩蓋了亞群體的差異時，『混成學習優於傳統教學』的結論可能是一種統計假象——對某些學生確實更好，但對另一些學生更差。」
+"The findings of this study do not contradict Means et al. (2013), but rather provide a more nuanced interpretation. When overall averages mask subgroup differences, the conclusion that 'blended learning is superior to traditional instruction' may be a statistical artifact — genuinely better for some students, but worse for others."
 
-這是你的 Discussion 中最有力的段落之一。
+This is one of the most powerful paragraphs in your Discussion.
 
-#### 第 2 輪
+#### Round 2
 
-**Socratic Mentor**：
-好，讓我問限制。你覺得這篇論文最大的 3 個限制是什麼？
+**Socratic Mentor**:
+Good, let me ask about limitations. What do you think are the 3 biggest limitations of this paper?
 
-**使用者**：
-1. 單一大學、通識課程的代表性有限
-2. MSLQ 的回溯性收集可能有偏誤
-3. 疫情時期的混成學習可能不等於常態化的混成學習
+**User**:
+1. Limited representativeness of a single university and general education courses
+2. Retrospective MSLQ collection may have bias
+3. Pandemic-era blended learning may not equate to routine blended learning
 
-**Socratic Mentor**：
-三個限制都很誠實。第 3 個特別重要——這直接影響你的結論能不能推廣到後疫情時代。建議在寫的時候不要只列出限制，而是對每個限制說明：（1）為什麼是限制（2）你做了什麼來減輕（3）未來怎麼克服。
+**Socratic Mentor**:
+All three limitations are honest. The third is particularly important — it directly affects whether your conclusions can be generalized to the post-pandemic era. When writing, I recommend not just listing limitations, but for each one explaining: (1) why it's a limitation, (2) what you did to mitigate it, and (3) how future research can overcome it.
 
-你的 Discussion 可以這樣組織：
-主要發現摘要（1 段）→ 與 Means et al. 對話（1 段）→ 門檻效應的理論意義（1 段）→ 自主學習能力的角色（1 段）→ 實務建議（1 段）→ 限制（1 段）→ 未來研究（1 段）
+Your Discussion can be organized like this:
+Summary of main findings (1 paragraph) → Dialogue with Means et al. (1 paragraph) → Theoretical significance of the threshold effect (1 paragraph) → The role of self-regulated learning ability (1 paragraph) → Practical recommendations (1 paragraph) → Limitations (1 paragraph) → Future research (1 paragraph)
 
 ```
 ### Chapter Summary: Discussion
 
-**核心目的**：解釋發現、與文獻對話、提出實務建議
-**核心論點**：整體無差異可能是正負效果相消的「統計假象」，自主學習能力是被忽略的關鍵調節變項
-**支持證據**：
-  1. 與 Means et al. (2013) 的批判性對話
-  2. Zimmerman (2002) 自主學習理論的延伸應用
-  3. 實務建議有數據支撐（d = -0.28 的低自主組需要介入）
-**潛在風險**：限制可能被認為太多，削弱結論力度
-**預期字數**：1,500-2,000 字
-**使用者確認**：Yes
+**Core purpose**: Interpret findings, dialogue with literature, propose practical recommendations
+**Core argument**: The overall null result may be a "statistical artifact" of positive and negative effects canceling out; self-regulated learning ability is an overlooked key moderating variable
+**Supporting evidence**:
+  1. Critical dialogue with Means et al. (2013)
+  2. Extended application of Zimmerman (2002) self-regulated learning theory
+  3. Practical recommendations supported by data (the low self-regulation group with d = -0.28 needs intervention)
+**Potential risk**: Too many limitations may be perceived as undermining the conclusions
+**Expected word count**: 1,500-2,000 words
+**User confirmation**: Yes
 
 [INSIGHT: discussion_summary]
-Discussion 核心敘事：「解構 Means et al. 的統計假象」+ 門檻效應的理論意義 + 三層實務建議（政策/教學/支持系統）。
+Discussion core narrative: "Deconstructing the statistical artifact of Means et al." + theoretical significance of the threshold effect + three-level practical recommendations (policy/instruction/support systems).
 ```
 
 ---
 
-### Conclusion（1 輪）
+### Conclusion (1 round)
 
-#### 第 1 輪
+#### Round 1
 
-**Socratic Mentor**：
-最後是 Conclusion，只有 3 個問題：
+**Socratic Mentor**:
+Finally, the Conclusion — only 3 questions:
 
-1. 你的核心貢獻是什麼？（一句話）
-2. 你最想讓讀者記住什麼？
-3. 這個研究改變了什麼？
+1. What is your core contribution? (One sentence)
+2. What do you most want the reader to remember?
+3. What did this research change?
 
-**使用者**：
-1. 核心貢獻：揭示混成學習效果的異質性，證明自主學習能力是關鍵調節變項。
-2. 最想讓讀者記住：混成學習不是「一體適用」的——推動時必須考慮學生差異。
-3. 改變了什麼：從「要不要推混成學習」轉為「怎麼推才不會傷害弱勢學生」。
+**User**:
+1. Core contribution: Revealing the heterogeneity of blended learning effects and proving that self-regulated learning ability is a key moderating variable.
+2. What I most want readers to remember: Blended learning is not "one-size-fits-all" — differences among students must be considered when promoting it.
+3. What this research changed: The question shifted from "should we promote blended learning" to "how do we promote it without harming disadvantaged students."
 
-**Socratic Mentor**：
-三個回答簡潔有力。你的 Conclusion 可以這樣寫：
+**Socratic Mentor**:
+All three answers are concise and powerful. Your Conclusion can be structured like this:
 
-回答 RQ（混成學習整體無顯著差異，但調節效應顯著）→ 核心貢獻（從「有沒有效」到「對誰有效」的視角轉移）→ 呼籲（大學推動數位轉型時應建立差異化的學習支持機制）
+Answer the RQs (no significant overall difference, but significant moderating effect) → Core contribution (a perspective shift from "is it effective" to "for whom is it effective") → Call to action (universities should establish differentiated learning support mechanisms when promoting digital transformation)
 
-注意不要引入新的證據或論點。結尾要有力。
+Be careful not to introduce new evidence or arguments. Make the ending impactful.
 
 ```
 ### Chapter Summary: Conclusion
 
-**核心目的**：回答 RQ、總結貢獻、提出展望
-**核心論點**：混成學習政策需要從「一體適用」轉向「差異化推動」
-**支持證據**：
-  1. 門檻效應的實證發現
-  2. 三層實務建議的可行性
-  3. 未來研究方向（跨校、縱貫、介入研究）
-**潛在風險**：結論太短可能顯得草率
-**預期字數**：500-700 字
-**使用者確認**：Yes
+**Core purpose**: Answer the RQs, summarize contributions, propose outlook
+**Core argument**: Blended learning policy needs to shift from "one-size-fits-all" to "differentiated promotion"
+**Supporting evidence**:
+  1. Empirical findings of the threshold effect
+  2. Feasibility of three-level practical recommendations
+  3. Future research directions (cross-institutional, longitudinal, intervention studies)
+**Potential risk**: Conclusion that is too short may appear hasty
+**Expected word count**: 500-700 words
+**User confirmation**: Yes
 
 [INSIGHT: conclusion_summary]
-Conclusion 的核心訊息：從「要不要推混成學習」轉向「怎麼推才不會傷害弱勢學生」——呼籲差異化政策。
+Conclusion's core message: Shift from "should we promote blended learning" to "how do we promote it without harming disadvantaged students" — calling for differentiated policy.
 ```
 
 ---
 
 ## Step 3: Argument Stress Test
 
-### 第 1 輪
+### Round 1
 
-**Socratic Mentor**：
-所有章節都討論完了。現在進入最後的論點壓力測試。我要挑戰你的論點，你準備好了嗎？
+**Socratic Mentor**:
+All chapters have been discussed. Now we enter the final argument stress test. I'm going to challenge your arguments — are you ready?
 
-**挑戰 1**：你說「自主學習能力是關鍵調節變項」，但你只測了這一個調節變項。也許數位素養、學習動機、社經地位也是調節變項，而且可能比自主學習能力更重要。你怎麼回應？
+**Challenge 1**: You claim "self-regulated learning ability is the key moderating variable," but you only tested this one moderating variable. Perhaps digital literacy, learning motivation, or socioeconomic status are also moderating variables, and might be more important than self-regulated learning ability. How do you respond?
 
-**使用者**：
-我承認只測了一個調節變項是限制。但選擇自主學習能力有理論基礎——Zimmerman 和 Pintrich 的理論都指出它是自我調節學習中最核心的構面。其他調節變項可以在未來研究中探討。
+**User**:
+I admit that testing only one moderating variable is a limitation. But choosing self-regulated learning ability has a theoretical basis — both Zimmerman's and Pintrich's theories identify it as the most central construct in self-regulated learning. Other moderating variables can be explored in future research.
 
-**Socratic Mentor**：
-[argument_builder 評估：論點強度 Moderate — 理論基礎充足但實證範圍有限]
+**Socratic Mentor**:
+[argument_builder assessment: Argument strength Moderate — theoretical basis is solid but empirical scope is limited]
 
-回應合理，但建議在 Discussion 的限制段落中明確提到其他潛在調節變項，展現你的學術自覺。
+The response is reasonable, but I recommend explicitly mentioning other potential moderating variables in the Discussion's limitations section to demonstrate your scholarly self-awareness.
 
-**挑戰 2**：你的效果量偏小（d = 0.35 和 d = -0.28）。有人可能會說這在實務上沒什麼意義。你怎麼回應？
+**Challenge 2**: Your effect sizes are small (d = 0.35 and d = -0.28). Someone might say these have no practical significance. How do you respond?
 
-**使用者**：
-Cohen (1988) 的標準下，這是小到中等的效果量。但在教育研究中，d = 0.2-0.4 已經是有實務意義的範圍（Hattie, 2009 的標準是 d > 0.4 為有意義，但很多公認有效的教育介入效果量也在 0.2-0.4 之間）。而且我的研究是觀察性的，不是實驗介入，效果量本來就會比較小。
+**User**:
+By Cohen's (1988) standards, these are small-to-medium effect sizes. But in educational research, d = 0.2-0.4 is already in the range of practical significance (Hattie's 2009 standard is d > 0.4 as meaningful, but many widely accepted educational interventions have effect sizes in the 0.2-0.4 range). Also, my study is observational, not an experimental intervention, so effect sizes would naturally be smaller.
 
-### 第 2 輪
+### Round 2
 
-**Socratic Mentor**：
-[argument_builder 評估：論點強度 Strong — 引用 Cohen 和 Hattie 標準，並區分觀察性研究與實驗研究的效果量差異]
+**Socratic Mentor**:
+[argument_builder assessment: Argument strength Strong — cites Cohen and Hattie standards, and distinguishes between observational and experimental effect size expectations]
 
-很好的回應。引用 Hattie (2009) 來脈絡化你的效果量，並指出觀察性研究的效果量期望本來就較低，這讓你的論點更有說服力。
+Excellent response. Citing Hattie (2009) to contextualize your effect sizes and noting that observational studies naturally have lower effect size expectations makes your argument more persuasive.
 
-**挑戰 3**：你用 PSM 處理自我選擇偏誤，但 PSM 只能控制你觀察到的混淆變項。可能有你沒測到的變項影響學生選課。
+**Challenge 3**: You used PSM to address self-selection bias, but PSM can only control for observed confounding variables. There may be unobserved variables influencing course selection.
 
-**使用者**：
-正確。PSM 的限制就是只能處理已觀察變項。但我用了入學成績、先前 GPA、性別、科系作為配對變項，這些是文獻中最常被提到的混淆因子。我會在限制中說明，並建議未來研究用隨機分派設計。
+**User**:
+Correct. The limitation of PSM is that it can only address observed variables. But I used admission scores, prior GPA, gender, and department as matching variables — these are the most commonly cited confounders in the literature. I will note this in the limitations section and recommend that future research use a randomized assignment design.
 
-**Socratic Mentor**：
-[argument_builder 評估：論點強度 Moderate — 誠實承認限制並提供改善方向]
+**Socratic Mentor**:
+[argument_builder assessment: Argument strength Moderate — honestly acknowledges limitations and provides improvement directions]
 
-好的，壓力測試完成。以下是你的 Argument Strength 總覽：
+Good, the stress test is complete. Here is your Argument Strength summary:
 
-| 論點 | 強度 | 說明 |
-|------|------|------|
-| 整體無差異但有調節效應 | Strong | 統計證據明確 |
-| 自主學習能力是關鍵調節變項 | Moderate | 理論基礎充足但只測一個變項 |
-| 門檻效應（非線性） | Strong | 數據支持，且是有趣的發現 |
-| PSM 控制選擇偏誤 | Moderate | 有效但無法控制未觀察變項 |
-| 效果量有實務意義 | Strong | 引用 Hattie 標準，脈絡化解釋 |
-| 回溯性 MSLQ 的效度 | Moderate | 理論上合理但未經實證驗證 |
+| Argument | Strength | Explanation |
+|----------|----------|-------------|
+| No overall difference but significant moderating effect | Strong | Clear statistical evidence |
+| Self-regulated learning ability is the key moderating variable | Moderate | Solid theoretical basis but only one variable tested |
+| Threshold effect (nonlinear) | Strong | Data supports it, and it's an interesting finding |
+| PSM controls for selection bias | Moderate | Effective but cannot control for unobserved variables |
+| Effect sizes have practical significance | Strong | Cites Hattie standards, contextualized interpretation |
+| Retrospective MSLQ validity | Moderate | Theoretically reasonable but not empirically validated |
 
-所有論點都在 Moderate 以上，可以進行 Chapter Plan 產出。
+All arguments are at Moderate or above — we can proceed to Chapter Plan output.
 
 ---
 
-## 最終 Chapter Plan 輸出
+## Final Chapter Plan Output
 
 ```markdown
 # Chapter Plan
 
-## 論文資訊
-- **題目**：數位轉型對台灣高等教育教學品質之影響：以混成學習為例
-- **論文類型**：IMRaD
-- **目標字數**：7,000-8,000 字
+## Paper Information
+- **Title**: The Impact of Digital Transformation on Teaching Quality in Taiwan's Higher Education: Blended Learning as a Case Study
+- **Paper type**: IMRaD
+- **Target word count**: 7,000-8,000 words
 
-## Chapter 1: Introduction (800-1,000 字)
-- **Core Argument**: 台灣大學大量推動混成學習但缺乏本土實證基礎
+## Chapter 1: Introduction (800-1,000 words)
+- **Core Argument**: Taiwanese universities are massively promoting blended learning but lack local empirical evidence
 - **Supporting Evidence**:
-  - 教育部數位轉型政策數據
-  - 台灣本土實證研究的缺乏（文獻缺口）
-  - 現有研究忽略學習者個體差異
-- **Counter-arguments**: 已有國際大型 meta-analysis 支持混成學習
-- **Response**: meta-analysis 結論的外推性有限（脈絡/學生差異）
+  - MOE digital transformation policy data
+  - Scarcity of local Taiwanese empirical research (literature gap)
+  - Existing research ignores individual learner differences
+- **Counter-arguments**: Large-scale international meta-analyses already support blended learning
+- **Response**: Meta-analysis conclusions have limited generalizability (context/student differences)
 - **Argument Strength**: Strong
 
-## Chapter 2: Literature Review (2,000-2,500 字)
-- **Core Argument**: 混成學習成效研究需要納入學習者特質作為調節變項
+## Chapter 2: Literature Review (2,000-2,500 words)
+- **Core Argument**: Blended learning effectiveness research needs to incorporate learner characteristics as moderating variables
 - **Supporting Evidence**:
-  - 混成學習定義的多元性（Garrison & Kanuka, 2004; Graham, 2006）
-  - Means et al. (2013) meta-analysis 的方法論限制
-  - 自主學習理論（Zimmerman, 2002; Pintrich, 2004）
-- **Counter-arguments**: 整體效果已被 meta-analysis 證實
-- **Response**: 整體效果掩蓋亞群體差異
+  - Diversity of blended learning definitions (Garrison & Kanuka, 2004; Graham, 2006)
+  - Methodological limitations of Means et al. (2013) meta-analysis
+  - Self-regulated learning theory (Zimmerman, 2002; Pintrich, 2004)
+- **Counter-arguments**: Overall effectiveness already proven by meta-analysis
+- **Response**: Overall effects mask subgroup differences
 - **Argument Strength**: Strong
 
-## Chapter 3: Methodology (1,200-1,500 字)
-- **Core Argument**: 準實驗設計 + PSM + 階層回歸可有效回答調節效應 RQ
+## Chapter 3: Methodology (1,200-1,500 words)
+- **Core Argument**: Quasi-experimental design + PSM + hierarchical regression can effectively answer the moderating effect RQ
 - **Supporting Evidence**:
-  - n=1200 跨三學年
-  - PSM 處理自我選擇偏誤
-  - MSLQ 為標準化測量工具
-- **Counter-arguments**: 回溯性問卷偏誤、自我選擇偏誤、單一大學代表性
-- **Response**: PSM 控制已觀察混淆變項、MSLQ 測穩定特質
+  - n=1200 across three academic years
+  - PSM addresses self-selection bias
+  - MSLQ is a standardized measurement tool
+- **Counter-arguments**: Retrospective survey bias, self-selection bias, single-university representativeness
+- **Response**: PSM controls observed confounders, MSLQ measures stable traits
 - **Argument Strength**: Moderate
 
-## Chapter 4: Results (1,000-1,200 字)
-- **Core Argument**: 整體效果不顯著但調節效應顯著，呈門檻效應
+## Chapter 4: Results (1,000-1,200 words)
+- **Core Argument**: Overall effect not significant but moderating effect is significant, showing threshold effect
 - **Supporting Evidence**:
-  - 主效果 p = .23（不顯著）
-  - 交互作用 p < .01（顯著）
-  - 高自主組 d = 0.35；低自主組 d = -0.28
-- **Counter-arguments**: 效果量偏小
-- **Response**: 教育研究觀察性設計中 d = 0.2-0.4 有實務意義（Hattie, 2009）
+  - Main effect p = .23 (not significant)
+  - Interaction p < .01 (significant)
+  - High self-regulation group d = 0.35; Low self-regulation group d = -0.28
+- **Counter-arguments**: Small effect sizes
+- **Response**: d = 0.2-0.4 has practical significance in educational observational research (Hattie, 2009)
 - **Argument Strength**: Strong
 
-## Chapter 5: Discussion (1,500-2,000 字)
-- **Core Argument**: 「整體無差異」是正負效果相消的統計假象
+## Chapter 5: Discussion (1,500-2,000 words)
+- **Core Argument**: The "overall null result" is a statistical artifact of positive and negative effects canceling out
 - **Supporting Evidence**:
-  - 與 Means et al. (2013) 的批判性對話
-  - Zimmerman (2002) 理論的延伸
-  - 低自主組的實務風險（d = -0.28）
-- **Counter-arguments**: 限制太多（單一大學、回溯性、疫情脈絡）
-- **Response**: 限制真實但不影響核心發現的方向性
+  - Critical dialogue with Means et al. (2013)
+  - Extension of Zimmerman (2002) theory
+  - Practical risk of the low self-regulation group (d = -0.28)
+- **Counter-arguments**: Too many limitations (single university, retrospective, pandemic context)
+- **Response**: Limitations are real but don't affect the directionality of core findings
 - **Argument Strength**: Moderate
 
-## Chapter 6: Conclusion (500-700 字)
-- **Core Argument**: 混成學習政策需從「一體適用」轉向「差異化推動」
+## Chapter 6: Conclusion (500-700 words)
+- **Core Argument**: Blended learning policy needs to shift from "one-size-fits-all" to "differentiated promotion"
 - **Supporting Evidence**:
-  - 門檻效應的實證基礎
-  - 三層實務建議
-- **Counter-arguments**: 單一研究不足以改變政策
-- **Response**: 本研究提供方向性指引，呼籲後續大規模研究
+  - Empirical basis of the threshold effect
+  - Three-level practical recommendations
+- **Counter-arguments**: A single study is insufficient to change policy
+- **Response**: This study provides directional guidance and calls for subsequent large-scale research
 - **Argument Strength**: Moderate
 
-## INSIGHT Collection 總覽
-1. [thesis_statement] 混成學習效果受自主學習能力調節，呈門檻效應
-2. [introduction_summary] 政策先行、驗證不足的急迫性
-3. [literature_review_summary] 定義→爭議→遺漏的變項
-4. [methodology_summary] 準實驗 + PSM + 階層回歸
-5. [results_summary] 門檻效應：兩端分化，中間無差異
-6. [discussion_summary] 解構 Means et al. 的統計假象
-7. [conclusion_summary] 從「要不要推」到「怎麼推」
+## INSIGHT Collection Summary
+1. [thesis_statement] Blended learning effects are moderated by self-regulated learning ability, showing threshold effect
+2. [introduction_summary] Urgency of policy ahead of evidence
+3. [literature_review_summary] Definition → Controversy → Missing variable
+4. [methodology_summary] Quasi-experimental + PSM + hierarchical regression
+5. [results_summary] Threshold effect: two-end polarization, middle no difference
+6. [discussion_summary] Deconstructing the statistical artifact of Means et al.
+7. [conclusion_summary] From "should we promote" to "how to promote"
 
-## 後續步驟
-→ 使用者可接著用 `full mode` 產出完整論文（Chapter Plan 自動匯入）
-→ 或送 `academic-paper-reviewer` 審查 Chapter Plan 的可行性
+## Next Steps
+→ User can proceed to use `full mode` to produce the complete paper (Chapter Plan auto-imports)
+→ Or send to `academic-paper-reviewer` to review the feasibility of the Chapter Plan
 ```

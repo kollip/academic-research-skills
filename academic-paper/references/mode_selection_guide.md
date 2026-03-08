@@ -1,250 +1,250 @@
-# Mode Selection Guide — 模式選擇指南
+# Mode Selection Guide
 
-本指南幫助使用者和 intake_agent 選擇最適合的 operational mode。
+This guide helps users and the `intake_agent` select the most appropriate operational mode.
 
 ---
 
-## 模式選擇流程圖
+## Mode Selection Flowchart
 
 ```
-用戶輸入 →
+User Input →
 │
-├── 已有完整研究？
-│   ├── Yes → 要完整論文？
+├── Already have complete research?
+│   ├── Yes → Want a full paper?
 │   │   ├── Yes ─────────────────────────→ full mode
-│   │   └── No → 只要大綱？
+│   │   └── No → Just need an outline?
 │   │       ├── Yes ─────────────────────→ outline-only mode
-│   │       └── No → 只要摘要？
+│   │       └── No → Just need an abstract?
 │   │           ├── Yes ──────────────────→ abstract-only mode
-│   │           └── No → 只要文獻回顧？
+│   │           └── No → Just need a literature review?
 │   │               ├── Yes ─────────────→ lit-review mode
 │   │               └── No ──────────────→ full mode
 │   │
-│   └── No → 想被引導思考？
+│   └── No → Want guided thinking?
 │       ├── Yes ─────────────────────────→ plan mode ★ NEW
-│       └── No ──────────────────────────→ full mode（Phase 0 會訪談）
+│       └── No ──────────────────────────→ full mode (Phase 0 will conduct an interview)
 │
-├── 已有論文要修訂？ ──────────────────────→ revision mode
-├── 只要轉換格式？ ────────────────────────→ format-convert mode
-└── 只要檢查引用？ ────────────────────────→ citation-check mode
+├── Have an existing paper to revise? ──────────────────────→ revision mode
+├── Just need format conversion? ────────────────────────→ format-convert mode
+└── Just need a citation check? ────────────────────────→ citation-check mode
 ```
 
 ---
 
-## 各模式詳細說明
+## Detailed Description of Each Mode
 
-### full mode — 完整論文撰寫
+### full mode — Complete Paper Writing
 
-**適用場景**：
-- 使用者有明確的研究問題和（部分）材料
-- 需要從頭到尾產出完整論文
-- 包含所有階段：訪談 → 文獻 → 架構 → 論證 → 撰寫 → 引用 → 審查 → 格式化
+**Applicable Scenarios**:
+- User has a clear research question and (partial) materials
+- Needs to produce a complete paper from start to finish
+- Includes all phases: Interview → Literature → Structure → Argumentation → Writing → Citation → Review → Formatting
 
-**不適用場景**：
-- 使用者對研究方向完全沒有想法（→ 先用 deep-research）
-- 只需要特定段落（→ 用其他專門 mode）
+**Not Applicable When**:
+- User has no idea about research direction (→ use `deep-research` first)
+- Only need a specific section (→ use another specialized mode)
 
-**預期產出**：完整論文草稿 + 參考文獻 + 雙語摘要 + 審查報告
-**預期時間**：長（8 個 Phase 完整執行）
-**使用 Agent**：全部 9 個 + socratic_mentor（如需要）
-
----
-
-### outline-only mode — 大綱產出
-
-**適用場景**：
-- 只需要論文架構和大綱
-- 要提交給指導教授審查的 proposal
-- 需要快速規劃論文結構
-
-**不適用場景**：
-- 需要完整論文內容（→ full mode）
-- 需要被引導思考（→ plan mode）
-
-**預期產出**：詳細大綱 + 證據配置 + 字數分配
-**預期時間**：短（Phase 0-2）
-**使用 Agent**：intake → literature_strategist → structure_architect
+**Expected Output**: Complete paper draft + references + bilingual abstract + review report
+**Expected Duration**: Long (all 8 Phases fully executed)
+**Agents Used**: All 9 + socratic_mentor (if needed)
 
 ---
 
-### plan mode — 逐章節引導規劃 ★ NEW
+### outline-only mode — Outline Generation
 
-**適用場景**：
-- 使用者有想法但還不夠清楚
-- 想要被引導思考每個章節的內容
-- 第一次寫學術論文的新手
-- 想在動筆前把每個部分想清楚
-- 剛從 deep-research 拿到材料，需要轉化為論文規劃
+**Applicable Scenarios**:
+- Only need the paper structure and outline
+- A proposal to submit to an advisor for review
+- Need to quickly plan the paper structure
 
-**不適用場景**：
-- 已經很清楚要寫什麼（→ full mode 更快）
-- 只需要大綱不需要深度思考（→ outline-only mode）
-- 時間緊迫需要快速產出（→ full mode）
+**Not Applicable When**:
+- Need complete paper content (→ full mode)
+- Need guided thinking (→ plan mode)
 
-**預期產出**：Chapter Plan + INSIGHT Collection
-**預期時間**：中等（Step 0-3，約 20-30 輪對話）
-**使用 Agent**：intake → socratic_mentor → structure_architect → argument_builder
-
-**後續銜接**：
-- Chapter Plan → full mode（產出完整論文）
-- Chapter Plan → academic-paper-reviewer（審查規劃）
+**Expected Output**: Detailed outline + evidence allocation + word count distribution
+**Expected Duration**: Short (Phase 0-2)
+**Agents Used**: intake → literature_strategist → structure_architect
 
 ---
 
-### revision mode — 論文修訂
+### plan mode — Chapter-by-Chapter Guided Planning ★ NEW
 
-**適用場景**：
-- 已有完成的論文草稿
-- 收到審稿意見需要修訂
-- 自己覺得某些段落需要改善
+**Applicable Scenarios**:
+- User has ideas but they are not yet clear enough
+- Wants guided thinking for each chapter's content
+- First-time academic paper writer
+- Wants to think through every section before writing
+- Just received materials from deep-research and needs to transform them into a paper plan
 
-**不適用場景**：
-- 沒有現成的論文草稿（→ full mode）
-- 只需要檢查引用格式（→ citation-check mode）
+**Not Applicable When**:
+- Already knows exactly what to write (→ full mode is faster)
+- Only needs an outline without deep thinking (→ outline-only mode)
+- Time-pressured and needs rapid output (→ full mode)
 
-**預期產出**：修訂後的論文 + 修訂說明（tracked changes）
-**預期時間**：中等
-**使用 Agent**：peer_reviewer → draft_writer → citation_compliance
+**Expected Output**: Chapter Plan + INSIGHT Collection
+**Expected Duration**: Medium (Step 0-3, approximately 20-30 rounds of conversation)
+**Agents Used**: intake → socratic_mentor → structure_architect → argument_builder
 
-**前提**：使用者必須提供現有論文內容
-
----
-
-### abstract-only mode — 摘要撰寫
-
-**適用場景**：
-- 論文已完成，只需要摘要
-- 需要提交研討會的摘要
-- 需要雙語摘要
-
-**不適用場景**：
-- 沒有論文內容可以摘要（→ full mode 或 plan mode）
-
-**預期產出**：雙語摘要（zh-TW + EN）+ 關鍵詞
-**預期時間**：短
-**使用 Agent**：intake → abstract_bilingual
+**Subsequent Connections**:
+- Chapter Plan → full mode (produce complete paper)
+- Chapter Plan → academic-paper-reviewer (review the plan)
 
 ---
 
-### lit-review mode — 文獻回顧
+### revision mode — Paper Revision
 
-**適用場景**：
-- 需要特定主題的文獻回顧
-- 準備論文的 Literature Review 章節
-- 需要系統性搜尋策略和文獻矩陣
+**Applicable Scenarios**:
+- Already have a completed paper draft
+- Received reviewer comments requiring revision
+- Feel certain sections need improvement
 
-**不適用場景**：
-- 需要完整論文（→ full mode）
-- 需要深入的研究調查（→ deep-research）
+**Not Applicable When**:
+- No existing paper draft (→ full mode)
+- Only need to check citation format (→ citation-check mode)
 
-**預期產出**：註解書目 + 文獻矩陣 + 綜合評析
-**預期時間**：中等
-**使用 Agent**：intake → literature_strategist
+**Expected Output**: Revised paper + revision notes (tracked changes)
+**Expected Duration**: Medium
+**Agents Used**: peer_reviewer → draft_writer → citation_compliance
+
+**Prerequisite**: User must provide existing paper content
 
 ---
 
-### format-convert mode — 格式轉換
+### abstract-only mode — Abstract Writing
 
-**適用場景**：
-- 已有論文內容，需要轉換格式
+**Applicable Scenarios**:
+- Paper is already complete, only need an abstract
+- Need to submit a conference abstract
+- Need a bilingual abstract
+
+**Not Applicable When**:
+- No paper content to summarize (→ full mode or plan mode)
+
+**Expected Output**: Bilingual abstract (zh-TW + EN) + keywords
+**Expected Duration**: Short
+**Agents Used**: intake → abstract_bilingual
+
+---
+
+### lit-review mode — Literature Review
+
+**Applicable Scenarios**:
+- Need a literature review on a specific topic
+- Preparing the Literature Review chapter of a paper
+- Need a systematic search strategy and literature matrix
+
+**Not Applicable When**:
+- Need a complete paper (→ full mode)
+- Need an in-depth research investigation (→ deep-research)
+
+**Expected Output**: Annotated bibliography + literature matrix + synthesis analysis
+**Expected Duration**: Medium
+**Agents Used**: intake → literature_strategist
+
+---
+
+### format-convert mode — Format Conversion
+
+**Applicable Scenarios**:
+- Already have paper content, need format conversion
 - Markdown → LaTeX / DOCX / PDF
-- 需要符合特定期刊的格式要求
+- Need to comply with a specific journal's formatting requirements
 
-**不適用場景**：
-- 沒有現成內容（→ full mode）
-- 需要修改內容（→ revision mode）
+**Not Applicable When**:
+- No existing content (→ full mode)
+- Need content modifications (→ revision mode)
 
-**預期產出**：目標格式的文件
-**預期時間**：短
-**使用 Agent**：formatter 單獨使用
-
----
-
-### citation-check mode — 引用檢查
-
-**適用場景**：
-- 已有論文，只需要檢查引用格式
-- 投稿前的最後檢查
-- 切換引用格式（如 APA → IEEE）
-
-**不適用場景**：
-- 沒有現成的引用列表（→ full mode）
-- 需要修改論文內容（→ revision mode）
-
-**預期產出**：引用錯誤報告 + 自動修正建議
-**預期時間**：短
-**使用 Agent**：citation_compliance 單獨使用
+**Expected Output**: Document in target format
+**Expected Duration**: Short
+**Agents Used**: formatter used standalone
 
 ---
 
-## 從 deep-research 銜接的路徑
+### citation-check mode — Citation Check
+
+**Applicable Scenarios**:
+- Already have a paper, only need to check citation format
+- Final check before submission
+- Switching citation format (e.g., APA → IEEE)
+
+**Not Applicable When**:
+- No existing citation list (→ full mode)
+- Need to modify paper content (→ revision mode)
+
+**Expected Output**: Citation error report + automatic correction suggestions
+**Expected Duration**: Short
+**Agents Used**: citation_compliance used standalone
+
+---
+
+## Paths from deep-research
 
 ```
-deep-research 完成
+deep-research completed
   │
-  ├── deep-research (full mode) 產出：
+  ├── deep-research (full mode) outputs:
   │   RQ Brief + Methodology Blueprint + Annotated Bibliography + Synthesis Report
   │   │
-  │   ├── 想直接寫論文 ──→ academic-paper (full mode)
-  │   │   intake_agent 自動偵測材料，跳過冗餘問題
+  │   ├── Want to write the paper directly ──→ academic-paper (full mode)
+  │   │   intake_agent auto-detects materials, skips redundant questions
   │   │
-  │   └── 想先規劃再寫 ──→ academic-paper (plan mode)
-  │       socratic_mentor 利用已有材料加速引導
+  │   └── Want to plan before writing ──→ academic-paper (plan mode)
+  │       socratic_mentor leverages existing materials to accelerate guidance
   │
-  └── deep-research (socratic mode) 產出：
+  └── deep-research (socratic mode) outputs:
       INSIGHT Collection + Synthesis Report
       │
-      ├── INSIGHT 已足夠清晰 ──→ academic-paper (full mode)
+      ├── INSIGHTs are sufficiently clear ──→ academic-paper (full mode)
       │
-      └── 需要更多引導 ──→ academic-paper (plan mode)
-          socratic_mentor 從 INSIGHT 繼續深化
+      └── Need more guidance ──→ academic-paper (plan mode)
+          socratic_mentor continues deepening from INSIGHTs
 ```
 
-## 到 academic-paper-reviewer 的銜接
+## Connecting to academic-paper-reviewer
 
 ```
-academic-paper 完成
+academic-paper completed
   │
-  ├── full mode 產出完整論文 ──→ academic-paper-reviewer (full / guided)
-  │   完整的同儕審查 + 修訂建議
+  ├── full mode produces complete paper ──→ academic-paper-reviewer (full / guided)
+  │   Complete peer review + revision suggestions
   │
-  ├── plan mode 產出 Chapter Plan ──→ academic-paper-reviewer (guided)
-  │   審查規劃的可行性和完整性
+  ├── plan mode produces Chapter Plan ──→ academic-paper-reviewer (guided)
+  │   Review the plan's feasibility and completeness
   │
-  └── reviewer 回饋 ──→ academic-paper (revision mode)
-      根據審查意見修訂論文
+  └── reviewer feedback ──→ academic-paper (revision mode)
+      Revise paper based on review comments
 ```
 
 ---
 
-## 常見誤選場景
+## Common Misselection Scenarios
 
-| 使用者說 | 容易誤選 | 正確選擇 | 原因 |
+| User Says | Easily Misselected | Correct Choice | Reason |
 |---------|---------|---------|------|
-| 「幫我寫個大綱」 | outline-only | 先確認：是要簡單大綱還是深度規劃？ | 可能需要 plan mode |
-| 「我想寫論文但不知道怎麼開始」 | full | plan mode | 需要引導思考 |
-| 「幫我改論文」 | revision | 先確認：有沒有審稿意見？ | 可能需要 full mode 重寫 |
-| 「幫我查文獻」 | lit-review | 先確認：是要論文的文獻回顧還是研究調查？ | 可能需要 deep-research |
-| 「我有 deep-research 的結果，幫我寫論文」 | full（直接跳過 Phase 0） | full（但 intake 需偵測 handoff） | 需要正確匯入材料 |
-| 「我想一步一步規劃論文」 | outline-only | plan mode | 需要互動式引導 |
-| 「論文格式不對」 | revision | citation-check 或 format-convert | 可能只需格式修正 |
+| "Help me write an outline" | outline-only | First confirm: Do they want a simple outline or deep planning? | May need plan mode |
+| "I want to write a paper but don't know how to start" | full | plan mode | Needs guided thinking |
+| "Help me revise my paper" | revision | First confirm: Are there reviewer comments? | May need full mode rewrite |
+| "Help me search for literature" | lit-review | First confirm: Is it a literature review for a paper or a research investigation? | May need deep-research |
+| "I have deep-research results, help me write a paper" | full (skip Phase 0 directly) | full (but intake needs to detect handoff) | Materials need to be properly imported |
+| "I want to plan my paper step by step" | outline-only | plan mode | Needs interactive guidance |
+| "The paper format is wrong" | revision | citation-check or format-convert | May only need format correction |
 
 ---
 
-## 快速決策表
+## Quick Decision Table
 
-| 你有什麼？ | 你要什麼？ | 選這個 mode |
+| What Do You Have? | What Do You Want? | Choose This Mode |
 |-----------|-----------|------------|
-| 什麼都沒有 | 完整論文 | plan mode → full mode |
-| 研究問題 + 文獻 | 完整論文 | full mode |
-| 研究問題 + 文獻 | 大綱 | outline-only mode |
-| 模糊的想法 | 論文規劃 | plan mode |
-| deep-research 結果 | 完整論文 | full mode（auto-handoff） |
-| deep-research 結果 | 引導式規劃 | plan mode |
-| 完成的論文 | 修訂 | revision mode |
-| 完成的論文 | 摘要 | abstract-only mode |
-| 完成的論文 | 格式轉換 | format-convert mode |
-| 完成的論文 | 引用檢查 | citation-check mode |
+| Nothing | Complete paper | plan mode → full mode |
+| Research question + literature | Complete paper | full mode |
+| Research question + literature | Outline | outline-only mode |
+| Vague idea | Paper plan | plan mode |
+| deep-research results | Complete paper | full mode (auto-handoff) |
+| deep-research results | Guided planning | plan mode |
+| Completed paper | Revision | revision mode |
+| Completed paper | Abstract | abstract-only mode |
+| Completed paper | Format conversion | format-convert mode |
+| Completed paper | Citation check | citation-check mode |
 
 ---
 

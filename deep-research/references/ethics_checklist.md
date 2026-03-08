@@ -164,60 +164,60 @@ or conditions].
 
 ## 8. Human Subjects Ethics
 
-### 8.1 人類受試者判定
+### 8.1 Human Subjects Determination
 
-- [ ] 研究是否蒐集、使用、或分析人類相關資料？
-- [ ] 若是，資料是否可辨識個人身分？
-- [ ] 若資料為已公開去識別化資料，是否向 IRB 確認免審資格？
+- [ ] Does the research collect, use, or analyze human-related data?
+- [ ] If yes, is the data personally identifiable?
+- [ ] If the data is publicly available and de-identified, has exempt review status been confirmed with the IRB?
 
-### 8.2 IRB 審查等級
+### 8.2 IRB Review Levels
 
-| 審查等級 | 適用條件 | 審查時程 |
-|----------|---------|---------|
-| **免除審查（Exempt）** | 公開資料、去識別化資料、匿名問卷（無敏感議題） | 1-2 週 |
-| **簡易審查（Expedited）** | 最小風險、非弱勢群體、一般問卷/訪談 | 2-4 週 |
-| **完整審查（Full Board）** | 高於最小風險、弱勢群體、敏感議題、欺騙手法 | 4-8 週 |
+| Review Level | Applicable Conditions | Review Timeline |
+|-------------|----------------------|-----------------|
+| **Exempt Review** | Public data, de-identified data, anonymous surveys (no sensitive topics) | 1-2 weeks |
+| **Expedited Review** | Minimal risk, non-vulnerable populations, general surveys/interviews | 2-4 weeks |
+| **Full Board Review** | Greater than minimal risk, vulnerable populations, sensitive topics, deception | 4-8 weeks |
 
-- [ ] 已判定適用的 IRB 審查等級
-- [ ] 已將 IRB 審查時程納入研究計畫時程
-- [ ] 研究者已完成研究倫理訓練（CITI 或同等課程）
+- [ ] Applicable IRB review level has been determined
+- [ ] IRB review timeline has been incorporated into the research project schedule
+- [ ] Researcher has completed research ethics training (CITI or equivalent course)
 
-### 8.3 知情同意
+### 8.3 Informed Consent
 
-- [ ] 知情同意書包含研究名稱、目的、程序、風險、益處
-- [ ] 明確說明參與的自願性（可隨時退出、不受懲罰）
-- [ ] 提供研究者與 IRB 聯繫方式
-- [ ] 特殊情境處理：
-  - [ ] 線上問卷：電子同意（點選「我同意」）
-  - [ ] 錄音/錄影：獨立勾選項目
-  - [ ] 未成年人：法定代理人同意 + 受試者 assent
-  - [ ] 原住民研究：部落知情同意 + 個人知情同意
+- [ ] Informed consent form includes research title, purpose, procedures, risks, and benefits
+- [ ] Clearly states voluntary nature of participation (may withdraw at any time, no penalties)
+- [ ] Provides researcher and IRB contact information
+- [ ] Special situations addressed:
+  - [ ] Online survey: Electronic consent (clicking "I agree")
+  - [ ] Audio/video recording: Separate checkbox item
+  - [ ] Minors: Legal guardian consent + subject assent
+  - [ ] Indigenous research: Community consent + individual informed consent
 
-### 8.4 數據脫敏
+### 8.4 Data De-identification
 
-- [ ] 移除直接識別碼（姓名、學號、身分證號）
-- [ ] 評估間接識別碼風險（系所 + 年級 + 性別組合）
-- [ ] 小樣本辨識風險評估（小型系所可能反推個人）
-- [ ] 質性引述移除可辨識細節
-- [ ] 資料儲存加密與存取權限控管
-- [ ] 訂定資料保存期限與銷毀程序
+- [ ] Remove direct identifiers (names, student IDs, national ID numbers)
+- [ ] Assess indirect identifier risks (department + year + gender combinations)
+- [ ] Small sample re-identification risk assessment (small departments may allow re-identification of individuals)
+- [ ] Remove identifiable details from qualitative quotations
+- [ ] Encrypt data storage with access controls
+- [ ] Establish data retention and destruction timeline
 
-### 8.5 弱勢群體保護
+### 8.5 Vulnerable Population Protection
 
-| 群體 | 額外保護措施 |
-|------|------------|
-| **未成年人** | 法定代理人同意 + 適齡 assent form |
-| **身心障礙者** | 評估同意能力、提供無障礙同意程序 |
-| **學生（研究者為教師）** | 避免權力關係影響自願性、第三方代為招募 |
-| **原住民** | 部落諮詢與同意、尊重 OCAP 原則 |
-| **經濟弱勢** | 報酬不得構成不當誘因 |
-| **受刑人** | 額外 IRB 審查、確保非強制參與 |
+| Population | Additional Protective Measures |
+|-----------|-------------------------------|
+| **Minors** | Legal guardian consent + age-appropriate assent form |
+| **Persons with disabilities** | Assess consent capacity, provide accessible consent procedures |
+| **Students (researcher is a teacher)** | Avoid power dynamics affecting voluntariness, use third-party recruitment |
+| **Indigenous peoples** | Community consultation and consent, respect OCAP principles |
+| **Economically disadvantaged** | Compensation must not constitute undue inducement |
+| **Incarcerated persons** | Additional IRB review, ensure non-coercive participation |
 
-- [ ] 已識別研究涉及的弱勢群體
-- [ ] 已規劃對應的額外保護措施
-- [ ] IRB 審查等級已考量弱勢群體因素
+- [ ] Vulnerable populations involved in the research have been identified
+- [ ] Corresponding additional protective measures have been planned
+- [ ] IRB review level accounts for vulnerable population considerations
 
-> 詳細 IRB 決策樹與台灣流程：見 `references/irb_decision_tree.md`
+> For detailed IRB decision tree and Taiwan-specific process: see `references/irb_decision_tree.md`
 
 ---
 
@@ -235,4 +235,4 @@ Before delivery, confirm ALL items:
 - [ ] Reproducibility documentation provided
 - [ ] Writing is inclusive and respectful
 - [ ] Report benefits stated audience without causing foreseeable harm
-- [ ] 涉及人類受試者的研究是否已規劃 IRB 審查？
+- [ ] If the research involves human subjects, has IRB review been planned?

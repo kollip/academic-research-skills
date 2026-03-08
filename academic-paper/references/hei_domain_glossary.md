@@ -1,169 +1,169 @@
-# HEI Domain Glossary — 高教術語雙語對照
+# HEI Domain Glossary
 
 Taiwan Higher Education domain-specific terminology. Used by all agents when writing papers in the HEI field.
 
 ## Institutional Types
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Higher Education Institution (HEI) | 高等教育機構 | 大學校院統稱 |
-| Comprehensive University | 綜合大學 | |
-| University of Science and Technology | 科技大學 | 技職體系 |
-| University of Technology | 技術學院 | |
-| Junior College | 專科學校 | 二專/五專 |
-| Public Institution | 公立學校 | |
-| Private Institution | 私立學校 | |
-| General Higher Education | 一般大學 | vs. 技職 |
-| Technological/Vocational Higher Education | 技職教育體系 | |
-| Normal University / Teachers University | 師範大學 | |
-| Medical University | 醫學大學 | |
+| Higher Education Institution (HEI) | Gao Deng Jiao Yu Ji Gou | General term for universities and colleges |
+| Comprehensive University | Zong He Da Xue | |
+| University of Science and Technology | Ke Ji Da Xue | Part of the technological/vocational system |
+| University of Technology | Ji Shu Xue Yuan | |
+| Junior College | Zhuan Ke Xue Xiao | 2-year / 5-year junior colleges |
+| Public Institution | Gong Li Xue Xiao | |
+| Private Institution | Si Li Xue Xiao | |
+| General Higher Education | Yi Ban Da Xue | As opposed to technological/vocational |
+| Technological/Vocational Higher Education | Ji Zhi Jiao Yu Ti Xi | |
+| Normal University / Teachers University | Shi Fan Da Xue | |
+| Medical University | Yi Xue Da Xue | |
 
 ## Quality Assurance
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Quality Assurance (QA) | 品質保證 | |
-| Accreditation | 評鑑（認可） | |
-| Institutional Accreditation | 校務評鑑 | HEEACT 主辦 |
-| Program Accreditation | 系所評鑑/品質保證認可 | |
-| Self-Assessment Report (SAR) | 自我評鑑報告 | |
-| Site Visit | 實地訪評 | |
-| Peer Review | 同儕審查 | |
-| External Review | 外部審查 | |
-| Evaluation Criteria | 評鑑項目 | E1-E4 for institutional |
-| Performance Indicator | 績效指標 | |
-| Benchmark | 標竿/基準 | |
-| Best Practice | 最佳實務 | |
-| Continuous Improvement | 持續改進 | |
-| PDCA Cycle | PDCA 循環 | Plan-Do-Check-Act |
-| HEEACT | 財團法人高等教育評鑑中心基金會 | |
+| Quality Assurance (QA) | Pin Zhi Bao Zheng | |
+| Accreditation | Ping Jian (Ren Ke) | |
+| Institutional Accreditation | Xiao Wu Ping Jian | Administered by HEEACT |
+| Program Accreditation | Xi Suo Ping Jian / Pin Zhi Bao Zheng Ren Ke | |
+| Self-Assessment Report (SAR) | Zi Wo Ping Jian Bao Gao | |
+| Site Visit | Shi Di Fang Ping | |
+| Peer Review | Tong Chai Shen Cha | |
+| External Review | Wai Bu Shen Cha | |
+| Evaluation Criteria | Ping Jian Xiang Mu | E1-E4 for institutional accreditation |
+| Performance Indicator | Ji Xiao Zhi Biao | |
+| Benchmark | Biao Gan / Ji Zhun | |
+| Best Practice | Zui Jia Shi Wu | |
+| Continuous Improvement | Chi Xu Gai Jin | |
+| PDCA Cycle | PDCA Xun Huan | Plan-Do-Check-Act |
+| HEEACT | Gao Deng Jiao Yu Ping Jian Zhong Xin Ji Jin Hui | Higher Education Evaluation and Accreditation Council of Taiwan |
 
 ## Governance & Strategy
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Board of Directors/Trustees | 董事會 | 私立學校 |
-| University President | 校長 | |
-| Vice President (Academic) | 學術副校長/教務長 | |
-| Dean | 院長 | |
-| Department Chair | 系主任 | |
-| University Autonomy | 大學自治 | |
-| Strategic Plan | 校務發展計畫 | |
-| Medium-Term Plan | 中長程校務發展計畫 | |
-| Mission Statement | 辦學理念/使命 | |
-| Vision | 願景 | |
-| Core Competency | 核心能力 | |
-| Institutional Research (IR) | 校務研究 | |
-| Key Performance Indicator (KPI) | 關鍵績效指標 | |
-| Balanced Scorecard (BSC) | 平衡計分卡 | |
+| Board of Directors/Trustees | Dong Shi Hui | For private institutions |
+| University President | Xiao Zhang | |
+| Vice President (Academic) | Xue Shu Fu Xiao Zhang / Jiao Wu Zhang | |
+| Dean | Yuan Zhang | |
+| Department Chair | Xi Zhu Ren | |
+| University Autonomy | Da Xue Zi Zhi | |
+| Strategic Plan | Xiao Wu Fa Zhan Ji Hua | |
+| Medium-Term Plan | Zhong Chang Cheng Xiao Wu Fa Zhan Ji Hua | |
+| Mission Statement | Ban Xue Li Nian / Shi Ming | |
+| Vision | Yuan Jing | |
+| Core Competency | He Xin Neng Li | |
+| Institutional Research (IR) | Xiao Wu Yan Jiu | |
+| Key Performance Indicator (KPI) | Guan Jian Ji Xiao Zhi Biao | |
+| Balanced Scorecard (BSC) | Ping Heng Ji Fen Ka | |
 
 ## Students & Enrollment
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Enrollment | 註冊/招生 | |
-| Enrollment Rate | 註冊率 | 實際註冊/核定名額 |
-| Admission | 入學 | |
-| Freshman | 大一新生 | |
-| Undergraduate | 學士班/大學部 | |
-| Master's Program | 碩士班 | |
-| Doctoral Program | 博士班 | |
-| In-Service Master's | 碩士在職專班 | |
-| Student Retention | 學生留校率 | |
-| Dropout Rate | 休退學率 | |
-| Graduation Rate | 畢業率 | |
-| Employment Rate | 就業率 | |
-| Declining Birthrate | 少子化 | 台灣高教關鍵議題 |
-| Student-Faculty Ratio | 生師比 | |
+| Enrollment | Zhu Ce / Zhao Sheng | |
+| Enrollment Rate | Zhu Ce Lv | Actual enrollment / approved quota |
+| Admission | Ru Xue | |
+| Freshman | Da Yi Xin Sheng | |
+| Undergraduate | Xue Shi Ban / Da Xue Bu | |
+| Master's Program | Shuo Shi Ban | |
+| Doctoral Program | Bo Shi Ban | |
+| In-Service Master's | Shuo Shi Zai Zhi Zhuan Ban | |
+| Student Retention | Xue Sheng Liu Xiao Lv | |
+| Dropout Rate | Xiu Tui Xue Lv | |
+| Graduation Rate | Bi Ye Lv | |
+| Employment Rate | Jiu Ye Lv | |
+| Declining Birthrate | Shao Zi Hua | A key issue in Taiwan higher education |
+| Student-Faculty Ratio | Sheng Shi Bi | |
 
 ## Teaching & Curriculum
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Curriculum | 課程 | |
-| Curriculum Design | 課程設計 | |
-| Program Learning Outcomes | 系所學習成效 | |
-| General Education | 通識教育 | |
-| Capstone Course | 總整課程 | |
-| Practicum / Internship | 實習 | |
-| Service Learning | 服務學習 | |
-| Competency-Based Education | 能力導向教育 | |
-| Outcome-Based Education (OBE) | 成果導向教育 | |
-| Teaching Evaluation | 教學評量 | |
-| Course Evaluation | 課程評鑑 | |
-| Credits | 學分 | |
-| Interdisciplinary | 跨領域 | |
-| Digital Learning | 數位學習 | |
-| Distance Learning | 遠距教學 | |
+| Curriculum | Ke Cheng | |
+| Curriculum Design | Ke Cheng She Ji | |
+| Program Learning Outcomes | Xi Suo Xue Xi Cheng Xiao | |
+| General Education | Tong Shi Jiao Yu | |
+| Capstone Course | Zong Zheng Ke Cheng | |
+| Practicum / Internship | Shi Xi | |
+| Service Learning | Fu Wu Xue Xi | |
+| Competency-Based Education | Neng Li Dao Xiang Jiao Yu | |
+| Outcome-Based Education (OBE) | Cheng Guo Dao Xiang Jiao Yu | |
+| Teaching Evaluation | Jiao Xue Ping Liang | |
+| Course Evaluation | Ke Cheng Ping Jian | |
+| Credits | Xue Fen | |
+| Interdisciplinary | Kua Ling Yu | |
+| Digital Learning | Shu Wei Xue Xi | |
+| Distance Learning | Yuan Ju Jiao Xue | |
 
 ## Research & Faculty
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Faculty | 教師/專任教師 | |
-| Full-Time Faculty | 專任教師 | |
-| Part-Time Faculty / Adjunct | 兼任教師 | |
-| Assistant Professor | 助理教授 | |
-| Associate Professor | 副教授 | |
-| Professor | 教授 | |
-| Tenure | 長聘 | |
-| Research Output | 研究產出 | |
-| Publication | 學術發表/著作 | |
-| Citation | 引用 | |
-| Impact Factor | 影響因子 | |
-| H-Index | H 指數 | |
-| Industry-Academia Collaboration | 產學合作 | |
-| Technology Transfer | 技術移轉 | |
-| Research Grant | 研究計畫補助 | |
+| Faculty | Jiao Shi / Zhuan Ren Jiao Shi | |
+| Full-Time Faculty | Zhuan Ren Jiao Shi | |
+| Part-Time Faculty / Adjunct | Jian Ren Jiao Shi | |
+| Assistant Professor | Zhu Li Jiao Shou | |
+| Associate Professor | Fu Jiao Shou | |
+| Professor | Jiao Shou | |
+| Tenure | Chang Pin | |
+| Research Output | Yan Jiu Chan Chu | |
+| Publication | Xue Shu Fa Biao / Zhu Zuo | |
+| Citation | Yin Yong | |
+| Impact Factor | Ying Xiang Yin Zi | |
+| H-Index | H Zhi Shu | |
+| Industry-Academia Collaboration | Chan Xue He Zuo | |
+| Technology Transfer | Ji Shu Yi Zhuan | |
+| Research Grant | Yan Jiu Ji Hua Bu Zhu | |
 
 ## Internationalization
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Internationalization | 國際化 | |
-| International Student | 國際學生/境外學生 | |
-| Exchange Student | 交換學生 | |
-| Dual Degree | 雙聯學制 | |
-| Memorandum of Understanding (MOU) | 合作備忘錄 | |
-| English-Taught Program (ETP) | 全英語授課學程 | |
-| Bilingual Education | 雙語教育 | |
-| Study Abroad | 出國交流 | |
-| Inbound Mobility | 境外學生來台 | |
-| Outbound Mobility | 本國學生出國 | |
+| Internationalization | Guo Ji Hua | |
+| International Student | Guo Ji Xue Sheng / Jing Wai Xue Sheng | |
+| Exchange Student | Jiao Huan Xue Sheng | |
+| Dual Degree | Shuang Lian Xue Zhi | |
+| Memorandum of Understanding (MOU) | He Zuo Bei Wang Lu | |
+| English-Taught Program (ETP) | Quan Ying Yu Shou Ke Xue Cheng | |
+| Bilingual Education | Shuang Yu Jiao Yu | |
+| Study Abroad | Chu Guo Jiao Liu | |
+| Inbound Mobility | Jing Wai Xue Sheng Lai Tai | International students coming to Taiwan |
+| Outbound Mobility | Ben Guo Xue Sheng Chu Guo | Domestic students going abroad |
 
 ## Finance & Resources
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Tuition and Fees | 學雜費 | |
-| Government Subsidy | 政府補助 | |
-| Endowment | 校務基金/捐贈基金 | |
-| Operating Revenue | 營運收入 | |
-| Financial Sustainability | 財務永續 | |
-| Higher Education Sprout Project | 高等教育深耕計畫 | MOE 重點補助計畫 |
-| USR (University Social Responsibility) | 大學社會責任 | |
+| Tuition and Fees | Xue Za Fei | |
+| Government Subsidy | Zheng Fu Bu Zhu | |
+| Endowment | Xiao Wu Ji Jin / Juan Zeng Ji Jin | |
+| Operating Revenue | Ying Yun Shou Ru | |
+| Financial Sustainability | Cai Wu Yong Xu | |
+| Higher Education Sprout Project | Gao Deng Jiao Yu Shen Geng Ji Hua | A key MOE funding program |
+| USR (University Social Responsibility) | Da Xue She Hui Ze Ren | |
 
 ## Policy & Regulatory
 
-| English | 中文 | Notes |
+| English | Romanized Chinese | Notes |
 |---------|------|-------|
-| Ministry of Education (MOE) | 教育部 | |
-| University Act | 大學法 | |
-| Private School Act | 私立學校法 | |
-| Program Adjustment | 系所調整 | |
-| Merger | 合併 | |
-| Exit Mechanism | 退場機制 | |
-| Enrollment Cap | 招生名額（核定名額） | |
-| Performance-Based Funding | 績效型補助 | |
+| Ministry of Education (MOE) | Jiao Yu Bu | |
+| University Act | Da Xue Fa | |
+| Private School Act | Si Li Xue Xiao Fa | |
+| Program Adjustment | Xi Suo Tiao Zheng | |
+| Merger | He Bing | |
+| Exit Mechanism | Tui Chang Ji Zhi | |
+| Enrollment Cap | Zhao Sheng Ming E (He Ding Ming E) | |
+| Performance-Based Funding | Ji Xiao Xing Bu Zhu | |
 
 ## Assessment Domains (HEEACT)
 
-| Code | English | 中文 |
+| Code | English | Romanized Chinese |
 |------|---------|------|
-| E1 | Governance and Management | 校務治理與經營 |
-| E2 | Teaching and Learning | 教學與學習 |
-| E3 | Student Support | 學生輔導與支持 |
-| E4 | Social Responsibility and Sustainability | 社會責任與永續發展 |
-| D1 | Goals and Features | 目標與特色 |
-| D2 | Curriculum and Teaching | 課程設計與教師教學 |
-| D3 | Student Learning and Outcomes | 學生學習與成效 |
+| E1 | Governance and Management | Xiao Wu Zhi Li Yu Jing Ying |
+| E2 | Teaching and Learning | Jiao Xue Yu Xue Xi |
+| E3 | Student Support | Xue Sheng Fu Dao Yu Zhi Chi |
+| E4 | Social Responsibility and Sustainability | She Hui Ze Ren Yu Yong Xu Fa Zhan |
+| D1 | Goals and Features | Mu Biao Yu Te Se |
+| D2 | Curriculum and Teaching | Ke Cheng She Ji Yu Jiao Shi Jiao Xue |
+| D3 | Student Learning and Outcomes | Xue Sheng Xue Xi Yu Cheng Xiao |

@@ -1,4 +1,4 @@
-# Journal Submission Guide — 期刊投稿指南
+# Journal Submission Guide
 
 Used by `formatter_agent` and `intake_agent`.
 
@@ -59,13 +59,13 @@ Used by `formatter_agent` and `intake_agent`.
 
 ### Taiwan HEI Journals (TSSCI)
 
-| Journal | 中文名稱 | Citation Style |
+| Journal | Romanized Chinese Name | Citation Style |
 |---------|---------|---------------|
-| Journal of Research in Education Sciences | 教育科學研究期刊 | APA |
-| Bulletin of Educational Research | 教育研究集刊 | APA |
-| Journal of Taiwan Normal University: Education | 師大學報：教育類 | APA |
-| Journal of Educational Practice and Research | 教育實踐與研究 | APA |
-| Higher Education Review | 高等教育 | APA |
+| Journal of Research in Education Sciences | Jiao Yu Ke Xue Yan Jiu Qi Kan | APA |
+| Bulletin of Educational Research | Jiao Yu Yan Jiu Ji Kan | APA |
+| Journal of Taiwan Normal University: Education | Shi Da Xue Bao: Jiao Yu Lei | APA |
+| Journal of Educational Practice and Research | Jiao Yu Shi Jian Yu Yan Jiu | APA |
+| Higher Education Review | Gao Deng Jiao Yu | APA |
 
 ## Cover Letter Template
 

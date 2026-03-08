@@ -1,18 +1,18 @@
-# Handoff 範例：deep-research → academic-paper
+# Handoff Example: deep-research → academic-paper
 
-本範例展示 deep-research full mode 完成研究後，如何銜接到 academic-paper 開始論文寫作。
-
----
-
-## 情境設定
-
-使用者已完成 deep-research full mode，研究主題為「AI-Assisted Quality Assurance in Higher Education: A Comparative Analysis of Implementation Strategies in East Asian Universities」。以下是研究產出摘要。
+This example demonstrates how deep-research full mode, after completing research, hands off to academic-paper to begin paper writing.
 
 ---
 
-## deep-research 產出摘要
+## Scenario Setup
 
-### 1. Research Question Brief（from research_question_agent）
+The user has completed deep-research full mode on the topic "AI-Assisted Quality Assurance in Higher Education: A Comparative Analysis of Implementation Strategies in East Asian Universities." Below is a summary of the research outputs.
+
+---
+
+## deep-research Output Summary
+
+### 1. Research Question Brief (from research_question_agent)
 
 ```markdown
 ### Primary Research Question
@@ -37,7 +37,7 @@ explain the variation in adoption patterns?
 3. To what extent do implementation outcomes align with stated policy objectives?
 ```
 
-### 2. Methodology Blueprint（from research_architect_agent）
+### 2. Methodology Blueprint (from research_architect_agent)
 
 ```markdown
 - Paradigm: Pragmatist (comparative policy analysis)
@@ -52,7 +52,7 @@ explain the variation in adoption patterns?
   with QA practitioners
 ```
 
-### 3. Annotated Bibliography（from bibliography_agent）
+### 3. Annotated Bibliography (from bibliography_agent)
 
 ```markdown
 23 sources identified, 18 retained after quality screening:
@@ -68,7 +68,7 @@ Key themes identified:
 - Data infrastructure as prerequisite (not just technology)
 ```
 
-### 4. Synthesis Report（from synthesis_agent）
+### 4. Synthesis Report (from synthesis_agent)
 
 ```markdown
 ## Core Findings
@@ -104,19 +104,19 @@ Key themes identified:
 
 ---
 
-## Handoff 指令
+## Handoff Instruction
 
-使用者完成 deep-research 後輸入：
+After completing deep-research, the user inputs:
 
 ```
-現在幫我根據這個研究寫一篇論文
+Now help me write a paper based on this research
 ```
 
 ---
 
-## academic-paper intake_agent 自動偵測
+## academic-paper intake_agent Auto-Detection
 
-**intake_agent 偵測流程**：
+**intake_agent Detection Process**:
 
 ```
 Scanning available materials...
@@ -152,24 +152,24 @@ Remaining work: Writing, formatting, argumentation, and polish
 
 ---
 
-## 跳過的步驟和原因
+## Skipped Steps and Reasons
 
-| academic-paper 步驟 | 正常流程 | Handoff 後 | 原因 |
+| academic-paper Step | Normal Workflow | After Handoff | Reason |
 |---------------------|---------|-----------|------|
-| Phase 1: Topic Scoping | intake_agent 從零釐清 | SKIPPED | RQ Brief 已完整 |
-| Phase 2: Structure Planning | outline_agent 設計結構 | PARTIAL | 有 Blueprint 但需轉為論文結構 |
-| Phase 3: Literature Search | literature_agent 搜尋 | SKIPPED | Bibliography 已完整 |
-| Phase 4: Literature Review Writing | review_writer_agent 撰寫 | ACTIVE | 有 Synthesis 但需轉為論文語氣 |
-| Phase 5: Methodology Writing | method_writer_agent 撰寫 | ACTIVE | 有 Blueprint 但需展開為完整段落 |
-| Phase 6: Findings Writing | findings_writer_agent 撰寫 | ACTIVE | 有 Synthesis 但需展開論證 |
-| Phase 7: Discussion Writing | discussion_writer_agent 撰寫 | ACTIVE | 需原創論述（非直接複製 Synthesis） |
-| Phase 8: Intro + Conclusion | bookend_agent 撰寫 | ACTIVE | 需要根據全文撰寫 |
-| Phase 9: Abstract + Formatting | format_agent 處理 | ACTIVE | 需要全文完成後產出 |
-| Phase 10: Self-Review | review_agent 審查 | ACTIVE | 必須執行 |
+| Phase 1: Topic Scoping | intake_agent clarifies from scratch | SKIPPED | RQ Brief is complete |
+| Phase 2: Structure Planning | outline_agent designs structure | PARTIAL | Has Blueprint but needs conversion to paper structure |
+| Phase 3: Literature Search | literature_agent searches | SKIPPED | Bibliography is complete |
+| Phase 4: Literature Review Writing | review_writer_agent writes | ACTIVE | Has Synthesis but needs conversion to paper tone |
+| Phase 5: Methodology Writing | method_writer_agent writes | ACTIVE | Has Blueprint but needs expansion to full paragraphs |
+| Phase 6: Findings Writing | findings_writer_agent writes | ACTIVE | Has Synthesis but needs expanded argumentation |
+| Phase 7: Discussion Writing | discussion_writer_agent writes | ACTIVE | Needs original discourse (not direct copy of Synthesis) |
+| Phase 8: Intro + Conclusion | bookend_agent writes | ACTIVE | Needs to be written based on full text |
+| Phase 9: Abstract + Formatting | format_agent processes | ACTIVE | Needs full text completion first |
+| Phase 10: Self-Review | review_agent reviews | ACTIVE | Must be executed |
 
 ---
 
-## 銜接後 academic-paper 的實際工作流程
+## Post-Handoff academic-paper Actual Workflow
 
 ```
 === academic-paper: Accelerated Pipeline ===
@@ -177,14 +177,14 @@ Remaining work: Writing, formatting, argumentation, and polish
 Step 1: STRUCTURAL MAPPING
   [outline_agent]
   - Input: RQ Brief + Methodology Blueprint + Synthesis Report
-  - Output: 完整論文大綱，每個段落標註對應的 deep-research 材料
-  - 產出範例：
+  - Output: Complete paper outline, each section tagged with corresponding deep-research materials
+  - Output example:
 
     I. Introduction
        - Context: AI in HE QA (from Synthesis background)
        - Problem: Cross-national variation unexplained
        - Purpose: Compare 3 East Asian models
-       - RQ: [直接引用 RQ Brief]
+       - RQ: [Directly cite RQ Brief]
 
     II. Literature Review
        - 2.1 AI in Quality Assurance (from Bibliography themes)
@@ -214,68 +214,68 @@ Step 1: STRUCTURAL MAPPING
 
 Step 2: SECTION WRITING (Parallel)
   [review_writer_agent] → Literature Review
-    - 基於 Annotated Bibliography 和 Synthesis，轉化為流暢的文獻回顧
-    - 不是逐篇摘要，而是主題式整合
+    - Based on Annotated Bibliography and Synthesis, transform into a fluent literature review
+    - Not sequential summaries, but thematic integration
 
   [method_writer_agent] → Methodology
-    - 將 Blueprint 展開為完整的方法論段落
-    - 補充 QCA 的技術細節和程序說明
+    - Expand the Blueprint into complete methodology paragraphs
+    - Add technical details and procedural explanation for QCA
 
   [findings_writer_agent] → Findings
-    - 將 Synthesis 的 3 個核心發現展開為有證據支持的論述
-    - 每個發現附具體案例和數據
-    - 處理 Synthesis 中標記的矛盾
+    - Expand the Synthesis's 3 core findings into evidence-supported arguments
+    - Each finding accompanied by specific cases and data
+    - Address contradictions flagged in the Synthesis
 
 Step 3: DISCUSSION + BOOKENDS
   [discussion_writer_agent] → Discussion
-    - 原創論述：發現與理論的對話
-    - 不重複 Findings，而是解釋「為什麼」
-    - 整合 deep-research 的 Knowledge Gaps 為 Future Research
+    - Original discourse: dialogue between findings and theory
+    - Does not repeat Findings; instead explains "why"
+    - Integrates deep-research Knowledge Gaps as Future Research
 
   [bookend_agent] → Introduction + Conclusion
-    - Introduction：從宏觀背景導入具體 RQ
-    - Conclusion：不引入新資訊，呼應 RQ 並展望未來
+    - Introduction: from macro context to specific RQ
+    - Conclusion: no new information, echoes RQ and looks to the future
 
 Step 4: ABSTRACT + FORMAT
   [format_agent]
-    - Abstract: 150-250 字，IMRAD 結構
-    - APA 7.0 全文格式化
-    - Reference list 整理（基於 Bibliography + 新增引用）
+    - Abstract: 150-250 words, IMRAD structure
+    - APA 7.0 full-text formatting
+    - Reference list cleanup (based on Bibliography + newly added citations)
 
 Step 5: SELF-REVIEW
   [review_agent]
-    - 內部一致性檢查（RQ → Method → Findings → Discussion 的邏輯鏈）
-    - 引用完整性（每個 claim 有 citation）
-    - 格式規範
-    - 判定：Ready for submission / Needs revision
+    - Internal consistency check (RQ → Method → Findings → Discussion logic chain)
+    - Citation completeness (every claim has a citation)
+    - Format compliance
+    - Verdict: Ready for submission / Needs revision
 ```
 
 ---
 
-## 使用者看到的銜接體驗
+## User-Facing Handoff Experience
 
-**academic-paper 的開場訊息**：
+**academic-paper's Opening Message**:
 
-> 我已經讀取了你在 deep-research 階段的完整產出，包括：
-> - Research Question Brief（FINER 4.6/5）
-> - Methodology Blueprint（QCA + document analysis）
-> - Annotated Bibliography（18 篇已篩選來源）
-> - Synthesis Report（3 核心發現 + 2 知識空白）
+> I've read your complete outputs from the deep-research stage, including:
+> - Research Question Brief (FINER 4.6/5)
+> - Methodology Blueprint (QCA + document analysis)
+> - Annotated Bibliography (18 quality-screened sources)
+> - Synthesis Report (3 core findings + 2 knowledge gaps)
 >
-> 基於這些材料，我已經完成了論文大綱的初步規劃。以下是預計的論文結構：
-> [顯示大綱]
+> Based on these materials, I've completed a preliminary plan for the paper outline. Here is the planned paper structure:
+> [Display outline]
 >
-> 我有兩個問題需要你確認：
-> 1. 你的目標期刊是什麼？（會影響字數限制和格式要求）
-> 2. 論文語言是英文還是中英雙語？
+> I have two questions that need your confirmation:
+> 1. What is your target journal? (This affects word limits and formatting requirements)
+> 2. Should the paper language be English or bilingual?
 >
-> 確認後我就開始撰寫。因為研究基礎已經很完整，預計可以跳過前期的探索階段，直接進入論文寫作。
+> Once confirmed, I'll begin writing. Because the research foundation is already comprehensive, I can skip the early exploration stages and proceed directly to paper writing.
 
 ---
 
-## 注意事項
+## Notes
 
-1. **不是複製貼上**：academic-paper 不會直接複製 deep-research 的產出，而是將其轉化為論文的語氣和格式
-2. **可能發現新問題**：在撰寫過程中，academic-paper 的 agents 可能發現 deep-research 遺漏的點，會主動補充
-3. **仍需要使用者確認**：目標期刊、語言偏好、特定格式要求等仍需使用者輸入
-4. **審稿建議自動銜接**：論文完成後，可接續使用 `academic-paper-reviewer` 進行正式審查
+1. **Not copy-paste**: academic-paper does not directly copy deep-research outputs, but transforms them into the tone and format of an academic paper
+2. **May discover new issues**: During the writing process, academic-paper agents may discover points missed by deep-research and will proactively supplement them
+3. **Still requires user confirmation**: Target journal, language preference, specific formatting requirements still require user input
+4. **Review recommendation auto-connects**: After paper completion, the user can continue with `academic-paper-reviewer` for formal review

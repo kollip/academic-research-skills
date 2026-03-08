@@ -1,4 +1,4 @@
-# Funding Statement Template — 資金來源聲明模板
+# Funding Statement Template
 
 ## Usage
 
@@ -8,13 +8,13 @@ Reference: `references/funding_statement_guide.md`
 
 ---
 
-## Step 1: Funding Source Registry / 資金來源登記表
+## Step 1: Funding Source Registry
 
 Fill in one row per funding source. Leave empty if no funding.
 
-| # | Funder（資助機構） | Grant Type（計畫類型） | Grant No.（計畫編號） | PI / Role（主持人/角色） | Period（執行期間） | Amount（金額） |
+| # | Funder | Grant Type | Grant No. | PI / Role | Period | Amount |
 |---|-----|------|------|------|------|------|
-| 1 | [e.g., NSTC] | [e.g., 專題研究計畫] | [e.g., NSTC 113-2410-H-003-001] | [e.g., Author A / PI] | [e.g., 2024/08-2025/07] | [optional] |
+| 1 | [e.g., NSTC] | [e.g., Research Project Grant] | [e.g., NSTC 113-2410-H-003-001] | [e.g., Author A / PI] | [e.g., 2024/08-2025/07] | [optional] |
 | 2 | [Funder Name] | [Grant Type] | [Grant Number] | [Name / Role] | [Period] | [optional] |
 | 3 | [Funder Name] | [Grant Type] | [Grant Number] | [Name / Role] | [Period] | [optional] |
 
@@ -22,7 +22,7 @@ Fill in one row per funding source. Leave empty if no funding.
 
 ---
 
-## Step 2: Funder Role Declaration / 資助機構角色聲明
+## Step 2: Funder Role Declaration
 
 For each funder, indicate their involvement:
 
@@ -35,11 +35,11 @@ For each funder, indicate their involvement:
 
 ---
 
-## Step 3: Select Statement Type / 選擇聲明類型
+## Step 3: Select Statement Type
 
 Choose the appropriate template below and fill in the details.
 
-### A. 有資助——單一來源 / Funded (Single Source)
+### A. Funded (Single Source)
 
 **English**:
 ```
@@ -48,13 +48,15 @@ Funding: This work was supported by the [Funder Full Name]
 and analysis, decision to publish, or preparation of the manuscript.
 ```
 
-**中文**：
+**Chinese**:
 ```
-經費來源：本研究承[資助機構全稱][計畫類型]補助（計畫編號：[編號]）。
-資助機構對本研究之設計、資料蒐集與分析、投稿決定及稿件撰寫均未介入。
+Funding: This research was supported by the [Funder Full Name] [Grant Type]
+(Grant No.: [Number]). The funder had no involvement in the design, data
+collection and analysis, publication decision, or manuscript preparation
+of this research.
 ```
 
-### B. 有資助——多重來源 / Funded (Multiple Sources)
+### B. Funded (Multiple Sources)
 
 **English**:
 ```
@@ -64,16 +66,17 @@ the [Funder 2] (Grant No. [Number 2]); and the [Funder 3]
 collection and analysis, decision to publish, or preparation of the manuscript.
 ```
 
-**中文**：
+**Chinese**:
 ```
-經費來源：本研究承以下計畫補助：
-(1) [資助機構 1][計畫類型]（計畫編號：[編號 1]）；
-(2) [資助機構 2][計畫類型]（計畫編號：[編號 2]）；
-(3) [資助機構 3][計畫類型]（計畫編號：[編號 3]）。
-各資助機構對本研究之設計、資料蒐集與分析、投稿決定及稿件撰寫均未介入。
+Funding: This research was supported by the following grants:
+(1) [Funder 1] [Grant Type] (Grant No.: [Number 1]);
+(2) [Funder 2] [Grant Type] (Grant No.: [Number 2]);
+(3) [Funder 3] [Grant Type] (Grant No.: [Number 3]).
+The funders had no involvement in the design, data collection and analysis,
+publication decision, or manuscript preparation of this research.
 ```
 
-### C. 無資助 / No Funding
+### C. No Funding
 
 **English**:
 ```
@@ -81,12 +84,13 @@ Funding: This research received no specific grant from any funding agency in
 the public, commercial, or not-for-profit sectors.
 ```
 
-**中文**：
+**Chinese**:
 ```
-經費來源：本研究未接受任何公部門、商業或非營利機構之特定補助。
+Funding: This research did not receive any specific grant from public,
+commercial, or not-for-profit funding agencies.
 ```
 
-### D. 部分資助 / Partially Funded
+### D. Partially Funded
 
 **English**:
 ```
@@ -95,17 +99,18 @@ Funding: This work was partially supported by the [Funder]
 and analysis, decision to publish, or preparation of the manuscript.
 ```
 
-**中文**：
+**Chinese**:
 ```
-經費來源：本研究部分經費由[資助機構]（計畫編號：[編號]）補助。
-資助機構對本研究之設計、資料蒐集與分析、投稿決定及稿件撰寫均未介入。
+Funding: This research was partially supported by [Funder] (Grant No.: [Number]).
+The funder had no involvement in the design, data collection and analysis,
+publication decision, or manuscript preparation of this research.
 ```
 
 ---
 
-## Step 4: COI Statement / 利益衝突聲明
+## Step 4: COI Statement
 
-### A. 無利益衝突 / No Conflict
+### A. No Conflict
 
 **English**:
 ```
@@ -114,13 +119,14 @@ financial interests or personal relationships that could have appeared to
 influence the work reported in this paper.
 ```
 
-**中文**：
+**Chinese**:
 ```
-利益衝突聲明：所有作者聲明，就本文所報導之研究而言，不存在任何已知的
-競爭性財務利益或個人關係。
+Declaration of Interest: All authors declare that, with respect to the research
+reported in this paper, there are no known competing financial interests or
+personal relationships.
 ```
 
-### B. 有利益衝突 / Conflict Exists
+### B. Conflict Exists
 
 **English**:
 ```
@@ -130,18 +136,19 @@ research grants / consulting fees / speaker honoraria] from [Organization].
 [Organization/Journal]. The remaining authors declare no competing interests.
 ```
 
-**中文**：
+**Chinese**:
 ```
-利益衝突聲明：[作者姓名]曾接受[組織名稱]之[研究補助/顧問費/演講費]。
-[作者姓名]擔任[組織/期刊名稱]之[顧問委員/編輯委員]。
-其餘作者聲明無利益衝突。
+Declaration of Interest: [Author Name] has received [research grants / consulting
+fees / speaker honoraria] from [Organization Name]. [Author Name] serves on the
+[advisory board / editorial board] of [Organization/Journal Name]. The remaining
+authors declare no competing interests.
 ```
 
 ---
 
-## Step 5: Taiwan-Specific Requirements / 台灣特殊要求
+## Step 5: Taiwan-Specific Requirements
 
-### NSTC 計畫致謝格式
+### NSTC Grant Acknowledgment Format
 
 **When grant was awarded before July 2022 (use MOST)**:
 ```
@@ -155,15 +162,15 @@ This work was supported by the National Science and Technology Council, Taiwan
 (Grant No. NSTC 113-2410-H-003-001).
 ```
 
-### 教育部計畫致謝格式
+### MOE Grant Acknowledgment Format
 
-**高教深耕計畫**：
+**Higher Education Sprout Project**:
 ```
 This work was supported by the Ministry of Education, Taiwan, through the
 Higher Education Sprout Project.
 ```
 
-**教學實踐研究計畫**：
+**Teaching Practice Research Program**:
 ```
 This work was supported by the Ministry of Education, Taiwan, through the
 Teaching Practice Research Program (Grant No. PBM[year][number]).
@@ -171,7 +178,7 @@ Teaching Practice Research Program (Grant No. PBM[year][number]).
 
 ---
 
-## Combined Output Example / 組合輸出範例
+## Combined Output Example
 
 A complete Declarations section for a Springer Nature journal:
 
@@ -200,7 +207,7 @@ This study was approved by the Institutional Review Board of [University Name]
 
 ---
 
-## Quality Checklist / 品質檢核
+## Quality Checklist
 
 | Check | Status |
 |-------|:------:|

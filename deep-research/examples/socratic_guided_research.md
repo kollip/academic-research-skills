@@ -1,331 +1,331 @@
-# Socratic Mode 範例：少子化對台灣私立大學經營策略之影響
+# Socratic Mode Example: Impact of Declining Birth Rates on Taiwan's Private University Management Strategies
 
-本範例展示 Socratic mode 的完整多輪對話過程，從模糊的研究興趣到清晰的 Research Plan Summary。
+This example demonstrates the complete multi-round dialogue process in Socratic mode, from a vague research interest to a clear Research Plan Summary.
 
 ---
 
-## 情境設定
+## Scenario Setup
 
-**使用者**：
+**User**:
 ```
-引導我研究少子化對私立大學的影響
+Guide my research on the impact of declining birth rates on private universities
 ```
 
-**系統**：偵測觸發詞「引導我研究」→ 啟動 Socratic mode → 調用 socratic_mentor_agent
+**System**: Detects trigger phrase "guide my research" → activates Socratic mode → invokes socratic_mentor_agent
 
 ---
 
-## Layer 1: PROBLEM FRAMING — 問題界定
+## Layer 1: PROBLEM FRAMING — Problem Definition
 
-### 第 1 輪
+### Round 1
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-少子化對私立大學的影響——這確實是台灣高等教育界最熱門也最迫切的議題之一。不過「影響」這個詞很大，我想先了解你的出發點。
+The impact of declining birth rates on private universities — this is certainly one of the most discussed and urgent topics in Taiwan's higher education sector. But "impact" is a broad word, and I'd like to understand your starting point first.
 
-你說的「影響」，是指你觀察到了什麼具體的現象讓你想探討這件事？比如說，是某所大學的停辦新聞讓你開始思考？還是你在工作中遇到了某個跟少子化相關的挑戰？
+When you say "impact," what specific phenomenon have you observed that made you want to explore this? For example, was it news of a university closing that got you thinking? Or did you encounter a challenge related to declining birth rates in your work?
 
-**使用者**：
-我在一所私立科技大學工作，這幾年招生越來越困難，尤其是日間部的學生。我們學校已經開始關掉一些系所了。我想知道，面對這種情況，私立大學到底應該怎麼應對。
+**User**:
+I work at a private university of technology, and enrollment has been getting harder and harder in recent years, especially for the daytime division. Our school has already started closing down some departments. I want to know how private universities should respond to this situation.
 
-### 第 2 輪
+### Round 2
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-你從自身的工作經驗出發，這很好——最有意義的研究往往來自真實的觀察。你提到的現象很具體：日間部招生困難、系所裁撤。
+Starting from your own work experience is great — the most meaningful research often comes from real observations. The phenomena you mentioned are very specific: difficulty in daytime division enrollment, department closures.
 
-[INSIGHT: 使用者關注的核心不只是少子化本身，而是私立大學在少子化壓力下的「應對策略」]
+[INSIGHT: The user's core concern is not just declining birth rates per se, but the "response strategies" of private universities under the pressure of declining birth rates]
 
-不過我想追問一下：你剛才說「應該怎麼應對」——你是想了解「其他學校實際上在做什麼」（描述性問題），還是想評估「哪些策略真的有效」（評估性問題）？
+But let me follow up: you said "how should they respond" — do you want to find out "what other schools are actually doing" (a descriptive question), or do you want to evaluate "which strategies are actually effective" (an evaluative question)?
 
-這兩個問題的方向很不同：前者是盤點現況，後者是判斷成效。你覺得哪個更接近你想回答的？
+These two directions are very different: the former is surveying the current state, the latter is judging effectiveness. Which one is closer to what you want to answer?
 
-**使用者**：
-我比較想知道哪些策略真的有效。因為我看到很多學校都在做轉型，但有些好像有效，有些好像只是在撐。我想知道差異在哪裡。
+**User**:
+I'm more interested in which strategies are actually effective. Because I see many schools doing transformation, but some seem effective while others seem to just be hanging on. I want to know what makes the difference.
 
-### 第 3 輪
+### Round 3
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-很好，你想做的不是記錄現象，而是理解「為什麼有些學校的轉型成功，有些卻失敗」。這是一個有分析深度的問題。
+Good — what you want to do is not just document phenomena, but understand "why some schools' transformations succeed while others fail." This is a question with analytical depth.
 
-[INSIGHT: 研究問題方向：私立大學因應少子化的轉型策略中，什麼因素區分了成功與失敗的案例]
+[INSIGHT: Research question direction: Among the transformation strategies adopted by private universities in response to declining birth rates, what factors differentiate successful from failed cases]
 
-那我接著問：你說「有效」和「只是在撐」——你心中怎麼定義「有效」？是招生數回升？是財務指標改善？還是學校還活著就算有效？
+So let me ask: you said "effective" and "just hanging on" — how do you define "effective" in your mind? Is it enrollment numbers recovering? Financial indicators improving? Or just staying alive counts as effective?
 
-定義「成功」的標準，會直接影響你研究的結論。你覺得什麼算是一個轉型策略「真的有效」？
+Defining the criteria for "success" will directly affect your research conclusions. What do you think constitutes a transformation strategy being "truly effective"?
 
-**使用者**：
-我覺得不能只看招生數。有些學校招生數穩住了，但是靠降低入學門檻、大量招境外生，品質很有問題。我覺得「有效」應該是在維持一定教育品質的前提下，學校能持續經營。
+**User**:
+I don't think we can just look at enrollment numbers. Some schools have stabilized their enrollment, but by lowering admission standards and recruiting large numbers of international students, with serious quality issues. I think "effective" should mean the school can sustain operations while maintaining a certain level of educational quality.
 
-### 第 4 輪
+### Round 4
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-你提出了一個很關鍵的區分：不是所有的「活下來」都等於「成功」。你認為成功需要同時滿足兩個條件——經營永續性和教育品質。
+You've made a very important distinction: not all "survival" equals "success." You believe success needs to simultaneously satisfy two conditions — operational sustainability and educational quality.
 
-[INSIGHT: 使用者對「成功轉型」的定義是雙重標準：(1) 經營永續（財務可持續）+ (2) 教育品質維持，而非單純的招生數字]
+[INSIGHT: The user's definition of "successful transformation" is a dual standard: (1) operational sustainability (financial viability) + (2) maintaining educational quality, not just enrollment numbers]
 
-這讓你的研究更有深度，但也更複雜。我想確認一件事：你說「一定教育品質」——你打算怎麼衡量品質？是用 HEEACT 的評鑑結果？畢業生就業率？雇主滿意度？還是其他指標？
+This gives your research more depth, but also more complexity. I want to confirm something: you said "a certain level of educational quality" — how do you plan to measure quality? Would you use HEEACT accreditation results? Graduate employment rates? Employer satisfaction? Or other indicators?
 
-而且，你覺得品質下降多少算「有問題」？有沒有一個你能接受的底線？
+Also, how much quality decline do you consider "problematic"? Is there a floor you can accept?
 
-**使用者**：
-這個我還沒想清楚。也許可以用評鑑結果加上畢業生就業率？但我知道這些指標也有問題......
+**User**:
+I haven't thought this through yet. Maybe I could use accreditation results plus graduate employment rates? But I know those indicators have problems too...
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-你意識到指標本身的局限性，這是做研究最重要的自覺之一。我們不需要現在就決定完美的衡量方式——這是方法論階段的任務。但你已經開始思考了，很好。
+Your awareness of the limitations of the indicators themselves is one of the most important aspects of self-awareness in research. We don't need to decide on the perfect measurement method right now — that's a task for the methodology stage. But you've already started thinking about it, which is great.
 
-讓我把我們目前的討論整理一下。你的研究問題似乎在朝這個方向收斂：「在台灣少子化背景下，私立大學採取的轉型策略中，哪些策略能在維持教育品質的前提下實現經營永續？成功與失敗案例的關鍵差異因素是什麼？」
+Let me organize our discussion so far. Your research question seems to be converging toward this direction: "In the context of Taiwan's declining birth rates, among the transformation strategies adopted by private universities, which strategies can achieve operational sustainability while maintaining educational quality? What are the key differentiating factors between successful and failed cases?"
 
-你覺得這個方向有抓到你的核心關切嗎？還是有什麼遺漏？
+Does this direction capture your core concern? Or is something missing?
 
-[INSIGHT: RQ 候選方向確認：比較成功與失敗的私立大學轉型策略，聚焦在品質維持+經營永續的雙重成功標準]
+[INSIGHT: Candidate RQ direction confirmed: comparing successful and failed private university transformation strategies, focusing on the dual success criteria of quality maintenance + operational sustainability]
 
-**使用者**：
-對，大方向是這樣。但是不是太大了？全台灣的私立大學很多。
+**User**:
+Yes, that's roughly the direction. But is it too broad? There are a lot of private universities in Taiwan.
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-很好的自我覺察。確實，如果要比較「所有」私立大學，範圍會太大。你覺得可以怎麼縮小範圍？你有沒有特別想聚焦的類型——比如科技大學？或是特定規模的學校？或者特定地區？
-
----
-
-## Layer 2: METHODOLOGY REFLECTION — 方法論反思
-
-### 第 5 輪
-
-**使用者**：
-我比較熟悉私立科技大學，而且科大面對的挑戰跟一般私立大學不太一樣——他們更依賴產學合作和技職體系。我想聚焦在私立科技大學。
-
-**Socratic Mentor**：
-
-聚焦在私立科技大學是合理的選擇——你有第一手經驗，而且科大確實有獨特的定位和挑戰。
-
-[INSIGHT: 研究範圍縮小至台灣私立科技大學，原因是使用者的實務經驗及科大的獨特定位（產學合作、技職體系依賴）]
-
-那我們進入下一個重要問題：你打算用什麼方式來回答這個問題？你目前有想過用什麼研究方法嗎——比如問卷調查、個案研究、統計分析，或是訪談？
-
-**使用者**：
-我想做個案研究。挑幾所轉型成功和失敗的科大來比較。
-
-### 第 6 輪
-
-**Socratic Mentor**：
-
-多個案比較研究是一個經典的策略分析方法，很適合你的問題。不過我想追問幾件事。
-
-首先，你打算怎麼選案例？你說「轉型成功和失敗」——但在選案例的時候你就需要先判斷誰成功誰失敗，而你剛才說「成功」的定義還沒完全想清楚。你會不會陷入一個循環：用你想研究的標準來選樣本，然後再用同樣的標準來評估？
-
-其次，「幾所」是幾所？2 所？6 所？10 所？這會影響你能做多深入的分析。
-
-**使用者**：
-嗯......你說得對，選案例這件事確實需要先想清楚。也許我可以先用一些客觀指標來初步篩選，比如註冊率變化和財務狀況，然後再深入分析。大概 4-6 所吧？
-
-**Socratic Mentor**：
-
-4-6 所是一個可管理的數量，符合多個案比較研究的慣例。用客觀指標先篩選，再做深入分析，這個兩階段設計很務實。
-
-[INSIGHT: 方法論選擇：多個案比較研究法，4-6 所私立科大，用客觀指標（註冊率、財務）做初步篩選，再深入分析策略差異]
-
-最後一個方法論問題：你打算怎麼「深入分析」？是訪談校長和主管？分析公開文件和報告？還是兩者都做？你覺得你能取得這些資料嗎？
-
-**使用者**：
-我應該可以透過我的人脈訪談到幾位科大的主管。然後公開資料像是教育部的統計和學校的自評報告也可以用。
-
-**[此處觸發 devils_advocate_agent — Checkpoint]**
-
-**Devil's Advocate 挑戰（融入 Mentor 的引導）**：
-
-我的同事提出了一個值得思考的問題：你的訪談對象都是「主管」——他們會不會傾向於把自己學校的策略描述得比實際更有計畫性？畢竟沒有人會在訪談中說「我們其實也不知道自己在做什麼」。你怎麼處理這種社會期望偏差？
+Good self-awareness. Indeed, if you want to compare "all" private universities, the scope would be too large. How do you think you could narrow it down? Are there specific types you want to focus on — such as universities of technology? Or schools of a specific size? Or a specific region?
 
 ---
 
-## Layer 3: EVIDENCE DESIGN — 證據策略
+## Layer 2: METHODOLOGY REFLECTION — Methodological Reflection
 
-### 第 7 輪
+### Round 5
 
-**使用者**：
-對，這是個問題。也許我可以交叉比對——不只聽主管怎麼說，還要看實際數據有沒有支持他們的說法。
+**User**:
+I'm more familiar with private universities of technology, and the challenges they face are different from general private universities — they rely more on industry-academia partnerships and the vocational education system. I want to focus on private universities of technology.
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-交叉驗證是一個很好的策略——學術上叫做三角驗證法（triangulation）。你用訪談資料加上統計數據相互印證，可以提高結論的可信度。
+Focusing on private universities of technology is a reasonable choice — you have first-hand experience, and technology universities indeed have a unique positioning and set of challenges.
 
-[INSIGHT: 資料蒐集策略採三角驗證：(1) 主管訪談（主觀經驗）+ (2) 教育部統計數據（客觀指標）+ (3) 自評報告文件分析，三者交叉印證]
+[INSIGHT: Research scope narrowed to Taiwan's private universities of technology, due to the user's practical experience and the unique positioning of technology universities (reliance on industry-academia partnerships, vocational education system)]
 
-那讓我問你一個更尖銳的問題：什麼樣的發現會讓你改變結論？比如，如果你原本以為「產學合作」是成功關鍵，但數據顯示成功和失敗的學校在產學合作上沒有顯著差異，你會怎麼辦？
+Now let's move to the next important question: how do you plan to answer this question? Have you thought about what research method to use — such as surveys, case studies, statistical analysis, or interviews?
 
-**使用者**：
-那我就需要接受這個結果，去找其他的解釋因素。
+**User**:
+I want to do case studies. Pick a few technology universities that have succeeded and failed in their transformation for comparison.
 
-### 第 8 輪
+### Round 6
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-你的態度很好——願意被數據改變想法，這是做研究最基本的誠實。
+Multiple case comparison is a classic strategy analysis method that suits your question well. But let me follow up on a few things.
 
-那再問一個你可能不想面對的問題：你最擔心找不到什麼？有沒有一種可能的發現讓你很害怕，因為它會讓整個研究變得沒意義？
+First, how do you plan to select cases? You said "succeeded and failed in transformation" — but in selecting cases, you'd need to first judge who succeeded and who failed, and you just said the definition of "success" isn't fully worked out yet. Could you end up in a loop: using the criteria you want to study to select the sample, then evaluating with those same criteria?
 
-**使用者**：
-我最擔心的是......如果發現學校的成敗其實跟策略無關，而是純粹取決於地理位置和歷史聲譽？那我的研究就變成「沒有什麼策略是有用的」。
+Second, "a few" — how many? 2? 6? 10? This affects how deep your analysis can go.
 
-**Socratic Mentor**：
+**User**:
+Hmm... you're right, the case selection issue does need to be thought through first. Maybe I could use some objective indicators for preliminary screening, like changes in enrollment rates and financial status, then do in-depth analysis. Probably 4-6 schools?
 
-這其實是一個非常有價值的發現——如果地理位置和歷史聲譽是決定性因素，那對政策制定者的啟示就完全不同了。你不需要害怕「沒有策略有用」的結論，因為這本身就是一個結論。
+**Socratic Mentor**:
 
-[INSIGHT: 重要的替代假說：私立科大的存亡可能更取決於結構性因素（地理位置、歷史聲譽）而非主動的轉型策略。這個假說不會讓研究無意義，反而會改變政策建議的方向]
+4-6 is a manageable number, consistent with common practice in multiple case comparison research. Using objective indicators for preliminary screening, then doing in-depth analysis — this two-stage design is very practical.
 
-不過，如果你想控制這些因素的影響，你可以在案例選擇時刻意配對：選一所北部成功的和一所北部失敗的，一所南部成功的和一所南部失敗的。這樣地理位置就被控制了。你覺得呢？
+[INSIGHT: Methodology choice: multiple case comparison method, 4-6 private technology universities, using objective indicators (enrollment rates, financials) for preliminary screening, then in-depth analysis of strategy differences]
 
-**使用者**：
-對，配對設計很有道理。我可以用地理位置和學校規模來配對。
+One last methodology question: how do you plan to do the "in-depth analysis"? Interview presidents and administrators? Analyze public documents and reports? Or both? Do you think you can obtain this data?
 
----
+**User**:
+I should be able to interview a few technology university administrators through my network. And public data like MOE statistics and schools' self-assessment reports can also be used.
 
-## Layer 4: CRITICAL SELF-EXAMINATION — 批判性自我檢視
+**[devils_advocate_agent triggered here — Checkpoint]**
 
-### 第 9 輪
+**Devil's Advocate Challenge (integrated into Mentor's guidance)**:
 
-**Socratic Mentor**：
-
-配對設計可以處理一部分混淆因素，很好。
-
-[INSIGHT: 個案選擇採配對設計：以地理位置和學校規模為配對條件，控制結構性因素的影響]
-
-現在讓我們誠實地面對這個研究的限制。你在其中一所私立科大工作——你覺得這個身份對你的研究是優勢還是劣勢？還是兩者都是？
-
-**使用者**：
-兩者都是吧。優勢是我了解這個環境，比較容易取得資料和理解脈絡。劣勢是我可能有偏見，尤其如果我自己的學校是案例之一。
-
-### 第 10 輪
-
-**Socratic Mentor**：
-
-非常坦誠的自我評估。你提到了一個關鍵的研究倫理問題：insider research 的角色衝突。
-
-[INSIGHT: 研究者身份的雙面性：insider advantage（容易取得資料、理解脈絡） vs insider bias（對自身機構的偏見）。需要在研究設計中明確處理]
-
-**[此處觸發 devils_advocate_agent — Checkpoint]**
-
-我的同事補充了一個挑戰：如果你自己學校被歸類為「失敗案例」，你發表得出來嗎？你的校長和同事看到後會怎麼想？這不只是研究偏見的問題，更是政治敏感度的問題。你打算怎麼處理？
-
-**使用者**：
-也許我應該不要把自己的學校放進案例裡。或者用匿名處理。
-
-**Socratic Mentor**：
-
-兩個都是可行的策略，但各有取捨。排除自己的學校會失去你最了解的案例；匿名處理在台灣的小圈子裡其實很容易被認出來。你需要在方法論裡明確說明你的立場和處理方式。
-
-還有一個更根本的問題：如果你的研究結論是「策略 X 無效」，但你自己的學校正在推動策略 X——你會據實發表嗎？
-
-**使用者**：
-我覺得應該據實發表。如果研究有價值，就應該說實話。但我知道這會有政治壓力。
+My colleague raised a question worth thinking about: your interview subjects are all "administrators" — wouldn't they tend to describe their school's strategies as more planned than they actually were? After all, nobody is going to say in an interview "we actually had no idea what we were doing." How do you handle this social desirability bias?
 
 ---
 
-## Layer 5: SIGNIFICANCE & CONTRIBUTION — 貢獻與意義
+## Layer 3: EVIDENCE DESIGN — Evidence Strategy
 
-### 第 11 輪
+### Round 7
 
-**Socratic Mentor**：
+**User**:
+Right, that's a problem. Maybe I can cross-validate — not just listen to what administrators say, but also check whether actual data supports their claims.
 
-你願意面對這個矛盾，這很好。這些限制和挑戰不需要讓你放棄研究，但需要在論文裡透明地討論。
+**Socratic Mentor**:
 
-[INSIGHT: 研究倫理決策：據實發表，在方法論中透明揭露研究者身份及潛在利益衝突，案例匿名化處理]
+Cross-validation is an excellent strategy — in academic terms it's called triangulation. Using interview data plus statistical data to corroborate each other improves the credibility of your conclusions.
 
-現在讓我們談一個最根本的問題：如果你完成了這個研究，誰會因此做出不同的決策？換句話說，讀者為什麼應該在乎你的發現？
+[INSIGHT: Data collection strategy employs triangulation: (1) administrator interviews (subjective experience) + (2) MOE statistical data (objective indicators) + (3) self-assessment report document analysis, with all three cross-validating each other]
 
-**使用者**：
-我覺得對其他私立科大的校長和決策者有用。他們可以知道哪些策略值得投資，哪些可能是白費力氣。對教育部的政策也有參考價值，比如退場條例是不是太一刀切。
+Now let me ask you a sharper question: what kind of finding would make you change your conclusion? For example, if you originally thought "industry-academia partnerships" were the key to success, but the data shows that successful and failed schools don't differ significantly in industry-academia partnerships, what would you do?
 
-### 第 12 輪
+**User**:
+Then I'd need to accept that result and look for other explanatory factors.
 
-**Socratic Mentor**：
+### Round 8
 
-你指出了兩個層次的貢獻：實務層（學校決策者）和政策層（教育部）。這讓你的研究不只是學術練習，而是有實際應用價值的。
+**Socratic Mentor**:
 
-[INSIGHT: 研究貢獻雙重層次：(1) 實務層——為私立科大決策者提供策略選擇的證據基礎；(2) 政策層——為退場與轉型政策提供個案比較的實證依據]
+Your attitude is excellent — being willing to let data change your mind is the most fundamental honesty in research.
 
-最後一個問題：你能用一句話完成這個句型嗎——「在我的研究之前，人們以為......但我的研究可能會顯示......」
+Now let me ask a question you might not want to face: what are you most worried about not finding? Is there a possible finding that scares you because it would make the entire research meaningless?
 
-**使用者**：
-在我的研究之前，人們以為少子化下私立科大的存亡主要取決於招生策略。但我的研究可能會顯示，決定性的因素不只是招生，而是學校能不能在招生之外找到新的價值定位。
+**User**:
+What I'm most worried about is... if it turns out that school success or failure has nothing to do with strategy at all, and is purely determined by geographic location and historical reputation. Then my research would become "no strategy is useful."
 
-**Socratic Mentor**：
+**Socratic Mentor**:
 
-這是一個非常有力的研究定位。你不只是在描述現象，而是在挑戰一個常見的假設——「招生就是一切」。如果你能用實證案例支持這個觀點，這會是一篇有影響力的研究。
+That's actually a very valuable finding — if geographic location and historical reputation are the decisive factors, then the implications for policymakers would be entirely different. You don't need to be afraid of a "no strategy is useful" conclusion, because that itself is a conclusion.
 
-[INSIGHT: 核心學術貢獻：挑戰「少子化 = 招生問題」的簡化敘事，提出「價值重新定位」才是私立科大永續經營的關鍵因素]
+[INSIGHT: Important alternative hypothesis: Private technology universities' survival may depend more on structural factors (geographic location, historical reputation) than on active transformation strategies. This hypothesis doesn't make the research meaningless; rather, it would change the direction of policy recommendations]
+
+However, if you want to control for the influence of these factors, you could intentionally pair cases during selection: choose one successful and one failed school from the north, one successful and one failed school from the south. That way geographic location is controlled. What do you think?
+
+**User**:
+Yes, paired design makes a lot of sense. I can pair by geographic location and school size.
+
+---
+
+## Layer 4: CRITICAL SELF-EXAMINATION — Critical Self-Review
+
+### Round 9
+
+**Socratic Mentor**:
+
+Paired design can address some confounding factors. Good.
+
+[INSIGHT: Case selection uses paired design: geographic location and school size as pairing conditions to control the influence of structural factors]
+
+Now let's honestly face the limitations of this research. You work at one of these private technology universities — do you think this identity is an advantage or a disadvantage for your research? Or both?
+
+**User**:
+Both, I think. The advantage is that I understand the environment and can more easily access data and understand context. The disadvantage is that I might have biases, especially if my own school is one of the cases.
+
+### Round 10
+
+**Socratic Mentor**:
+
+A very honest self-assessment. You've raised a key research ethics issue: the role conflict of insider research.
+
+[INSIGHT: The researcher's identity has a dual nature: insider advantage (easy data access, contextual understanding) vs insider bias (bias toward one's own institution). This must be explicitly addressed in the research design]
+
+**[devils_advocate_agent triggered here — Checkpoint]**
+
+My colleague added a challenge: if your own school gets classified as a "failed case," would you be able to publish? What would your president and colleagues think when they see it? This isn't just a research bias issue — it's a political sensitivity issue. How do you plan to handle this?
+
+**User**:
+Maybe I should not include my own school in the cases. Or use anonymization.
+
+**Socratic Mentor**:
+
+Both are viable strategies, but each has trade-offs. Excluding your own school means losing the case you know best; anonymization in Taiwan's small academic circle can be easily identified. You'll need to explicitly state your position and handling approach in the methodology.
+
+And there's an even more fundamental question: if your research conclusion is "Strategy X is ineffective," but your own school is currently pursuing Strategy X — would you publish honestly?
+
+**User**:
+I think I should publish honestly. If the research has value, the truth should be told. But I know there will be political pressure.
+
+---
+
+## Layer 5: SIGNIFICANCE & CONTRIBUTION — Contribution and Significance
+
+### Round 11
+
+**Socratic Mentor**:
+
+Your willingness to face this tension is admirable. These limitations and challenges don't need to make you give up the research, but they need to be transparently discussed in the paper.
+
+[INSIGHT: Research ethics decision: publish honestly, transparently disclose the researcher's identity and potential conflicts of interest in the methodology, anonymize case institutions]
+
+Now let's address the most fundamental question: if you complete this research, who would make different decisions as a result? In other words, why should readers care about your findings?
+
+**User**:
+I think it would be useful for other private technology university presidents and decision-makers. They can learn which strategies are worth investing in and which might be a waste of effort. It would also have reference value for MOE policy, such as whether the exit regulations are too one-size-fits-all.
+
+### Round 12
+
+**Socratic Mentor**:
+
+You've identified two levels of contribution: the practical level (school decision-makers) and the policy level (MOE). This makes your research not just an academic exercise, but one with real applied value.
+
+[INSIGHT: Research contribution at two levels: (1) practical level — providing private technology university decision-makers with an evidence base for strategy choices; (2) policy level — providing case comparison evidence for exit and transformation policies]
+
+One last question: can you complete this sentence in one statement — "Before my research, people thought... but my research might show..."
+
+**User**:
+Before my research, people thought that the survival of private technology universities under declining birth rates depended mainly on enrollment strategies. But my research might show that the decisive factor is not just enrollment, but whether the school can find a new value proposition beyond enrollment.
+
+**Socratic Mentor**:
+
+This is a very powerful research positioning. You're not just describing a phenomenon — you're challenging a common assumption: "enrollment is everything." If you can support this argument with empirical cases, this will be an impactful study.
+
+[INSIGHT: Core academic contribution: challenging the simplified narrative of "declining birth rates = enrollment problem," proposing that "value repositioning" is the key factor for private technology universities' sustainable operation]
 
 ---
 
 ## Research Plan Summary
 
-對話結束。以下是根據 12 輪對話萃取的 Research Plan Summary。
+Dialogue concluded. Below is the Research Plan Summary extracted from 12 rounds of dialogue.
 
 ---
 
-### 研究問題 (Research Question)
+### Research Question
 
-**核心問題**：在台灣少子化背景下，私立科技大學的轉型策略中，哪些策略能在維持教育品質的前提下實現經營永續？成功與失敗案例的關鍵差異因素是什麼？
+**Core Question**: In the context of Taiwan's declining birth rates, among the transformation strategies of private technology universities, which strategies can achieve operational sustainability while maintaining educational quality? What are the key differentiating factors between successful and failed cases?
 
-**子問題**：
-1. 私立科大採取了哪些不同類型的轉型策略？
-2. 成功維持經營且維持品質的科大，其策略有什麼共同特徵？
-3. 結構性因素（地理位置、歷史聲譽、學校規模）在多大程度上影響策略的成效？
+**Sub-questions**:
+1. What different types of transformation strategies have private technology universities adopted?
+2. What common characteristics do the strategies of technology universities that have maintained both operations and quality share?
+3. To what extent do structural factors (geographic location, historical reputation, school size) influence strategy effectiveness?
 
-### 方法論方向 (Methodology Direction)
+### Methodology Direction
 
-- **研究設計**：多個案比較研究（multiple case study comparison）
-- **案例數**：4-6 所私立科技大學
-- **案例選擇**：兩階段——先用客觀指標篩選（註冊率變化、財務狀況），再配對（地理位置 x 學校規模）
-- **資料蒐集**：三角驗證
-  - 主管深度訪談
-  - 教育部公開統計數據
-  - 學校自評報告文件分析
+- **Research design**: Multiple case comparison study
+- **Number of cases**: 4-6 private technology universities
+- **Case selection**: Two-stage — first screen with objective indicators (enrollment rate changes, financial status), then pair (geographic location x school size)
+- **Data collection**: Triangulation
+  - In-depth administrator interviews
+  - MOE public statistical data
+  - School self-assessment report document analysis
 
-### 證據策略 (Evidence Strategy)
+### Evidence Strategy
 
-- 訪談與數據交叉驗證，避免單一來源偏誤
-- 配對設計控制地理和規模等結構性因素
-- 明確的「改變結論」條件：如果策略因素不顯著而結構性因素顯著，調整結論方向而非隱藏發現
+- Cross-validate interviews with data to avoid single-source bias
+- Paired design to control structural factors like geography and scale
+- Clear "change the conclusion" condition: if strategy factors are not significant while structural factors are, adjust the conclusion direction rather than hiding findings
 
-### 已知限制 (Known Limitations)
+### Known Limitations
 
-1. **研究者身份**：在私立科大任職，存在 insider bias 風險。處理方式：方法論中透明揭露、案例匿名化
-2. **訪談偏誤**：主管可能美化自身策略。處理方式：三角驗證
-3. **樣本量有限**：4-6 所個案無法統計推論。定位為：分析性推論（analytic generalization）而非統計推論
-4. **「成功」定義的主觀性**：品質指標本身有爭議。處理方式：使用多元指標、在限制段落中討論
-5. **政治敏感度**：結論可能影響研究者與所屬機構的關係
+1. **Researcher identity**: Employed at a private technology university, insider bias risk exists. Handling: transparent disclosure in methodology, case anonymization
+2. **Interview bias**: Administrators may overstate their strategies. Handling: triangulation
+3. **Limited sample size**: 4-6 cases cannot support statistical inference. Positioned as: analytic generalization rather than statistical inference
+4. **Subjectivity of "success" definition**: Quality indicators themselves are debatable. Handling: use multiple indicators, discuss in limitations section
+5. **Political sensitivity**: Conclusions may affect the researcher's relationship with their institution
 
-### 預期貢獻 (Expected Contribution)
+### Expected Contribution
 
-- **學術貢獻**：挑戰「少子化 = 招生問題」的簡化敘事，提出「價值重新定位」的分析框架
-- **實務貢獻**：為私立科大決策者提供有實證基礎的策略選擇參考
-- **政策貢獻**：為退場與轉型政策提供個案比較的實證依據
+- **Academic contribution**: Challenge the simplified narrative of "declining birth rates = enrollment problem," propose an analytical framework of "value repositioning"
+- **Practical contribution**: Provide private technology university decision-makers with evidence-based strategy choice reference
+- **Policy contribution**: Provide case comparison evidence for exit and transformation policies
 
-### INSIGHT 完整列表
+### Complete INSIGHT List
 
-1. [INSIGHT: 使用者關注的核心不只是少子化本身，而是私立大學在少子化壓力下的「應對策略」]
-2. [INSIGHT: 研究問題方向：私立大學因應少子化的轉型策略中，什麼因素區分了成功與失敗的案例]
-3. [INSIGHT: 使用者對「成功轉型」的定義是雙重標準：(1) 經營永續（財務可持續）+ (2) 教育品質維持，而非單純的招生數字]
-4. [INSIGHT: RQ 候選方向確認：比較成功與失敗的私立大學轉型策略，聚焦在品質維持+經營永續的雙重成功標準]
-5. [INSIGHT: 研究範圍縮小至台灣私立科技大學，原因是使用者的實務經驗及科大的獨特定位（產學合作、技職體系依賴）]
-6. [INSIGHT: 方法論選擇：多個案比較研究法，4-6 所私立科大，用客觀指標（註冊率、財務）做初步篩選，再深入分析策略差異]
-7. [INSIGHT: 資料蒐集策略採三角驗證：(1) 主管訪談（主觀經驗）+ (2) 教育部統計數據（客觀指標）+ (3) 自評報告文件分析，三者交叉印證]
-8. [INSIGHT: 重要的替代假說：私立科大的存亡可能更取決於結構性因素（地理位置、歷史聲譽）而非主動的轉型策略。這個假說不會讓研究無意義，反而會改變政策建議的方向]
-9. [INSIGHT: 個案選擇採配對設計：以地理位置和學校規模為配對條件，控制結構性因素的影響]
-10. [INSIGHT: 研究者身份的雙面性：insider advantage（容易取得資料、理解脈絡） vs insider bias（對自身機構的偏見）。需要在研究設計中明確處理]
-11. [INSIGHT: 研究倫理決策：據實發表，在方法論中透明揭露研究者身份及潛在利益衝突，案例匿名化處理]
-12. [INSIGHT: 研究貢獻雙重層次：(1) 實務層——為私立科大決策者提供策略選擇的證據基礎；(2) 政策層——為退場與轉型政策提供個案比較的實證依據]
-13. [INSIGHT: 核心學術貢獻：挑戰「少子化 = 招生問題」的簡化敘事，提出「價值重新定位」才是私立科大永續經營的關鍵因素]
+1. [INSIGHT: The user's core concern is not just declining birth rates per se, but the "response strategies" of private universities under the pressure of declining birth rates]
+2. [INSIGHT: Research question direction: Among the transformation strategies adopted by private universities in response to declining birth rates, what factors differentiate successful from failed cases]
+3. [INSIGHT: The user's definition of "successful transformation" is a dual standard: (1) operational sustainability (financial viability) + (2) maintaining educational quality, not just enrollment numbers]
+4. [INSIGHT: Candidate RQ direction confirmed: comparing successful and failed private university transformation strategies, focusing on the dual success criteria of quality maintenance + operational sustainability]
+5. [INSIGHT: Research scope narrowed to Taiwan's private technology universities, due to the user's practical experience and the unique positioning of technology universities (reliance on industry-academia partnerships, vocational education system)]
+6. [INSIGHT: Methodology choice: multiple case comparison method, 4-6 private technology universities, using objective indicators (enrollment rates, financials) for preliminary screening, then in-depth analysis of strategy differences]
+7. [INSIGHT: Data collection strategy employs triangulation: (1) administrator interviews (subjective experience) + (2) MOE statistical data (objective indicators) + (3) self-assessment report document analysis, with all three cross-validating each other]
+8. [INSIGHT: Important alternative hypothesis: Private technology universities' survival may depend more on structural factors (geographic location, historical reputation) than on active transformation strategies. This hypothesis doesn't make the research meaningless; rather, it would change the direction of policy recommendations]
+9. [INSIGHT: Case selection uses paired design: geographic location and school size as pairing conditions to control the influence of structural factors]
+10. [INSIGHT: The researcher's identity has a dual nature: insider advantage (easy data access, contextual understanding) vs insider bias (bias toward one's own institution). This must be explicitly addressed in the research design]
+11. [INSIGHT: Research ethics decision: publish honestly, transparently disclose the researcher's identity and potential conflicts of interest in the methodology, anonymize case institutions]
+12. [INSIGHT: Research contribution at two levels: (1) practical level — providing private technology university decision-makers with an evidence base for strategy choices; (2) policy level — providing case comparison evidence for exit and transformation policies]
+13. [INSIGHT: Core academic contribution: challenging the simplified narrative of "declining birth rates = enrollment problem," proposing that "value repositioning" is the key factor for private technology universities' sustainable operation]
 
-### 建議下一步
+### Recommended Next Steps
 
-- **Option A**：使用 `deep-research` (full mode) 進行系統性文獻搜尋，了解既有研究對私立大學轉型策略的分類和評估
-- **Option B**：使用 `academic-paper` (plan mode) 直接開始規劃論文結構，將 Research Plan Summary 作為基礎
-- **推薦路徑**：Option A → Option B（先確認文獻基礎，再規劃論文）
+- **Option A**: Use `deep-research` (full mode) for systematic literature search to understand existing research on private university transformation strategy classification and evaluation
+- **Option B**: Use `academic-paper` (plan mode) to start planning the paper structure directly, using this Research Plan Summary as a foundation
+- **Recommended path**: Option A → Option B (confirm the literature foundation first, then plan the paper)
 
-使用者可直接輸入：「現在幫我根據這個研究計畫做完整文獻回顧」或「幫我根據這個研究計畫寫論文」
+The user can directly input: "Now help me do a comprehensive literature review based on this research plan" or "Help me write a paper based on this research plan"

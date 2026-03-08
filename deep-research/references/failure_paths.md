@@ -1,329 +1,329 @@
-# Failure Paths — 研究流程失敗路徑圖
+# Failure Paths — Research Pipeline Failure Path Map
 
-## 概述
+## Overview
 
-本文件列出 deep-research skill 所有模式中可能遭遇的失敗情境，以及對應的偵測條件、使用者通知訊息、處理步驟和恢復路徑。目的是確保每個失敗情境都有明確的處理策略，不會讓使用者陷入無法繼續的狀態。
+This document lists all failure scenarios that may be encountered across all modes of the deep-research skill, along with their detection conditions, user notification messages, handling steps, and recovery paths. The purpose is to ensure every failure scenario has a clear handling strategy, preventing users from reaching a dead end.
 
 ---
 
-## 失敗路徑總覽
+## Failure Path Summary
 
-| # | 失敗情境 | 影響模式 | 嚴重程度 | 處理策略 |
+| # | Failure Scenario | Affected Modes | Severity | Handling Strategy |
 |---|---------|---------|---------|---------|
-| F1 | RQ 無法收斂 | full, socratic | Medium | 縮小範圍 / 提供候選 RQ |
-| F2 | 文獻不足 | full, quick, lit-review | High | 擴大搜尋策略 |
-| F3 | 方法論不匹配 | full | High | 退回 Phase 1 |
-| F4 | Devil's Advocate CRITICAL | full | Critical | STOP + 修正 |
-| F5 | Ethics BLOCKED | full, review | Critical | STOP + 修復路徑 |
-| F6 | Socratic 對話不收斂 | socratic | Medium | 切換 full mode |
-| F7 | 使用者中途放棄 | all | Low | 儲存進度 |
-| F8 | 只有中文文獻 | full, lit-review | Medium | 切換搜尋策略 |
-| F9 | 來源品質全部低於門檻 | full, fact-check | High | 降級或擴大來源 |
-| F10 | 結論與證據不一致 | full | High | 退回 Phase 3 |
-| F11 | 修訂迴圈超出上限 | full | Medium | 強制結束 + 限制列表 |
-| F12 | 跨領域橋接失敗 | full | Low | 回到單一學科 |
+| F1 | RQ cannot converge | full, socratic | Medium | Narrow scope / provide candidate RQs |
+| F2 | Insufficient literature | full, quick, lit-review | High | Expand search strategy |
+| F3 | Methodology mismatch | full | High | Return to Phase 1 |
+| F4 | Devil's Advocate CRITICAL | full | Critical | STOP + correct |
+| F5 | Ethics BLOCKED | full, review | Critical | STOP + remediation path |
+| F6 | Socratic dialogue does not converge | socratic | Medium | Switch to full mode |
+| F7 | User abandons mid-process | all | Low | Save progress |
+| F8 | Only Chinese-language literature available | full, lit-review | Medium | Switch search strategy |
+| F9 | All source quality below threshold | full, fact-check | High | Downgrade or expand sources |
+| F10 | Conclusions inconsistent with evidence | full | High | Return to Phase 3 |
+| F11 | Revision loop exceeds limit | full | Medium | Force-complete + limitation list |
+| F12 | Interdisciplinary bridging failure | full | Low | Revert to single discipline |
 
 ---
 
-## 詳細失敗路徑
+## Detailed Failure Paths
 
-### F1: 研究問題無法收斂
+### F1: Research Question Cannot Converge
 
-**影響模式**：`full`（Phase 1）、`socratic`（Layer 1）
-**嚴重程度**：Medium
+**Affected Modes**: `full` (Phase 1), `socratic` (Layer 1)
+**Severity**: Medium
 
-**觸發條件**：
-- `full` mode: research_question_agent 互動超過 3 輪，使用者仍無法確定 RQ
-- `socratic` mode: Layer 1 超過 5 輪，使用者反覆修改但沒有明確方向
+**Trigger Conditions**:
+- `full` mode: research_question_agent interaction exceeds 3 rounds, user still cannot determine the RQ
+- `socratic` mode: Layer 1 exceeds 5 rounds, user repeatedly revises without a clear direction
 
-**使用者通知訊息**：
-> 我注意到我們已經討論了一段時間，但研究問題還沒有收斂到一個明確的方向。這很正常——有時候問題本身就是最難的部分。讓我提供幾個可能的方向，你看看哪個最接近你的想法？
+**User Notification Message**:
+> I notice we've been discussing for a while, but the research question hasn't converged to a clear direction yet. This is perfectly normal — sometimes the question itself is the hardest part. Let me offer a few possible directions to see which one is closest to your thinking.
 
-**處理步驟**：
-1. 彙整已討論的關鍵主題和使用者表達的偏好
-2. 產出 3 個候選 RQ，每個附簡短說明和 FINER 粗評
-3. 請使用者選擇最接近的一個作為起點
-4. 如果使用者仍無法選擇 → 建議先做 `lit-review` mode 探索文獻，再回來
+**Handling Steps**:
+1. Compile key topics discussed and user-expressed preferences
+2. Produce 3 candidate RQs, each with a brief explanation and rough FINER assessment
+3. Ask the user to select the closest one as a starting point
+4. If the user still cannot choose → suggest doing a `lit-review` mode to explore the literature first, then return
 
-**恢復路徑**：
-- 選擇候選 RQ → 繼續原流程
-- 做 lit-review → 文獻回顧完成後重新啟動 RQ 釐清
-- 使用者自行重新描述 → 重啟 Phase 1 / Layer 1
-
----
-
-### F2: 文獻不足
-
-**影響模式**：`full`（Phase 2）、`quick`、`lit-review`
-**嚴重程度**：High
-
-**觸發條件**：
-- bibliography_agent 使用標準搜尋策略後，找到的可用來源 < 5 篇
-- 排除品質不合格的來源後，剩餘 < 3 篇
-
-**使用者通知訊息**：
-> 以目前的搜尋策略，我只找到有限的相關文獻。這可能意味著：(1) 這是一個非常新的研究領域；(2) 搜尋關鍵詞需要調整；(3) 研究問題的界定可能需要微調。讓我嘗試擴大搜尋策略。
-
-**處理步驟**：
-1. 擴大搜尋關鍵詞（同義詞、上位概念、相關概念）
-2. 擴大資料庫範圍（加入灰色文獻、政策報告、工作論文）
-3. 放寬時間範圍（從近 5 年擴大到近 10 年）
-4. 嘗試相鄰學科的關鍵詞
-5. 如果仍不足 → 建議使用者考慮調整 RQ 或接受這是一個探索性研究
-
-**恢復路徑**：
-- 擴大搜尋後找到足夠文獻 → 繼續原流程
-- 接受為探索性研究 → 調整報告定位，強調研究的開創性
-- 調整 RQ → 退回 Phase 1
+**Recovery Paths**:
+- Select a candidate RQ → continue the original workflow
+- Do lit-review → restart RQ clarification after the literature review is complete
+- User redescribes on their own → restart Phase 1 / Layer 1
 
 ---
 
-### F3: 方法論不匹配
+### F2: Insufficient Literature
 
-**影響模式**：`full`（Checkpoint 1）
-**嚴重程度**：High
+**Affected Modes**: `full` (Phase 2), `quick`, `lit-review`
+**Severity**: High
 
-**觸發條件**：
-- devils_advocate_agent 在 Checkpoint 1 判定 research_architect_agent 提出的方法論無法回答 research_question_agent 產出的 RQ
-- 方法論與 RQ 之間的邏輯鏈有斷裂
+**Trigger Conditions**:
+- bibliography_agent finds < 5 usable sources after standard search strategy
+- After excluding quality-unqualified sources, < 3 remain
 
-**使用者通知訊息**：
-> Devil's Advocate 在方法論審查中發現一個重要問題：你的研究問題問的是「為什麼」，但你的方法設計只能回答「是否」。讓我們回頭調整，有三個可能的方向......
+**User Notification Message**:
+> With the current search strategy, I found only limited relevant literature. This could mean: (1) this is a very new research area; (2) the search keywords need adjustment; (3) the research question scope may need refinement. Let me try expanding the search strategy.
 
-**處理步驟**：
-1. 明確說明 RQ 類型（描述/比較/因果/評估）和方法能力之間的落差
-2. 提供 3 個替代方法建議，每個附優缺點
-3. 確認是否需要調整 RQ 來匹配可行的方法
-4. 重新執行 research_architect_agent
+**Handling Steps**:
+1. Expand search keywords (synonyms, broader terms, related concepts)
+2. Expand database scope (add grey literature, policy reports, working papers)
+3. Relax time range (from past 5 years to past 10 years)
+4. Try keywords from adjacent disciplines
+5. If still insufficient → suggest the user consider adjusting the RQ or accept this as an exploratory study
 
-**恢復路徑**：
-- 選擇替代方法 → 重新產出 Methodology Blueprint → Checkpoint 1 重審
-- 調整 RQ → 退回 research_question_agent → 重新走 Phase 1
-- 最多重試 2 次，第 3 次仍不匹配 → 建議使用者諮詢指導教授
+**Recovery Paths**:
+- Expanded search yields sufficient literature → continue original workflow
+- Accept as exploratory research → adjust report positioning, emphasize the study's pioneering nature
+- Adjust RQ → return to Phase 1
+
+---
+
+### F3: Methodology Mismatch
+
+**Affected Modes**: `full` (Checkpoint 1)
+**Severity**: High
+
+**Trigger Conditions**:
+- devils_advocate_agent at Checkpoint 1 determines that the methodology proposed by research_architect_agent cannot answer the RQ produced by research_question_agent
+- There is a logical gap between the methodology and the RQ
+
+**User Notification Message**:
+> Devil's Advocate found an important issue in the methodology review: your research question asks "why," but your method design can only answer "whether." Let's go back and adjust — here are three possible directions...
+
+**Handling Steps**:
+1. Clearly state the gap between the RQ type (descriptive/comparative/causal/evaluative) and the method's capability
+2. Provide 3 alternative method suggestions, each with pros and cons
+3. Confirm whether the RQ needs adjustment to match a feasible method
+4. Re-execute research_architect_agent
+
+**Recovery Paths**:
+- Select an alternative method → regenerate Methodology Blueprint → Checkpoint 1 re-review
+- Adjust RQ → return to research_question_agent → redo Phase 1
+- Maximum 2 retries; if still mismatched on the 3rd attempt → suggest the user consult their advisor
 
 ---
 
 ### F4: Devil's Advocate CRITICAL
 
-**影響模式**：`full`（任何 Checkpoint）
-**嚴重程度**：Critical
+**Affected Modes**: `full` (any Checkpoint)
+**Severity**: Critical
 
-**觸發條件**：
-- devils_advocate_agent 在任何 Checkpoint 發現 Critical severity 的問題
-- 包括：致命邏輯漏洞、核心假設無法成立、證據與結論矛盾
+**Trigger Conditions**:
+- devils_advocate_agent finds a Critical severity issue at any Checkpoint
+- Includes: fatal logical flaws, core assumptions that cannot hold, evidence contradicting conclusions
 
-**使用者通知訊息**：
-> STOP — Devil's Advocate 發現了一個關鍵問題，必須在繼續之前解決：
-> [具體問題描述]
-> 這不是一個可以忽略的問題，因為它會從根本上影響研究的有效性。
+**User Notification Message**:
+> STOP — Devil's Advocate found a critical issue that must be resolved before continuing:
+> [Specific issue description]
+> This is not an issue that can be ignored, as it fundamentally affects the research's validity.
 
-**處理步驟**：
-1. 完整呈現 Critical issue 的描述、影響和建議修正方向
-2. 暫停流程，不允許進入下一 Phase
-3. 等待使用者回應或修正
-4. 使用者修正後 → 重新執行該 Checkpoint
-5. 連續 2 次 CRITICAL → 建議使用者根本性重新思考研究方向
+**Handling Steps**:
+1. Fully present the Critical issue's description, impact, and suggested correction direction
+2. Pause the workflow; do not allow advancement to the next Phase
+3. Wait for user response or correction
+4. After user correction → re-execute the Checkpoint
+5. 2 consecutive CRITICALs → suggest the user fundamentally rethink the research direction
 
-**恢復路徑**：
-- 使用者修正問題 → 重新執行 Checkpoint → PASS 後繼續
-- 使用者選擇修改 RQ/方法 → 退回對應 Phase
-- 使用者放棄該方向 → 進入 F7 流程
+**Recovery Paths**:
+- User corrects the issue → re-execute Checkpoint → continue after PASS
+- User chooses to modify the RQ/method → return to the corresponding Phase
+- User abandons the direction → enter F7 workflow
 
 ---
 
 ### F5: Ethics BLOCKED
 
-**影響模式**：`full`（Phase 5）、`review`
-**嚴重程度**：Critical
+**Affected Modes**: `full` (Phase 5), `review`
+**Severity**: Critical
 
-**觸發條件**：
-- ethics_review_agent 判定 BLOCKED
-- 包括：研究涉及未經同意的個人資料使用、可能造成歧視性影響、dual-use 風險
+**Trigger Conditions**:
+- ethics_review_agent determines BLOCKED
+- Includes: research involving non-consensual use of personal data, potentially discriminatory impact, dual-use risk
 
-**使用者通知訊息**：
-> Ethics Review 判定此研究存在需要先行處理的倫理問題：
-> [具體問題列表]
-> 在這些問題解決之前，研究報告無法交付。以下是建議的修復路徑......
+**User Notification Message**:
+> Ethics Review has determined that this research has ethical issues requiring prior resolution:
+> [Specific issue list]
+> The research report cannot be delivered until these issues are resolved. Here are the suggested remediation paths...
 
-**處理步驟**：
-1. 列出所有 BLOCKED 原因，每個附具體修復建議
-2. 區分可修復（例如加入知情同意聲明）和不可修復（例如研究設計本質上有倫理問題）
-3. 可修復的問題 → 提供修改建議 → 使用者確認後重新審查
-4. 不可修復的問題 → 建議根本性修改研究設計
+**Handling Steps**:
+1. List all BLOCKED reasons, each with specific remediation suggestions
+2. Distinguish between remediable (e.g., add informed consent statement) and irremediable (e.g., research design inherently has ethical issues)
+3. Remediable issues → provide modification suggestions → re-review after user confirmation
+4. Irremediable issues → suggest fundamental redesign of the research
 
-**恢復路徑**：
-- 修復倫理問題 → 重新執行 ethics_review_agent → CLEARED 後繼續
-- 修改研究設計 → 退回 Phase 1
-- 問題不可修復 → 建議放棄此研究方向，提供替代方向建議
-
----
-
-### F6: Socratic 對話不收斂
-
-**影響模式**：`socratic`
-**嚴重程度**：Medium
-
-**觸發條件**：
-- 對話超過 10 輪，使用者仍在不同方向之間搖擺
-- 萃取的 INSIGHT < 3 個
-
-**使用者通知訊息**：
-> 我們已經探索了好幾個方向，每個都有它的價值。不過我注意到我們在幾個方向之間來回——這可能代表你對這個主題有多元的興趣，但也可能讓研究難以聚焦。你想要：
-> (A) 繼續 Socratic 對話，但聚焦在你剛才提到的 [最有潛力的方向]？
-> (B) 切換到 full mode，讓我的團隊幫你系統性地探索和收斂？
-> (C) 先暫停，回去想一想再繼續？
-
-**處理步驟**：
-1. 彙整目前已萃取的 INSIGHT
-2. 識別最有收斂潛力的 1-2 個方向
-3. 提供 3 個選項（繼續聚焦 / 切換模式 / 暫停）
-4. 如果使用者選擇繼續但到 15 輪仍未收斂 → 自動彙整 + 結束
-
-**恢復路徑**：
-- 繼續聚焦 → 限制討論範圍，5 輪內收斂
-- 切換 full mode → 將已萃取的 INSIGHT 傳遞給 research_question_agent
-- 暫停 → 儲存 INSIGHT 列表，使用者可隨時重新進入
+**Recovery Paths**:
+- Fix ethical issues → re-execute ethics_review_agent → continue after CLEARED
+- Modify research design → return to Phase 1
+- Issues are irremediable → suggest abandoning this research direction, provide alternative direction suggestions
 
 ---
 
-### F7: 使用者中途放棄
+### F6: Socratic Dialogue Does Not Converge
 
-**影響模式**：所有模式
-**嚴重程度**：Low
+**Affected Modes**: `socratic`
+**Severity**: Medium
 
-**觸發條件**：
-- 使用者明確表示不想繼續（「算了」「不做了」「太複雜了」）
-- 使用者長時間不回應後表示放棄
+**Trigger Conditions**:
+- Dialogue exceeds 10 rounds, user still vacillating between different directions
+- Extracted INSIGHTs < 3
 
-**使用者通知訊息**：
-> 沒問題。我已經保存了目前的進度。以下是我們到目前為止的成果摘要：
-> [已完成的階段和產出列表]
-> 你可以隨時用「繼續之前的研究」重新進入，我們會從中斷的地方開始。
+**User Notification Message**:
+> We've explored several directions, each with its own value. However, I notice we've been going back and forth between a few directions — this may mean you have multifaceted interests in this topic, but it can also make the research hard to focus. Would you like to:
+> (A) Continue the Socratic dialogue, but focus on [the most promising direction] you just mentioned?
+> (B) Switch to full mode, and let my team help you systematically explore and converge?
+> (C) Take a pause, think it over, and come back later?
 
-**處理步驟**：
-1. 保存當前階段的所有產出（RQ Brief, INSIGHT, Bibliography 等）
-2. 產出進度摘要
-3. 提供重新進入的指令
+**Handling Steps**:
+1. Compile currently extracted INSIGHTs
+2. Identify the 1-2 directions with the most convergence potential
+3. Provide 3 options (continue with focus / switch mode / pause)
+4. If user chooses to continue but still hasn't converged by round 15 → auto-compile + end
 
-**恢復路徑**：
-- 使用者說「繼續之前的研究」→ 載入已儲存的產出，從中斷處繼續
-- 使用者重新開始 → 全新流程
-
----
-
-### F8: 只有中文文獻
-
-**影響模式**：`full`（Phase 2）、`lit-review`
-**嚴重程度**：Medium
-
-**觸發條件**：
-- 英文學術資料庫搜尋（Web of Science, Scopus, PubMed 等）結果為空或極少
-- 主題具有強烈的在地性質（例如台灣特定政策、法規、制度）
-
-**使用者通知訊息**：
-> 這個主題的英文文獻非常有限，但中文文獻資源豐富。我將調整搜尋策略，納入中文學術資料庫。請注意，中文文獻在國際發表中的引用慣例可能不同。
-
-**處理步驟**：
-1. 切換搜尋策略到中文學術資料庫（華藝線上圖書館、臺灣博碩士論文系統、CNKI）
-2. 使用中文關鍵詞重新搜尋
-3. 在報告中說明文獻語言分布
-4. 如果使用者需要英文報告 → 提供中文文獻的英文引用格式建議
-5. 如果使用者需要國際發表 → 建議尋找可對照的國際案例
-
-**恢復路徑**：
-- 中文文獻充足 → 繼續流程，文獻語言標註清楚
-- 使用者需要國際發表 → 建議調整 RQ 增加比較觀點
+**Recovery Paths**:
+- Continue with focus → restrict discussion scope, converge within 5 rounds
+- Switch to full mode → pass extracted INSIGHTs to research_question_agent
+- Pause → save INSIGHT list; user can re-enter at any time
 
 ---
 
-### F9: 來源品質全部低於門檻
+### F7: User Abandons Mid-Process
 
-**影響模式**：`full`（Phase 2）、`fact-check`
-**嚴重程度**：High
+**Affected Modes**: All modes
+**Severity**: Low
 
-**觸發條件**：
-- source_verification_agent 將所有找到的來源評為 Level V 以下
-- 沒有 peer-reviewed 來源
+**Trigger Conditions**:
+- User explicitly states they don't want to continue ("never mind," "I quit," "too complicated")
+- User abandons after a long period of non-response
 
-**使用者通知訊息**：
-> 目前找到的來源品質整體偏低，缺乏高品質的 peer-reviewed 研究。這可能代表這是一個新興領域，或者搜尋策略需要調整。建議我們考慮......
+**User Notification Message**:
+> No problem. I've saved the current progress. Here's a summary of what we've accomplished so far:
+> [List of completed stages and outputs]
+> You can re-enter at any time by saying "continue the previous research," and we'll pick up where we left off.
 
-**處理步驟**：
-1. 擴大來源類型（加入政策報告、白皮書、官方統計）
-2. 降低但明確標註品質等級
-3. 將報告定位為「初步探索」而非「系統性回顧」
-4. 在報告中加入「證據品質限制」專段
+**Handling Steps**:
+1. Save all outputs from the current stage (RQ Brief, INSIGHTs, Bibliography, etc.)
+2. Produce a progress summary
+3. Provide instructions for re-entry
 
-**恢復路徑**：
-- 找到足夠的替代來源 → 繼續流程，品質標註清楚
-- 無法找到合格來源 → 建議使用者考慮進行原始研究（primary research）
-
----
-
-### F10: 結論與證據不一致
-
-**影響模式**：`full`（Phase 5, Checkpoint 3）
-**嚴重程度**：High
-
-**觸發條件**：
-- editor_in_chief_agent 或 devils_advocate_agent 在 Phase 5 發現報告結論超出證據支持範圍
-
-**使用者通知訊息**：
-> 審查發現報告的部分結論超出了證據的支持範圍。具體來說：
-> [列出問題]
-> 我將退回修訂，確保每個結論都有對應的證據支持。
-
-**處理步驟**：
-1. 標記所有「過度推論」的結論
-2. 針對每個標記：(a) 弱化結論以匹配證據，或 (b) 補充額外證據
-3. 重新執行 Checkpoint 3
-
-**恢復路徑**：
-- 修訂成功 → 完成 Phase 6
-- 修訂後仍有問題 → 第 2 次修訂
-- 2 次修訂仍有問題 → 將問題轉為「研究限制」段落
+**Recovery Paths**:
+- User says "continue the previous research" → load saved outputs, continue from where interrupted
+- User starts over → entirely new workflow
 
 ---
 
-### F11: 修訂迴圈超出上限
+### F8: Only Chinese-Language Literature Available
 
-**影響模式**：`full`（Phase 6）
-**嚴重程度**：Medium
+**Affected Modes**: `full` (Phase 2), `lit-review`
+**Severity**: Medium
 
-**觸發條件**：
-- Phase 6 修訂已執行 2 次（上限），仍有未解決的 Major issues
+**Trigger Conditions**:
+- English academic database searches (Web of Science, Scopus, PubMed, etc.) yield empty or very few results
+- The topic is strongly localized (e.g., Taiwan-specific policy, regulations, institutional systems)
 
-**使用者通知訊息**：
-> 經過兩輪修訂，以下問題已解決：[已解決列表]。但以下問題因研究本質限制尚未完全解決：[未解決列表]。這些將列入「已知限制」段落。報告現在已經是在現有條件下能達到的最佳版本。
+**User Notification Message**:
+> English-language literature on this topic is very limited, but Chinese-language literature resources are abundant. I will adjust the search strategy to include Chinese academic databases. Please note that citation conventions for Chinese-language literature in international publications may differ.
 
-**處理步驟**：
-1. 彙整已解決和未解決的問題
-2. 將未解決的 Major issues 轉入「Acknowledged Limitations」段落
-3. 交付最終版報告
+**Handling Steps**:
+1. Switch search strategy to Chinese academic databases (Airiti Library, National Digital Library of Theses and Dissertations in Taiwan, CNKI)
+2. Re-search using Chinese keywords
+3. Note the language distribution of the literature in the report
+4. If the user needs an English report → provide suggestions for English citation format of Chinese literature
+5. If the user needs to publish internationally → suggest finding comparable international cases
 
-**恢復路徑**：
-- 使用者接受 → 交付報告
-- 使用者不接受 → 建議從 Phase 1 重新設計研究
+**Recovery Paths**:
+- Chinese literature is sufficient → continue workflow with clear language annotations
+- User needs international publication → suggest adjusting RQ to add a comparative perspective
 
 ---
 
-### F12: 跨領域橋接失敗
+### F9: All Source Quality Below Threshold
 
-**影響模式**：`full`
-**嚴重程度**：Low
+**Affected Modes**: `full` (Phase 2), `fact-check`
+**Severity**: High
 
-**觸發條件**：
-- synthesis_agent 嘗試跨領域整合但找不到有意義的連結
-- 不同學科的概念框架無法調和
+**Trigger Conditions**:
+- source_verification_agent rates all found sources as Level V or below
+- No peer-reviewed sources
 
-**使用者通知訊息**：
-> 我嘗試從 [學科 A] 和 [學科 B] 的角度整合觀點，但這兩個學科對這個現象的理解框架差異較大，強行整合可能反而模糊焦點。建議我們聚焦在 [主要學科] 的框架，並在討論段落中提及其他學科的觀點作為參考。
+**User Notification Message**:
+> The overall quality of currently found sources is low, lacking high-quality peer-reviewed research. This may indicate an emerging field, or the search strategy may need adjustment. I suggest we consider...
 
-**處理步驟**：
-1. 選擇主要學科框架作為分析基礎
-2. 其他學科觀點以「替代觀點」或「跨學科啟示」段落呈現
-3. 不強行整合無法調和的框架
+**Handling Steps**:
+1. Expand source types (add policy reports, white papers, official statistics)
+2. Lower the threshold but clearly annotate quality levels
+3. Reposition the report as "preliminary exploration" rather than "systematic review"
+4. Add an "Evidence Quality Limitations" section to the report
 
-**恢復路徑**：
-- 聚焦單一框架 → 繼續流程
-- 使用者堅持跨領域 → 建議改用 mixed-methods 或 narrative review
+**Recovery Paths**:
+- Find sufficient alternative sources → continue workflow with clear quality annotations
+- Cannot find qualified sources → suggest the user consider conducting primary research
+
+---
+
+### F10: Conclusions Inconsistent with Evidence
+
+**Affected Modes**: `full` (Phase 5, Checkpoint 3)
+**Severity**: High
+
+**Trigger Conditions**:
+- editor_in_chief_agent or devils_advocate_agent finds in Phase 5 that report conclusions exceed the scope supported by the evidence
+
+**User Notification Message**:
+> The review found that some conclusions in the report go beyond what the evidence supports. Specifically:
+> [List of issues]
+> I will return for revision to ensure every conclusion has corresponding evidence support.
+
+**Handling Steps**:
+1. Flag all "over-inferred" conclusions
+2. For each flag: (a) weaken the conclusion to match the evidence, or (b) supplement with additional evidence
+3. Re-execute Checkpoint 3
+
+**Recovery Paths**:
+- Revision successful → complete Phase 6
+- Issues remain after revision → 2nd revision round
+- Issues remain after 2 revisions → convert issues to a "Research Limitations" section
+
+---
+
+### F11: Revision Loop Exceeds Limit
+
+**Affected Modes**: `full` (Phase 6)
+**Severity**: Medium
+
+**Trigger Conditions**:
+- Phase 6 revision has been executed 2 times (maximum), with unresolved Major issues remaining
+
+**User Notification Message**:
+> After two rounds of revision, the following issues have been resolved: [resolved list]. However, the following issues remain unresolved due to inherent research limitations: [unresolved list]. These will be listed in the "Acknowledged Limitations" section. The report is now the best version achievable under current conditions.
+
+**Handling Steps**:
+1. Compile resolved and unresolved issues
+2. Convert unresolved Major issues into the "Acknowledged Limitations" section
+3. Deliver the final report
+
+**Recovery Paths**:
+- User accepts → deliver the report
+- User does not accept → suggest redesigning the research from Phase 1
+
+---
+
+### F12: Interdisciplinary Bridging Failure
+
+**Affected Modes**: `full`
+**Severity**: Low
+
+**Trigger Conditions**:
+- synthesis_agent attempts interdisciplinary integration but cannot find meaningful connections
+- Conceptual frameworks from different disciplines cannot be reconciled
+
+**User Notification Message**:
+> I attempted to integrate perspectives from [Discipline A] and [Discipline B], but these two disciplines' understanding frameworks for this phenomenon differ substantially. Forcing integration may actually blur the focus. I suggest we center on the [primary discipline] framework, and mention other disciplines' perspectives in the discussion section as reference.
+
+**Handling Steps**:
+1. Select the primary disciplinary framework as the analytical foundation
+2. Present other disciplinary perspectives in an "Alternative Perspectives" or "Interdisciplinary Insights" section
+3. Do not force integration of irreconcilable frameworks
+
+**Recovery Paths**:
+- Focus on a single framework → continue workflow
+- User insists on interdisciplinary → suggest switching to mixed-methods or narrative review

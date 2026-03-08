@@ -1,244 +1,247 @@
-# IRB Decision Tree — 人類受試者研究倫理審查指引
+# IRB Decision Tree — Human Subjects Research Ethics Review Guide
 
 ## Purpose
-IRB（Institutional Review Board）倫理審查決策樹與台灣流程指引。用於 ethics_review_agent 判定研究是否涉及人類受試者，以及 research_architect_agent 在方法論設計階段規劃 IRB 審查。
+IRB (Institutional Review Board) ethics review decision tree and Taiwan process guide. Used by the ethics_review_agent to determine whether research involves human subjects, and by the research_architect_agent to plan IRB review during methodology design.
 
 ---
 
-## 1. 人類受試者研究判定決策樹
+## 1. Human Subjects Research Determination Decision Tree
 
 ```
-你的研究是否蒐集、使用、或分析人類的資料？
+Does your research collect, use, or analyze data from humans?
 │
-├── No → 不涉及人類受試者，無需 IRB 審查
-│         （例：純理論研究、文獻回顧、公開統計資料二次分析）
+├── No → Does not involve human subjects, no IRB review needed
+│         (e.g., pure theoretical research, literature review, secondary analysis of public statistics)
 │
-└── Yes → 資料是否可辨識個人身分？
+└── Yes → Is the data personally identifiable?
           │
-          ├── No → 資料是否為已公開的公共資料？
+          ├── No → Is the data publicly available public data?
           │        │
-          │        ├── Yes → 通常免除審查（Exempt）
-          │        │         但仍須向 IRB 提出免審申請確認
+          │        ├── Yes → Typically exempt from review
+          │        │         But must still submit an exempt review application to IRB for confirmation
           │        │
-          │        └── No → 進入下方「審查等級判定」
+          │        └── No → Proceed to "Review Level Determination" below
           │
-          └── Yes → 研究是否直接與受試者互動？
+          └── Yes → Does the research involve direct interaction with subjects?
                     │
-                    ├── No → 僅使用既有資料/檢體
+                    ├── No → Only uses existing data/specimens
                     │        │
-                    │        ├── 資料已去識別化 → 可申請免除審查
-                    │        └── 資料含可辨識資訊 → 簡易審查或完整審查
+                    │        ├── Data already de-identified → May apply for exempt review
+                    │        └── Data contains identifiable information → Expedited or full board review
                     │
-                    └── Yes → 進入下方「審查等級判定」
+                    └── Yes → Proceed to "Review Level Determination" below
 ```
 
 ---
 
-## 2. 三級審查等級
+## 2. Three-Level Review System
 
-### 2.1 免除審查（Exempt Review）
+### 2.1 Exempt Review
 
-**適用條件**（符合任一）：
-- [ ] 使用已公開、去識別化的資料集
-- [ ] 正常教育環境中的教育實踐研究
-- [ ] 僅涉及匿名問卷調查（無敏感議題）
-- [ ] 觀察公共行為（不記錄可辨識資訊）
-- [ ] 使用政府公開統計資料
+**Applicable Conditions** (any one of the following):
+- [ ] Uses publicly available, de-identified datasets
+- [ ] Research on educational practices in normal educational settings
+- [ ] Involves only anonymous surveys (no sensitive topics)
+- [ ] Observation of public behavior (no identifiable information recorded)
+- [ ] Uses government public statistical data
 
-**注意**：免除審查不代表免除申請，仍須提交 IRB 確認免審資格。
+**Note**: Exempt review does not mean exempt from application — you must still submit to IRB to confirm exempt status.
 
-### 2.2 簡易審查（Expedited Review）
+### 2.2 Expedited Review
 
-**適用條件**（符合全部）：
-- [ ] 研究風險不高於日常生活中通常遇到的風險（minimal risk）
-- [ ] 不涉及弱勢群體（vulnerable populations）
-- [ ] 研究方法在簡易審查類別清單中
+**Applicable Conditions** (all must be met):
+- [ ] Research risk is no greater than risks ordinarily encountered in daily life (minimal risk)
+- [ ] Does not involve vulnerable populations
+- [ ] Research methods are on the expedited review category list
 
-**常見類別**：
-- 問卷調查（含敏感但非高風險議題）
-- 訪談（一般主題）
-- 教學介入研究（非侵入性）
-- 語音/影像紀錄（經同意）
-- 已蒐集之臨床資料二次分析
+**Common Categories**:
+- Surveys (containing sensitive but not high-risk topics)
+- Interviews (general topics)
+- Teaching intervention research (non-invasive)
+- Audio/video recording (with consent)
+- Secondary analysis of previously collected clinical data
 
-### 2.3 完整審查（Full Board Review）
+### 2.3 Full Board Review
 
-**適用條件**（符合任一）：
-- [ ] 高於最小風險（greater than minimal risk）
-- [ ] 涉及弱勢群體（兒童、囚犯、孕婦、認知障礙者）
-- [ ] 涉及敏感議題（性行為、非法行為、精神健康）
-- [ ] 使用欺騙手法（deception）
-- [ ] 可能造成心理或社會傷害
+**Applicable Conditions** (any one of the following):
+- [ ] Greater than minimal risk
+- [ ] Involves vulnerable populations (children, prisoners, pregnant women, individuals with cognitive impairments)
+- [ ] Involves sensitive topics (sexual behavior, illegal behavior, mental health)
+- [ ] Uses deception
+- [ ] May cause psychological or social harm
 
 ---
 
-## 3. 台灣 IRB 流程
+## 3. Taiwan IRB Process
 
-### 3.1 主管機關
+### 3.1 Governing Authorities
 
-| 機關 | 管轄範圍 | 法規依據 |
-|------|---------|---------|
-| **國科會（原科技部）** | 國科會補助計畫涉及人體研究 | 「國科會補助專題研究計畫作業要點」 |
-| **衛福部** | 人體研究、人體試驗、人體生物資料庫 | 「人體研究法」（2011） |
-| **教育部** | 教育場域研究倫理 | 各校自訂辦法 |
+| Authority | Jurisdiction | Legal Basis |
+|-----------|-------------|-------------|
+| **National Science and Technology Council (formerly MOST)** | NSTC-funded projects involving human research | "NSTC Guidelines for Research Grant Applications" |
+| **Ministry of Health and Welfare** | Human research, clinical trials, human biobanks | "Human Subjects Research Act" (2011) |
+| **Ministry of Education** | Research ethics in educational settings | Institutional regulations |
 
-### 3.2 法規框架
+### 3.2 Regulatory Framework
 
-| 法規 | 適用範圍 | 關鍵要求 |
-|------|---------|---------|
-| **人體研究法** | 以人為對象之研究（問卷、訪談、觀察、介入） | 事前審查、知情同意、個資保護 |
-| **個人資料保護法** | 涉及個資蒐集、處理、利用 | 告知義務、目的限制、安全維護 |
-| **人體試驗管理辦法** | 藥物/醫療器材臨床試驗 | GCP 規範、受試者保險 |
+| Regulation | Scope | Key Requirements |
+|-----------|-------|------------------|
+| **Human Subjects Research Act** | Research involving human subjects (surveys, interviews, observations, interventions) | Prior review, informed consent, personal data protection |
+| **Personal Data Protection Act** | Collection, processing, and use of personal data | Notification obligation, purpose limitation, security maintenance |
+| **Regulations Governing Human Trials** | Drug/medical device clinical trials | GCP compliance, subject insurance |
 
-### 3.3 申請流程
+### 3.3 Application Process
 
 ```
-1. 研究計畫撰寫
+1. Write research proposal
    ↓
-2. 判定是否涉及人類受試者
-   ↓ （涉及）
-3. 確認審查等級（免審 / 簡審 / 完整審查）
+2. Determine whether human subjects are involved
+   ↓ (Involved)
+3. Confirm review level (Exempt / Expedited / Full Board)
    ↓
-4. 向所屬機構 IRB 提交申請
-   - 研究計畫書
-   - 知情同意書
-   - 問卷/訪談大綱
-   - 研究者資格證明（CITI 或同等訓練）
+4. Submit application to institutional IRB
+   - Research proposal
+   - Informed consent form
+   - Questionnaire/interview guide
+   - Researcher qualification documentation (CITI or equivalent training)
    ↓
-5. IRB 審查（時程：簡審 2-4 週、完整審查 4-8 週）
+5. IRB review (timeline: Expedited 2-4 weeks, Full Board 4-8 weeks)
    ↓
-6. 取得核准函後始得進行研究
+6. Research may only begin after receiving approval letter
    ↓
-7. 定期進度報告（通常每年）
+7. Periodic progress reports (typically annual)
    ↓
-8. 結案報告
+8. Final report
 ```
 
-### 3.4 線上研究倫理審查平台
+### 3.4 Online Research Ethics Review Platforms
 
-| 平台 | 說明 | 網址 |
-|------|------|------|
-| **AREC**（Academic Research Ethics Committee） | 多校聯合倫理審查委員會 | 各校 IRB 網站 |
-| **各大學 IRB 系統** | 校內線上申請系統 | 各校研發處網站 |
-| **CITI Program** | 研究倫理線上訓練課程 | citiprogram.org |
-| **臺灣研究倫理教育資源中心** | 研究倫理教育教材 | 各校教學發展中心 |
-
----
-
-## 4. 高等教育研究情境速查表
-
-| 研究情境 | 是否涉及人類受試者 | 建議審查等級 | 備註 |
-|----------|------------------|------------|------|
-| 教育部公開統計資料分析 | 否 | 免除 | 已公開去識別化資料 |
-| 校務研究（IR）資料分析 | 視情況 | 免除/簡審 | 取決於資料是否去識別化 |
-| 學生學習成效問卷 | 是 | 簡審 | 匿名問卷通常為簡審 |
-| 教師訪談（一般教學經驗） | 是 | 簡審 | 非敏感議題 |
-| 教學實驗（A/B 教學法比較） | 是 | 簡審/完整 | 取決於是否影響學生成績權益 |
-| 學生心理健康調查 | 是 | 完整審查 | 敏感議題 |
-| 弱勢學生群體研究 | 是 | 完整審查 | 弱勢群體保護 |
-| 學生學習歷程檔案分析 | 視情況 | 簡審 | 含可辨識資訊需簡審 |
-| 課堂觀察（不記錄個資） | 是 | 免除/簡審 | 公共場域觀察 |
-| 畢業生流向追蹤調查 | 是 | 簡審 | 含個資需簡審 |
-| HEEACT 評鑑資料分析 | 視情況 | 免除/簡審 | 已公開部分免審 |
-| 大學教職員薪資/勞動條件調查 | 是 | 簡審/完整 | 可能涉及機構內權力關係 |
+| Platform | Description | URL |
+|----------|-------------|-----|
+| **AREC** (Academic Research Ethics Committee) | Multi-institutional joint ethics review committee | Institutional IRB websites |
+| **Institutional IRB systems** | Online application systems within universities | Institutional R&D office websites |
+| **CITI Program** | Online research ethics training course | citiprogram.org |
+| **Taiwan Research Ethics Education Resource Center** | Research ethics education materials | Institutional teaching development centers |
 
 ---
 
-## 5. 知情同意書要素
+## 4. Higher Education Research Quick Reference Table
 
-### 5.1 必要項目
+| Research Scenario | Involves Human Subjects | Recommended Review Level | Notes |
+|-------------------|------------------------|--------------------------|-------|
+| MOE public statistical data analysis | No | Exempt | Already publicly available de-identified data |
+| Institutional research (IR) data analysis | Depends | Exempt/Expedited | Depends on whether data is de-identified |
+| Student learning outcome survey | Yes | Expedited | Anonymous surveys typically qualify for expedited review |
+| Teacher interviews (general teaching experience) | Yes | Expedited | Non-sensitive topics |
+| Teaching experiment (A/B teaching method comparison) | Yes | Expedited/Full Board | Depends on whether it affects students' grades/rights |
+| Student mental health survey | Yes | Full Board | Sensitive topic |
+| Vulnerable student population study | Yes | Full Board | Vulnerable population protection |
+| Student learning portfolio analysis | Depends | Expedited | Contains identifiable information requiring expedited review |
+| Classroom observation (no personal data recorded) | Yes | Exempt/Expedited | Public setting observation |
+| Graduate career tracking survey | Yes | Expedited | Contains personal data requiring expedited review |
+| HEEACT accreditation data analysis | Depends | Exempt/Expedited | Publicly available portions exempt from review |
+| University faculty salary/labor conditions survey | Yes | Expedited/Full Board | May involve institutional power dynamics |
 
-- [ ] 研究名稱
-- [ ] 研究機構與主持人姓名
-- [ ] 研究目的
-- [ ] 研究程序說明（受試者需做什麼、需時多久）
-- [ ] 可能的風險與不適
-- [ ] 可能的益處
-- [ ] 保密措施（資料如何保存、誰可存取、保存期限）
-- [ ] 參與的自願性（可隨時退出、不受任何懲罰）
-- [ ] 研究者聯繫方式
-- [ ] IRB 聯繫方式（申訴管道）
-- [ ] 受試者簽名與日期欄
+---
 
-### 5.2 特殊情境
+## 5. Informed Consent Form Elements
 
-| 情境 | 額外要求 |
-|------|---------|
-| **線上問卷** | 電子同意書（點選「我同意」即視為同意）；須說明 IP 不被記錄 |
-| **錄音/錄影** | 獨立勾選項目：是否同意錄音/錄影 |
-| **未成年人** | 法定代理人同意 + 受試者知情同意（assent） |
-| **跨國研究** | 符合當地 IRB 要求 + 台灣 IRB 要求 |
-| **原住民研究** | 部落知情同意（community consent）+ 個人知情同意 |
+### 5.1 Required Items
 
-### 5.3 知情同意書範本結構
+- [ ] Research title
+- [ ] Research institution and principal investigator name
+- [ ] Research purpose
+- [ ] Research procedures description (what subjects need to do, how long it takes)
+- [ ] Potential risks and discomfort
+- [ ] Potential benefits
+- [ ] Confidentiality measures (how data is stored, who has access, retention period)
+- [ ] Voluntary nature of participation (may withdraw at any time, no penalties)
+- [ ] Researcher contact information
+- [ ] IRB contact information (complaint channel)
+- [ ] Subject signature and date field
+
+### 5.2 Special Situations
+
+| Situation | Additional Requirements |
+|-----------|------------------------|
+| **Online survey** | Electronic consent (clicking "I agree" constitutes consent); must state that IP addresses will not be recorded |
+| **Audio/video recording** | Separate checkbox item: consent to audio/video recording |
+| **Minors** | Legal guardian consent + subject assent |
+| **Cross-national research** | Comply with local IRB requirements + Taiwan IRB requirements |
+| **Indigenous research** | Community consent (tribal consent) + individual informed consent |
+
+### 5.3 Informed Consent Form Template Structure
 
 ```
-研究參與同意書
+Research Participation Consent Form
 
-一、研究計畫名稱：[                    ]
-二、計畫主持人：[      ] / 所屬機構：[        ]
-三、研究目的：[                              ]
-四、研究方法及程序：
-    您將被邀請 [具體說明受試者要做什麼]，預計需時 [  ] 分鐘。
-五、可能的風險或不適：[                        ]
-六、可能的益處：[                              ]
-七、保密措施：
-    您的資料將以代碼處理，研究結果僅以整體方式呈現，
-    不會揭露您的個人身分。資料保存 [X] 年後銷毀。
-八、參與的自願性：
-    您可以自由決定是否參與本研究，且可隨時退出，
-    不會因此受到任何不利影響。
-九、聯繫方式：
-    計畫主持人：[姓名] [電話] [email]
-    IRB 聯繫：[機構名稱] [電話] [email]
+1. Research Project Title: [                    ]
+2. Principal Investigator: [      ] / Institution: [        ]
+3. Research Purpose: [                              ]
+4. Research Methods and Procedures:
+    You will be invited to [specific description of what the subject will do],
+    estimated to take [  ] minutes.
+5. Potential Risks or Discomfort: [                        ]
+6. Potential Benefits: [                              ]
+7. Confidentiality Measures:
+    Your data will be processed using codes; research results will only be
+    presented in aggregate form, and your personal identity will not be
+    disclosed. Data will be destroyed after [X] years.
+8. Voluntary Nature of Participation:
+    You are free to decide whether to participate in this study and may
+    withdraw at any time without any adverse consequences.
+9. Contact Information:
+    Principal Investigator: [Name] [Phone] [Email]
+    IRB Contact: [Institution Name] [Phone] [Email]
 
-□ 我已閱讀並瞭解以上說明，同意參與本研究。
+□ I have read and understood the above explanation and agree to participate
+  in this research.
 
-受試者簽名：__________ 日期：__________
-研究者簽名：__________ 日期：__________
+Subject Signature: __________ Date: __________
+Researcher Signature: __________ Date: __________
 ```
 
 ---
 
-## 6. 數據脫敏與隱私保護
+## 6. Data De-identification and Privacy Protection
 
-### 6.1 去識別化策略
+### 6.1 De-identification Strategies
 
-| 策略 | 說明 | 適用情境 |
-|------|------|---------|
-| **匿名化（Anonymization）** | 完全移除所有可辨識資訊，不可回溯 | 最終資料公開 |
-| **假名化（Pseudonymization）** | 以代碼替換，保留對照表 | 研究過程中需追蹤 |
-| **資料泛化（Generalization）** | 將精確值轉為區間（如年齡 → 年齡組） | 統計分析 |
-| **資料遮蔽（Masking）** | 隱藏部分資訊（如 email 部分遮蔽） | 資料展示 |
-| **k-匿名性（k-anonymity）** | 確保每筆紀錄至少與 k-1 筆無法區分 | 資料集釋出 |
+| Strategy | Description | Applicable Scenario |
+|----------|-------------|---------------------|
+| **Anonymization** | Complete removal of all identifiable information, irreversible | Final data publication |
+| **Pseudonymization** | Replace with codes, retain a linkage table | Need to track during research process |
+| **Data generalization** | Convert precise values to ranges (e.g., age → age group) | Statistical analysis |
+| **Data masking** | Hide partial information (e.g., partially masked email) | Data display |
+| **k-anonymity** | Ensure each record is indistinguishable from at least k-1 other records | Dataset release |
 
-### 6.2 高教研究常見隱私風險
+### 6.2 Common Privacy Risks in Higher Education Research
 
-- **小樣本辨識**：小型系所可能透過描述性統計反推個人
-- **交叉比對**：多個去識別化資料集合併後可能重新辨識
-- **敘事辨識**：質性研究引述可能揭露受訪者身分
-- **機構辨識**：描述機構特徵過於具體可能辨識出機構
+- **Small sample identification**: Small departments may allow re-identification through descriptive statistics
+- **Cross-referencing**: Combining multiple de-identified datasets may enable re-identification
+- **Narrative identification**: Qualitative research quotations may reveal interviewee identity
+- **Institutional identification**: Overly specific institutional characteristics may allow institution identification
 
-### 6.3 建議做法
+### 6.3 Recommended Practices
 
-- [ ] 移除直接識別碼（姓名、學號、身分證號）
-- [ ] 評估間接識別碼風險（系所 + 年級 + 性別可能辨識個人）
-- [ ] 質性引述檢查：移除可辨識細節
-- [ ] 機構名稱處理：視研究需要決定是否匿名化
-- [ ] 資料儲存加密，存取權限控管
-- [ ] 訂定資料保存與銷毀時程
+- [ ] Remove direct identifiers (names, student IDs, national ID numbers)
+- [ ] Assess indirect identifier risks (department + year + gender combinations may identify individuals)
+- [ ] Check qualitative quotations: remove identifiable details
+- [ ] Handle institutional names: decide whether to anonymize based on research needs
+- [ ] Encrypt data storage with access controls
+- [ ] Establish data retention and destruction timeline
 
 ---
 
-## Quick Reference: 研究者自我檢核
+## Quick Reference: Researcher Self-Check
 
-在開始研究前，回答以下問題：
+Before starting research, answer the following questions:
 
-1. [ ] 我的研究是否蒐集、使用、或分析人類相關資料？
-2. [ ] 若是，資料是否已完全去識別化且為公開資料？
-3. [ ] 若否，我需要申請哪一級 IRB 審查？
-4. [ ] 我是否已完成研究倫理訓練（CITI 或同等課程）？
-5. [ ] 我的知情同意書是否包含所有必要項目？
-6. [ ] 我是否有適當的資料保護計畫？
-7. [ ] 若涉及弱勢群體，是否有額外保護措施？
-8. [ ] 我的 IRB 申請時程是否納入研究計畫時程？
+1. [ ] Does my research collect, use, or analyze human-related data?
+2. [ ] If yes, is the data completely de-identified and publicly available?
+3. [ ] If not, which level of IRB review do I need to apply for?
+4. [ ] Have I completed research ethics training (CITI or equivalent)?
+5. [ ] Does my informed consent form include all required elements?
+6. [ ] Do I have an appropriate data protection plan?
+7. [ ] If vulnerable populations are involved, are there additional protective measures?
+8. [ ] Has the IRB review timeline been incorporated into the research project timeline?

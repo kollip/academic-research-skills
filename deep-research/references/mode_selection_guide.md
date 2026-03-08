@@ -1,228 +1,228 @@
-# Mode Selection Guide — 模式選擇指南
+# Mode Selection Guide
 
-## 概述
+## Overview
 
-deep-research 提供 6 種模式，適用於不同的研究階段和需求。本指南幫助使用者選擇最適合的模式。
+deep-research provides 6 modes suited to different research stages and needs. This guide helps users select the most appropriate mode.
 
 ---
 
-## 決策流程圖
+## Decision Flowchart
 
 ```
-使用者輸入
+User Input
     │
-    ├── 已有清楚的研究問題？
-    │   ├── Yes ──→ 已有文本要審查？
+    ├── Have a clear research question?
+    │   ├── Yes ──→ Have a text to review?
     │   │            ├── Yes ──→ review mode
-    │   │            └── No ───→ 需要完整報告？
+    │   │            └── No ───→ Need a complete report?
     │   │                         ├── Yes ──→ full mode
-    │   │                         └── No ───→ 只需文獻？
+    │   │                         └── No ───→ Only need literature?
     │   │                                     ├── Yes ──→ lit-review mode
     │   │                                     └── No ───→ quick mode
     │   │
-    │   └── No ──→ 想被引導思考？
+    │   └── No ──→ Want guided thinking?
     │              ├── Yes ──→ socratic mode
     │              └── No ───→ full mode
-    │                          (Phase 1 互動式 RQ 釐清)
+    │                          (Phase 1 interactive RQ clarification)
     │
-    ├── 只需要驗證特定事實？
+    ├── Only need to verify specific facts?
     │   └── Yes ──→ fact-check mode
     │
-    └── 不確定需要什麼？
-        └── 描述你的情境 → 系統自動推薦模式
+    └── Not sure what you need?
+        └── Describe your situation → System auto-recommends a mode
 ```
 
 ---
 
-## 各模式詳細資訊
+## Detailed Mode Information
 
-### full mode（完整研究）
+### full mode (Complete Research)
 
-| 項目 | 說明 |
+| Item | Description |
 |------|------|
-| **適用場景** | 需要從零開始進行完整的學術研究，產出可引用的研究報告 |
-| **不適用場景** | 只需要快速了解一個主題；已有完整研究只需審查；只需要文獻清單 |
-| **典型使用者** | 研究生準備論文提案、政策研究員撰寫分析報告、學者進行新領域探索 |
-| **預期產出** | 完整 APA 7.0 報告（3,000-8,000 字），含文獻回顧、方法論、分析、結論 |
-| **預期對話輪數** | 2-5 輪（Phase 1 互動 + 確認點） |
-| **啟用 Agent 數** | 全部 9 個 |
-| **所需時間** | 較長，適合不趕時間的深入研究 |
+| **Applicable Scenario** | Need to conduct complete academic research from scratch, producing a citable research report |
+| **Not Applicable** | Just need a quick understanding of a topic; already have complete research and only need review; only need a bibliography |
+| **Typical Users** | Graduate students preparing thesis proposals, policy researchers writing analysis reports, scholars exploring new fields |
+| **Expected Output** | Complete APA 7.0 report (3,000-8,000 words), including literature review, methodology, analysis, conclusions |
+| **Expected Dialogue Rounds** | 2-5 rounds (Phase 1 interaction + checkpoints) |
+| **Agents Activated** | All 9 |
+| **Time Required** | Longer; suitable for in-depth research without time pressure |
 
-**觸發範例**：
+**Trigger Examples**:
 ```
 "Research the impact of AI on higher education quality assurance"
-"深度研究少子化對台灣高等教育的影響"
-"研究 SDGs 在亞洲大學的實踐現況"
+"Deep research on the impact of declining birth rates on Taiwan's higher education"
+"Research the current state of SDGs implementation in Asian universities"
 ```
 
 ---
 
-### quick mode（快速研究）
+### quick mode (Quick Research)
 
-| 項目 | 說明 |
+| Item | Description |
 |------|------|
-| **適用場景** | 需要快速了解一個主題的核心觀點和主要文獻，時間有限 |
-| **不適用場景** | 需要完整的方法論設計；需要深入的批判性分析；需要可發表品質的報告 |
-| **典型使用者** | 準備會議背景資料的行政人員、需要快速文獻掃描的研究者、寫提案前的初步探索 |
-| **預期產出** | 研究簡報（500-1,500 字），含重點摘要、主要文獻、初步觀點 |
-| **預期對話輪數** | 0-1 輪（通常直接產出） |
-| **啟用 Agent 數** | 4 個（RQ + Biblio + Verification + Report） |
-| **所需時間** | 較短 |
+| **Applicable Scenario** | Need a quick understanding of a topic's core viewpoints and key literature, under time constraints |
+| **Not Applicable** | Need complete methodology design; need in-depth critical analysis; need publication-quality reports |
+| **Typical Users** | Administrative staff preparing meeting background materials, researchers needing a quick literature scan, preliminary exploration before writing a proposal |
+| **Expected Output** | Research brief (500-1,500 words), including key summary, major literature, preliminary viewpoints |
+| **Expected Dialogue Rounds** | 0-1 round (typically direct output) |
+| **Agents Activated** | 4 (RQ + Biblio + Verification + Report) |
+| **Time Required** | Shorter |
 
-**觸發範例**：
+**Trigger Examples**:
 ```
 "Quick research on blockchain in education"
-"快速研究一下教育科技的最新趨勢"
+"Quick research on the latest trends in educational technology"
 ```
 
 ---
 
-### review mode（文本審查）
+### review mode (Text Review)
 
-| 項目 | 說明 |
+| Item | Description |
 |------|------|
-| **適用場景** | 已有一篇論文/報告/草稿，需要專業的審查和回饋 |
-| **不適用場景** | 還沒有文本要審查；需要從零寫一篇研究；需要文獻搜尋 |
-| **典型使用者** | 論文寫完需要審稿回饋的研究生、期刊投稿前的自我檢查、同儕審查 |
-| **預期產出** | 審查報告，含 Editorial Verdict（Accept/Revise/Reject）、具體修改建議、倫理審查 |
-| **預期對話輪數** | 0-1 輪 |
-| **啟用 Agent 數** | 3 個（Editor + Devil's Advocate + Ethics） |
-| **所需時間** | 中等，取決於文本長度 |
+| **Applicable Scenario** | Already have a paper/report/draft that needs professional review and feedback |
+| **Not Applicable** | No text to review yet; need to write research from scratch; need literature search |
+| **Typical Users** | Graduate students who finished a paper and need peer review feedback, self-check before journal submission, peer review |
+| **Expected Output** | Review report with Editorial Verdict (Accept/Revise/Reject), specific revision suggestions, ethics review |
+| **Expected Dialogue Rounds** | 0-1 round |
+| **Agents Activated** | 3 (Editor + Devil's Advocate + Ethics) |
+| **Time Required** | Medium, depends on text length |
 
-**觸發範例**：
+**Trigger Examples**:
 ```
 "Review this paper"
-"幫我審查這篇論文的方法論"
+"Help me review this paper's methodology"
 "Check this manuscript before submission"
 ```
 
 ---
 
-### lit-review mode（文獻回顧）
+### lit-review mode (Literature Review)
 
-| 項目 | 說明 |
+| Item | Description |
 |------|------|
-| **適用場景** | 需要系統性的文獻搜尋和整合分析，但不需要完整的研究報告 |
-| **不適用場景** | 需要包含原創分析的完整報告；只需要驗證幾個事實；需要方法論設計 |
-| **典型使用者** | 撰寫論文文獻回顧章節的研究生、進行系統性回顧的研究團隊、課程作業 |
-| **預期產出** | 註釋書目 + 綜合分析（1,500-4,000 字），含主題分類、證據矩陣、研究空白 |
-| **預期對話輪數** | 1-2 輪（確認搜尋範圍） |
-| **啟用 Agent 數** | 3 個（Biblio + Verification + Synthesis） |
-| **所需時間** | 中等 |
+| **Applicable Scenario** | Need systematic literature search and synthesis analysis, but not a complete research report |
+| **Not Applicable** | Need a complete report with original analysis; only need to verify a few facts; need methodology design |
+| **Typical Users** | Graduate students writing the literature review chapter of their thesis, research teams conducting systematic reviews, coursework assignments |
+| **Expected Output** | Annotated bibliography + synthesis analysis (1,500-4,000 words), including thematic classification, evidence matrix, research gaps |
+| **Expected Dialogue Rounds** | 1-2 rounds (confirm search scope) |
+| **Agents Activated** | 3 (Biblio + Verification + Synthesis) |
+| **Time Required** | Medium |
 
-**觸發範例**：
+**Trigger Examples**:
 ```
 "Literature review on SDGs in higher education"
-"文獻回顧：台灣高教品質保證的演進"
+"Literature review: the evolution of quality assurance in Taiwan's higher education"
 "Systematic review of AI-assisted assessment"
 ```
 
 ---
 
-### fact-check mode（事實查核）
+### fact-check mode (Fact-Checking)
 
-| 項目 | 說明 |
+| Item | Description |
 |------|------|
-| **適用場景** | 需要驗證特定事實聲明的真實性和來源品質 |
-| **不適用場景** | 需要完整的研究分析；需要文獻綜合；需要產出研究報告 |
-| **典型使用者** | 驗證會議中引用的數據、檢查報告中的事實準確性、查核政策聲明 |
-| **預期產出** | 驗證報告（300-800 字），含來源評級、事實準確度評估、可信度判定 |
-| **預期對話輪數** | 0 輪（直接產出） |
-| **啟用 Agent 數** | 1 個（Source Verification） |
-| **所需時間** | 最短 |
+| **Applicable Scenario** | Need to verify the truthfulness and source quality of specific factual claims |
+| **Not Applicable** | Need complete research analysis; need literature synthesis; need to produce a research report |
+| **Typical Users** | Verifying data cited in meetings, checking factual accuracy in reports, checking policy claims |
+| **Expected Output** | Verification report (300-800 words), including source rating, factual accuracy assessment, credibility determination |
+| **Expected Dialogue Rounds** | 0 rounds (direct output) |
+| **Agents Activated** | 1 (Source Verification) |
+| **Time Required** | Shortest |
 
-**觸發範例**：
+**Trigger Examples**:
 ```
 "Fact-check these claims about Taiwan's university enrollment"
-"事實查核：台灣大學數量是否真的在下降？"
+"Fact-check: Is the number of universities in Taiwan really declining?"
 "Verify: 'OECD countries average 50% tertiary attainment rate'"
 ```
 
 ---
 
-### socratic mode（引導式研究）
+### socratic mode (Guided Research)
 
-| 項目 | 說明 |
+| Item | Description |
 |------|------|
-| **適用場景** | 對一個主題有興趣但不確定如何開始研究；想透過對話釐清思路；需要研究指導 |
-| **不適用場景** | 已有明確的研究問題和方法論；需要快速產出報告；只需要文獻或事實查核 |
-| **典型使用者** | 初次接觸研究的碩士生、轉換研究領域的學者、構思研究提案的博士生 |
-| **預期產出** | Research Plan Summary，含萃取的 INSIGHT、研究問題方向、方法論建議 |
-| **預期對話輪數** | 8-15 輪（多輪對話是核心特色） |
-| **啟用 Agent 數** | 2-3 個（socratic_mentor + research_question + devils_advocate 視情況） |
-| **所需時間** | 較長，但重點在思考過程而非產出速度 |
+| **Applicable Scenario** | Interested in a topic but unsure how to start research; want to clarify thinking through dialogue; need research guidance |
+| **Not Applicable** | Already have a clear research question and methodology; need quick report output; only need literature or fact-checking |
+| **Typical Users** | Master's students encountering research for the first time, scholars transitioning research fields, doctoral students brainstorming research proposals |
+| **Expected Output** | Research Plan Summary with extracted INSIGHTs, research question direction, methodology suggestions |
+| **Expected Dialogue Rounds** | 8-15 rounds (multi-round dialogue is the core feature) |
+| **Agents Activated** | 2-3 (socratic_mentor + research_question + devils_advocate as needed) |
+| **Time Required** | Longer, but the focus is on the thinking process rather than output speed |
 
-**觸發範例**：
+**Trigger Examples**:
 ```
-"引導我研究高等教育的主題"
+"Guide my research on higher education topics"
 "Guide my research on educational technology"
-"幫我想清楚我的論文方向"
+"Help me think through my thesis direction"
 "Help me think through my research topic"
 ```
 
 ---
 
-## 常見誤選場景
+## Common Misselection Scenarios
 
-| 使用者說的 | 他們可能真正需要的 | 建議模式 | 原因 |
+| What the User Says | What They Probably Need | Recommended Mode | Reason |
 |-----------|------------------|---------|------|
-| 「幫我做一個完整的文獻回顧」 | 完整報告（含分析和結論） | `full`，非 `lit-review` | lit-review 只產出書目和綜合，不含原創分析 |
-| 「快速查一下 X 的情況」 | 事實查核 | `fact-check`，非 `quick` | 如果只需要驗證特定事實，fact-check 更精準 |
-| 「我想研究 X」（但說不清楚想知道什麼） | 研究思路釐清 | `socratic`，非 `full` | full mode 的 Phase 1 也能互動，但 socratic 更深入 |
-| 「幫我改這篇論文」 | 論文修改指導 | `review`，非 `full` | 已有文本，需要審查而非從零研究 |
-| 「我需要 APA 格式的參考文獻」 | 文獻格式化 | `lit-review`，非 `full` | 如果只需要文獻列表和格式，不需要完整研究 |
-| 「幫我想一個研究題目」 | 研究方向探索 | `socratic` | 最適合沒有明確方向的使用者 |
+| "Help me do a complete literature review" | Complete report (with analysis and conclusions) | `full`, not `lit-review` | lit-review only produces bibliography and synthesis, no original analysis |
+| "Quickly check the situation with X" | Fact-checking | `fact-check`, not `quick` | If only needing to verify specific facts, fact-check is more precise |
+| "I want to research X" (but can't articulate what they want to know) | Research thinking clarification | `socratic`, not `full` | full mode's Phase 1 also offers interaction, but socratic goes deeper |
+| "Help me fix this paper" | Paper revision guidance | `review`, not `full` | Already has text, needs review not research from scratch |
+| "I need APA-formatted references" | Reference formatting | `lit-review`, not `full` | If only a reference list and formatting is needed, no complete research required |
+| "Help me think of a research topic" | Research direction exploration | `socratic` | Best suited for users without a clear direction |
 
 ---
 
-## 模式間的銜接
+## Mode Transitions
 
-### 常見銜接路徑
+### Common Transition Paths
 
 ```
-socratic → full        Socratic 完成後想要完整研究
-socratic → academic-paper (plan)   Socratic 完成後直接寫論文
-lit-review → full      文獻回顧後想要做完整分析
-fact-check → full      事實查核後發現需要深入研究
-quick → full           快速研究後覺得值得深入
-review → full          審查後發現需要重新研究
+socratic → full        Continue with complete research after Socratic completion
+socratic → academic-paper (plan)   Write paper directly after Socratic completion
+lit-review → full      Want complete analysis after literature review
+fact-check → full      Need deeper research after fact-checking
+quick → full           Worth going deeper after quick research
+review → full          Need to re-research after review
 ```
 
-### deep-research 與 academic-paper 的模式對照
+### deep-research to academic-paper Mode Mapping
 
-| deep-research 模式 | 產出 | 銜接到 academic-paper 模式 | 說明 |
+| deep-research Mode | Output | Maps to academic-paper Mode | Description |
 |-------------------|------|--------------------------|------|
-| `full` | 完整研究報告 | `full` 或 `revision` | 研究完成，進入論文寫作 |
-| `socratic` | Research Plan Summary | `plan` | 研究方向確定，規劃論文結構 |
-| `lit-review` | 註釋書目 + 綜合 | `full`（以文獻為基礎） | 文獻回顧完成，開始寫論文 |
-| `quick` | 研究簡報 | `plan`（需要擴充） | 初步探索完成，規劃完整論文 |
-| `review` | 審查報告 | 不銜接 | 審查結束，修改原論文 |
-| `fact-check` | 驗證報告 | 不銜接 | 查核結束 |
+| `full` | Complete research report | `full` or `revision` | Research complete, proceed to paper writing |
+| `socratic` | Research Plan Summary | `plan` | Research direction determined, plan paper structure |
+| `lit-review` | Annotated bibliography + synthesis | `full` (literature-based) | Literature review complete, start writing paper |
+| `quick` | Research brief | `plan` (needs expansion) | Preliminary exploration complete, plan full paper |
+| `review` | Review report | Does not map | Review concluded, revise original paper |
+| `fact-check` | Verification report | Does not map | Fact-checking concluded |
 
-### deep-research 與 academic-paper-reviewer 的模式對照
+### deep-research vs academic-paper-reviewer Mode Mapping
 
 | deep-research `review` mode | academic-paper-reviewer |
 |------------------------------|------------------------|
-| 3 agents（Editor + DA + Ethics） | 專屬論文審查 skill |
-| 適合任何文本的品質審查 | 專為學術論文設計的審稿流程 |
-| 產出 Editorial Verdict | 產出結構化審稿意見 |
-| 推薦用於：初稿粗篩、非學術文本 | 推薦用於：投稿前正式審查 |
+| 3 agents (Editor + DA + Ethics) | Dedicated paper review skill |
+| Suitable for quality review of any text | Designed specifically for academic paper review process |
+| Produces Editorial Verdict | Produces structured review comments |
+| Recommended for: initial draft screening, non-academic texts | Recommended for: formal pre-submission review |
 
 ---
 
-## 完整學術研究 Pipeline
+## Complete Academic Research Pipeline
 
 ```
 Step 1: deep-research (socratic/full)
           ↓ Research Plan / Full Report
 Step 2: academic-paper (plan/full)
-          ↓ 論文草稿
+          ↓ Paper draft
 Step 3: academic-paper-reviewer (full/guided)
-          ↓ 審稿意見
+          ↓ Review comments
 Step 4: academic-paper (revision)
-          ↓ 修訂版論文
-Step 5: [重複 Step 3-4 直到通過]
-          ↓ 最終版論文
+          ↓ Revised paper
+Step 5: [Repeat Steps 3-4 until passed]
+          ↓ Final paper
 ```
 
 ---

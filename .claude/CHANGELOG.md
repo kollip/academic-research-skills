@@ -6,6 +6,32 @@ Cross-skill fixes and update history.
 
 ## 2026-03-08
 
+### Full English Translation — All Skills Translated to English
+
+**Files changed**: All `.md` files across `academic-pipeline/`, `academic-paper/`, `academic-paper-reviewer/`, `deep-research/`
+
+**Changes**:
+- Translated all Chinese content to English across 68+ files (agents, references, templates, examples, SKILL.md)
+- TSSCI journal names in `top_journals_by_field.md` retain official Chinese names as proper nouns (with English translations)
+- Privacy scan: removed residual `HEEACT Luminai` reference from `deep-research/references/socratic_questioning_framework.md`
+- `README.zh-TW.md` intentionally kept in Chinese as the bilingual README option
+
+---
+
+### academic-pipeline v2.5 — External Review Protocol
+
+**Files changed**: `academic-pipeline/SKILL.md`
+
+**Changes**:
+- New External Review Protocol section: 4-step workflow for handling real journal reviewer feedback (intake → strategic coaching → revise + Response to Reviewers → completeness check)
+- Difference table: internal simulated review vs. external real review
+- Strategic Revision Coaching: 4 layers (understanding → judgment → strategy → risk assessment)
+- Response to Reviewers auto-generated template
+- Self-verification completeness check adjustments
+- Capability boundaries: AI verification ≠ real reviewer satisfaction
+
+---
+
 ### academic-pipeline v2.4 — Stage 6 Process Summary + Collaboration Quality Evaluation
 
 **Files changed**: `academic-pipeline/SKILL.md`, `README.md`, `README.zh-TW.md`

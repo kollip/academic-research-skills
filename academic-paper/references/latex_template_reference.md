@@ -1,4 +1,4 @@
-# LaTeX Template Reference — LaTeX 範本參考
+# LaTeX Template Reference
 
 Used by `formatter_agent` for LaTeX output generation.
 
@@ -237,14 +237,14 @@ English abstract text here...
 \end{abstract}
 
 \begin{center}
-\textbf{中文摘要}
+\textbf{Chinese Abstract}
 \end{center}
 
 \noindent
-中文摘要內容...
+Chinese abstract content...
 
 \noindent
-\textbf{關鍵詞}：關鍵詞一、關鍵詞二、關鍵詞三
+\textbf{Keywords}: Keyword 1, Keyword 2, Keyword 3
 ```
 
 ## Common LaTeX Compilation Issues

@@ -1,4 +1,4 @@
-# Paper Structure Patterns — 6 種論文結構模式
+# Paper Structure Patterns — 6 Paper Structure Models
 
 Used by `structure_architect_agent` and `intake_agent` to select the appropriate paper structure.
 

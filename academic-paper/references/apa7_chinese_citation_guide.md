@@ -1,239 +1,239 @@
-# APA 7.0 中文引用完整規範
+# APA 7.0 Complete Guide for Chinese Citations
 
-以台灣學術慣例為主的中文 APA 7.0 引用格式指南。本指南為 `apa7_extended_guide.md` 的中文延伸，供 `citation_compliance_agent`、`draft_writer_agent`、`formatter_agent` 使用。
-
----
-
-## 中文期刊論文
-
-### 基本格式
-
-```
-作者1、作者2（年份）。文章標題。期刊名稱，卷(期)，頁碼-頁碼。https://doi.org/xxxxx
-```
-
-### 範例
-
-**單一作者**：
-```
-王大明（2024）。少子化對私立大學經營策略之影響。高等教育研究，15(2)，45-68。https://doi.org/10.6152/jhe.2024.0502.03
-```
-
-**兩位作者**：
-```
-王大明、李小華（2024）。台灣高等教育品質保證制度之演變與展望。教育研究集刊，70(1)，1-32。https://doi.org/10.3966/102887082024037001001
-```
-
-**三位以上作者**：
-```
-王大明、李小華、張三豐、陳四海、林五洲（2023）。混成學習模式對大學生學習成效之後設分析。教育心理學報，55(2)，201-228。https://doi.org/10.6251/BEP.202312_55(2).0002
-```
-
-**文中引用**：
-- 單一作者：王大明（2024）指出... / ...（王大明，2024）
-- 兩位作者：王大明與李小華（2024）... / ...（王大明、李小華，2024）
-- 三位以上（首次）：王大明等人（2023）... / ...（王大明等人，2023）
-- 三位以上（再次）：王大明等人（2023）...
+A Chinese APA 7.0 citation format guide based on Taiwan academic conventions. This guide is a Chinese-language extension of `apa7_extended_guide.md`, used by `citation_compliance_agent`, `draft_writer_agent`, and `formatter_agent`.
 
 ---
 
-## 中文書籍
+## Chinese Journal Articles
 
-### 基本格式
+### Basic Format
 
 ```
-作者（年份）。書名。出版社。
-```
-
-### 範例
-
-**單一作者**：
-```
-張三（2023）。台灣高等教育發展史。五南圖書。
+Author1, Author2 (Year). Article title. Journal Name, Volume(Issue), Pages. https://doi.org/xxxxx
 ```
 
-**主編書籍**：
+### Examples
+
+**Single author**:
 ```
-王五（主編）（2023）。高等教育品質管理：理論與實務。高等教育出版社。
+Wang, Da-Ming (2024). The impact of declining birthrate on private university management strategies. Journal of Higher Education, 15(2), 45-68. https://doi.org/10.6152/jhe.2024.0502.03
 ```
 
-**多版次**：
+**Two authors**:
 ```
-林六（2024）。教育研究法（第五版）。心理出版社。
-```
-
-**翻譯書籍**：
-```
-Creswell, J. W.（2023）。研究設計：質化、量化及混合方法取向（張芬芬譯；第五版）。學富文化。（原著出版年：2018）
+Wang, Da-Ming, & Li, Xiao-Hua (2024). The evolution and prospects of Taiwan's higher education quality assurance system. Bulletin of Educational Research, 70(1), 1-32. https://doi.org/10.3966/102887082024037001001
 ```
 
-**文中引用**：
-- 張三（2023）在其著作中提到...
-- ...（張三，2023，頁 45-48）
-- 翻譯書：Creswell（2018/2023）...
+**Three or more authors**:
+```
+Wang, Da-Ming, Li, Xiao-Hua, Zhang, San-Feng, Chen, Si-Hai, & Lin, Wu-Zhou (2023). A meta-analysis of blended learning models on university student learning outcomes. Bulletin of Educational Psychology, 55(2), 201-228. https://doi.org/10.6251/BEP.202312_55(2).0002
+```
+
+**In-text citations**:
+- Single author: Wang (2024) states... / ...(Wang, 2024)
+- Two authors: Wang and Li (2024)... / ...(Wang & Li, 2024)
+- Three or more (first time): Wang et al. (2023)... / ...(Wang et al., 2023)
+- Three or more (subsequent): Wang et al. (2023)...
 
 ---
 
-## 中文書籍章節
+## Chinese Books
 
-### 基本格式
-
-```
-章節作者（年份）。章節標題。載於 主編姓名（主編），書名（頁碼）。出版社。
-```
-
-### 範例
+### Basic Format
 
 ```
-李四（2023）。品質保證制度的演變。載於王五（主編），高等教育品質管理：理論與實務（頁 45-78）。高等教育出版社。
+Author (Year). Book title. Publisher.
 ```
 
+### Examples
+
+**Single author**:
 ```
-陳美玲（2024）。大學社會責任之實踐。載於林志成、黃淑玲（主編），台灣大學治理新趨勢（頁 112-145）。五南圖書。
+Zhang, San (2023). A history of Taiwan's higher education development. Wu-Nan Books.
 ```
+
+**Edited book**:
+```
+Wang, Wu (Ed.) (2023). Higher education quality management: Theory and practice. Higher Education Publishing.
+```
+
+**Multiple editions**:
+```
+Lin, Liu (2024). Educational research methods (5th ed.). Psychological Publishing.
+```
+
+**Translated book**:
+```
+Creswell, J. W. (2023). Research design: Qualitative, quantitative, and mixed methods approaches (F.-F. Zhang, Trans.; 5th ed.). Scholarly Cultural Enterprise. (Original work published 2018)
+```
+
+**In-text citations**:
+- Zhang (2023) mentions in his work...
+- ...(Zhang, 2023, p. 45-48)
+- Translated book: Creswell (2018/2023)...
 
 ---
 
-## 中文學位論文
+## Chinese Book Chapters
 
-### 基本格式
-
-```
-作者（年份）。論文題目（未出版之碩/博士論文）。學校名稱。
-```
-
-### 範例
-
-**未出版學位論文**：
-```
-陳六（2024）。AI 輔助教學對學生學習成效之影響——以國立臺灣大學為例（未出版之碩士論文）。國立臺灣大學。
-```
-
-**已出版（有 DOI 或資料庫）**：
-```
-黃七（2023）。私立大學轉型策略之個案研究（博士論文，國立政治大學）。臺灣碩博士論文知識加值系統。https://hdl.handle.net/11296/xxxxx
-```
-
-**文中引用**：
-- 陳六（2024）的研究發現...
-- ...（陳六，2024）
-
----
-
-## 政府出版品
-
-### 基本格式
+### Basic Format
 
 ```
-機構名稱（年份）。出版品名稱。https://url
+Chapter author (Year). Chapter title. In Editor name (Ed.), Book title (pp. Pages). Publisher.
 ```
 
-### 範例
-
-**政府報告**：
-```
-教育部（2024）。113 學年度大專校院校務資訊公開平台統計資料。https://udb.moe.edu.tw/
-```
-
-**法規**：
-```
-教育部（2023）。大學法（民國 112 年 6 月 28 日修正）。全國法規資料庫。https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030001
-```
-
-**評鑑報告**：
-```
-高等教育評鑑中心基金會（2024）。第三週期大學校院校務評鑑實施計畫（112-114 年度）。https://www.heeact.edu.tw/
-```
-
-**文中引用**：
-- 教育部（2024）的統計資料顯示...
-- ...（高等教育評鑑中心基金會，2024）
-
----
-
-## 研討會論文
-
-### 基本格式
+### Examples
 
 ```
-作者（年月）。論文題目〔論文發表〕。研討會名稱，地點。
+Li, Si (2023). The evolution of quality assurance systems. In W. Wang (Ed.), Higher education quality management: Theory and practice (pp. 45-78). Higher Education Publishing.
 ```
 
-### 範例
-
 ```
-林八（2024 年 11 月）。生成式 AI 對高等教育教學之衝擊〔論文發表〕。2024 年台灣教育學術研討會，台北，台灣。
+Chen, Mei-Ling (2024). The practice of university social responsibility. In Z.-C. Lin & S.-L. Huang (Eds.), New trends in Taiwan's university governance (pp. 112-145). Wu-Nan Books.
 ```
 
 ---
 
-## 網路資源
+## Chinese Theses and Dissertations
 
-### 基本格式
-
-```
-作者或機構（年份）。網頁標題。網站名稱。https://url
-```
-
-### 範例
+### Basic Format
 
 ```
-國家發展委員會（2024）。人口推估（2024 至 2070 年）。https://pop-proj.ndc.gov.tw/
+Author (Year). Thesis title (Unpublished master's/doctoral dissertation). University name.
 ```
 
+### Examples
+
+**Unpublished thesis/dissertation**:
 ```
-大學問（2024 年 3 月 15 日）。113 學年度大學分發入學名額分析。大學問網站。https://www.unews.com.tw/
+Chen, Liu (2024). The impact of AI-assisted instruction on student learning outcomes: A case study of National Taiwan University (Unpublished master's thesis). National Taiwan University.
+```
+
+**Published (with DOI or database)**:
+```
+Huang, Qi (2023). A case study of private university transformation strategies (Doctoral dissertation, National Chengchi University). National Digital Library of Theses and Dissertations in Taiwan. https://hdl.handle.net/11296/xxxxx
+```
+
+**In-text citations**:
+- Chen (2024) found in their study...
+- ...(Chen, 2024)
+
+---
+
+## Government Publications
+
+### Basic Format
+
+```
+Organization name (Year). Publication title. https://url
+```
+
+### Examples
+
+**Government report**:
+```
+Ministry of Education (2024). Academic Year 113 higher education institution transparency platform statistics. https://udb.moe.edu.tw/
+```
+
+**Legislation**:
+```
+Ministry of Education (2023). University Act (amended June 28, 2023). Laws and Regulations Database of the Republic of China. https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030001
+```
+
+**Accreditation report**:
+```
+Higher Education Evaluation and Accreditation Council of Taiwan (2024). Third-cycle institutional accreditation implementation plan (Academic Years 112-114). https://www.heeact.edu.tw/
+```
+
+**In-text citations**:
+- Ministry of Education (2024) statistics show...
+- ...(Higher Education Evaluation and Accreditation Council of Taiwan, 2024)
+
+---
+
+## Conference Papers
+
+### Basic Format
+
+```
+Author (Year, Month). Paper title [Conference paper]. Conference name, Location.
+```
+
+### Examples
+
+```
+Lin, Ba (2024, November). The impact of generative AI on higher education teaching [Conference paper]. 2024 Taiwan Education Academic Conference, Taipei, Taiwan.
 ```
 
 ---
 
-## 中英混合引用規則
+## Online Resources
 
-### 參考文獻排列
+### Basic Format
 
-**方案 A（推薦）：中英分列**
-- 中文文獻在前，依作者姓氏筆畫數排序
-- 英文文獻在後，依作者姓氏字母排序
-- 以「中文文獻」和「English References」兩個標題區分
+```
+Author or organization (Year). Webpage title. Website name. https://url
+```
 
-**方案 B：中英混合排列**
-- 中英文文獻統一排列
-- 中文依筆畫排序，英文依字母排序
-- 中文排在對應注音/拼音字母的位置（或全部中文在前）
+### Examples
 
-### 文中引用格式差異
+```
+National Development Council (2024). Population projections (2024 to 2070). https://pop-proj.ndc.gov.tw/
+```
 
-| 元素 | 中文 | 英文 |
+```
+University TW (2024, March 15). Analysis of Academic Year 113 university admission quotas. University TW website. https://www.unews.com.tw/
+```
+
+---
+
+## Mixed Chinese-English Citation Rules
+
+### Reference List Ordering
+
+**Option A (Recommended): Separate Chinese and English**
+- Chinese references listed first, ordered by author surname stroke count
+- English references listed after, ordered alphabetically by author surname
+- Separated by two headings: "Chinese References" and "English References"
+
+**Option B: Mixed Chinese-English Ordering**
+- All Chinese and English references listed together
+- Chinese ordered by stroke count, English by alphabetical order
+- Chinese entries placed at the corresponding phonetic/pinyin letter position (or all Chinese first)
+
+### In-Text Citation Format Differences
+
+| Element | Chinese | English |
 |------|------|------|
-| 括號 | 全形（） | 半形 () |
-| 多位作者連接 | 頓號「、」 | & |
-| 三人以上 | 等人 | et al. |
-| 年份格式 | 西元年 | 西元年 |
-| 直接引用頁碼 | 頁 45 | p. 45 |
-| 多頁引用 | 頁 45-48 | pp. 45-48 |
+| Parentheses | Full-width () | Half-width () |
+| Multiple author connector | Enumeration comma | & |
+| Three or more authors | et al. (Chinese equivalent) | et al. |
+| Year format | CE year | CE year |
+| Direct quote page | p. (Chinese format) | p. 45 |
+| Multi-page quote | pp. (Chinese format) | pp. 45-48 |
 
-### 混合引用範例（文中）
-
-```
-近年來，少子化對台灣高等教育的影響已受到廣泛關注（王大明，2024；Chen & Wang, 2023）。
-Smith et al. (2024) 和王大明等人（2023）的研究皆指出，私立大學面臨的招生壓力尤為嚴峻。
-```
-
-### 混合參考文獻範例（方案 A）
+### Mixed Citation Example (In-Text)
 
 ```
-參考文獻
+In recent years, the impact of declining birthrates on Taiwan's higher education has received widespread attention (Wang, 2024; Chen & Wang, 2023).
+Smith et al. (2024) and Wang et al. (2023) both indicated that private universities face particularly severe enrollment pressure.
+```
 
-一、中文文獻
+### Mixed Reference List Example (Option A)
 
-王大明（2024）。少子化對私立大學經營策略之影響。高等教育研究，15(2)，45-68。
+```
+References
+
+I. Chinese References
+
+Wang, Da-Ming (2024). The impact of declining birthrate on private university management strategies. Journal of Higher Education, 15(2), 45-68.
     https://doi.org/10.6152/jhe.2024.0502.03
-李小華、張三豐（2023）。台灣高等教育品質保證制度之演變。教育政策論壇，26(3)，1-30。
-高等教育評鑑中心基金會（2024）。第三週期大學校院校務評鑑實施計畫。
+Li, Xiao-Hua, & Zhang, San-Feng (2023). The evolution of Taiwan's higher education quality assurance system. Educational Policy Forum, 26(3), 1-30.
+Higher Education Evaluation and Accreditation Council of Taiwan (2024). Third-cycle institutional accreditation implementation plan.
     https://www.heeact.edu.tw/
-教育部（2024）。113 學年度大專校院校務資訊公開平台統計資料。https://udb.moe.edu.tw/
+Ministry of Education (2024). Academic Year 113 higher education institution transparency platform statistics. https://udb.moe.edu.tw/
 
-二、英文文獻
+II. English References
 
 Chen, L., & Wang, T. (2023). Quality assurance in East Asian higher education: A
     comparative study. Higher Education, 85(3), 567-589.
@@ -245,120 +245,120 @@ Smith, J. A., Jones, B. C., & Brown, D. E. (2024). The impact of declining birth
 
 ---
 
-## TSSCI 期刊特殊規範
+## TSSCI Journal-Specific Conventions
 
-部分台灣社會科學引文索引（TSSCI）期刊有自己的引用格式要求。
+Some Taiwan Social Sciences Citation Index (TSSCI) journals have their own citation format requirements.
 
-### 常見教育類期刊格式對照
+### Common Education Journal Format Comparison
 
-| 期刊 | 引用格式 | 特殊要求 |
+| Journal | Citation Format | Special Requirements |
 |------|---------|---------|
-| 教育研究集刊 | APA 7th 中文版 | 中英分列 |
-| 教育心理學報 | APA 7th 中文版 | 中英分列，需附英文參考文獻翻譯 |
-| 教育科學研究期刊 | APA 7th 中文版 | 中英分列 |
-| 課程與教學 | APA 7th 中文版 | 中英混合排列 |
-| 教育政策論壇 | APA 7th 中文版 | 中英分列，頁碼格式為「頁 x-y」 |
-| 高等教育研究 | APA 7th 中文版 | 中英分列 |
-| 台灣教育社會學研究 | APA 7th 中文版 | 中英分列 |
+| Bulletin of Educational Research | APA 7th Chinese edition | Separate Chinese and English |
+| Bulletin of Educational Psychology | APA 7th Chinese edition | Separate Chinese and English; English translation of Chinese references required |
+| Journal of Research in Education Sciences | APA 7th Chinese edition | Separate Chinese and English |
+| Curriculum & Instruction Quarterly | APA 7th Chinese edition | Mixed Chinese-English ordering |
+| Educational Policy Forum | APA 7th Chinese edition | Separate Chinese and English; page format uses Chinese page notation |
+| Journal of Higher Education | APA 7th Chinese edition | Separate Chinese and English |
+| Taiwan Journal of Sociology of Education | APA 7th Chinese edition | Separate Chinese and English |
 
-### 投稿注意事項
+### Submission Notes
 
-1. **務必查閱目標期刊的投稿須知** — 以上僅為一般慣例
-2. 部分期刊要求中文文獻加附英文翻譯（方括號標示）
-3. 部分期刊要求所有中文文獻都有對應的羅馬拼音
-4. DOI 格式各期刊略有差異（有的要 https://doi.org/，有的只要 doi:）
+1. **Always check the target journal's submission guidelines** — the above are general conventions only
+2. Some journals require English translations appended to Chinese references (in square brackets)
+3. Some journals require romanized transliteration for all Chinese references
+4. DOI format varies slightly by journal (some require https://doi.org/, others only doi:)
 
 ---
 
-## 常見中文引用錯誤
+## Common Chinese Citation Errors
 
-### 1. 作者姓名格式
+### 1. Author Name Format
 
-| 錯誤 | 正確 | 說明 |
+| Error | Correct | Explanation |
 |------|------|------|
-| 大明王（2024） | 王大明（2024） | 中文不需姓名顛倒 |
-| Wang, Da-Ming（2024） | 王大明（2024） | 中文文獻用中文姓名 |
-| 王大明,李小華（2024） | 王大明、李小華（2024） | 用頓號不用逗號 |
+| Da-Ming Wang (2024) | Wang, Da-Ming (2024) | Chinese names should follow the citation format conventions |
+| Wang, Da-Ming (2024) in English format | Use Chinese name in Chinese references | Use Chinese names for Chinese references |
+| Wang, Li (2024) without separator | Wang & Li (2024) | Use appropriate connector between authors |
 
-### 2. 年份格式
+### 2. Year Format
 
-| 錯誤 | 正確 | 說明 |
+| Error | Correct | Explanation |
 |------|------|------|
-| 王大明（民國 113 年） | 王大明（2024） | APA 一律用西元年 |
-| 王大明（2024 年） | 王大明（2024） | 不加「年」字 |
-| 王大明, 2024 | 王大明（2024） | 用全形括號 |
+| Wang (ROC Year 113) | Wang (2024) | APA always uses CE years |
+| Wang (2024 year) | Wang (2024) | Do not add the word "year" after the number |
+| Wang, 2024 without parentheses | Wang (2024) | Use proper parentheses |
 
-### 3. 標點符號
+### 3. Punctuation
 
-| 錯誤 | 正確 | 說明 |
+| Error | Correct | Explanation |
 |------|------|------|
-| 。高等教育研究。 | 。高等教育研究， | 期刊名後用逗號接卷期 |
-| ，45(2)，頁 45-68 | ，45(2)，45-68 | 頁碼前不需加「頁」字（在期刊論文中） |
-| https://doi.org/xxxxx。 | https://doi.org/xxxxx | DOI/URL 結尾不加句號 |
+| Period after journal name | Comma after journal name | Use comma after journal name to connect to volume/issue |
+| "p." before page numbers in journal articles | Page numbers only | Do not add page indicator before page numbers in journal article references |
+| Period after DOI/URL | No punctuation after DOI/URL | No period at the end of DOI/URL |
 
-### 4. 書籍出版資訊
+### 4. Book Publication Information
 
-| 錯誤 | 正確 | 說明 |
+| Error | Correct | Explanation |
 |------|------|------|
-| 台北：五南。 | 五南圖書。 | APA 7 不需出版地 |
-| 五南出版 | 五南圖書。 | 使用出版社全名 |
+| Taipei: Publisher. | Publisher. | APA 7 does not require publication location |
+| Abbreviated publisher name | Full publisher name. | Use the publisher's full name |
 
-### 5. 翻譯書引用
+### 5. Translated Book Citations
 
-| 錯誤 | 正確 |
+| Error | Correct |
 |------|------|
-| Creswell 著，張芬芬譯（2023） | Creswell, J. W.（2023）。書名（張芬芬譯；第五版）。出版社。（原著出版年：2018） |
+| Creswell, translated by Zhang (2023) | Creswell, J. W. (2023). Book title (F.-F. Zhang, Trans.; 5th ed.). Publisher. (Original work published 2018) |
 
 ---
 
-## 特殊情境處理
+## Special Situation Handling
 
-### 同一作者同年多篇
-
-```
-文中：王大明（2024a）... 王大明（2024b）...
-
-參考文獻：
-王大明（2024a）。第一篇論文標題。期刊名，卷(期)，頁碼。
-王大明（2024b）。第二篇論文標題。期刊名，卷(期)，頁碼。
-```
-
-### 機構作者
+### Same Author, Multiple Works in the Same Year
 
 ```
-文中：教育部（2024）... / ...（教育部，2024）
-首次：高等教育評鑑中心基金會〔HEEACT〕（2024）...
-再次：HEEACT（2024）...
+In-text: Wang (2024a)... Wang (2024b)...
+
+References:
+Wang (2024a). First paper title. Journal Name, Volume(Issue), Pages.
+Wang (2024b). Second paper title. Journal Name, Volume(Issue), Pages.
 ```
 
-### 二手引用（間接引用）
+### Institutional Authors
 
 ```
-文中：王大明的研究（如 李小華，2024 所引述）指出...
-參考文獻：只列 李小華（2024）的文獻，不列 王大明的原始文獻
+In-text: Ministry of Education (2024)... / ...(Ministry of Education, 2024)
+First mention: Higher Education Evaluation and Accreditation Council of Taiwan [HEEACT] (2024)...
+Subsequent: HEEACT (2024)...
 ```
 
-### AI 生成內容引用
+### Secondary Citations (Indirect Citations)
 
 ```
-OpenAI（2024）。ChatGPT（版本 GPT-4）〔大型語言模型〕。https://chat.openai.com
+In-text: Wang's research (as cited in Li, 2024) indicates...
+References: Only list Li (2024); do not list Wang's original work
+```
 
-Anthropic（2024）。Claude（版本 3.5 Sonnet）〔大型語言模型〕。https://claude.ai
+### Citing AI-Generated Content
+
+```
+OpenAI (2024). ChatGPT (Version GPT-4) [Large language model]. https://chat.openai.com
+
+Anthropic (2024). Claude (Version 3.5 Sonnet) [Large language model]. https://claude.ai
 ```
 
 ---
 
-## 快速檢查清單
+## Quick Checklist
 
-在完成參考文獻後，逐項檢查：
+After completing the reference list, check each item:
 
-- [ ] 所有文中引用都有對應的參考文獻條目
-- [ ] 所有參考文獻條目都有文中引用
-- [ ] 中文用全形標點，英文用半形標點
-- [ ] 作者之間用頓號（中文）或 & 符號（英文）
-- [ ] 年份統一使用西元年
-- [ ] DOI/URL 結尾無句號
-- [ ] 中英文參考文獻排序正確（筆畫/字母）
-- [ ] 翻譯書有標註原著出版年
-- [ ] 機構作者使用全名（首次可附縮寫）
-- [ ] 書籍格式符合 APA 7（無出版地）
+- [ ] All in-text citations have corresponding reference list entries
+- [ ] All reference list entries have in-text citations
+- [ ] Chinese uses full-width punctuation; English uses half-width punctuation
+- [ ] Authors are connected with enumeration comma (Chinese) or & symbol (English)
+- [ ] Years consistently use CE years
+- [ ] No period at the end of DOI/URL
+- [ ] Chinese and English reference ordering is correct (stroke count / alphabetical)
+- [ ] Translated books include original publication year
+- [ ] Institutional authors use full names (abbreviation may be appended on first mention)
+- [ ] Book format complies with APA 7 (no publication location)

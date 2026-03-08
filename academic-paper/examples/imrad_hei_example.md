@@ -20,11 +20,11 @@ Quality assurance (QA) in higher education increasingly relies on standardized e
 
 ---
 
-## 中文摘要
+## Chinese Abstract
 
-高等教育品質保證日益倚賴標準化評鑑架構，然而評鑑委員間的一致性問題始終存在。本研究旨在探討 AI 輔助工具對台灣高等教育評鑑一致性及機構自我評鑑實務之影響。研究採準實驗設計，比較 2024-2025 年評鑑週期中 24 件校務評鑑案例——12 件採傳統方式、12 件採 AI 輔助評鑑方案。研究結果顯示，AI 輔助評鑑可降低評鑑委員間變異達 28%（Cohen's *d* = 0.74），並提升自評報告與實地訪評結果之一致性（*r* = .82 對比傳統之 .63）。受評機構亦回饋 AI 工具有助於在準備階段及早發現資料缺漏。然而，評鑑委員對於質性判斷可能趨於同質化表達關切。本研究結果建議 AI 工具可有效提升品質保證一致性，但需以平衡方式整合，保留專家在評鑑歷程中的專業判斷。
+Higher education quality assurance increasingly relies on standardized evaluation frameworks, yet the issue of inter-evaluator consistency has persisted. This study aims to investigate the effects of AI-assisted tools on evaluation consistency and institutional self-assessment practices in Taiwanese higher education. A quasi-experimental design was employed, comparing evaluation outcomes across 24 institutional accreditation cases during the 2024-2025 accreditation cycle — 12 using traditional methods and 12 using AI-augmented evaluation protocols. Results showed that AI-augmented evaluations reduced inter-evaluator variance by 28% (Cohen's *d* = 0.74) and improved the alignment between self-assessment reports and site visit findings (*r* = .82 vs. .63 for traditional methods). Evaluated institutions also reported that AI tools helped identify data gaps earlier during the preparation phase. However, evaluators expressed concerns about the potential homogenization of qualitative judgment. These findings suggest that AI tools can effectively improve quality assurance consistency, but integration must be balanced to preserve expert professional judgment in the accreditation process.
 
-**關鍵詞**：品質保證、人工智慧、高等教育評鑑、評鑑一致性、台灣
+**Keywords**: quality assurance, artificial intelligence, higher education accreditation, evaluation consistency, Taiwan
 
 ---
 

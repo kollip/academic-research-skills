@@ -1,173 +1,173 @@
-# Review Criteria Framework — 結構化審查標準框架
+# Review Criteria Framework — Structured Review Criteria Framework
 
-本文件定義學術論文審查的通用標準和按論文類型區分的特殊標準。所有 reviewer agents 共用此框架。
-
----
-
-## 1. Universal Review Dimensions（通用審查維度）
-
-所有論文類型都適用的 7 個核心維度：
-
-### Dimension 1: Originality（原創性）— 權重 15%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 提出全新理論/方法/證據，可能改變領域方向 |
-| Strong | 4 | 有明確的新見解或新組合，填補具體的研究缺口 |
-| Adequate | 3 | 漸進式貢獻，在既有知識上有合理延伸 |
-| Weak | 2 | 與現有文獻高度重疊，新貢獻不明確 |
-| None | 1 | 基本上是重複已知的內容 |
-
-### Dimension 2: Methodological Rigor（方法論嚴謹度）— 權重 25%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 研究設計無可挑剔，方法創新且執行完美 |
-| Strong | 4 | 設計合理，方法適當，執行有少許可改善之處 |
-| Adequate | 3 | 方法基本可接受，但有一些設計或執行上的限制 |
-| Weak | 2 | 方法有顯著缺陷，影響結論的可信度 |
-| Unacceptable | 1 | 方法根本不適合回答研究問題，或有嚴重錯誤 |
-
-### Dimension 3: Evidence Sufficiency（證據充分性）— 權重 20%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 證據豐富、多元、有說服力，超出預期 |
-| Strong | 4 | 證據充分支撐所有主要論點 |
-| Adequate | 3 | 多數論點有證據支撐，少數需要補充 |
-| Weak | 2 | 關鍵論點缺乏充分證據 |
-| Unacceptable | 1 | 論點與證據嚴重脫節 |
-
-### Dimension 4: Argument Coherence（論證連貫性）— 權重 15%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 論點清晰、邏輯嚴密、結構精巧 |
-| Strong | 4 | 論述流暢，偶有小的邏輯跳躍 |
-| Adequate | 3 | 基本連貫，但有些段落間的連結不夠明確 |
-| Weak | 2 | 多處邏輯斷裂，讀者難以跟隨論證 |
-| Unacceptable | 1 | 論證混亂，無法辨識核心主張 |
-
-### Dimension 5: Writing Quality（寫作品質）— 權重 10%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 學術英語/中文精確流暢，堪為寫作典範 |
-| Strong | 4 | 語言清晰，偶有小瑕疵，不影響理解 |
-| Adequate | 3 | 大致可讀，有些語法或用詞問題 |
-| Weak | 2 | 語言問題頻繁出現，影響理解 |
-| Unacceptable | 1 | 語言品質不達可審查的標準 |
-
-### Dimension 6: Literature Integration（文獻整合）— 權重 10%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 文獻全面、當代、批判性整合，research gap 論證有力 |
-| Strong | 4 | 涵蓋主要文獻，有良好的整合和定位 |
-| Adequate | 3 | 基本涵蓋，但有遺漏或整合不足 |
-| Weak | 2 | 文獻過時、不全面、或只是列舉 |
-| Unacceptable | 1 | 文獻回顧嚴重不足或與主題不相關 |
-
-### Dimension 7: Significance & Impact（重要性與影響）— 權重 5%
-
-| 等級 | 分數 | 描述 |
-|------|------|------|
-| Outstanding | 5 | 可能改變政策、實務或理論方向 |
-| Strong | 4 | 對特定領域或實務有明確影響 |
-| Adequate | 3 | 有一定的學術或實務價值 |
-| Weak | 2 | 影響範圍有限，主要是學術興趣 |
-| Marginal | 1 | 難以看出研究的意義 |
+This document defines universal criteria for academic paper review and type-specific criteria differentiated by paper type. All reviewer agents share this framework.
 
 ---
 
-## 2. Paper Type-Specific Criteria（論文類型專屬標準）
+## 1. Universal Review Dimensions
 
-### 2.1 實證研究論文（Empirical Research）
+Seven core dimensions applicable to all paper types:
 
-除通用維度外，特別關注：
+### Dimension 1: Originality — Weight 15%
 
-| 額外維度 | 審查重點 |
-|---------|---------|
-| 研究假設明確性 | 假設是否可檢驗、是否與理論一致 |
-| 變項操作定義 | 自變項/依變項/控制變項的定義是否精確 |
-| 內在效度 | 混淆變項是否被控制 |
-| 外在效度 | 結果的可推廣性 |
-| 統計報告完整性 | 效果量、信賴區間、假設檢驗條件 |
-| 結論保守度 | 結論是否超出數據支撐範圍 |
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Proposes entirely new theory/method/evidence that could change the field's direction |
+| Strong | 4 | Has clear new insights or novel combinations, fills a specific research gap |
+| Adequate | 3 | Incremental contribution, reasonable extension of existing knowledge |
+| Weak | 2 | Highly overlapping with existing literature, new contribution unclear |
+| None | 1 | Essentially repeats what is already known |
 
-### 2.2 理論/概念論文（Theoretical/Conceptual）
+### Dimension 2: Methodological Rigor — Weight 25%
 
-| 額外維度 | 審查重點 |
-|---------|---------|
-| 概念定義精確性 | 核心概念是否有清晰的界定 |
-| 論證邏輯結構 | 前提→推論→結論的邏輯鏈是否完整 |
-| 反論處理 | 是否考慮並回應可能的反對觀點 |
-| 理論新穎性 | 是否真正推進了理論的發展 |
-| 可驗證性 | 理論是否能產生可檢驗的命題 |
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Impeccable research design, innovative methods executed flawlessly |
+| Strong | 4 | Sound design, appropriate methods, minor room for improvement in execution |
+| Adequate | 3 | Methods basically acceptable, but with some design or execution limitations |
+| Weak | 2 | Methods have significant flaws affecting the credibility of conclusions |
+| Unacceptable | 1 | Methods fundamentally unsuitable for answering the research question, or contain serious errors |
 
-### 2.3 文獻回顧 / Meta-analysis
+### Dimension 3: Evidence Sufficiency — Weight 20%
 
-| 額外維度 | 審查重點 |
-|---------|---------|
-| 搜尋策略 | 是否全面、可重現（PRISMA 遵循度） |
-| 納入/排除標準 | 標準是否明確、合理、一致執行 |
-| 偏誤風險評估 | 是否評估納入研究的偏誤風險 |
-| 異質性處理 | 統計和概念的異質性是否被適當處理 |
-| 綜合方法 | 是否超越簡單計票，達到批判性綜合 |
-| Publication Bias | 是否評估和討論出版偏誤 |
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Rich, diverse, and persuasive evidence that exceeds expectations |
+| Strong | 4 | Evidence sufficiently supports all major arguments |
+| Adequate | 3 | Most arguments supported by evidence, a few need supplementation |
+| Weak | 2 | Key arguments lack sufficient evidence |
+| Unacceptable | 1 | Serious disconnect between arguments and evidence |
 
-### 2.4 案例研究（Case Study）
+### Dimension 4: Argument Coherence — Weight 15%
 
-| 額外維度 | 審查重點 |
-|---------|---------|
-| 案例選擇論證 | 為何選擇此案例？代表什麼？ |
-| 理論取樣 vs 便利取樣 | 案例選擇是否有理論基礎 |
-| 三角驗證 | 多重資料來源是否被使用 |
-| 脈絡描述厚度 | thick description 是否足夠 |
-| 分析可轉移性 | 分析結果是否可轉移到其他脈絡 |
-| 研究者反身性 | 研究者與案例的關係是否被反思 |
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Clear arguments, rigorous logic, elegant structure |
+| Strong | 4 | Smooth argumentation, occasional minor logical leaps |
+| Adequate | 3 | Basically coherent, but some inter-paragraph connections are unclear |
+| Weak | 2 | Multiple logical breaks, readers have difficulty following the argument |
+| Unacceptable | 1 | Confused argumentation, core claims cannot be identified |
 
-### 2.5 政策分析/政策簡報（Policy Analysis/Brief）
+### Dimension 5: Writing Quality — Weight 10%
 
-| 額外維度 | 審查重點 |
-|---------|---------|
-| 政策問題定義 | 問題是否清楚界定、有證據支撐 |
-| 利害關係人分析 | 主要利害關係人是否被識別 |
-| 政策選項分析 | 是否提出並比較多個選項 |
-| 可行性評估 | 政策建議在現實中是否可行 |
-| 證據品質 | 政策建議是否基於可靠的證據 |
-| 意外後果 | 是否考慮政策的非預期影響 |
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Precise and fluent academic English/Chinese, a model of scholarly writing |
+| Strong | 4 | Clear language, occasional minor imperfections that don't affect understanding |
+| Adequate | 3 | Generally readable, with some grammar or word choice issues |
+| Weak | 2 | Frequent language issues that affect understanding |
+| Unacceptable | 1 | Language quality does not meet reviewable standards |
 
----
+### Dimension 6: Literature Integration — Weight 10%
 
-## 3. Common Review Pitfalls（常見審查陷阱）
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Comprehensive, contemporary, critically integrated literature with a compelling research gap argument |
+| Strong | 4 | Covers major literature, with good integration and positioning |
+| Adequate | 3 | Basic coverage, but with omissions or insufficient integration |
+| Weak | 2 | Literature is outdated, incomplete, or merely enumerated |
+| Unacceptable | 1 | Seriously insufficient literature review or irrelevant to the topic |
 
-### 審查者應避免的偏誤
+### Dimension 7: Significance & Impact — Weight 5%
 
-| 陷阱 | 描述 | 如何避免 |
-|------|------|---------|
-| **過度挑剔 (Hypercriticism)** | 對微小問題過度放大，忽視論文整體貢獻 | 先肯定優點，再指出問題；區分 major 和 minor |
-| **確認偏誤 (Confirmation Bias)** | 只找支持自己先入為主觀點的證據 | 刻意尋找論文的優點和自己觀點的反例 |
-| **個人偏好投射 (Preference Projection)** | 要求作者用「我的方法」而非評估「作者的方法」 | 問「這個方法能否回答問題」而非「我會怎麼做」 |
-| **範式偏見 (Paradigm Bias)** | 用量化標準評判質性研究（或反之） | 使用與論文研究範式匹配的評價標準 |
-| **名望偏誤 (Prestige Bias)** | 因為作者的機構或過往成就而放鬆標準 | 專注於論文本身的品質 |
-| **新穎性偏誤 (Novelty Bias)** | 只重視新穎的研究，低估重複驗證研究的價值 | 承認重複驗證在科學中的重要角色 |
-| **長度偏誤 (Length Bias)** | 長論文=好論文、短論文=粗糙 | 評估內容密度，而非頁數 |
-| **語言歧視 (Language Discrimination)** | 因為非母語作者的語言瑕疵而低估研究品質 | 區分「語言需要潤色」和「研究品質不佳」 |
-
-### 建設性回饋的原則
-
-1. **具體而非泛泛**：「第 3 節第 2 段的因果推論缺乏控制變項」優於「方法有問題」
-2. **問題+理由+建議**：每個批評都要包含「是什麼」「為什麼」「怎麼改」
-3. **區分必要和建議**：哪些是必須改的，哪些是「改了更好」
-4. **承認不確定性**：「我不確定這個分析是否考慮了 X」比「作者忽略了 X」更準確
-5. **尊重作者**：即使論文品質不佳，作者仍然投入了時間和努力
+| Level | Score | Description |
+|-------|-------|-------------|
+| Outstanding | 5 | Could change policy, practice, or theoretical direction |
+| Strong | 4 | Clear impact on a specific field or practice |
+| Adequate | 3 | Has some academic or practical value |
+| Weak | 2 | Limited scope of impact, mainly academic interest |
+| Marginal | 1 | Difficult to see the significance of the research |
 
 ---
 
-## 4. Scoring Aggregation（評分彙整）
+## 2. Paper Type-Specific Criteria
 
-### 加權總分計算
+### 2.1 Empirical Research
+
+Beyond universal dimensions, specifically focus on:
+
+| Additional Dimension | Review Focus |
+|---------------------|-------------|
+| Research hypothesis clarity | Are hypotheses testable and consistent with theory |
+| Variable operational definitions | Are independent/dependent/control variable definitions precise |
+| Internal validity | Are confounding variables controlled |
+| External validity | Generalizability of results |
+| Statistical reporting completeness | Effect sizes, confidence intervals, assumption testing |
+| Conclusion conservatism | Do conclusions exceed what the data supports |
+
+### 2.2 Theoretical/Conceptual Paper
+
+| Additional Dimension | Review Focus |
+|---------------------|-------------|
+| Conceptual definition precision | Are core concepts clearly delineated |
+| Argument logic structure | Is the premise -> inference -> conclusion logic chain complete |
+| Counterargument handling | Are possible opposing viewpoints considered and addressed |
+| Theoretical novelty | Does it truly advance theoretical development |
+| Testability | Can the theory generate testable propositions |
+
+### 2.3 Literature Review / Meta-analysis
+
+| Additional Dimension | Review Focus |
+|---------------------|-------------|
+| Search strategy | Is it comprehensive and reproducible (PRISMA compliance) |
+| Inclusion/exclusion criteria | Are criteria clear, reasonable, and consistently applied |
+| Bias risk assessment | Is bias risk of included studies assessed |
+| Heterogeneity handling | Is statistical and conceptual heterogeneity appropriately handled |
+| Synthesis method | Goes beyond simple vote counting to achieve critical synthesis |
+| Publication Bias | Is publication bias assessed and discussed |
+
+### 2.4 Case Study
+
+| Additional Dimension | Review Focus |
+|---------------------|-------------|
+| Case selection justification | Why was this case chosen? What does it represent? |
+| Theoretical vs convenience sampling | Is case selection theoretically grounded |
+| Triangulation | Are multiple data sources used |
+| Context description thickness | Is thick description sufficient |
+| Analysis transferability | Are analysis results transferable to other contexts |
+| Researcher reflexivity | Is the researcher's relationship with the case reflected upon |
+
+### 2.5 Policy Analysis / Policy Brief
+
+| Additional Dimension | Review Focus |
+|---------------------|-------------|
+| Policy problem definition | Is the problem clearly defined and evidence-supported |
+| Stakeholder analysis | Are key stakeholders identified |
+| Policy option analysis | Are multiple options proposed and compared |
+| Feasibility assessment | Are policy recommendations practically feasible |
+| Evidence quality | Are policy recommendations based on reliable evidence |
+| Unintended consequences | Are unintended policy impacts considered |
+
+---
+
+## 3. Common Review Pitfalls
+
+### Biases Reviewers Should Avoid
+
+| Pitfall | Description | How to Avoid |
+|---------|-------------|--------------|
+| **Hypercriticism** | Overblowing minor issues, ignoring the paper's overall contribution | Affirm strengths first, then point out issues; distinguish major from minor |
+| **Confirmation Bias** | Only finding evidence supporting pre-existing views | Deliberately seek the paper's merits and counterexamples to your own views |
+| **Preference Projection** | Requiring authors to use "my method" rather than evaluating "the author's method" | Ask "can this method answer the question" rather than "what would I do" |
+| **Paradigm Bias** | Using quantitative standards to judge qualitative research (or vice versa) | Use evaluation criteria matching the paper's research paradigm |
+| **Prestige Bias** | Relaxing standards because of the author's institution or past achievements | Focus on the quality of the paper itself |
+| **Novelty Bias** | Only valuing novel research, undervaluing replication studies | Acknowledge the important role of replication in science |
+| **Length Bias** | Long paper = good paper, short paper = sloppy | Evaluate content density, not page count |
+| **Language Discrimination** | Undervaluing research quality due to non-native language imperfections | Distinguish "language needs polishing" from "research quality is poor" |
+
+### Principles of Constructive Feedback
+
+1. **Specific, not vague**: "The causal inference in Section 3, paragraph 2 lacks control variables" is better than "methodology has problems"
+2. **Problem + reason + suggestion**: Every criticism should include "what," "why," and "how to fix"
+3. **Distinguish required from suggested**: Which changes are mandatory, which are "nice to have"
+4. **Acknowledge uncertainty**: "I'm not sure whether this analysis accounts for X" is more accurate than "the author ignored X"
+5. **Respect the author**: Even if paper quality is poor, the author still invested time and effort
+
+---
+
+## 4. Scoring Aggregation
+
+### Weighted Total Score Calculation
 
 ```
 Total Score =
@@ -180,17 +180,17 @@ Total Score =
   Significance (5%)
 ```
 
-### 分數→決定的對應
+### Score-to-Decision Mapping
 
-| 加權總分 | 建議決定 | 說明 |
-|---------|---------|------|
-| 4.5-5.0 | Accept | 極少數論文達到此水準 |
-| 3.5-4.4 | Minor Revision | 整體品質好，需要小幅修改 |
-| 2.5-3.4 | Major Revision | 有潛力但需要大幅修改 |
-| 1.5-2.4 | Reject (Resubmit) | 根本問題需要重做，但主題有價值 |
-| 1.0-1.4 | Reject | 不適合此期刊或品質不達標 |
+| Weighted Total | Recommended Decision | Note |
+|---------------|---------------------|------|
+| 4.5-5.0 | Accept | Very few papers reach this level |
+| 3.5-4.4 | Minor Revision | Overall quality is good, minor revisions needed |
+| 2.5-3.4 | Major Revision | Has potential but needs substantial revision |
+| 1.5-2.4 | Reject (Resubmit) | Fundamental issues need rework, but topic has value |
+| 1.0-1.4 | Reject | Not suitable for this journal or quality below standard |
 
-**重要提醒**：分數只是參考。最終決定還需考慮：
-- 是否有單一維度特別低（如方法論 1 分），即使總分尚可也可能 Reject
-- Reviewer 意見的具體內容比數字更重要
-- 期刊的特殊考量（special issue、領域發展需要等）
+**Important reminder**: Scores are only reference. The final decision also needs to consider:
+- Whether any single dimension is particularly low (e.g., methodology score of 1), which may lead to Reject even if the overall score is passable
+- Specific content of reviewer comments is more important than numbers
+- Special considerations of the journal (special issue, field development needs, etc.)

@@ -1,43 +1,43 @@
 ---
-scenario: 論文收到同儕審查意見後進行修訂
+scenario: Revising a paper after receiving peer review comments
 mode: revision
 agents_used:
   - formatter_agent
   - citation_compliance_agent
   - peer_reviewer_agent
-input: 原始 peer review 意見（3 major + 4 minor）
-output: 修訂對照表 + 修訂回覆信（Response to Reviewers）
+input: Original peer review comments (3 major + 4 minor)
+output: Revision comparison table + Response to Reviewers letter
 ---
 
-# Revision Mode 範例：回應同儕審查意見
+# Revision Mode Example: Responding to Peer Review Comments
 
 ## Scenario
 
-使用者有一篇已完成的論文《微學分認證對台灣技職教育學生就業力之影響》，收到期刊的同儕審查意見（3 major + 4 minor），使用 academic-paper 的 revision mode 進行系統化修訂。本範例展示從意見解析、引用修正、審查驗證到修訂回覆信的完整流程。
+The user has a completed paper titled "The Impact of Micro-Credential Certification on Employability of Vocational Education Students in Taiwan," which has received peer review comments from a journal (3 major + 4 minor). The user employs academic-paper's revision mode for systematic revision. This example demonstrates the complete workflow from comment parsing, citation correction, review verification, to the Response to Reviewers letter.
 
 ---
 
-## 原始 Peer Review 意見
+## Original Peer Review Comments
 
 ### Reviewer 1
 
 **Major Comments:**
 
-**M1.** 研究方法有重大疑慮。文中使用問卷調查蒐集學生自評就業力，但未使用任何客觀指標（如實際就業率、起薪、雇主滿意度）進行三角驗證。僅憑自我評估來衡量「就業力」的效度不足，建議至少補充一項客觀指標或明確討論此方法論限制。
+**M1.** There are serious concerns about the research methodology. The paper uses questionnaire surveys to collect students' self-assessed employability but does not employ any objective indicators (such as actual employment rates, starting salaries, or employer satisfaction) for triangulation. Relying solely on self-assessment to measure "employability" has insufficient validity. It is recommended to supplement with at least one objective indicator or explicitly discuss this methodological limitation.
 
-**M2.** 文獻回顧缺乏系統性。第二章引用的 23 篇文獻中，超過一半是 2018 年以前的出版品，且未涵蓋近兩年（2024-2025）關於微學分（micro-credentials）的重要國際研究，特別是 UNESCO（2024）和歐盟執委會（2024）的最新報告。建議補充近三年文獻並更新文獻矩陣。
+**M2.** The literature review lacks systematicity. Of the 23 references cited in Chapter 2, more than half are publications from before 2018, and the review does not cover important recent international studies on micro-credentials from the past two years (2024-2025), particularly the latest reports from UNESCO (2024) and the European Commission (2024). It is recommended to supplement with literature from the past three years and update the literature matrix.
 
-**M3.** 統計分析不完整。表 4 的迴歸模型僅報告 R-squared 和 beta 係數，缺少共線性診斷（VIF）、殘差分析、和效果量。此外，控制變數的選擇理由不明確——為何控制「家庭收入」但未控制「先前工作經驗」？
+**M3.** The statistical analysis is incomplete. The regression model in Table 4 reports only R-squared and beta coefficients, lacking collinearity diagnostics (VIF), residual analysis, and effect sizes. Additionally, the rationale for selecting control variables is unclear — why was "family income" controlled but not "prior work experience"?
 
 **Minor Comments:**
 
-**m1.** 中文摘要第三句「本研究發現微學分認證對學生就業力有顯著正向影響」過於籠統，未提及效果量大小。
+**m1.** The third sentence of the Chinese abstract — "This study found that micro-credential certification has a significant positive impact on student employability" — is too vague and does not mention the magnitude of the effect size.
 
-**m2.** 參考文獻格式不一致：部分中文文獻使用全形括號、部分使用半形括號。第 15 條引用缺少 DOI。
+**m2.** Reference formatting is inconsistent: some Chinese references use full-width parentheses while others use half-width parentheses. Citation #15 is missing its DOI.
 
-**m3.** 圖 2 的座標軸標籤字體過小，建議放大至 10pt 以上。圖 3 缺少圖說。
+**m3.** The axis labels in Figure 2 have font sizes that are too small; it is recommended to enlarge them to 10pt or above. Figure 3 is missing a caption.
 
-**m4.** 第 47 頁最後一段出現「如表 X 所示」，疑為排版遺漏。
+**m4.** The last paragraph on page 47 contains "as shown in Table X," which appears to be a typesetting omission.
 
 ---
 
@@ -45,129 +45,134 @@ output: 修訂對照表 + 修訂回覆信（Response to Reviewers）
 
 **Major Comments:**
 
-（無額外 major comments，但強調同意 Reviewer 1 的 M1 和 M2。）
+(No additional major comments, but the reviewer agrees with Reviewer 1's M1 and M2.)
 
 **Minor Comments:**
 
-（同意 Reviewer 1 的 minor comments，另補充：）
+(Agrees with Reviewer 1's minor comments, and adds:)
 
-**m5（R2）.** 建議在 Introduction 加入更明確的研究缺口陳述，目前從問題描述到研究目的的過渡過於突兀。
+**m5 (R2).** It is recommended to add a clearer research gap statement in the Introduction. The transition from problem description to research purpose is currently too abrupt.
 
-**m6（R2）.** Discussion 章節的「政策建議」段落過於簡短，僅列出三點建議但缺乏論證。建議擴充或降格為「未來研究方向」。
+**m6 (R2).** The "policy recommendations" paragraph in the Discussion chapter is too brief — it lists only three recommendations without supporting arguments. It is recommended to expand or downgrade this section to "future research directions."
 
-**m7（R2）.** 建議加入研究倫理聲明，說明 IRB 審查狀況和知情同意程序。
-
----
-
-## formatter_agent 解析修訂意見
-
-### 修訂意見分類
-
-**解析結果：** 3 Major + 7 Minor，共 10 項修訂意見。
-
-| 編號 | 類型 | 涉及章節 | 修訂範圍 | 預估工作量 |
-|------|------|----------|----------|------------|
-| M1 | Major | Methodology, Discussion | 方法論限制討論 + 可能補充數據 | 高 |
-| M2 | Major | Literature Review | 補充文獻 + 更新文獻矩陣 | 中高 |
-| M3 | Major | Results | 補充統計診斷 + 效果量 | 中 |
-| m1 | Minor | Abstract | 修訂摘要用語 | 低 |
-| m2 | Minor | References | 格式統一 + 補 DOI | 低 |
-| m3 | Minor | Figures | 圖表修正 | 低 |
-| m4 | Minor | Body text | 排版修正 | 低 |
-| m5 | Minor | Introduction | 補充研究缺口陳述 | 低中 |
-| m6 | Minor | Discussion | 擴充政策建議論述 | 中 |
-| m7 | Minor | Methodology | 補充倫理聲明 | 低 |
-
-### 修訂策略建議
-
-formatter_agent 建議的修訂順序：
-
-1. 先處理 M1（方法論），因為它影響 Discussion 和 Limitations 的修訂方向
-2. 再處理 M3（統計分析），因為補充的統計結果可能影響 M1 的限制討論內容
-3. 然後處理 M2（文獻回顧），補充文獻後可能需要連動更新 Discussion
-4. 最後批次處理所有 minor comments
+**m7 (R2).** It is recommended to add a research ethics statement explaining the IRB review status and informed consent procedures.
 
 ---
 
-## citation_compliance_agent 修正引用問題
+## formatter_agent Parses Revision Comments
 
-### 引用審計報告
+### Revision Comment Classification
 
-**審計範圍：** 全文引用格式（APA 7.0 中文引用規範）
+**Parsing Result:** 3 Major + 7 Minor, totaling 10 revision items.
 
-**發現問題：**
+| No. | Type | Affected Section | Revision Scope | Estimated Workload |
+|-----|------|-----------------|----------------|-------------------|
+| M1 | Major | Methodology, Discussion | Methodological limitation discussion + possible data supplement | High |
+| M2 | Major | Literature Review | Supplement literature + update literature matrix | Medium-High |
+| M3 | Major | Results | Add statistical diagnostics + effect sizes | Medium |
+| m1 | Minor | Abstract | Revise abstract wording | Low |
+| m2 | Minor | References | Unify formatting + add DOI | Low |
+| m3 | Minor | Figures | Fix figures and tables | Low |
+| m4 | Minor | Body text | Fix typesetting | Low |
+| m5 | Minor | Introduction | Add research gap statement | Low-Medium |
+| m6 | Minor | Discussion | Expand policy recommendations discussion | Medium |
+| m7 | Minor | Methodology | Add ethics statement | Low |
 
-| 問題 | 數量 | 嚴重度 |
-|------|------|--------|
-| 括號格式不一致（全形/半形） | 7 處 | Medium |
-| 缺少 DOI | 3 處 | High |
-| 年份格式不一致 | 2 處 | Low |
-| 引用文獻與參考文獻不匹配 | 1 處 | High |
-| 中文文獻翻譯標題缺失 | 4 處 | Medium |
+### Recommended Revision Strategy
 
-### 具體修正
+The formatter_agent recommends the following revision order:
 
-**修正 1：括號格式統一（對應 m2）**
+1. Address M1 (methodology) first, as it affects the revision direction of Discussion and Limitations
+2. Then address M3 (statistical analysis), as the supplementary statistical results may affect the limitation discussion in M1
+3. Then address M2 (literature review), as supplemented literature may require cascading updates to the Discussion
+4. Finally, batch-process all minor comments
 
-修正前：
+---
+
+## citation_compliance_agent Corrects Citation Issues
+
+### Citation Audit Report
+
+**Audit Scope:** Full-text citation formatting (APA 7.0 Chinese citation standards)
+
+**Issues Found:**
+
+| Issue | Count | Severity |
+|-------|-------|----------|
+| Inconsistent parenthesis format (full-width/half-width) | 7 instances | Medium |
+| Missing DOI | 3 instances | High |
+| Inconsistent year format | 2 instances | Low |
+| In-text citation / reference list mismatch | 1 instance | High |
+| Missing English translated titles for Chinese references | 4 instances | Medium |
+
+### Specific Corrections
+
+**Correction 1: Unify parenthesis format (addressing m2)**
+
+Before correction:
 ```
-（Wang & Chen, 2023）在其研究中指出...
-林明德（2022）的調查顯示...
-根據 UNESCO (2024) 的報告...
-```
-
-修正後：
-```
-Wang 與 Chen（2023）在其研究中指出...
-林明德（2022）的調查顯示...
-根據 UNESCO（2024）的報告...
-```
-
-規則：中文論文統一使用全形括號；作者在句中時使用「作者（年份）」格式。
-
-**修正 2：補充缺失 DOI（對應 m2）**
-
-修正前：
-```
-黃志偉（2021）。微學分制度對技職教育之啟示。技術及職業教育學報，15(2)，45-68。
-```
-
-修正後：
-```
-黃志偉（2021）。微學分制度對技職教育之啟示。技術及職業教育學報，15(2)，45-68。https://doi.org/10.6235/TVE.202106_15(2).0003
-```
-
-**修正 3：引用—參考文獻不匹配**
-
-發現正文第 23 頁引用「Chen et al.（2023）」，但參考文獻列表中該筆為「Chen, Y.-L., & Wang, S.-T.（2023）」，僅有兩位作者，不應使用「et al.」。
-
-修正前：
-```
-Chen et al.（2023）發現微學分認證有助於...
-```
-
-修正後：
-```
-Chen 與 Wang（2023）發現微學分認證有助於...
+(Wang & Chen, 2023) noted in their study...
+Lin, M.-D. (2022)'s survey showed...
+According to UNESCO (2024) report...
 ```
 
-**修正 4：中文文獻補充英文翻譯標題**
-
-根據 APA 7.0 規範，非英文文獻在參考文獻中應附上英文翻譯標題。
-
-修正前：
+After correction:
 ```
-教育部（2024）。技術及職業教育政策綱領。教育部。
+Wang and Chen (2023) noted in their study...
+Lin (2022)'s survey showed...
+According to the UNESCO (2024) report...
 ```
 
-修正後：
+Rule: Chinese papers uniformly use full-width parentheses; when the author is in the sentence, use "Author (Year)" format.
+
+**Correction 2: Add missing DOIs (addressing m2)**
+
+Before correction:
 ```
-教育部（2024）。技術及職業教育政策綱領 [Technical and vocational education policy guidelines]。教育部。
+Huang, C.-W. (2021). Implications of micro-credit systems for technical and vocational
+    education. Journal of Technical and Vocational Education, 15(2), 45-68.
 ```
 
-### 新增文獻（對應 M2）
+After correction:
+```
+Huang, C.-W. (2021). Implications of micro-credit systems for technical and vocational
+    education. Journal of Technical and Vocational Education, 15(2), 45-68.
+    https://doi.org/10.6235/TVE.202106_15(2).0003
+```
 
-配合 M2 的文獻更新要求，citation_compliance_agent 驗證新增文獻的格式合規性：
+**Correction 3: In-text citation / reference list mismatch**
+
+Found that the in-text citation on page 23 reads "Chen et al.（2023）," but the reference list entry is "Chen, Y.-L., & Wang, S.-T.（2023）," which has only two authors and should not use "et al."
+
+Before correction:
+```
+Chen et al.（2023）found that micro-credential certification helps...
+```
+
+After correction:
+```
+Chen and Wang（2023）found that micro-credential certification helps...
+```
+
+**Correction 4: Add English translated titles for Chinese references**
+
+Per APA 7.0 standards, non-English references should include an English translated title in the reference list.
+
+Before correction:
+```
+Ministry of Education. (2024). Technical and vocational education policy guidelines.
+    Ministry of Education.
+```
+
+After correction:
+```
+Ministry of Education. (2024). Technical and vocational education policy guidelines
+    [Technical and vocational education policy guidelines]. Ministry of Education.
+```
+
+### New References Added (addressing M2)
+
+In conjunction with M2's literature update requirement, the citation_compliance_agent verifies format compliance of newly added references:
 
 ```
 UNESCO. (2024). Towards a common framework for micro-credentials:
@@ -187,155 +192,154 @@ Wheelahan, L., & Moodie, G. (2024). Micro-credentials: A critique
     and Work, 37(1), 45-62. https://doi.org/10.xxxx/xxxxx
 ```
 
-格式審計結果：4 筆新增文獻均符合 APA 7.0 規範。
+Format audit result: All 4 newly added references comply with APA 7.0 standards.
 
 ---
 
-## peer_reviewer_agent 檢查修訂後版本
+## peer_reviewer_agent Reviews the Revised Version
 
-### 修訂充分性評估
+### Revision Adequacy Assessment
 
-| 編號 | 原始意見 | 修訂是否充分 | 評語 |
-|------|----------|:------------:|------|
-| M1 | 方法論效度不足 | 部分充分 | 已加入方法論限制討論，但可進一步說明自評量表的心理計量特性 |
-| M2 | 文獻過時 | 充分 | 新增 8 篇 2023-2025 文獻，文獻矩陣已更新 |
-| M3 | 統計分析不完整 | 充分 | 已補充 VIF（最大值 2.37）、Cook's Distance、Cohen's f-squared |
-| m1 | 摘要過於籠統 | 充分 | 已修訂為含效果量的精確描述 |
-| m2 | 引用格式不一致 | 充分 | 已全面統一，DOI 已補齊 |
-| m3 | 圖表問題 | 充分 | 字體已調整，圖說已補充 |
-| m4 | 「表 X」排版遺漏 | 充分 | 已修正為「表 6」 |
-| m5 | 研究缺口不明確 | 充分 | 已加入 150 字研究缺口段落 |
-| m6 | 政策建議過於簡短 | 充分 | 已擴充至 400 字，含論證 |
-| m7 | 缺少倫理聲明 | 充分 | 已加入 IRB 編號和知情同意說明 |
+| No. | Original Comment | Revision Adequate? | Remarks |
+|-----|-----------------|:------------------:|---------|
+| M1 | Methodological validity insufficient | Partially adequate | Methodological limitation discussion has been added, but could further explain the psychometric properties of the self-report scale |
+| M2 | Literature outdated | Adequate | 8 new references from 2023-2025 added, literature matrix updated |
+| M3 | Statistical analysis incomplete | Adequate | VIF (max 2.37), Cook's Distance, and Cohen's f-squared have been added |
+| m1 | Abstract too vague | Adequate | Revised to include precise description with effect sizes |
+| m2 | Citation formatting inconsistent | Adequate | Comprehensively unified, DOIs added |
+| m3 | Figure issues | Adequate | Font sizes adjusted, captions added |
+| m4 | "Table X" typesetting omission | Adequate | Corrected to "Table 6" |
+| m5 | Research gap unclear | Adequate | 150-word research gap paragraph added |
+| m6 | Policy recommendations too brief | Adequate | Expanded to 400 words with supporting arguments |
+| m7 | Missing ethics statement | Adequate | IRB number and informed consent description added |
 
-### 修訂後五維度評分
+### Post-Revision Five-Dimension Scores
 
-| 維度 | 修訂前 | 修訂後 | 變化 |
-|------|--------|--------|------|
-| 原創性（20%） | 3.5 | 3.5 | 持平 |
-| 方法論嚴謹度（25%） | 2.5 | 3.5 | +1.0 |
-| 證據充分性（25%） | 3.0 | 3.8 | +0.8 |
-| 論證連貫性（15%） | 3.5 | 4.0 | +0.5 |
-| 寫作品質（15%） | 4.0 | 4.2 | +0.2 |
-| **加權總分** | **3.24** | **3.78** | **+0.54** |
+| Dimension | Before Revision | After Revision | Change |
+|-----------|----------------|----------------|--------|
+| Originality (20%) | 3.5 | 3.5 | No change |
+| Methodological Rigor (25%) | 2.5 | 3.5 | +1.0 |
+| Evidence Sufficiency (25%) | 3.0 | 3.8 | +0.8 |
+| Argument Coherence (15%) | 3.5 | 4.0 | +0.5 |
+| Writing Quality (15%) | 4.0 | 4.2 | +0.2 |
+| **Weighted Total** | **3.24** | **3.78** | **+0.54** |
 
-### 修訂裁定
+### Revision Verdict
 
-**裁定：ACCEPT with Minor Revision**
+**Verdict: ACCEPT with Minor Revision**
 
-修訂前為 Major Revision（3.24），修訂後提升至 Minor Revision/Accept 邊界（3.78）。剩餘 1 項建議（M1 的心理計量特性說明）可在校稿階段處理，不影響接受決定。
+The paper moved from Major Revision (3.24) before revision to the Minor Revision/Accept boundary (3.78) after revision. The remaining 1 recommendation (psychometric properties explanation for M1) can be addressed during the proofing stage and does not affect the acceptance decision.
 
 ---
 
-## Revision Results — 修訂對照表
+## Revision Results — Revision Comparison Table
 
 ### Major Revisions
 
-| Reviewer Comment | 修訂前 | 修訂後 | 頁碼 |
-|------------------|--------|--------|------|
-| M1：方法論效度 | 未討論自評量表限制 | 新增「3.6 方法論限制」段落（約 350 字），討論自評量表的效度限制、社會期望偏誤風險，並引用 Hora et al.（2024）支持自評就業力量表在特定條件下的合理性。在 Discussion 的 Limitations 段落增加 200 字，說明未來研究應納入客觀就業數據進行三角驗證。 | pp. 18-19, 38 |
-| M2：文獻過時 | 23 篇文獻，其中 12 篇為 2018 年前 | 新增 8 篇 2023-2025 文獻（含 UNESCO 2024、歐盟 2024），刪除 3 篇過時且非核心的文獻。文獻總數增至 28 篇，2020 年後文獻占比從 48% 提升至 68%。文獻矩陣表新增「國際趨勢」主題列。 | pp. 8-14 |
-| M3：統計分析 | 僅報告 R-squared 和 beta | 新增表 4a（共線性診斷：所有 VIF 值介於 1.12-2.37，均低於 5 的門檻）、表 4b（殘差分析：Cook's Distance 最大值 0.087，無具影響力的極端值）。補充 Cohen's f-squared = 0.18（中等效果量）。控制變數選擇增加一段說明（p. 17），解釋因樣本均為在學生，先前正式工作經驗變異過低而未納入。 | pp. 22-24 |
+| Reviewer Comment | Before Revision | After Revision | Pages |
+|------------------|----------------|----------------|-------|
+| M1: Methodological validity | No discussion of self-report scale limitations | Added a new "3.6 Methodological Limitations" section (approximately 350 words), discussing the validity limitations of self-report scales, social desirability bias risk, and citing Hora et al. (2024) to support the reasonableness of self-assessed employability scales under specific conditions. Added 200 words to the Limitations paragraph in the Discussion, stating that future research should incorporate objective employment data for triangulation. | pp. 18-19, 38 |
+| M2: Literature outdated | 23 references, 12 from before 2018 | Added 8 references from 2023-2025 (including UNESCO 2024, European Commission 2024), removed 3 outdated non-core references. Total references increased to 28, with post-2020 references rising from 48% to 68%. Added an "International Trends" thematic row to the literature matrix table. | pp. 8-14 |
+| M3: Statistical analysis | Only R-squared and beta reported | Added Table 4a (collinearity diagnostics: all VIF values between 1.12-2.37, all below the threshold of 5), Table 4b (residual analysis: Cook's Distance maximum 0.087, no influential outliers). Added Cohen's f-squared = 0.18 (medium effect size). Added a paragraph on page 17 explaining the control variable selection rationale: because all subjects were enrolled students, prior formal work experience had too little variance to serve as a control variable. | pp. 22-24 |
 
 ### Minor Revisions
 
-| Reviewer Comment | 修訂前 | 修訂後 | 頁碼 |
-|------------------|--------|--------|------|
-| m1：摘要效果量 | 「本研究發現微學分認證對學生就業力有顯著正向影響」 | 「本研究發現微學分認證對學生自評就業力具有中等程度之正向影響（beta = .34, p < .001, f-squared = .18），其中以『職場實務技能』面向的效果最為顯著」 | p. ii |
-| m2：引用格式 | 全形/半形括號混用，3 筆缺 DOI | 統一使用全形括號，補齊全部 DOI，修正 et al. 誤用 | 全文 |
-| m3：圖表 | 座標軸字體 8pt，圖 3 無圖說 | 所有圖表字體調整為 11pt，圖 3 補充圖說「圖 3. 各微學分類型對就業力五面向之預測力比較」 | pp. 25, 27 |
-| m4：排版遺漏 | 「如表 X 所示」 | 「如表 6 所示」 | p. 47 |
-| m5：研究缺口 | Introduction 直接從問題描述跳到研究目的 | 在第 1.3 節新增研究缺口段落：「儘管國際文獻已累積關於微學分認證的初步證據，但絕大多數研究聚焦於歐美高教脈絡。台灣技職教育體系的獨特性——包含產學合作機制、證照導向課程設計，以及雙軌制訓練架構——使得國際研究結果的可遷移性受到限制。目前台灣本土研究多為政策倡議或理論論述，缺乏以量化數據驗證微學分認證實際效果的實證研究。」 | p. 5 |
-| m6：政策建議 | 三點政策建議，各約 50 字 | 擴充為三點政策建議，各約 130 字，含具體論證。例如建議一修訂為：「建議教育部修訂『專科以上學校產學合作實施辦法』，將微學分認證納入產學合作績效指標。本研究發現微學分認證對『職場實務技能』面向的效果量（f-squared = .22）高於其他面向，顯示與產業連結的認證設計更能有效提升學生就業力。因此，鼓勵技職校院與產業共同設計微學分課程，將有助於強化技職教育的就業導向定位。」 | pp. 39-40 |
-| m7：倫理聲明 | 無 | 新增「研究倫理」段落：「本研究經國立 OO 科技大學研究倫理委員會審查通過（IRB 編號：NTUST-REC-2024-037）。所有參與者於填答前簽署書面知情同意書，內容載明研究目的、資料使用方式、匿名保障措施，以及隨時退出之權利。」 | p. 16 |
+| Reviewer Comment | Before Revision | After Revision | Pages |
+|------------------|----------------|----------------|-------|
+| m1: Abstract effect size | "This study found that micro-credential certification has a significant positive impact on student employability" | "This study found that micro-credential certification has a moderate positive impact on student self-assessed employability (beta = .34, p < .001, f-squared = .18), with the most significant effect observed in the 'workplace practical skills' dimension" | p. ii |
+| m2: Citation formatting | Mixed full-width/half-width parentheses, 3 missing DOIs | Uniformly using full-width parentheses, all DOIs added, et al. misuse corrected | Throughout |
+| m3: Figures | Axis label font 8pt, Figure 3 missing caption | All figure fonts adjusted to 11pt, Figure 3 caption added: "Figure 3. Comparison of predictive power of different micro-credential types across five employability dimensions" | pp. 25, 27 |
+| m4: Typesetting omission | "as shown in Table X" | "as shown in Table 6" | p. 47 |
+| m5: Research gap | Introduction jumped directly from problem description to research purpose | Added a research gap paragraph in Section 1.3: "Although international literature has accumulated preliminary evidence on micro-credential certification, the vast majority of studies focus on Western higher education contexts. The uniqueness of Taiwan's vocational education system — including industry-academia cooperation mechanisms, certification-oriented curriculum design, and the dual-track training structure — limits the transferability of international research findings. Currently, local Taiwanese research consists mostly of policy advocacy or theoretical discourse, lacking empirical studies that validate the actual effects of micro-credential certification with quantitative data." | p. 5 |
+| m6: Policy recommendations | Three policy recommendations, each approximately 50 words | Expanded to three policy recommendations, each approximately 130 words, with specific supporting arguments. For example, Recommendation 1 was revised to: "It is recommended that the Ministry of Education amend the 'Regulations for Industry-Academia Cooperation at Postsecondary Institutions' to incorporate micro-credential certification into industry-academia cooperation performance indicators. This study found that the effect size of micro-credential certification on the 'workplace practical skills' dimension (f-squared = .22) is higher than for other dimensions, indicating that certification designed in connection with industry can more effectively enhance student employability. Therefore, encouraging vocational institutions to co-design micro-credential courses with industry partners will help strengthen the employment-oriented positioning of vocational education." | pp. 39-40 |
+| m7: Ethics statement | None | Added a "Research Ethics" paragraph: "This study was approved by the Institutional Review Board of National OO University of Science and Technology (IRB No.: NTUST-REC-2024-037). All participants signed written informed consent forms prior to completing the survey, which specified the research purpose, data usage methods, anonymity safeguards, and the right to withdraw at any time." | p. 16 |
 
 ---
 
-## Response to Reviewers（修訂回覆信）
+## Response to Reviewers
 
 ---
 
-**論文編號：** TVEJ-2025-0142
+**Manuscript No.:** TVEJ-2025-0142
 
-**論文題目：** 微學分認證對台灣技職教育學生就業力之影響：以北部四所科技大學為例
+**Manuscript Title:** The Impact of Micro-Credential Certification on Employability of Vocational Education Students in Taiwan: A Case Study of Four Universities of Science and Technology in Northern Taiwan
 
-**修訂日期：** 2026-02-26
-
----
-
-尊敬的編輯委員及審查委員：
-
-感謝兩位審查委員提出深入且具建設性的修訂意見。我們逐條回覆如下，所有修改均以藍色標記於修訂稿中。
+**Revision Date:** 2026-02-26
 
 ---
 
-### 回覆 Reviewer 1
+Dear Editor and Reviewers:
 
-**M1：方法論效度**
-
-感謝審查委員指出此重要問題。我們完全同意僅以自評量表衡量就業力存在效度限制。針對此意見，我們進行以下修訂：
-
-1. 在第 3.6 節新增「方法論限制」段落（約 350 字），明確討論自評量表的潛在偏誤，包括社會期望效應和認知落差。
-2. 引用 Hora et al.（2024）的研究，說明自評就業力量表在控制社會期望偏誤後，與雇主評估仍具中度相關（r = .52），支持其作為初步探索性研究工具的合理性。
-3. 在 Discussion 的 Limitations 段落擴充 200 字，明確建議未來研究應蒐集畢業一年後的實際就業數據進行三角驗證。
-
-我們因受限於研究時程和 IRB 核准範圍，無法在本研究中補充客觀就業數據，但已如實揭露此限制。
-
-> 見修訂稿 pp. 18-19, 38
-
-**M2：文獻過時**
-
-感謝審查委員的提醒。我們已大幅更新文獻回顧：
-
-1. 新增 8 篇 2023-2025 年文獻，包括審查委員建議的 UNESCO（2024）報告和歐盟執委會（2024）實施報告。
-2. 刪除 3 篇與研究問題關聯較低的 2017 年以前文獻。
-3. 更新文獻矩陣表（表 2），新增「國際趨勢」主題列。
-4. 文獻的時效性指標從 48%（2020 年後）提升至 68%。
-
-> 見修訂稿 pp. 8-14，表 2
-
-**M3：統計分析不完整**
-
-感謝審查委員要求更完整的統計報告。我們已補充：
-
-1. 表 4a：共線性診斷結果，所有自變項 VIF 值介於 1.12-2.37，均低於學界慣用的 5.0 門檻，顯示共線性不構成問題。
-2. 表 4b：殘差分析，包含 Cook's Distance（最大值 0.087）和標準化殘差分布，確認無具影響力的極端值。
-3. 補充效果量 Cohen's f-squared = 0.18，屬中等效果量。
-4. 在第 3.4 節增加控制變數選擇理由的說明。關於為何未控制「先前工作經驗」：本研究樣本為在學生，僅有 11.3% 的受試者曾有六個月以上正式工作經驗，變異過低不適合作為控制變數。
-
-> 見修訂稿 pp. 17, 22-24
-
-**m1-m4：** 所有 minor comments 均已逐一修正，詳見修訂對照表。
+Thank you both for your thorough and constructive review comments. We respond to each item below. All revisions are marked in blue in the revised manuscript.
 
 ---
 
-### 回覆 Reviewer 2
+### Response to Reviewer 1
 
-**m5：研究缺口陳述**
+**M1: Methodological Validity**
 
-感謝審查委員的建議。我們已在 Introduction 第 1.3 節加入約 150 字的研究缺口陳述，明確指出台灣技職教育體系的獨特性使國際研究不可直接套用，且本土實證研究仍然不足。
+Thank you for raising this important issue. We fully agree that measuring employability solely through self-report scales has validity limitations. In response to this comment, we have made the following revisions:
 
-> 見修訂稿 p. 5
+1. Added a "Methodological Limitations" section (Section 3.6, approximately 350 words) that explicitly discusses the potential biases of self-report scales, including social desirability effects and cognitive discrepancies.
+2. Cited Hora et al. (2024), who found that self-assessed employability scales, after controlling for social desirability bias, still maintain a moderate correlation with employer assessments (r = .52), supporting their reasonableness as a preliminary exploratory research tool.
+3. Expanded the Limitations paragraph in the Discussion by 200 words, explicitly recommending that future research collect actual employment data from one year after graduation for triangulation.
 
-**m6：政策建議擴充**
+Due to constraints in our research timeline and IRB approval scope, we were unable to supplement objective employment data in this study, but we have transparently disclosed this limitation.
 
-我們已將 Discussion 中的政策建議段落從約 150 字擴充至約 400 字。每項建議現在包含：(a) 具體政策修訂建議、(b) 本研究數據的支持證據、(c) 預期效果和可能限制。
+> See revised manuscript pp. 18-19, 38
 
-> 見修訂稿 pp. 39-40
+**M2: Literature Outdated**
 
-**m7：研究倫理聲明**
+Thank you for this reminder. We have substantially updated the literature review:
 
-已在第 3.1 節後新增研究倫理段落，包含 IRB 審查通過編號和知情同意程序說明。
+1. Added 8 references from 2023-2025, including the UNESCO (2024) report and European Commission (2024) implementation report as recommended by the reviewer.
+2. Removed 3 pre-2017 references with lower relevance to the research questions.
+3. Updated the literature matrix table (Table 2), adding an "International Trends" thematic row.
+4. The literature recency indicator improved from 48% (post-2020) to 68%.
 
-> 見修訂稿 p. 16
+> See revised manuscript pp. 8-14, Table 2
+
+**M3: Incomplete Statistical Analysis**
+
+Thank you for requesting more complete statistical reporting. We have added:
+
+1. Table 4a: Collinearity diagnostic results — all independent variable VIF values range from 1.12 to 2.37, all below the commonly used threshold of 5.0, indicating that collinearity is not a concern.
+2. Table 4b: Residual analysis, including Cook's Distance (maximum 0.087) and standardized residual distribution, confirming no influential outliers.
+3. Effect size: Cohen's f-squared = 0.18, a medium effect size.
+4. An explanation of control variable selection rationale in Section 3.4. Regarding why "prior work experience" was not controlled: since our sample consists of enrolled students, only 11.3% of respondents had more than six months of formal work experience, resulting in too little variance to serve as a control variable.
+
+> See revised manuscript pp. 17, 22-24
+
+**m1-m4:** All minor comments have been addressed individually. See the revision comparison table for details.
 
 ---
 
-我們相信上述修訂已充分回應兩位審查委員的所有意見。若仍有需要進一步修改之處，我們樂意配合。
+### Response to Reviewer 2
 
-此致
-敬禮
+**m5: Research Gap Statement**
 
-通訊作者：[作者姓名]
-聯絡信箱：[email]
-修訂日期：2026-02-26
+Thank you for this suggestion. We have added an approximately 150-word research gap statement in Introduction Section 1.3, explicitly noting that the uniqueness of Taiwan's vocational education system limits the direct applicability of international research, and that local empirical studies remain insufficient.
+
+> See revised manuscript p. 5
+
+**m6: Expanded Policy Recommendations**
+
+We have expanded the policy recommendations paragraph in the Discussion from approximately 150 words to approximately 400 words. Each recommendation now includes: (a) a specific policy revision recommendation, (b) supporting evidence from this study's data, and (c) expected effects and possible limitations.
+
+> See revised manuscript pp. 39-40
+
+**m7: Research Ethics Statement**
+
+A research ethics paragraph has been added after Section 3.1, including the IRB approval number and a description of the informed consent procedure.
+
+> See revised manuscript p. 16
+
+---
+
+We believe that the above revisions have fully addressed all comments from both reviewers. If further modifications are needed, we are happy to comply.
+
+Sincerely,
+
+Corresponding Author: [Author Name]
+Contact Email: [email]
+Revision Date: 2026-02-26

@@ -1,172 +1,172 @@
 ---
-scenario: 查核台灣高等教育相關陳述
+scenario: Fact-checking claims about Taiwan's higher education
 mode: fact-check
 agents_used:
   - source_verification_agent
-input: 使用者提供 7 條關於台灣高等教育的陳述
-output: 逐條查核報告 + 查核摘要
+input: User provides 7 claims about Taiwan's higher education
+output: Claim-by-claim verification report + verification summary
 ---
 
-# Fact-Check Mode 範例：台灣高等教育陳述查核
+# Fact-Check Mode Example: Taiwan Higher Education Claim Verification
 
-本範例展示 `fact-check` mode 的完整流程。使用者提供一組關於台灣高等教育的陳述，source_verification_agent 逐條進行事實查核。
+This example demonstrates the complete workflow of `fact-check` mode. The user provides a set of claims about Taiwan's higher education, and the source_verification_agent verifies each claim.
 
 ---
 
 ## User Request
 
 ```
-請幫我 fact-check 以下關於台灣高等教育的陳述：
+Please fact-check the following claims about Taiwan's higher education:
 
-1. 台灣目前共有 152 所大專校院。
-2. HEEACT 成立於 2005 年，是台灣唯一負責高教評鑑的機構。
-3. 台灣的大學教師生師比平均為 1:20。
-4. 少子化導致台灣已有超過 10 所大學完成退場或停辦。
-5. 台灣高教經費占 GDP 比例約為 0.4%，低於 OECD 平均值。
-6. 2024 學年度大學考試分發入學的缺額率達 15%。
-7. 台灣每年博士畢業生約 4,000 人，其中超過半數進入學術界任教。
+1. Taiwan currently has 152 colleges and universities.
+2. HEEACT was established in 2005 and is the only institution responsible for higher education accreditation in Taiwan.
+3. The average student-to-faculty ratio in Taiwan's universities is 1:20.
+4. Declining birth rates have caused more than 10 universities in Taiwan to complete their exit or closure procedures.
+5. Taiwan's higher education expenditure as a percentage of GDP is approximately 0.4%, lower than the OECD average.
+6. The vacancy rate for the 2024 academic year university examination distribution admission reached 15%.
+7. Taiwan produces approximately 4,000 doctoral graduates per year, of which more than half enter academia as faculty.
 ```
 
 ---
 
-## source_verification_agent 查核報告
+## source_verification_agent Verification Report
 
-### 陳述 1
+### Claim 1
 
-> 「台灣目前共有 152 所大專校院。」
+> "Taiwan currently has 152 colleges and universities."
 
-**判定：** ⚠️ Partially True
+**Verdict:** Warning — Partially True
 
-**查核依據：** 根據教育部 112 學年度大專校院概況統計，台灣大專校院總數為 145 所（含大學、獨立學院、專科學校），此數字因部分學校退場或合併而持續變動。若將軍警院校（如國防大學、警察大學等）納入計算，總數略有增加但仍未達 152 所。「152 所」可能是引用較早年度（約 108-109 學年度）的數據，當時尚有更多學校在營運中。
+**Verification Basis:** According to MOE's higher education overview statistics for Academic Year 112 (2023-2024), Taiwan's total number of higher education institutions is 145 (including universities, independent colleges, and junior colleges). This number continues to change due to school closures or mergers. If military and police academies (e.g., National Defense University, Central Police University) are included, the total increases slightly but still does not reach 152. "152" likely references data from an earlier year (approximately Academic Year 108-109), when more schools were still operating.
 
-**來源：** 教育部統計處，《大專校院概況統計》，112 學年度（2023-2024）。
+**Source:** MOE Statistics Division, *Higher Education Overview Statistics*, Academic Year 112 (2023-2024).
 
-**修正建議：** 應更新為最新學年度數字，並明確界定統計範圍（是否包含軍警院校、宗教研修學院等特殊類型）。
-
----
-
-### 陳述 2
-
-> 「HEEACT 成立於 2005 年，是台灣唯一負責高教評鑑的機構。」
-
-**判定：** ⚠️ Partially True
-
-**查核依據：** 財團法人高等教育評鑑中心基金會（HEEACT）確實於 2005 年 12 月 26 日成立，此部分正確。然而，「唯一」的說法不準確。台灣高教評鑑體系自 2017 年起推動多元化，除 HEEACT 外，台灣評鑑協會（TWAEA）和中華工程教育學會（IEET）等組織也受教育部認可辦理特定類型的品質保證認可。此外，2023 年之後的第三週期校務評鑑也允許學校選擇自辦外部評鑑。因此，HEEACT 是最主要但並非唯一的評鑑機構。
-
-**來源：**
-- HEEACT 官方網站，關於我們 > 成立沿革
-- 教育部，《大學校院自我評鑑結果審查作業原則》（2017 年修訂版）
-- 教育部，《大專校院委託辦理品質保證認可實施計畫》（116 年度）
-
-**修正建議：** 修正為「HEEACT 成立於 2005 年，是台灣最主要的高教評鑑機構之一」。
+**Correction Suggestion:** Should be updated to the latest academic year figure, with clear definition of the statistical scope (whether military/police academies, religious seminary institutions, and other special types are included).
 
 ---
 
-### 陳述 3
+### Claim 2
 
-> 「台灣的大學教師生師比平均為 1:20。」
+> "HEEACT was established in 2005 and is the only institution responsible for higher education accreditation in Taiwan."
 
-**判定：** ⚠️ Partially True
+**Verdict:** Warning — Partially True
 
-**查核依據：** 生師比的計算因公式不同而有差異。教育部公布的全校生師比標準（含專兼任換算）與只計算專任教師的生師比有顯著差別。根據 112 學年度數據，公立大學日間學制的折合生師比約為 1:18 至 1:22（因校而異），私立大學約為 1:22 至 1:28。整體平均約在 1:23 左右，而非 1:20。此外，「1:20」的表述方式容易混淆——生師比通常寫為「20:1」（20 名學生對 1 名教師），而非「1:20」。
+**Verification Basis:** The Higher Education Evaluation and Accreditation Council of Taiwan (HEEACT) was indeed established on December 26, 2005 — this part is correct. However, the claim of "only" is inaccurate. Taiwan's higher education evaluation system has promoted diversification since 2017. In addition to HEEACT, the Taiwan Assessment and Evaluation Association (TWAEA) and the Institute of Engineering Education Taiwan (IEET), among others, are also recognized by the MOE to conduct specific types of quality assurance accreditation. Furthermore, from the third cycle of institutional accreditation starting in 2023, universities are also allowed to choose self-conducted external evaluation. Therefore, HEEACT is the most prominent but not the only accreditation body.
 
-**來源：** 教育部統計處，《大專校院校別學生及教師相關統計》，112 學年度。
+**Sources:**
+- HEEACT official website, About Us > History
+- MOE, "Principles for Reviewing University Self-Evaluation Results" (2017 revision)
+- MOE, "Implementation Plan for Commissioned Quality Assurance Accreditation of Higher Education Institutions" (Academic Year 116)
 
-**修正建議：** 建議修正為「台灣大專校院日間學制全校折合生師比約為 23:1，公私立有顯著差異」，並使用正確的生師比表述格式。
-
----
-
-### 陳述 4
-
-> 「少子化導致台灣已有超過 10 所大學完成退場或停辦。」
-
-**判定：** ✅ Verified
-
-**查核依據：** 根據教育部公告及《私立高級中等以上學校退場條例》執行情形，截至 2025 年初，已完成停招或停辦程序的大專校院包括：高鳳數位內容學院（2014 停辦）、永達技術學院（2014 停招、2021 停辦）、高美醫護管理專科學校（2018 停招）、亞太創意技術學院（2019 停招）、南榮科技大學（2020 停招）、稻江科技暨管理學院（2020 停招）、台灣觀光學院（2022 停辦）、蘭陽技術學院（2022 停招）、中州科技大學（2023 停招）、和春技術學院（2023 停招）、大同技術學院（2023 停招）、台灣首府大學（2023 停辦）、明道大學（2024 停招）、環球科技大學（2024 停招）等。合計已超過 10 所，此陳述屬實。
-
-**來源：**
-- 教育部，各年度大專校院停招/停辦公告
-- 教育部，《私立高級中等以上學校退場條例》執行進度報告
-
-**備註：** 此數字持續增加中，部分學校處於「專案輔導」階段尚未完成退場。
+**Correction Suggestion:** Revise to "HEEACT was established in 2005 and is one of the most prominent higher education accreditation bodies in Taiwan."
 
 ---
 
-### 陳述 5
+### Claim 3
 
-> 「台灣高教經費占 GDP 比例約為 0.4%，低於 OECD 平均值。」
+> "The average student-to-faculty ratio in Taiwan's universities is 1:20."
 
-**判定：** ⚠️ Partially True
+**Verdict:** Warning — Partially True
 
-**查核依據：** 此陳述需要區分「政府公共支出」和「總支出（含私人）」。根據教育部統計，台灣政府對高等教育的公共支出占 GDP 比例約為 0.4-0.5%，確實低於 OECD 平均的約 0.9%（2021 年 Education at a Glance 數據）。然而，若計入私人支出（學費、企業贊助等），台灣高教總經費占 GDP 比例約為 1.2-1.3%，接近 OECD 平均的 1.5%。因此，「0.4%」這個數字只反映公共支出部分，陳述未區分公共與私人支出，容易造成誤導。
+**Verification Basis:** The student-to-faculty ratio varies depending on the calculation formula used. The MOE's published full-school student-to-faculty ratio (including full-time and part-time equivalents) differs significantly from one calculated using only full-time faculty. According to Academic Year 112 data, the equivalent student-to-faculty ratio for public university daytime programs is approximately 18:1 to 22:1 (varies by institution), while private universities are approximately 22:1 to 28:1. The overall average is approximately 23:1, not 20:1. Additionally, "1:20" is an unconventional notation — the student-to-faculty ratio is typically written as "20:1" (20 students per 1 faculty), not "1:20."
 
-**來源：**
-- 教育部統計處，《教育經費統計》，112 年度
+**Source:** MOE Statistics Division, *Student and Faculty Statistics by Institution*, Academic Year 112.
+
+**Correction Suggestion:** Revise to "The equivalent student-to-faculty ratio for Taiwan's daytime higher education programs is approximately 23:1, with significant differences between public and private institutions," and use the correct notation format.
+
+---
+
+### Claim 4
+
+> "Declining birth rates have caused more than 10 universities in Taiwan to complete their exit or closure procedures."
+
+**Verdict:** Verified
+
+**Verification Basis:** According to MOE announcements and the implementation status of the "Private Senior High School and Above Exit Act," as of early 2025, institutions that have completed enrollment suspension or closure procedures include: Kao Fong College of Digital Contents (closed 2014), Yung Ta Institute of Technology (enrollment suspended 2014, closed 2021), Kao-Mei College of Health Care and Management (enrollment suspended 2018), Asia-Pacific Institute of Creativity (enrollment suspended 2019), Nan Jeon University of Science and Technology (enrollment suspended 2020), Toko University (enrollment suspended 2020), Taiwan Tourism College (closed 2022), Lan Yang Institute of Technology (enrollment suspended 2022), Chung Chou University of Science and Technology (enrollment suspended 2023), Hechun Institute of Technology (enrollment suspended 2023), Tatung Institute of Technology (enrollment suspended 2023), Taiwan Shoufu University (closed 2023), MingDao University (enrollment suspended 2024), TransWorld University (enrollment suspended 2024), among others. The total exceeds 10 institutions; this claim is verified.
+
+**Sources:**
+- MOE, annual higher education institution enrollment suspension/closure announcements
+- MOE, "Private Senior High School and Above Exit Act" implementation progress report
+
+**Note:** This number continues to increase; some schools are in the "special counseling" stage and have not yet completed their exit process.
+
+---
+
+### Claim 5
+
+> "Taiwan's higher education expenditure as a percentage of GDP is approximately 0.4%, lower than the OECD average."
+
+**Verdict:** Warning — Partially True
+
+**Verification Basis:** This claim requires distinguishing between "government public expenditure" and "total expenditure (including private)." According to MOE statistics, Taiwan's government public expenditure on higher education as a percentage of GDP is approximately 0.4-0.5%, which is indeed lower than the OECD average of approximately 0.9% (Education at a Glance 2021 data). However, when private expenditure (tuition, corporate sponsorship, etc.) is included, Taiwan's total higher education expenditure as a percentage of GDP is approximately 1.2-1.3%, approaching the OECD average of 1.5%. Therefore, the "0.4%" figure only reflects the public expenditure portion. The claim does not distinguish between public and private expenditure, which can be misleading.
+
+**Sources:**
+- MOE Statistics Division, *Education Expenditure Statistics*, Year 112
 - OECD, *Education at a Glance 2023*, Table C2.1
 
-**修正建議：** 修正為「台灣高等教育公共支出占 GDP 比例約 0.4-0.5%，低於 OECD 平均的 0.9%；惟若含私人支出，總比例約 1.2-1.3%，差距縮小」。
+**Correction Suggestion:** Revise to "Taiwan's public expenditure on higher education as a percentage of GDP is approximately 0.4-0.5%, lower than the OECD average of 0.9%; however, when including private expenditure, the total proportion is approximately 1.2-1.3%, narrowing the gap."
 
 ---
 
-### 陳述 6
+### Claim 6
 
-> 「2024 學年度大學考試分發入學的缺額率達 15%。」
+> "The vacancy rate for the 2024 academic year university examination distribution admission reached 15%."
 
-**判定：** ❓ Unverifiable
+**Verdict:** Unverifiable
 
-**查核依據：** 大學考試入學分發委員會每年公布分發結果，但「缺額率」的定義和計算方式可能因報導而異。此處的「15%」缺乏明確的出處和計算基準：是以核定招生名額為分母？還是以扣除其他管道錄取後的剩餘名額為分母？近年來媒體報導的數字差異極大，從個位數百分比到超過 20% 都有，取決於計算方式和是否僅計算一般大學或含科技校院。此外，2024 學年度的分發結果需以大學考試入學分發委員會的官方公告為準，而非媒體概估。
+**Verification Basis:** The University Entrance Exam Center for Placement publishes distribution results annually, but the definition and calculation method of "vacancy rate" may vary across reports. The "15%" cited here lacks a clear source and calculation basis: is the denominator the approved enrollment quota? Or the remaining quota after subtracting admissions through other channels? Media-reported figures in recent years vary widely, from single-digit percentages to over 20%, depending on the calculation method and whether only general universities or also technical colleges are included. Furthermore, the 2024 academic year distribution results should be based on the official announcement from the University Entrance Exam Center for Placement, not media estimates.
 
-**來源：** 無法取得精確的官方數據以驗證此特定數字。
+**Source:** Unable to obtain precise official data to verify this specific figure.
 
-**修正建議：** 引用大學考試入學分發委員會的官方統計，明確定義缺額率的計算方式，並標明資料來源年份。
-
----
-
-### 陳述 7
-
-> 「台灣每年博士畢業生約 4,000 人，其中超過半數進入學術界任教。」
-
-**判定：** ❌ False
-
-**查核依據：** 前半段大致正確——根據教育部統計，近年台灣博士學位授予人數約為每年 3,800 至 4,200 人之間，「約 4,000 人」的說法合理。然而，後半段「超過半數進入學術界任教」與現有數據不符。根據科技部（現國科會）的博士人才追蹤調查及教育部的畢業生流向調查，博士畢業生進入學術界（大專校院專任教師）的比例在近年約為 25-30%。隨著大專校院教師缺額因少子化而大幅減少，新進教師職缺逐年下降，博士進入學術界的比例持續走低。多數博士畢業生流向產業界、研究機構或博士後研究，而非直接擔任專任教師。
-
-**來源：**
-- 教育部統計處，《大專校院畢業生流向追蹤調查》
-- 國科會，《博士人才培育及就業情況調查》
-- 教育部統計處，《大專校院學位授予數》，111-112 學年度
-
-**修正建議：** 修正為「台灣每年博士畢業生約 4,000 人，其中約 25-30% 進入大專校院擔任專任教師，比例因少子化導致教師缺額減少而持續下降」。
+**Correction Suggestion:** Cite the official statistics from the University Entrance Exam Center for Placement, clearly define the calculation method for the vacancy rate, and specify the data source year.
 
 ---
 
-## 查核摘要報告
+### Claim 7
 
-### 總覽
+> "Taiwan produces approximately 4,000 doctoral graduates per year, of which more than half enter academia as faculty."
 
-| 編號 | 陳述摘要 | 判定 | 嚴重度 |
+**Verdict:** False
+
+**Verification Basis:** The first part is roughly correct — according to MOE statistics, the number of doctoral degrees awarded annually in Taiwan in recent years is approximately 3,800 to 4,200, making "approximately 4,000" a reasonable claim. However, the second part — "more than half enter academia as faculty" — does not match available data. According to the NSTC (formerly MOST) doctoral talent tracking survey and the MOE graduate career tracking survey, the proportion of doctoral graduates entering academia (as full-time faculty at higher education institutions) in recent years is approximately 25-30%. As faculty vacancies at higher education institutions have significantly decreased due to declining birth rates, new faculty positions have declined year by year, and the proportion of doctoral graduates entering academia continues to fall. Most doctoral graduates flow to industry, research institutions, or postdoctoral positions, rather than directly becoming full-time faculty.
+
+**Sources:**
+- MOE Statistics Division, *Graduate Career Tracking Survey*
+- NSTC, *Doctoral Talent Development and Employment Survey*
+- MOE Statistics Division, *Degrees Awarded at Higher Education Institutions*, Academic Years 111-112
+
+**Correction Suggestion:** Revise to "Taiwan produces approximately 4,000 doctoral graduates per year, of which approximately 25-30% enter higher education institutions as full-time faculty. This proportion continues to decline as declining birth rates reduce faculty vacancies."
+
+---
+
+## Verification Summary Report
+
+### Overview
+
+| # | Claim Summary | Verdict | Severity |
 |------|----------|------|--------|
-| 1 | 大專校院 152 所 | ⚠️ Partially True | Low — 數字已過時 |
-| 2 | HEEACT 是唯一評鑑機構 | ⚠️ Partially True | Medium — 事實性錯誤 |
-| 3 | 生師比 1:20 | ⚠️ Partially True | Low — 近似但格式有誤 |
-| 4 | 超過 10 所學校退場 | ✅ Verified | N/A |
-| 5 | 高教經費占 GDP 0.4% | ⚠️ Partially True | Medium — 未區分公私 |
-| 6 | 缺額率 15% | ❓ Unverifiable | High — 無法驗證 |
-| 7 | 博士生半數進學術界 | ❌ False | High — 嚴重失實 |
+| 1 | 152 higher education institutions | Warning — Partially True | Low — outdated figure |
+| 2 | HEEACT is the only accreditation body | Warning — Partially True | Medium — factual error |
+| 3 | Student-to-faculty ratio 1:20 | Warning — Partially True | Low — approximate but notation error |
+| 4 | Over 10 schools have exited | Verified | N/A |
+| 5 | HE expenditure 0.4% of GDP | Warning — Partially True | Medium — public vs private not distinguished |
+| 6 | Vacancy rate 15% | Unverifiable | High — cannot verify |
+| 7 | Over half of doctoral graduates enter academia | False | High — seriously inaccurate |
 
-### 查核統計
+### Verification Statistics
 
-- ✅ Verified：1 條（14%）
-- ⚠️ Partially True：4 條（57%）
-- ❌ False：1 條（14%）
-- ❓ Unverifiable：1 條（14%）
+- Verified: 1 claim (14%)
+- Warning — Partially True: 4 claims (57%)
+- False: 1 claim (14%)
+- Unverifiable: 1 claim (14%)
 
-### 整體評估
+### Overall Assessment
 
-這組陳述的整體準確度偏低。7 條陳述中僅 1 條完全正確，4 條部分正確但存在遺漏或精確度不足，1 條明確錯誤，1 條無法驗證。最嚴重的問題是陳述 7（博士生就業流向），此陳述與實際數據差距甚大，若用於政策論述可能導致錯誤結論。
+The overall accuracy of this set of claims is low. Of the 7 claims, only 1 is completely correct, 4 are partially correct but have omissions or insufficient precision, 1 is clearly false, and 1 cannot be verified. The most serious issue is Claim 7 (doctoral graduate career path), which diverges significantly from actual data and could lead to incorrect conclusions if used in policy discourse.
 
-### 查核建議
+### Verification Recommendations
 
-1. 所有數據均應標註具體來源和年份
-2. 涉及比例或百分比的陳述，應明確定義分子與分母
-3. 涉及制度描述的陳述（如評鑑體系），應反映最新的制度變革
-4. 無法取得精確數據的陳述，應標註為「據估計」或「據媒體報導」而非作為確定事實陳述
+1. All data should indicate the specific source and year
+2. Claims involving proportions or percentages should clearly define the numerator and denominator
+3. Claims describing institutional systems (such as the accreditation system) should reflect the latest institutional changes
+4. Claims where precise data cannot be obtained should be qualified as "estimated" or "according to media reports" rather than stated as established facts

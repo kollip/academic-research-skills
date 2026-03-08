@@ -1,218 +1,218 @@
-# Editorial Decision Standards — 編輯決定判定標準
+# Editorial Decision Standards — Criteria for Editorial Decision Making
 
-本文件定義 Accept / Minor Revision / Major Revision / Reject 的明確判定標準，供 `eic_agent` 和 `editorial_synthesizer_agent` 使用。
-
----
-
-## 1. Decision Categories（決定類別）
-
-### Accept（接受）
-
-**定義**：論文可以在無需進一步審查的情況下出版。
-
-**判定標準**：
-- 所有通用維度平均分 >= 4.0
-- 沒有任何維度低於 3.0
-- 至少 3/4 位 reviewer 推薦 Accept 或 Minor Revision
-- 沒有未解決的重大學術問題
-
-**附帶條件**：
-- 可能附帶小量 copyediting 建議
-- 可能要求最終的格式調整
-- 不需要再次送審
-
-**典型情境**：
-- 論文已經過多輪修訂，問題已全部解決
-- 罕見的一次通過（top-tier 期刊 < 5% 的投稿）
+This document defines the explicit criteria for Accept / Minor Revision / Major Revision / Reject decisions, for use by `eic_agent` and `editorial_synthesizer_agent`.
 
 ---
 
-### Minor Revision（小幅修改）
+## 1. Decision Categories
 
-**定義**：論文基本合格，需要有限度的修改後可以出版，修改後通常不需要再次送審。
+### Accept
 
-**判定標準**：
-- 所有通用維度平均分 >= 3.5
-- 沒有任何維度低於 2.5
-- 至少 3/4 位 reviewer 推薦 Accept 或 Minor Revision
-- 問題可在 2-4 週內解決
-- 修改不涉及核心論點或方法的重構
+**Definition**: The paper can be published without further review.
 
-**典型修改項目**：
-- 補充少量文獻
-- 釐清方法描述的某些細節
-- 改善論述的清晰度
-- 修正引用格式
-- 增加對 limitation 的討論
-- 調整結論的表述（避免 overclaiming）
+**Criteria**:
+- Average score across all universal dimensions >= 4.0
+- No dimension scores below 3.0
+- At least 3/4 reviewers recommend Accept or Minor Revision
+- No unresolved major academic issues
 
-**回覆要求**：
-- 作者需逐項回應 reviewer 意見
-- 修改後由 EIC 審閱（通常不再送外審）
-- 修改期限：2-4 週
+**Conditions**:
+- May include minor copyediting suggestions
+- May require final formatting adjustments
+- Does not need to be sent for review again
+
+**Typical scenarios**:
+- Paper has undergone multiple revision rounds, all issues resolved
+- Rare first-pass acceptance (< 5% of submissions at top-tier journals)
 
 ---
 
-### Major Revision（大幅修改）
+### Minor Revision
 
-**定義**：論文有潛力但存在重大問題，需要大幅修改後重新審查。
+**Definition**: The paper is fundamentally acceptable and can be published after limited modifications; typically does not need to be sent for review again after revision.
 
-**判定標準**：
-- 通用維度平均分在 2.5-3.4 之間
-- 某些維度可能低於 2.5（但非致命性的）
-- 至少 2/4 位 reviewer 推薦 Major Revision 或更好
-- 問題嚴重但可以修復（不是根本性的設計缺陷）
-- 修改需要 6-8 週的工作量
+**Criteria**:
+- Average score across all universal dimensions >= 3.5
+- No dimension scores below 2.5
+- At least 3/4 reviewers recommend Accept or Minor Revision
+- Issues can be resolved within 2-4 weeks
+- Modifications do not involve restructuring core arguments or methods
 
-**典型修改項目**：
-- 重新分析數據（補充分析或修正錯誤）
-- 大幅重寫文獻回顧（遺漏關鍵文獻）
-- 補充額外的數據收集
-- 重新組織論文結構
-- 修正方法論的顯著缺陷
-- 強化理論框架的應用
-- 增加 robustness check
+**Typical revision items**:
+- Supplementing a small number of references
+- Clarifying certain methodology description details
+- Improving clarity of argumentation
+- Correcting citation format
+- Adding discussion of limitations
+- Adjusting conclusion wording (avoiding overclaiming)
 
-**回覆要求**：
-- 作者需撰寫詳細的 point-by-point response letter
-- 修改後重新送審（可能送回原 reviewer 或新 reviewer）
-- 修改期限：6-8 週
-- 通常最多允許 2 輪 Major Revision
+**Response requirements**:
+- Authors must respond to reviewer comments item by item
+- After revision, reviewed by EIC (usually not sent for external review again)
+- Revision deadline: 2-4 weeks
 
 ---
 
-### Reject（拒絕）
+### Major Revision
 
-**定義**：論文不適合在此期刊出版，即使修改也無法達到要求。
+**Definition**: The paper has potential but has significant issues, requiring substantial revision followed by re-review.
 
-**判定標準（滿足任一即可觸發 Reject 考量）**：
-- 通用維度平均分 < 2.5
-- 任何核心維度（方法論、證據）= 1
-- 至少 3/4 位 reviewer 推薦 Reject
-- 存在無法修復的根本性問題
+**Criteria**:
+- Universal dimension average score between 2.5-3.4
+- Some dimensions may score below 2.5 (but not fatal)
+- At least 2/4 reviewers recommend Major Revision or better
+- Issues are serious but fixable (not fundamental design flaws)
+- Revision requires 6-8 weeks of work
 
-**Reject 的子類型**：
+**Typical revision items**:
+- Re-analyzing data (additional analysis or correcting errors)
+- Substantially rewriting literature review (missing key references)
+- Supplementing additional data collection
+- Reorganizing paper structure
+- Correcting significant methodological flaws
+- Strengthening theoretical framework application
+- Adding robustness checks
 
-| 子類型 | 描述 | 建議 |
-|--------|------|------|
-| **Reject — Out of Scope** | 主題不在期刊範圍內 | 推薦更適合的期刊 |
-| **Reject — Fundamental Flaw** | 研究設計有致命缺陷 | 建議重新設計研究 |
-| **Reject — Insufficient Contribution** | 缺乏原創性或增量貢獻 | 建議如何強化貢獻 |
-| **Reject — Premature** | 論文還不夠成熟 | 建議具體的改善方向 |
-| **Reject — Resubmit Encouraged** | 有潛力但需要根本性重構 | 給予詳細的重構建議 |
-
-**即使 Reject 也要做到**：
-- 肯定論文的可取之處
-- 提供具體的改善建議
-- 推薦更適合的期刊（如果是 scope 問題）
-- 語氣專業、尊重
+**Response requirements**:
+- Authors must write a detailed point-by-point response letter
+- After revision, sent for re-review (may go back to original reviewers or new reviewers)
+- Revision deadline: 6-8 weeks
+- Typically a maximum of 2 rounds of Major Revision allowed
 
 ---
 
-## 2. Decision Matrix（決定矩陣）
+### Reject
 
-### 基於 Reviewer 推薦的決定矩陣
+**Definition**: The paper is not suitable for publication in this journal, even with revision.
 
-| EIC | R1 | R2 | R3 | → 建議決定 |
-|-----|----|----|-----|-----------|
+**Criteria (meeting any one may trigger Reject consideration)**:
+- Universal dimension average score < 2.5
+- Any core dimension (methodology, evidence) = 1
+- At least 3/4 reviewers recommend Reject
+- Fundamental unfixable issues exist
+
+**Reject subtypes**:
+
+| Subtype | Description | Suggestion |
+|---------|-------------|-----------|
+| **Reject — Out of Scope** | Topic not within journal scope | Recommend more suitable journals |
+| **Reject — Fundamental Flaw** | Fatal flaw in research design | Suggest redesigning the research |
+| **Reject — Insufficient Contribution** | Lacks originality or incremental contribution | Suggest how to strengthen contribution |
+| **Reject — Premature** | Paper not yet mature enough | Suggest specific improvement directions |
+| **Reject — Resubmit Encouraged** | Has potential but needs fundamental restructuring | Provide detailed restructuring suggestions |
+
+**Even with Reject, must**:
+- Affirm the paper's merits
+- Provide specific improvement suggestions
+- Recommend more suitable journals (if it's a scope issue)
+- Maintain professional, respectful tone
+
+---
+
+## 2. Decision Matrix
+
+### Decision Matrix Based on Reviewer Recommendations
+
+| EIC | R1 | R2 | R3 | -> Recommended Decision |
+|-----|----|----|-----|----------------------|
 | Accept | Accept | Accept | Accept | **Accept** |
 | Accept | Accept | Accept | Minor | **Accept** (with suggestions) |
 | Accept | Accept | Minor | Minor | **Minor Revision** |
 | Accept | Minor | Minor | Minor | **Minor Revision** |
 | Minor | Minor | Minor | Minor | **Minor Revision** |
-| Minor | Minor | Minor | Major | **Minor-to-Major** (視具體問題) |
+| Minor | Minor | Minor | Major | **Minor-to-Major** (depends on specific issues) |
 | Minor | Minor | Major | Major | **Major Revision** |
 | Minor | Major | Major | Major | **Major Revision** |
 | Major | Major | Major | Major | **Major Revision** |
-| Major | Major | Major | Reject | **Major Revision** (最後機會) |
+| Major | Major | Major | Reject | **Major Revision** (last chance) |
 | Major | Major | Reject | Reject | **Reject** (resubmit encouraged) |
 | Major | Reject | Reject | Reject | **Reject** |
 | Reject | Reject | Reject | Reject | **Reject** |
 
-### 特殊情況處理
+### Special Situation Handling
 
-**Split Decision（票數平分）**：
-- 例如：Accept + Accept + Reject + Reject
-- EIC（或 synthesizer）需要深入分析分歧原因
-- 傾向採取保守策略：Major Revision，要求作者回應 Reject 方的意見
-- 可考慮邀請第五位 reviewer
+**Split Decision (evenly divided)**:
+- Example: Accept + Accept + Reject + Reject
+- EIC (or synthesizer) needs to deeply analyze the cause of disagreement
+- Lean toward conservative strategy: Major Revision, requiring the author to respond to the Reject side's comments
+- May consider inviting a fifth reviewer
 
-**One Outlier（一位意見特殊）**：
-- 例如：Minor + Minor + Minor + Reject
-- 仔細檢查 Reject 的理由
-- 如果理由成立且其他人遺漏了，升級為 Major Revision
-- 如果理由不充分，維持 Minor Revision 但在 Decision Letter 中提及該意見
-
----
-
-## 3. Decision Confidence Calibration（決定信心校準）
-
-### Reviewer Confidence Score 的影響
-
-| Confidence | 對決定的影響 |
-|-----------|-------------|
-| 5 (Very High) | 該 reviewer 的意見權重最高 |
-| 4 (High) | 標準權重 |
-| 3 (Medium) | 標準權重，但分歧時降權 |
-| 2 (Low) | 僅供參考，不作為決定性意見 |
-| 1 (Very Low) | 忽略該 reviewer 的推薦（但保留具體意見） |
-
-### 跨維度的嚴重度評估
-
-| 情況 | 嚴重度 | 處理 |
-|------|--------|------|
-| 方法論有致命缺陷（R1 分數 = 1） | Critical | 即使其他維度優秀，也傾向 Reject |
-| 文獻回顧重大遺漏（R2 分數 = 2） | Serious | Major Revision，要求補充 |
-| 跨領域觀點被忽略（R3 分數 = 2） | Moderate | Minor/Major，視其他維度 |
-| 寫作品質不佳（分數 = 2） | Minor | 不影響學術決定，但要求語言修改 |
+**One Outlier (one unusual opinion)**:
+- Example: Minor + Minor + Minor + Reject
+- Carefully examine the Reject rationale
+- If the rationale is valid and others missed it, escalate to Major Revision
+- If the rationale is insufficient, maintain Minor Revision but mention the opinion in the Decision Letter
 
 ---
 
-## 4. Revision Round Policy（修訂回合政策）
+## 3. Decision Confidence Calibration
 
-### 標準政策
+### Impact of Reviewer Confidence Score
 
-| 回合 | 期待 | 處理 |
-|------|------|------|
-| R1（首次修訂） | 回應所有 reviewer 意見 | 再次送審或 EIC 審閱 |
-| R2（第二次修訂） | 回應殘餘問題 | 通常由 EIC 最終決定 |
-| R3（第三次修訂） | 極少見，通常只處理格式 | EIC 最終決定 |
+| Confidence | Impact on Decision |
+|-----------|-------------------|
+| 5 (Very High) | This reviewer's opinion carries the highest weight |
+| 4 (High) | Standard weight |
+| 3 (Medium) | Standard weight, but reduced in case of disagreement |
+| 2 (Low) | For reference only, not used as a decisive opinion |
+| 1 (Very Low) | Ignore this reviewer's recommendation (but retain specific comments) |
 
-### 升級/降級規則
+### Cross-Dimension Severity Assessment
 
-- Minor Revision 修改不完整 → 可能升級為 Major Revision
-- Major Revision 修改優秀 → 可能降級為 Minor Revision 或 Accept
-- Major Revision 修改不足 → 可能 Reject（不鼓勵無限次修訂）
-- 超過 2 輪 Major Revision → 強烈建議 Accept 或 Reject，不再延續
+| Situation | Severity | Handling |
+|-----------|----------|---------|
+| Methodology has fatal flaw (R1 score = 1) | Critical | Even if other dimensions are excellent, lean toward Reject |
+| Major literature review omission (R2 score = 2) | Serious | Major Revision, require supplementation |
+| Cross-disciplinary perspective overlooked (R3 score = 2) | Moderate | Minor/Major, depends on other dimensions |
+| Poor writing quality (score = 2) | Minor | Does not affect academic decision, but require language revision |
 
 ---
 
-## 5. Professional Ethics of Editorial Review（專業審查倫理守則）
+## 4. Revision Round Policy
 
-### Reviewer 倫理
+### Standard Policy
 
-1. **保密原則**：審查過程和論文內容保密
-2. **利益衝突**：如果與作者有合作或競爭關係，應迴避
-3. **時效性**：在承諾的時間內完成審查
-4. **建設性**：即使推薦 Reject，也要提供有建設性的回饋
-5. **公正性**：不因作者的性別、種族、機構、國籍而有偏見
-6. **不剽竊**：不使用審查中看到的未發表想法
-7. **適當用詞**：避免人身攻擊、諷刺、貶低性語言
+| Round | Expectation | Handling |
+|-------|-------------|---------|
+| R1 (First revision) | Respond to all reviewer comments | Send for re-review or EIC review |
+| R2 (Second revision) | Respond to residual issues | Usually EIC makes final decision |
+| R3 (Third revision) | Very rare, usually only handling formatting | EIC makes final decision |
 
-### Editor 倫理
+### Upgrade/Downgrade Rules
 
-1. **公正決定**：基於學術品質，不受外部壓力影響
-2. **透明流程**：Decision letter 要清楚說明理由
-3. **合理期限**：給作者足夠的修改時間
-4. **申訴管道**：作者有權回應或質疑審查意見
-5. **一致標準**：相似品質的論文應得到相似的決定
+- Minor Revision with incomplete revisions -> May escalate to Major Revision
+- Major Revision with excellent revisions -> May downgrade to Minor Revision or Accept
+- Major Revision with insufficient revisions -> May Reject (infinite revision cycles are not encouraged)
+- Beyond 2 rounds of Major Revision -> Strongly recommend Accept or Reject, no further extension
 
-### 特殊情況的倫理考量
+---
 
-| 情況 | 倫理處理 |
-|------|---------|
-| 作者是你的學生/同事 | 必須迴避或揭露關係 |
-| 論文觀點與你相反 | 評估論證品質，非立場正確性 |
-| 論文使用你的理論但誤解 | 可以指出但不能要求引用自己的著作 |
-| 發現數據造假嫌疑 | 報告 EIC，由期刊啟動調查程序 |
-| 論文與你正在進行的研究相似 | 揭露潛在的利益衝突 |
+## 5. Professional Ethics of Editorial Review
+
+### Reviewer Ethics
+
+1. **Confidentiality**: The review process and paper content are confidential
+2. **Conflict of interest**: Recuse if there is a collaborative or competitive relationship with the author
+3. **Timeliness**: Complete the review within the committed timeframe
+4. **Constructiveness**: Even when recommending Reject, provide constructive feedback
+5. **Impartiality**: No bias based on author's gender, race, institution, or nationality
+6. **No plagiarism**: Do not use unpublished ideas seen during review
+7. **Appropriate language**: Avoid personal attacks, sarcasm, or demeaning language
+
+### Editor Ethics
+
+1. **Fair decision**: Based on academic quality, not influenced by external pressure
+2. **Transparent process**: Decision letter must clearly explain the rationale
+3. **Reasonable deadlines**: Give authors sufficient revision time
+4. **Appeal channel**: Authors have the right to respond to or challenge review comments
+5. **Consistent standards**: Papers of similar quality should receive similar decisions
+
+### Ethical Considerations for Special Situations
+
+| Situation | Ethical Handling |
+|-----------|-----------------|
+| Author is your student/colleague | Must recuse or disclose the relationship |
+| Paper's viewpoint is opposite to yours | Evaluate argument quality, not correctness of position |
+| Paper uses your theory but misunderstands it | May point it out but cannot require citation of your own work |
+| Suspected data fabrication | Report to EIC; journal initiates investigation procedure |
+| Paper is similar to your ongoing research | Disclose potential conflict of interest |

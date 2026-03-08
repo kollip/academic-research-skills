@@ -1,236 +1,253 @@
 ---
-scenario: 審查一段政策建議摘要
+scenario: Reviewing a policy recommendation summary
 mode: review
 agents_used:
   - editor_in_chief_agent
   - ethics_review_agent
   - devils_advocate_agent
-input: 使用者提供約 300 字的台灣高教政策建議文本
-output: 三位審查 agent 的完整報告 + 修訂建議摘要
+input: User provides an approximately 300-word policy recommendation text about Taiwan's higher education
+output: Complete reports from three review agents + revision recommendation summary
 ---
 
-# Review Mode 範例：政策建議摘要審查
+# Review Mode Example: Policy Recommendation Summary Review
 
-本範例展示 `review` mode 的完整流程。使用者提供一段已寫好的政策建議摘要，deep-research 啟動三位審查 agent 進行多維度審查。
+This example demonstrates the complete workflow of `review` mode. The user provides a previously written policy recommendation summary, and deep-research activates three review agents for multi-dimensional review.
 
 ---
 
 ## User Request
 
 ```
-請用 review mode 審查以下這段政策建議摘要：
+Please use review mode to review the following policy recommendation summary:
 
-「面對少子化浪潮，台灣高等教育體系亟需結構性變革。根據教育部統計，2024 年大學一年級新生人數已降至 18 萬人，較 2015 年減少超過 40%。私立大學首當其衝，已有 12 所學校啟動退場機制。本文建議推動三大政策方向：第一，建立跨校學分互認聯盟，允許學生跨校選課並累積學分，提升教育資源使用效率；第二，推動公私併機制，由公立大學併購經營困難的私立大學，整合校地、師資與設備資源；第三，設立高教轉型基金，提供每校最高新台幣 5 億元的轉型補助，支持學校發展特色領域或轉型為終身學習機構。上述三項政策若能同步推動，預估可在五年內減少 30% 的供需失衡，並維持高教品質與區域可及性。然而，政策推動需克服教師法對資遣的限制、校產歸屬爭議，以及社區對學校退場的抵制。整體而言，台灣高教體系必須從被動退場轉向主動轉型，方能在人口結構劇變中維持競爭力。」
+"Facing the wave of declining birth rates, Taiwan's higher education system urgently needs
+structural reform. According to MOE statistics, the number of first-year university students
+in 2024 has dropped to 180,000, a decrease of over 40% compared to 2015. Private universities
+have borne the brunt, with 12 schools already initiating exit mechanisms. This paper proposes
+three major policy directions: First, establish cross-institutional credit recognition
+alliances, allowing students to take courses across institutions and accumulate credits, thereby
+improving educational resource utilization efficiency; Second, promote public-private merger
+mechanisms, where public universities acquire struggling private universities, integrating
+campus facilities, faculty, and equipment resources; Third, establish a Higher Education
+Transformation Fund, providing each school up to NTD 500 million in transformation subsidies,
+supporting schools in developing distinctive fields or transforming into lifelong learning
+institutions. If the above three policies can be advanced simultaneously, it is estimated that
+supply-demand imbalance can be reduced by 30% within five years while maintaining higher
+education quality and regional accessibility. However, policy implementation must overcome
+restrictions on dismissal under the Teachers' Act, disputes over campus property ownership, and
+community resistance to school closures. Overall, Taiwan's higher education system must shift
+from passive exit to proactive transformation in order to maintain competitiveness amid dramatic
+demographic structural changes."
 ```
 
 ---
 
-## Review Pipeline 啟動
+## Review Pipeline Activation
 
-**Mode 偵測**：使用者明確要求 `review mode`，且提供了待審查文本。啟動 3 位審查 agent：
+**Mode Detection**: User explicitly requests `review mode` and provides text to be reviewed. Activating 3 review agents:
 
-1. `editor_in_chief_agent` — 學術品質與論證審查
-2. `ethics_review_agent` — 倫理與公平性審查
-3. `devils_advocate_agent` — 反面論證與挑戰
+1. `editor_in_chief_agent` — Academic quality and argumentation review
+2. `ethics_review_agent` — Ethics and fairness review
+3. `devils_advocate_agent` — Counter-arguments and challenges
 
 ---
 
-## editor_in_chief_agent 審查報告
+## editor_in_chief_agent Review Report
 
-### 審查摘要
+### Review Summary
 
-| 維度 | 評分 | 說明 |
+| Dimension | Score | Description |
 |------|------|------|
-| 原創性 | 3/5 | 三項政策建議在既有文獻中已有討論，缺乏新穎觀點 |
-| 嚴謹度 | 2/5 | 多項數據宣稱缺乏來源標註，推論過程有跳躍 |
-| 證據充分性 | 2/5 | 僅引用教育部統計一項來源，論據薄弱 |
-| 論證連貫性 | 3/5 | 三項政策的邏輯關聯不夠清晰 |
-| 寫作品質 | 4/5 | 文字流暢，結構完整，段落組織合理 |
-| **總評** | **2.8/5** | **建議 Major Revision** |
+| Originality | 3/5 | The three policy proposals have been discussed in existing literature; lacks novel perspectives |
+| Rigor | 2/5 | Multiple data claims lack source citations; reasoning process has logical leaps |
+| Evidence sufficiency | 2/5 | Only cites one source (MOE statistics); weak evidentiary basis |
+| Argument coherence | 3/5 | The logical connection between the three policies is not sufficiently clear |
+| Writing quality | 4/5 | Fluent writing, complete structure, reasonable paragraph organization |
+| **Overall** | **2.8/5** | **Recommend Major Revision** |
 
-### 逐段審查
+### Paragraph-by-Paragraph Review
 
-**段落 1（問題描述）**：
-> 「2024 年大學一年級新生人數已降至 18 萬人，較 2015 年減少超過 40%」
+**Paragraph 1 (Problem Description)**:
+> "The number of first-year university students in 2024 has dropped to 180,000, a decrease of over 40% compared to 2015"
 
-審查意見：此數據需要標註出處。根據教育部大專校院概況統計，2024 學年大學日間學制一年級新生實際人數約為 19.2 萬人，而非 18 萬人。此外，與 2015 年的比較基準需要明確界定是指「學年度」還是「年度」——兩者在跨年度數據上可能產生差異。建議修正為精確數字並加註資料來源與學年度。
+Review comment: This data needs a source citation. According to MOE higher education overview statistics, the actual number of first-year daytime program students in Academic Year 2024 is approximately 192,000, not 180,000. Furthermore, the 2015 comparison baseline needs clarification on whether it refers to "academic year" or "calendar year" — the two may produce differences in cross-year data. Recommend correcting to the precise figure with source citation and academic year noted.
 
-> 「已有 12 所學校啟動退場機制」
+> "12 schools already initiating exit mechanisms"
 
-審查意見：截至 2024 年底，依據《私立高級中等以上學校退場條例》列為專案輔導的學校及已停招的學校合計數字需要查核。此處「12 所」的計算方式不明確——是否包含已完成退場的學校？是否僅限大專校院？建議明確界定統計範圍並附上退場條例執行報告之引用。
+Review comment: As of the end of 2024, the total number of schools listed for special counseling under the "Private Senior High School and Above Exit Act" plus those that have already suspended enrollment needs to be verified. The calculation method for "12" here is unclear — does it include schools that have already completed exit? Is it limited to higher education institutions? Recommend clearly defining the statistical scope and citing the exit regulations implementation report.
 
-**段落 2（政策建議一：跨校學分互認聯盟）**：
-> 「允許學生跨校選課並累積學分，提升教育資源使用效率」
+**Paragraph 2 (Policy Proposal 1: Cross-Institutional Credit Recognition Alliance)**:
+> "Allowing students to take courses across institutions and accumulate credits, improving educational resource utilization efficiency"
 
-審查意見：此建議未考量實務面的關鍵障礙。目前台灣已有「優久聯盟」「台灣聯合大學系統」等跨校選課機制，但使用率偏低（多數聯盟跨校選課比例不到 3%）。建議分析既有機制失效的原因，再論述新聯盟如何克服這些障礙，否則建議缺乏增量價值。
+Review comment: This proposal does not consider key practical barriers. Taiwan already has cross-institutional course-taking mechanisms such as the "Top University Alliance" and "University System of Taiwan." However, utilization rates are low (most alliances have cross-institutional course-taking rates below 3%). Recommend analyzing why existing mechanisms have been ineffective, then explaining how the new alliance would overcome these barriers; otherwise the proposal lacks incremental value.
 
-**段落 3（政策建議二：公私併機制）**：
-> 「由公立大學併購經營困難的私立大學」
+**Paragraph 3 (Policy Proposal 2: Public-Private Merger Mechanism)**:
+> "Public universities acquire struggling private universities"
 
-審查意見：此處使用「併購」一詞在法律上有精確含義，但文中未討論私校法、國有財產法等相關法規的適用性。公立大學合併私立大學在台灣尚無前例，涉及法人屬性轉換（財團法人轉為行政法人/國立學校）的法律路徑尚不明確。建議修訂為「整併」或「合併」，並討論現行法制框架的可行性。
+Review comment: The term "acquire" has precise legal meaning, but the text does not discuss the applicability of relevant laws such as the Private School Act and National Property Act. There is no precedent for public universities merging with private universities in Taiwan, and the legal pathway for converting institutional legal status (from a foundation to an administrative corporation/national school) remains unclear. Recommend revising to "consolidation" or "merger" and discussing feasibility within the current legal framework.
 
-**段落 4（政策建議三：高教轉型基金）**：
-> 「提供每校最高新台幣 5 億元的轉型補助」
+**Paragraph 4 (Policy Proposal 3: Higher Education Transformation Fund)**:
+> "Providing each school up to NTD 500 million in transformation subsidies"
 
-審查意見：5 億元的金額依據為何？未提供成本估算的計算邏輯。若以 30 所潛在受惠學校計算，基金規模需達 150 億元，此金額相當於教育部高教司年度預算的相當比例。建議提供政策成本效益分析，或至少引述類似國際案例的經費規模作為參照。
+Review comment: What is the basis for the NTD 500 million figure? No cost estimation logic is provided. If calculated for 30 potentially eligible schools, the fund would need to reach NTD 15 billion, which represents a significant proportion of MOE's Higher Education Department annual budget. Recommend providing a policy cost-benefit analysis, or at minimum citing comparable international case funding scales as reference.
 
-**段落 5（效果預估）**：
-> 「預估可在五年內減少 30% 的供需失衡」
+**Paragraph 5 (Effect Estimate)**:
+> "Estimated to reduce supply-demand imbalance by 30% within five years"
 
-審查意見：此為本文最薄弱的論述。「30%」的預估缺乏任何計算基礎或模型支持，且「供需失衡」的操作型定義不明確——是指招生名額與報名人數的差距？還是學校數量與學生需求的比例？建議刪除此無依據的預估，或提供推估模型與假設說明。
+Review comment: This is the weakest argument in the paper. The "30%" estimate has no calculation basis or model support, and the operational definition of "supply-demand imbalance" is unclear — does it refer to the gap between enrollment quota and applicants? Or the ratio of school numbers to student demand? Recommend either deleting this unsupported estimate or providing the estimation model and assumptions.
 
-### 編輯裁定
+### Editorial Verdict
 
-**裁定：MAJOR REVISION**
+**Verdict: MAJOR REVISION**
 
-核心問題：
-1. 數據準確性不足，多項數字需查核校正
-2. 政策建議缺乏對既有機制的分析，未說明增量價值
-3. 效果預估完全無依據，損害整體可信度
-4. 缺乏國際比較案例佐證
+Core issues:
+1. Insufficient data accuracy; multiple figures need verification and correction
+2. Policy proposals lack analysis of existing mechanisms; incremental value not explained
+3. Effect estimate has zero basis, damaging overall credibility
+4. Lacks international comparison cases for support
 
 ---
 
-## ethics_review_agent 審查報告
+## ethics_review_agent Review Report
 
-### 倫理審查摘要
+### Ethics Review Summary
 
-| 維度 | 判定 | 說明 |
+| Dimension | Verdict | Description |
 |------|------|------|
-| AI 揭露合規 | N/A | 待審查文本非 AI 生成聲明範疇 |
-| 歸因完整性 | CONDITIONAL | 數據引用來源不足 |
-| 雙重用途風險 | CLEARED | 無敏感雙重用途疑慮 |
-| 公平代表性 | CONDITIONAL | 利害關係人觀點不平衡 |
-| **總判定** | **CONDITIONAL** | **需補充後通過** |
+| AI disclosure compliance | N/A | Text under review is not within AI disclosure scope |
+| Attribution integrity | CONDITIONAL | Insufficient data source citations |
+| Dual-use risk | CLEARED | No sensitive dual-use concerns |
+| Fair representation | CONDITIONAL | Stakeholder perspectives imbalanced |
+| **Overall Verdict** | **CONDITIONAL** | **Needs supplementation to pass** |
 
-### 逐項分析
+### Item-by-Item Analysis
 
-**1. 利害關係人公平代表性**
+**1. Stakeholder Fair Representation**
 
-本文從「政策制定者」視角撰寫，但涉及的利害關係人至少包含五個群體：
+This text is written from a "policymaker" perspective, but the stakeholders involved include at least five groups:
 
-- 學生（學習權益、學位認受性）
-- 教師（工作權、學術自由）
-- 行政人員（就業穩定性）
-- 社區（區域可及性、在地發展）
-- 私校董事會（校產處分權）
+- Students (learning rights, degree recognition)
+- Faculty (employment rights, academic freedom)
+- Administrative staff (job stability)
+- Communities (regional accessibility, local development)
+- Private school boards (campus property disposition rights)
 
-文中僅在末段簡短提及教師法限制和社區抵制，但未呈現這些群體的觀點或需求。特別是：
+The text only briefly mentions Teachers' Act restrictions and community resistance in the final paragraph, without presenting these groups' perspectives or needs. In particular:
 
-> 「政策推動需克服教師法對資遣的限制」
+> "Policy implementation must overcome restrictions on dismissal under the Teachers' Act"
 
-此表述將教師的工作權保障框架為「需克服的障礙」，隱含了將教師權益置於政策效率之下的價值判斷。從倫理角度看，應平等呈現「教師工作權保障的正當性」與「體系效率的需求」之間的張力，而非單向地將前者描述為後者的阻礙。
+This framing positions teachers' employment rights protection as "an obstacle to overcome," implicitly placing teacher rights below policy efficiency — a value judgment. From an ethical perspective, "the legitimacy of teacher employment protection" and "the need for system efficiency" should be presented as equal tensions, rather than unidirectionally describing the former as an impediment to the latter.
 
-**2. 弱勢群體影響評估缺失**
+**2. Missing Vulnerable Population Impact Assessment**
 
-公私併和退場機制對以下群體的影響未被討論：
+The impact of public-private mergers and exit mechanisms on the following groups is not discussed:
 
-- 偏鄉學生：若在地學校退場或被合併，通勤距離增加對經濟弱勢學生的不成比例影響
-- 身心障礙學生：校園無障礙設施的銜接問題
-- 原住民族專班學生：文化特殊性課程在合併後是否能維持
+- Rural students: If local schools exit or are merged, increased commuting distances would disproportionately affect economically disadvantaged students
+- Students with disabilities: Accessibility facility transition issues during campus changes
+- Indigenous program students: Whether culturally specific courses can be maintained after mergers
 
-建議在政策建議中加入「弱勢衝擊評估」段落。
+Recommend adding a "vulnerable population impact assessment" section to the policy proposals.
 
-**3. 區域正義議題**
+**3. Regional Justice Issues**
 
-> 「由公立大學併購經營困難的私立大學，整合校地、師資與設備資源」
+> "Public universities acquire struggling private universities, integrating campus facilities, faculty, and equipment resources"
 
-此建議可能加劇城鄉高教資源差距。經營困難的私立大學多位於非都會區，而有能力進行合併的公立大學多位於都會區。合併後若將資源集中至都會校區，將進一步損害非都會區的高等教育可及性。建議加入區域影響評估和配套措施。
+This proposal may exacerbate the urban-rural divide in higher education resources. Struggling private universities are mostly located in non-metropolitan areas, while public universities capable of carrying out mergers are mostly in metropolitan areas. If resources are concentrated at metropolitan campuses after merger, this would further damage higher education accessibility in non-metropolitan areas. Recommend adding regional impact assessment and supporting measures.
 
-### 倫理裁定
+### Ethics Verdict
 
-**裁定：CONDITIONAL**
+**Verdict: CONDITIONAL**
 
-通過條件：
-1. 補充多方利害關係人觀點的呈現
-2. 加入弱勢群體影響評估
-3. 修訂「克服教師法限制」的表述為更平衡的呈現方式
-4. 加入區域正義面向的討論
+Conditions for passing:
+1. Supplement multi-stakeholder perspective presentation
+2. Add vulnerable population impact assessment
+3. Revise the "overcome Teachers' Act restrictions" framing to a more balanced presentation
+4. Add discussion of the regional justice dimension
 
 ---
 
-## devils_advocate_agent 審查報告
+## devils_advocate_agent Review Report
 
-### 反面論證挑戰
+### Counter-Argument Challenges
 
-**挑戰 1：跨校學分互認聯盟真的能提升效率嗎？**
+**Challenge 1: Can cross-institutional credit recognition alliances really improve efficiency?**
 
-原文主張：
-> 「建立跨校學分互認聯盟...提升教育資源使用效率」
+Original claim:
+> "Establish cross-institutional credit recognition alliances...improving educational resource utilization efficiency"
 
-反面論證：既有的跨校選課機制使用率極低的根本原因不是制度設計，而是物理距離和時間成本。學生不會為了一門課通勤到另一所學校，除非該課程極具吸引力且無法替代。線上課程可以部分解決距離問題，但台灣高教體系對線上學分的認受性仍偏保守。此外，學分互認涉及各校教學品質互信問題——排名較前的學校是否願意承認排名較後學校的學分？如果不願意，則聯盟將成為單向流動，最終加速弱勢學校的邊緣化。
+Counter-argument: The root cause of low utilization in existing cross-institutional course-taking mechanisms is not institutional design but physical distance and time cost. Students won't commute to another school for one course unless that course is highly attractive and irreplaceable. Online courses can partially solve the distance problem, but Taiwan's higher education system remains conservative about recognizing online credits. Furthermore, credit recognition involves inter-institutional trust in teaching quality — would higher-ranked schools be willing to recognize credits from lower-ranked schools? If not, the alliance would become a one-way flow, ultimately accelerating the marginalization of weaker schools.
 
-**結論**：此政策建議需要回應「為什麼這次會不同」的問題。若未分析既有機制失敗的結構性原因，新的聯盟建議難以令人信服。
+**Conclusion**: This policy proposal needs to address the question of "why will it be different this time." Without analyzing the structural reasons for existing mechanisms' failure, a new alliance proposal is difficult to find convincing.
 
-**挑戰 2：公私併的前提假設可能錯誤**
+**Challenge 2: The premise assumption of public-private mergers may be wrong**
 
-原文主張：
-> 「由公立大學併購經營困難的私立大學，整合校地、師資與設備資源」
+Original claim:
+> "Public universities acquire struggling private universities, integrating campus facilities, faculty, and equipment resources"
 
-反面論證：此建議隱含的假設是「公立大學有動機和能力吸收私立大學」。但事實恰恰相反：
+Counter-argument: This proposal implicitly assumes that "public universities have the motivation and capacity to absorb private universities." But the reality is the opposite:
 
-1. 公立大學本身也面臨招生壓力，合併只是增加負擔
-2. 私立大學的校地多為租用或位於偏遠地區，對公立大學缺乏吸引力
-3. 私立大學的師資若無法通過公立大學的教師評鑑標準，合併後面臨大規模資遣問題
-4. 日本的國立大學法人合併案例（如北海道聯合大學機構）顯示，合併後的整合成本往往超過預期效益
+1. Public universities themselves face enrollment pressure; merging only adds burden
+2. Private universities' campuses are often leased or in remote locations, unattractive to public universities
+3. If private university faculty cannot pass public university faculty evaluation standards, mass dismissals would follow
+4. Japan's national university corporation merger cases (e.g., Hokkaido United University Institution) show that post-merger integration costs often exceed expected benefits
 
-一個完全相反的論點是：與其推動公私併，不如讓市場機制自然淘汰，政府角色應限於保障學生權益（如學分銜接、獎助學金轉移），而非維持過多的機構存續。
+A completely opposite argument: rather than pushing public-private mergers, let market mechanisms naturally eliminate schools, with the government's role limited to protecting student rights (such as credit transfer, scholarship transfer) rather than maintaining excessive institutional survival.
 
-**挑戰 3：五年內減少 30% 供需失衡的預估經不起檢驗**
+**Challenge 3: The five-year 30% supply-demand imbalance reduction estimate cannot withstand scrutiny**
 
-原文主張：
-> 「預估可在五年內減少 30% 的供需失衡」
+Original claim:
+> "Estimated to reduce supply-demand imbalance by 30% within five years"
 
-反面論證：這是一個典型的「用數字裝飾的直覺」。
+Counter-argument: This is a textbook case of "intuition dressed up with numbers."
 
-1. 供需失衡的量化指標未被定義：是總招生缺額？是停招系所數？是學校退場數？
-2. 30% 的計算基礎不存在：文中三項政策各自的貢獻度未被拆解
-3. 五年的時間框架不切實際：日本從 2004 年啟動國立大學法人化，到第一起法人合併（2022 年）花了 18 年
-4. 政策效果有時滯性和交互效應：三項政策「同步推動」可能相互干擾（如轉型基金降低退場壓力，反而延緩必要的結構調整）
+1. The quantitative indicator for supply-demand imbalance is undefined: is it total enrollment vacancies? Number of suspended programs? Number of school exits?
+2. No calculation basis for 30% exists: the contribution of each of the three policies has not been disaggregated
+3. The five-year timeframe is unrealistic: Japan launched national university corporatization in 2004; the first corporate merger (2022) took 18 years
+4. Policy effects have time lags and interaction effects: simultaneously advancing three policies could create interference (e.g., a transformation fund reduces exit pressure, potentially delaying necessary structural adjustment)
 
-此段應完全刪除或改為「需要進一步的政策模擬研究來評估預期效果」。
+This paragraph should be completely deleted or revised to "further policy simulation research is needed to evaluate expected effects."
 
-**挑戰 4：「主動轉型」的定義不清**
+**Challenge 4: The definition of "proactive transformation" is unclear**
 
-原文主張：
-> 「台灣高教體系必須從被動退場轉向主動轉型」
+Original claim:
+> "Taiwan's higher education system must shift from passive exit to proactive transformation"
 
-反面論證：這是一個具有修辭力量但操作上模糊的結論。什麼是「主動轉型」？對一所已經連續五年未達最低招生標準的學校而言，退場就是最合理的轉型。硬要維持一所沒有學生的學校運作，用「轉型」之名行「拖延」之實，反而浪費公共資源。文中未區分「可救的」與「不可救的」學校，但政策設計必須做出這個殘酷的分類。
+Counter-argument: This is a rhetorically powerful but operationally vague conclusion. What is "proactive transformation"? For a school that has failed to meet minimum enrollment standards for five consecutive years, exit is the most reasonable transformation. Insisting on keeping a school running with no students, using "transformation" to justify "delay," wastes public resources. The text does not distinguish between "salvageable" and "unsalvageable" schools, but policy design must make this harsh classification.
 
-### 挑戰總結
+### Challenge Summary
 
-| 挑戰 | 嚴重度 | 建議 |
+| Challenge | Severity | Recommendation |
 |------|--------|------|
-| 跨校聯盟缺乏增量價值論述 | Medium | 補充既有機制分析 |
-| 公私併前提假設有誤 | High | 重新論述可行性與動機 |
-| 30% 預估無依據 | Critical | 刪除或改為研究建議 |
-| 「主動轉型」定義模糊 | Medium | 加入操作型定義與分類 |
+| Cross-institutional alliance lacks incremental value argument | Medium | Add analysis of existing mechanism failures |
+| Public-private merger premise assumption is flawed | High | Re-argue feasibility and motivation |
+| 30% estimate has no basis | Critical | Delete or change to research recommendation |
+| "Proactive transformation" definition is vague | Medium | Add operational definition and classification |
 
 ---
 
-## 修訂建議摘要
+## Revision Recommendation Summary
 
-### 三位 Agent 的共識問題
+### Consensus Issues Across All Three Agents
 
-以下三項問題在所有審查 agent 的報告中均被提出：
+The following three issues were raised in all review agents' reports:
 
-1. **數據準確性**：核心統計數字（18 萬人、40%、12 所）均需查核校正並附上出處
-2. **政策可行性論述不足**：三項建議均停留在「應該做什麼」而非「如何做」和「為什麼做得到」
-3. **預估效果無依據**：「30%」的數字損害整體可信度
+1. **Data accuracy**: Core statistics (180,000, 40%, 12 schools) all need verification, correction, and source citation
+2. **Insufficient policy feasibility argument**: All three proposals remain at "what should be done" rather than "how to do it" and "why it can be done"
+3. **Effect estimate has no basis**: The "30%" figure damages overall credibility
 
-### 優先修訂事項（依嚴重度排序）
+### Priority Revision Items (by severity)
 
-| 優先序 | 修訂項目 | 來源 |
+| Priority | Revision Item | Source |
 |--------|----------|------|
-| 1 | 刪除或大幅修改「五年內減少 30%」預估 | editor + devil's advocate |
-| 2 | 所有數據加註出處，校正不準確的數字 | editor |
-| 3 | 分析既有跨校選課機制失敗原因，論述新建議的增量價值 | devil's advocate |
-| 4 | 加入利害關係人多元觀點和弱勢衝擊評估 | ethics |
-| 5 | 補充國際比較案例（日本、韓國） | editor |
-| 6 | 修訂「克服教師法限制」為更平衡的表述 | ethics |
-| 7 | 區分「可轉型」與「應退場」的學校類型 | devil's advocate |
-| 8 | 加入政策成本估算和效益分析框架 | editor |
+| 1 | Delete or substantially revise the "reduce by 30% within five years" estimate | editor + devil's advocate |
+| 2 | Add source citations to all data, correct inaccurate figures | editor |
+| 3 | Analyze why existing cross-institutional course-taking mechanisms failed, argue the incremental value of the new proposal | devil's advocate |
+| 4 | Add multi-stakeholder perspectives and vulnerable population impact assessment | ethics |
+| 5 | Add international comparison cases (Japan, South Korea) | editor |
+| 6 | Revise "overcome Teachers' Act restrictions" to a more balanced framing | ethics |
+| 7 | Distinguish between "transformable" and "should exit" school types | devil's advocate |
+| 8 | Add policy cost estimation and cost-benefit analysis framework | editor |
 
-### 修訂後的結論建議（供參考）
+### Revised Conclusion Suggestion (for reference)
 
-> 「面對少子化挑戰，台灣高教體系需要兼具效率與公平的結構性改革。本文提出跨校學分互認、公私整併和轉型基金三項政策方向。然而，每項政策均需克服既有機制的結構性障礙，並在推動過程中兼顧教師工作權保障、學生學習權益和區域高教可及性。政策效果的量化評估需要進一步的模擬研究，而非直覺式的預估。最重要的是，政策設計應區分不同學校的轉型潛力，對確實無法永續經營的學校提供有尊嚴的退場路徑，同時將有限資源集中於具有轉型潛力的機構。」
+> "Facing the challenge of declining birth rates, Taiwan's higher education system needs structural reform that balances efficiency and equity. This paper proposes three policy directions: cross-institutional credit recognition, public-private consolidation, and a transformation fund. However, each policy must overcome the structural barriers of existing mechanisms, and implementation must balance teacher employment protection, student learning rights, and regional higher education accessibility. Quantitative evaluation of policy effects requires further simulation research, not intuitive estimates. Most importantly, policy design should differentiate schools' transformation potential: for schools that genuinely cannot operate sustainably, provide dignified exit pathways, while concentrating limited resources on institutions with transformation potential."

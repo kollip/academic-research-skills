@@ -1,4 +1,4 @@
-# CRediT Statement Template — 作者貢獻聲明模板
+# CRediT Statement Template
 
 ## Usage
 
@@ -8,7 +8,7 @@ Reference: `references/credit_authorship_guide.md`
 
 ---
 
-## Step 1: Author Information / 作者資訊
+## Step 1: Author Information
 
 | # | Author Name | Affiliation | ORCID | Corresponding Author? |
 |---|-------------|-------------|-------|:---------------------:|
@@ -21,26 +21,26 @@ Reference: `references/credit_authorship_guide.md`
 
 ---
 
-## Step 2: Contribution Matrix / 貢獻矩陣
+## Step 2: Contribution Matrix
 
 Fill each cell with: **Lead** / **Supporting** / **--** (not involved)
 
 | CRediT Role | Author 1 | Author 2 | Author 3 | Author 4 |
 |-------------|:--------:|:--------:|:--------:|:--------:|
-| 1. Conceptualization（概念化） | [ ] | [ ] | [ ] | [ ] |
-| 2. Data curation（資料管理） | [ ] | [ ] | [ ] | [ ] |
-| 3. Formal analysis（正式分析） | [ ] | [ ] | [ ] | [ ] |
-| 4. Funding acquisition（經費取得） | [ ] | [ ] | [ ] | [ ] |
-| 5. Investigation（調查研究） | [ ] | [ ] | [ ] | [ ] |
-| 6. Methodology（研究方法） | [ ] | [ ] | [ ] | [ ] |
-| 7. Project administration（計畫管理） | [ ] | [ ] | [ ] | [ ] |
-| 8. Resources（資源提供） | [ ] | [ ] | [ ] | [ ] |
-| 9. Software（軟體開發） | [ ] | [ ] | [ ] | [ ] |
-| 10. Supervision（指導監督） | [ ] | [ ] | [ ] | [ ] |
-| 11. Validation（驗證） | [ ] | [ ] | [ ] | [ ] |
-| 12. Visualization（視覺化） | [ ] | [ ] | [ ] | [ ] |
-| 13. Writing -- original draft（撰寫初稿） | [ ] | [ ] | [ ] | [ ] |
-| 14. Writing -- review & editing（審閱修訂） | [ ] | [ ] | [ ] | [ ] |
+| 1. Conceptualization | [ ] | [ ] | [ ] | [ ] |
+| 2. Data curation | [ ] | [ ] | [ ] | [ ] |
+| 3. Formal analysis | [ ] | [ ] | [ ] | [ ] |
+| 4. Funding acquisition | [ ] | [ ] | [ ] | [ ] |
+| 5. Investigation | [ ] | [ ] | [ ] | [ ] |
+| 6. Methodology | [ ] | [ ] | [ ] | [ ] |
+| 7. Project administration | [ ] | [ ] | [ ] | [ ] |
+| 8. Resources | [ ] | [ ] | [ ] | [ ] |
+| 9. Software | [ ] | [ ] | [ ] | [ ] |
+| 10. Supervision | [ ] | [ ] | [ ] | [ ] |
+| 11. Validation | [ ] | [ ] | [ ] | [ ] |
+| 12. Visualization | [ ] | [ ] | [ ] | [ ] |
+| 13. Writing -- original draft | [ ] | [ ] | [ ] | [ ] |
+| 14. Writing -- review & editing | [ ] | [ ] | [ ] | [ ] |
 
 ---
 
@@ -68,44 +68,47 @@ Wei-Ting Lin: Investigation, Validation, Writing – review & editing.
 
 ---
 
-## Step 4: Output — 中文 CRediT 聲明
+## Step 4: Output — Chinese CRediT Statement
 
 ```
-作者貢獻聲明：
-[作者 1 姓名]：[角色 1]、[角色 2]、[角色 3]。
-[作者 2 姓名]：[角色 1]、[角色 2]。
-[作者 3 姓名]：[角色 1]、[角色 2]、[角色 3]。
+Author Contribution Statement:
+[Author 1 Name]: [Role 1], [Role 2], [Role 3].
+[Author 2 Name]: [Role 1], [Role 2].
+[Author 3 Name]: [Role 1], [Role 2], [Role 3].
 ```
 
-### 範例（中文）
+### Example (Chinese)
 
 ```
-作者貢獻聲明：
-王宇辰：概念化、研究方法、經費取得、撰寫初稿、指導監督、計畫管理。
-陳美玲：資料管理、正式分析、軟體開發、視覺化、撰寫初稿、審閱修訂。
-林韋廷：調查研究、驗證、審閱修訂。
+Author Contribution Statement:
+Yu-Chen Wang: Conceptualization, Methodology, Funding acquisition,
+Writing -- original draft, Supervision, Project administration.
+Mei-Ling Chen: Data curation, Formal analysis, Software, Visualization,
+Writing -- original draft, Writing -- review & editing.
+Wei-Ting Lin: Investigation, Validation, Writing -- review & editing.
 ```
 
 ---
 
-## Step 5: Equal Contribution Statement (Optional) / 同等貢獻聲明
+## Step 5: Equal Contribution Statement (Optional)
 
 If applicable, add one of the following:
 
-**英文**：
+**English**:
 ```
 [Author 1 Name] and [Author 2 Name] contributed equally to this work and
 share first authorship.
 ```
 
-**中文**：
+**Chinese**:
 ```
-[作者 1 姓名]與[作者 2 姓名]對本研究之貢獻相同，共列第一作者。
+[Author 1 Name] and [Author 2 Name] contributed equally to this work and
+share first authorship.
 ```
 
 ---
 
-## Quality Checklist / 品質檢核
+## Quality Checklist
 
 | Check | Status |
 |-------|:------:|

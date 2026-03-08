@@ -1,59 +1,8 @@
 # Pipeline Status Dashboard Template
 
-本模板定義 Progress Dashboard 的輸出格式。根據使用者語言切換中文/英文版本。
+This template defines the output format for the Progress Dashboard. Switch between language versions based on user language.
 
 ---
-
-## 繁體中文版
-
-```
-+=========================================+
-|   Academic Pipeline Status              |
-+=========================================+
-| 主題：{topic}                            |
-+-----------------------------------------+
-
-  Stage 1 RESEARCH    [{status_icon}] {status_text}
-    {mode_line}
-    {outputs_line}
-
-  Stage 2 WRITE       [{status_icon}] {status_text}
-    {mode_line}
-    {outputs_line}
-
-  Stage 3 REVIEW      [{status_icon}] {status_text}
-    {mode_line}
-    {decision_line}
-
-  Stage 4 REVISE      [{status_icon}] {status_text}
-    {revision_round_line}
-    {addressed_line}
-
-  Stage 3' RE-REVIEW  [{status_icon}] {status_text}
-    {loop_count_line}
-
-  Stage 5 FINALIZE    [{status_icon}] {status_text}
-    {format_line}
-
-+-----------------------------------------+
-| 材料清單：                               |
-|   [{icon}] 研究問題摘要 (RQ Brief)       |
-|   [{icon}] 方法論藍圖                    |
-|   [{icon}] 文獻書目                      |
-|   [{icon}] 綜合分析報告                  |
-|   [{icon}] 論文草稿                      |
-|   [{icon}] 審查報告                      |
-|   [{icon}] 修訂路線圖                    |
-|   [{icon}] 修訂稿                        |
-|   [{icon}] 回覆審查者                    |
-|   [{icon}] 最終論文                      |
-+-----------------------------------------+
-| 修訂歷程：                               |
-|   {revision_history}                     |
-+-----------------------------------------+
-| 下一步：{next_step_suggestion}            |
-+=========================================+
-```
 
 ## English Version
 
@@ -108,96 +57,90 @@
 
 ---
 
-## 欄位定義
+## Field Definitions
 
 ### status_icon
 
-| 狀態 | Icon |
-|------|------|
+| Status | Icon |
+|--------|------|
 | completed | `v` |
 | in_progress | `..` |
-| pending | ` ` (空格) |
+| pending | ` ` (space) |
 | skipped | `--` |
 
 ### status_text
 
-| 狀態 | 中文 | English |
-|------|------|---------|
-| completed | 已完成 | Completed |
-| in_progress | 進行中 | In Progress |
-| pending | 待執行 | Pending |
-| skipped | 已跳過 | Skipped |
+| Status | Text |
+|--------|------|
+| completed | Completed |
+| in_progress | In Progress |
+| pending | Pending |
+| skipped | Skipped |
 
 ### mode_line
 
-格式：`Mode: {mode_name}`
-- 僅在 status 為 completed 或 in_progress 時顯示
-- 如果 mode 有切換（如 plan --> full），顯示完整路徑
+Format: `Mode: {mode_name}`
+- Only displayed when status is completed or in_progress
+- If mode switched (e.g., plan -> full), display the full path
 
 ### outputs_line
 
-格式：`Outputs: {output_1}, {output_2}, ...`
-- 僅在 status 為 completed 時顯示
-- 列出該 stage 的所有產出物
+Format: `Outputs: {output_1}, {output_2}, ...`
+- Only displayed when status is completed
+- List all deliverables for that stage
 
 ### decision_line
 
-格式：`Decision: {Accept/Minor Revision/Major Revision/Reject}`
-- 僅在 Stage 3 或 Stage 3' completed 時顯示
+Format: `Decision: {Accept/Minor Revision/Major Revision/Reject}`
+- Only displayed when Stage 3 or Stage 3' is completed
 
 ### revision_round_line
 
-格式：`Revision Round: {current}/{max}`
-- 僅在 Stage 4 in_progress 時顯示
+Format: `Revision Round: {current}/{max}`
+- Only displayed when Stage 4 is in_progress
 
 ### addressed_line
 
-格式：`Addressed: {count}/{total} required revisions`
-- 僅在 Stage 4 in_progress 時顯示
+Format: `Addressed: {count}/{total} required revisions`
+- Only displayed when Stage 4 is in_progress
 
 ### loop_count_line
 
-格式：`Loop: {count}/2`
-- 僅在 Stage 3' 時顯示
+Format: `Loop: {count}/2`
+- Only displayed for Stage 3'
 
 ### material icon
 
-| 狀態 | Icon |
-|------|------|
+| Status | Icon |
+|--------|------|
 | available | `v` |
-| missing | ` ` (空格) |
+| missing | ` ` (space) |
 
 ### revision_history
 
-每輪一行：
+One line per round:
 ```
 Round {n}: {decision} | {addressed}/{total} items addressed
   Pending: {pending_items_summary}
 ```
 
-如果沒有修訂歷史，顯示「（尚無修訂歷程）」或「(No revision history yet)」。
+If no revision history, display "(No revision history yet)".
 
 ### next_step_suggestion
 
-根據當前狀態自動產生的建議：
-- Stage 1 completed: 「建議進入 Stage 2 (WRITE)，使用 {recommended_mode} mode」
-- Stage 3 completed (Major): 「需要進入 Stage 4 (REVISE)，有 {N} 個必修項目」
-- Stage 4 completed: 「建議進入 Stage 3' (RE-REVIEW) 確認修訂品質」
-- Stage 3' completed (Accept): 「恭喜！進入 Stage 5 (FINALIZE) 產出最終版本」
-- Pipeline completed: 「Pipeline 完成！最終論文已就緒。」
+Auto-generated suggestion based on current state:
+- Stage 1 completed: "Recommend proceeding to Stage 2 (WRITE) using {recommended_mode} mode"
+- Stage 3 completed (Major): "Need to enter Stage 4 (REVISE), {N} required items"
+- Stage 4 completed: "Recommend proceeding to Stage 3' (RE-REVIEW) to confirm revision quality"
+- Stage 3' completed (Accept): "Congratulations! Proceed to Stage 5 (FINALIZE) to produce final version"
+- Pipeline completed: "Pipeline complete! Final paper is ready."
 
 ---
 
-## 簡化版（Stage 完成後自動附上）
+## Simplified Version (Auto-appended after stage completion)
 
-一行式進度條：
+One-line progress bar:
 
 ```
 Pipeline: [v]RESEARCH -> [v]WRITE -> [..]REVIEW -> [ ]REVISE -> [ ]FINALIZE
-```
-
-或中文版：
-
-```
-進度：[v]研究 -> [v]撰寫 -> [..]審查 -> [ ]修訂 -> [ ]完稿
 ```

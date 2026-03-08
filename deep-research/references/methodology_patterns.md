@@ -227,206 +227,206 @@ Quality Criteria:
 - Actionable recommendations
 ```
 
-## Pattern 8: Technology Requirements Analysis（技術需求分析）
+## Pattern 8: Technology Requirements Analysis
 
 ### When to Use
-- 評估新技術的可行性、需求分析、技術比較
-- 系統設計前的技術選型決策
-- 技術導入的風險與效益評估
-- 當研究問題涉及「該用什麼技術？」或「這個技術能解決問題嗎？」
+- Assessing feasibility, requirements analysis, and technology comparison for new technologies
+- Technology selection decisions before system design
+- Risk and benefit assessment of technology adoption
+- When research questions involve "Which technology should be used?" or "Can this technology solve the problem?"
 
 ### Design Template
 ```
 Research Question: What technology approach best addresses [need] given [constraints]?
 
 Protocol:
-1. 需求收集（Requirement Elicitation）
-   - 利害關係人訪談
-   - 現有系統/流程分析
-   - 功能性需求 vs 非功能性需求（效能、安全、可擴充性）
-2. 技術掃描（Technology Scanning）
-   - 候選技術盤點（至少 3 個方案）
-   - 技術成熟度評估（TRL, Technology Readiness Level）
-   - 社群活躍度、文件完整度、長期維護風險
-3. 可行性評估（Feasibility Assessment）
-   - 技術可行性：能不能做？
-   - 經濟可行性：值不值得做？
-   - 組織可行性：團隊有能力做嗎？
-   - 時程可行性：時間夠嗎？
-4. 原型/概念驗證（PoC, Proof of Concept）
-   - 針對關鍵技術風險建構最小驗證
-   - 定義成功標準（效能門檻、整合測試通過率）
-   - 記錄遇到的問題和解決方案
-5. 需求規格（Requirement Specification）
-   - 產出正式需求文件
-   - 定義驗收標準
-   - 建立可追溯性矩陣（需求 ↔ 設計 ↔ 測試）
+1. Requirement Elicitation
+   - Stakeholder interviews
+   - Existing system/process analysis
+   - Functional requirements vs non-functional requirements (performance, security, scalability)
+2. Technology Scanning
+   - Inventory of candidate technologies (at least 3 options)
+   - Technology Readiness Level (TRL) assessment
+   - Community activity, documentation completeness, long-term maintenance risk
+3. Feasibility Assessment
+   - Technical feasibility: Can it be done?
+   - Economic feasibility: Is it worth doing?
+   - Organizational feasibility: Does the team have the capability?
+   - Schedule feasibility: Is there enough time?
+4. Proof of Concept (PoC)
+   - Construct minimal verification targeting key technical risks
+   - Define success criteria (performance thresholds, integration test pass rates)
+   - Document encountered problems and solutions
+5. Requirement Specification
+   - Produce formal requirements document
+   - Define acceptance criteria
+   - Establish traceability matrix (requirements ↔ design ↔ testing)
 
 Quality Criteria:
-- 需求完整性：所有利害關係人的需求都被收集
-- 可追溯性：每個需求都能追溯到來源，每個設計決策都有對應需求
-- 技術可行性驗證：關鍵技術風險已透過 PoC 驗證
-- 方案比較公平：使用一致的評估框架比較不同技術方案
+- Requirements completeness: All stakeholder requirements have been collected
+- Traceability: Each requirement is traceable to its source; each design decision maps to a corresponding requirement
+- Technical feasibility verification: Key technical risks have been validated through PoC
+- Fair comparison of options: Consistent evaluation framework used to compare different technology options
 ```
 
 ### Technology Comparison Matrix Template
 ```
-| 評估維度       | 方案 A | 方案 B | 方案 C | 權重 |
-|---------------|--------|--------|--------|------|
-| 功能符合度     |        |        |        | 30%  |
-| 技術成熟度     |        |        |        | 20%  |
-| 導入成本       |        |        |        | 15%  |
-| 維護成本       |        |        |        | 10%  |
-| 學習曲線       |        |        |        | 10%  |
-| 擴充性         |        |        |        | 10%  |
-| 社群/生態系    |        |        |        | 5%   |
-| 加權總分       |        |        |        | 100% |
+| Evaluation Dimension | Option A | Option B | Option C | Weight |
+|---------------------|----------|----------|----------|--------|
+| Functional Fit      |          |          |          | 30%    |
+| Technology Maturity  |          |          |          | 20%    |
+| Adoption Cost        |          |          |          | 15%    |
+| Maintenance Cost     |          |          |          | 10%    |
+| Learning Curve       |          |          |          | 10%    |
+| Scalability          |          |          |          | 10%    |
+| Community/Ecosystem  |          |          |          | 5%     |
+| Weighted Total       |          |          |          | 100%   |
 ```
 
-## Pattern 9: Legal Case Analysis（法律案例分析）
+## Pattern 9: Legal Case Analysis
 
 ### When to Use
-- 法規政策分析、判例研究、法律文本詮釋
-- 分析特定法律問題的現行規範與實務見解
-- 比較不同法域（jurisdictions）的法律處理方式
-- 當研究問題涉及法規解釋、權利義務分析、政策法律面分析時
+- Legal and regulatory policy analysis, case law research, legal text interpretation
+- Analyzing current regulations and judicial opinions on specific legal issues
+- Comparing legal approaches across different jurisdictions
+- When research questions involve statutory interpretation, rights and obligations analysis, or legal aspects of policy analysis
 
-### 與 Pattern 3（Policy Analysis）的區別
-- **Policy Analysis**：偏重政策效果評估，關心「這個政策有沒有效？」「有沒有更好的政策選項？」
-- **Legal Case Analysis**：偏重法律文本和判例分析，關心「法律怎麼規定？」「法院怎麼解釋？」「有沒有法律漏洞？」
+### Distinction from Pattern 3 (Policy Analysis)
+- **Policy Analysis**: Focuses on evaluating policy effectiveness — "Is this policy working?" "Are there better policy options?"
+- **Legal Case Analysis**: Focuses on analyzing legal texts and case law — "What does the law say?" "How do courts interpret it?" "Are there legal loopholes?"
 
 ### Design Template
 ```
 Research Question: How does the law address [issue] and what are the implications for [context]?
 
 Protocol:
-1. 法律問題界定（Issue Identification）
-   - 將研究問題轉化為具體的法律爭點
-   - 區分事實問題 vs 法律問題
-   - 界定涉及的法律領域（公法/私法/國際法）
-2. 相關法規盤點（Legal Framework Mapping）
-   - 憲法層級規範
-   - 法律/命令/行政規則層級
-   - 國際公約/軟法（soft law）
-   - 立法沿革與修法理由
-3. 判例檢索與分析（Case Law Analysis）
-   - 系統性判例檢索（法院層級、時間範圍、關鍵字）
-   - 判決要旨萃取
-   - 判例演進趨勢分析
-   - 識別主流見解 vs 少數見解
-4. 法理論證（Legal Reasoning）
-   - 文義解釋、體系解釋、目的解釋、歷史解釋
-   - 比較法分析（其他法域的處理方式）
-   - 學說見解整理與評析
-   - 利益衡量與價值判斷
-5. 建議（Recommendations）
-   - 現行法的解釋建議
-   - 修法建議（如有必要）
-   - 實務操作建議
-   - 風險提示
+1. Issue Identification
+   - Translate research question into specific legal issues
+   - Distinguish questions of fact vs questions of law
+   - Define the relevant legal domains (public law / private law / international law)
+2. Legal Framework Mapping
+   - Constitutional-level provisions
+   - Statutory / regulatory / administrative rule levels
+   - International conventions / soft law
+   - Legislative history and rationale for amendments
+3. Case Law Analysis
+   - Systematic case law search (court level, time range, keywords)
+   - Extract key holdings from decisions
+   - Analyze trends in case law evolution
+   - Identify majority opinions vs dissenting opinions
+4. Legal Reasoning
+   - Textual interpretation, systematic interpretation, purposive interpretation, historical interpretation
+   - Comparative law analysis (how other jurisdictions handle the issue)
+   - Review and evaluate scholarly opinions
+   - Interest balancing and value judgments
+5. Recommendations
+   - Interpretive recommendations under existing law
+   - Legislative reform recommendations (if necessary)
+   - Practical implementation recommendations
+   - Risk warnings
 
 Quality Criteria:
-- 法源正確性：引用的法規、判例必須是現行有效版本
-- 邏輯一致性：法理論證過程不能自相矛盾
-- 論證完整性：所有可能的解釋路徑都被考慮
-- 比較法嚴謹性：比較不同法域時要注意法制背景差異
+- Legal source accuracy: Cited regulations and cases must be current and effective versions
+- Logical consistency: Legal reasoning process must not be self-contradictory
+- Argumentation completeness: All possible interpretive paths have been considered
+- Comparative law rigor: When comparing jurisdictions, differences in legal system backgrounds must be noted
 ```
 
 ### Legal Analysis Structure Template
 ```
-一、法律問題
-   [具體法律爭點]
+I. Legal Issues
+   [Specific legal issues in dispute]
 
-二、相關規範
-   1. 法律層級：
-   2. 命令層級：
-   3. 國際規範：
+II. Relevant Provisions
+   1. Statutory level:
+   2. Regulatory level:
+   3. International norms:
 
-三、實務見解
-   1. 主流見解：[判決字號] [要旨]
-   2. 少數見解：[判決字號] [要旨]
-   3. 趨勢：
+III. Judicial Opinions
+   1. Majority opinion: [Case number] [Key holding]
+   2. Dissenting opinion: [Case number] [Key holding]
+   3. Trends:
 
-四、學說見解
-   1. 甲說：
-   2. 乙說：
-   3. 本文見解：
+IV. Scholarly Opinions
+   1. View A:
+   2. View B:
+   3. Author's view:
 
-五、比較法
-   [其他法域處理方式]
+V. Comparative Law
+   [How other jurisdictions handle the issue]
 
-六、結論與建議
+VI. Conclusions and Recommendations
 ```
 
-## Pattern 10: Creative/Practice-Based Research（創意/實踐導向研究）
+## Pattern 10: Creative/Practice-Based Research
 
 ### When to Use
-- 藝術研究（art-based research）：透過藝術創作探究知識
-- 設計研究（design research / research through design）：透過設計過程產生知識
-- 實踐導向研究（practice-based / practice-led research）：實踐本身就是研究方法
-- 當研究問題涉及創作實踐、設計思維、藝術探究時
+- Art-based research: Generating knowledge through artistic creation
+- Design research / research through design: Generating knowledge through the design process
+- Practice-based / practice-led research: Practice itself is the research method
+- When research questions involve creative practice, design thinking, or artistic inquiry
 
-### 與傳統學術研究的差異
-- **成果形式**：可以是作品+論文（而非只有論文）
-- **知識類型**：重視實踐知識（tacit knowledge）、身體知識（embodied knowledge）
-- **過程即方法**：創作/設計過程本身就是研究方法，不只是研究的客體
-- **主觀性**：研究者的主觀經驗是合法的知識來源，但需要系統性反思
+### Differences from Traditional Academic Research
+- **Output format**: Can be a creative work + dissertation (not just a dissertation)
+- **Knowledge type**: Values practical knowledge (tacit knowledge) and embodied knowledge
+- **Process as method**: The creative/design process itself is the research method, not merely the object of study
+- **Subjectivity**: The researcher's subjective experience is a legitimate source of knowledge, but requires systematic reflection
 
 ### Design Template
 ```
 Research Question: What knowledge emerges through the practice of [creative activity] in [context]?
 
 Protocol:
-1. 實踐反思（Reflective Practice）
-   - 界定研究問題與創作意圖
-   - 建立反思框架（如 Schön 的 reflection-in-action / reflection-on-action）
-   - 確認研究者的定位（insider / practitioner-researcher）
-2. 創作過程紀錄（Process Documentation）
-   - 工作日誌（studio journal / design diary）
-   - 過程影像/錄音紀錄
-   - 迭代版本紀錄（sketches, drafts, prototypes）
-   - 決策點紀錄：為什麼這樣做而不是那樣做？
-3. 脈絡化分析（Contextual Analysis）
-   - 將創作過程放入學科/文化/歷史脈絡
-   - 與既有作品/理論對話
-   - 識別創作中浮現的主題和洞察
-4. 知識萃取（Knowledge Articulation）
-   - 將隱性知識（tacit knowledge）轉化為可傳達的形式
-   - 建立從實踐到概念的橋樑
-   - 提煉可轉移的原則或框架
-5. 成果展示（Presentation of Findings）
-   - 作品展示（展覽、表演、原型展示）
-   - 書面論述（exegesis / critical commentary）
-   - 整合作品與論述的關聯性
+1. Reflective Practice
+   - Define research question and creative intention
+   - Establish reflective framework (e.g., Schön's reflection-in-action / reflection-on-action)
+   - Confirm researcher positioning (insider / practitioner-researcher)
+2. Process Documentation
+   - Studio journal / design diary
+   - Process video/audio documentation
+   - Iteration version records (sketches, drafts, prototypes)
+   - Decision point documentation: Why this approach and not another?
+3. Contextual Analysis
+   - Situate the creative process within disciplinary/cultural/historical context
+   - Engage in dialogue with existing works/theories
+   - Identify themes and insights emerging from the creative process
+4. Knowledge Articulation
+   - Transform tacit knowledge into communicable forms
+   - Build bridges from practice to concepts
+   - Distill transferable principles or frameworks
+5. Presentation of Findings
+   - Work presentation (exhibition, performance, prototype demonstration)
+   - Written discourse (exegesis / critical commentary)
+   - Integrate the relationship between work and discourse
 
 Quality Criteria:
-- 反思深度：不只是描述「做了什麼」，而是分析「為什麼這樣做」以及「學到了什麼」
-- 創作過程透明性：讀者可以理解從問題到作品的完整路徑
-- 知識貢獻明確性：清楚說明這個研究對知識的貢獻是什麼
-- 脈絡化品質：作品不是孤立存在，而是與學科對話
-- 方法論反身性：研究者對自身角色和偏見有所覺察
+- Depth of reflection: Not just describing "what was done," but analyzing "why it was done this way" and "what was learned"
+- Creative process transparency: Readers can understand the complete path from problem to work
+- Clarity of knowledge contribution: Clearly state what this research contributes to knowledge
+- Contextualization quality: The work does not exist in isolation but engages with the discipline
+- Methodological reflexivity: The researcher is aware of their own role and biases
 ```
 
 ### Practice-Based Research Documentation Template
 ```
-階段一：定位
-- 研究問題：
-- 創作意圖：
-- 研究者定位（practitioner / observer / participant）：
-- 理論框架：
+Phase 1: Positioning
+- Research question:
+- Creative intention:
+- Researcher positioning (practitioner / observer / participant):
+- Theoretical framework:
 
-階段二：過程
-| 迭代 | 日期 | 行動 | 反思 | 轉折點 |
-|------|------|------|------|--------|
-| v1   |      |      |      |        |
-| v2   |      |      |      |        |
-| v3   |      |      |      |        |
+Phase 2: Process
+| Iteration | Date | Action | Reflection | Turning Point |
+|-----------|------|--------|------------|---------------|
+| v1        |      |        |            |               |
+| v2        |      |        |            |               |
+| v3        |      |        |            |               |
 
-階段三：成果
-- 作品描述：
-- 知識貢獻：
-- 可轉移的原則/框架：
-- 對後續實踐/研究的建議：
+Phase 3: Outcomes
+- Work description:
+- Knowledge contribution:
+- Transferable principles/frameworks:
+- Recommendations for future practice/research:
 ```
 
 ## Choosing the Right Pattern
@@ -445,18 +445,18 @@ What type of question?
 └── "What knowledge emerges from practice?" → Creative/Practice-Based Research
 
 More nuanced decision:
-├── 技術評估相關
-│   ├── 比較不同技術方案 → Pattern 8 (Technology Requirements Analysis)
-│   └── 比較不同組織的技術採用 → Pattern 2 (Comparative Case Study)
-├── 法律/政策相關
-│   ├── 法律文本怎麼規定、判例怎麼解釋 → Pattern 9 (Legal Case Analysis)
-│   └── 政策有沒有效、該怎麼改 → Pattern 3 (Policy Analysis)
-├── 創作/設計相關
-│   ├── 透過創作過程產生知識 → Pattern 10 (Creative/Practice-Based Research)
-│   ├── 理解創作者的經驗 → Pattern 6 (Exploratory Research)
-│   └── 分析創作文本/作品 → Pattern 5 (Content Analysis)
-└── 不確定
-    ├── 問題很新、文獻很少 → Pattern 6 (Exploratory Research)
-    ├── 問題複雜、需要多種數據 → Pattern 4 (Mixed Methods)
-    └── 先看看別人怎麼做 → Pattern 1 (Systematic Literature Review)
+├── Technology assessment related
+│   ├── Comparing different technology options → Pattern 8 (Technology Requirements Analysis)
+│   └── Comparing technology adoption across organizations → Pattern 2 (Comparative Case Study)
+├── Law/policy related
+│   ├── What legal texts prescribe and how courts interpret them → Pattern 9 (Legal Case Analysis)
+│   └── Whether a policy is effective and how to improve it → Pattern 3 (Policy Analysis)
+├── Creative/design related
+│   ├── Generating knowledge through the creative process → Pattern 10 (Creative/Practice-Based Research)
+│   ├── Understanding the experience of creators → Pattern 6 (Exploratory Research)
+│   └── Analyzing creative texts/works → Pattern 5 (Content Analysis)
+└── Uncertain
+    ├── New topic with scarce literature → Pattern 6 (Exploratory Research)
+    ├── Complex problem requiring multiple data types → Pattern 4 (Mixed Methods)
+    └── First see how others have approached it → Pattern 1 (Systematic Literature Review)
 ```

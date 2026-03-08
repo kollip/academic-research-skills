@@ -1,4 +1,4 @@
-# Abstract Writing Guide — 摘要撰寫指南
+# Abstract Writing Guide
 
 Used by `abstract_bilingual_agent`.
 
@@ -85,47 +85,47 @@ State the significance, practical implications, or recommendations.
 >
 > **Keywords**: higher education, enrollment decline, private universities, institutional strategy, Taiwan
 
-## 繁體中文摘要指南
+## Traditional Chinese Abstract Guidelines
 
-### 字數
-- 標準：300-500 字
-- 研討會：300-800 字
-- 學位論文：500-1,000 字
+### Word Count
+- Standard: 300-500 characters
+- Conference: 300-800 characters
+- Dissertation: 500-1,000 characters
 
-### 結構（五段式）
+### Structure (5-Component Model)
 
-#### 成分一：研究背景（1-2 句）
-**模式**：
-- 「隨著…，…已成為…的重要議題。」
-- 「在…的背景下，…面臨…的挑戰。」
-- 「儘管…已獲得廣泛關注，但…仍缺乏系統性研究。」
+#### Component 1: Research Background (1-2 sentences)
+**Patterns**:
+- "As... has become an important issue for..."
+- "In the context of..., ... faces the challenge of..."
+- "Although... has received widespread attention, ... still lacks systematic research."
 
-#### 成分二：研究目的（1 句）
-**模式**：
-- 「本研究旨在探討…。」
-- 「本文以…為對象，分析…之影響。」
-- 「本研究目的在於建構…之架構。」
+#### Component 2: Research Purpose (1 sentence)
+**Patterns**:
+- "This study aims to explore..."
+- "This paper takes... as subjects and analyzes the impact of..."
+- "The purpose of this study is to construct a framework for..."
 
-#### 成分三：研究方法（1-2 句）
-**模式**：
-- 「本研究採用…研究法，以…為研究對象，透過…蒐集資料。」
-- 「運用…分析…資料。」
+#### Component 3: Research Method (1-2 sentences)
+**Patterns**:
+- "This study employs... research method, with... as subjects, collecting data through..."
+- "Using... to analyze... data."
 
-#### 成分四：研究發現（2-3 句）
-**模式**：
-- 「研究結果發現：（一）…；（二）…；（三）…。」
-- 「分析結果顯示，…。此外，…。」
+#### Component 4: Research Findings (2-3 sentences)
+**Patterns**:
+- "The results found: (1)...; (2)...; (3)..."
+- "The analysis results show that... Furthermore,..."
 
-#### 成分五：研究意義（1-2 句）
-**模式**：
-- 「本研究對於…具有理論與實務上的貢獻。」
-- 「研究結果可供…參考，並對…提出具體建議。」
+#### Component 5: Research Significance (1-2 sentences)
+**Patterns**:
+- "This study has both theoretical and practical contributions to..."
+- "The results can serve as a reference for... and provide specific recommendations for..."
 
-### 範例（中文，高教領域）
+### Example (Chinese, Higher Education Field)
 
-> 在少子化趨勢下，台灣私立大學校院面臨招生困境，然而現有研究對於機構回應策略的了解仍然有限。本研究旨在探討 2018 年至 2023 年間招生減少超過兩成之 12 所私立大學的策略調適模式。研究採用多重個案研究法，分析學校發展計畫、招生數據，並進行 36 位行政主管之半結構式訪談。研究發現三種主要調適策略：系所整併（5 校）、利基特色化（4 校）以及合併推動（3 校）。其中，採取利基特色化策略之學校呈現最高的招生回復率（平均 12.3%）。研究同時發現，調適時機是成功關鍵——在招生下滑兩年內啟動策略調整之學校，其成效顯著優於延遲行動者。本研究結果建議私立大學應建立前瞻性監控機制，並將利基特色化作為主要之永續經營策略。
+> Amid the trend of declining birth rates, Taiwan's private universities face enrollment difficulties, yet existing research on institutional response strategies remains limited. This study aims to explore the strategic adaptation patterns of 12 private universities that experienced enrollment declines exceeding 20% between 2018 and 2023. The study employs a multiple case study design, analyzing institutional development plans, enrollment data, and conducting 36 semi-structured interviews with administrators. Three primary adaptation strategies were identified: program consolidation (5 institutions), niche specialization (4 institutions), and merger pursuit (3 institutions). Among these, institutions adopting niche specialization demonstrated the highest enrollment recovery rates (mean = 12.3%). The study also found that timing of adaptation is critical to success -- institutions that initiated strategic adjustments within two years of enrollment decline showed significantly better outcomes than late movers. The results suggest that private universities should establish proactive monitoring mechanisms and adopt niche specialization as a primary sustainability strategy.
 >
-> **關鍵詞**：高等教育、招生下滑、私立大學、機構策略、台灣
+> **Keywords**: higher education, enrollment decline, private university, institutional strategy, Taiwan
 
 ## Keywords Selection
 
@@ -141,17 +141,17 @@ State the significance, practical implications, or recommendations.
 - Use established terms (check journal's keyword list if available)
 - 5-7 keywords total
 
-### 中文關鍵詞
-1. **核心概念** — 主要變項或構念（2-3 個）
-2. **研究脈絡** — 地域、機構或時間（1-2 個）
-3. **研究方法** — 如具特色（0-1 個）
-4. **學科領域** — 學科或子領域（1 個）
+### Chinese Keywords
+1. **Core concepts** — main variables or constructs (2-3)
+2. **Research context** — geographical, institutional, or temporal (1-2)
+3. **Research method** — if distinctive (0-1)
+4. **Academic field** — discipline or sub-field (1)
 
-**規則**：
-- 使用正式學術用語
-- 避免與標題完全重複
-- 可參考國家圖書館中文主題詞表
-- 5-7 個關鍵詞
+**Rules**:
+- Use formal academic terminology
+- Avoid completely duplicating the title
+- May reference the National Central Library Chinese Subject Headings
+- 5-7 keywords
 
 ## Bilingual Abstract Quality Checklist
 
@@ -159,7 +159,7 @@ State the significance, practical implications, or recommendations.
 |-------|---|
 | Both abstracts cover all 5 components | |
 | English: 150-300 words | |
-| 中文：300-500 字 | |
+| Chinese: 300-500 characters | |
 | Abstracts are independently written (not translated) | |
 | Key findings match between languages | |
 | Quantitative data consistent between versions | |

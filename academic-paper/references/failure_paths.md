@@ -1,284 +1,286 @@
-# Failure Paths — 學術論文撰寫失敗路徑圖
+# Failure Paths — Academic Paper Writing Failure Path Map
 
-本文件記錄 academic-paper skill 在各階段可能遭遇的失敗情境、觸發條件及處理策略。所有 agent 在偵測到失敗情境時應參照本指南。
+This document records the failure scenarios that the academic-paper skill may encounter at each stage, their trigger conditions, and handling strategies. All agents should refer to this guide when they detect a failure scenario.
 
 ---
 
-## 失敗路徑總覽
+## Failure Path Overview
 
-| # | 失敗情境 | 觸發條件 | 嚴重度 | 處理策略 |
+| # | Failure Scenario | Trigger Condition | Severity | Handling Strategy |
 |---|---------|---------|--------|---------|
-| F1 | 研究基礎不足 | Plan mode Step 0 發現無 RQ / 無數據 | High | 建議先跑 `deep-research` |
-| F2 | 論文結構選錯 | structure_architect 發現 RQ 與結構不匹配 | Medium | 退回 Phase 2，建議替代結構 |
-| F3 | 字數嚴重超標 | Draft 超過目標字數 30% 以上 | Medium | 識別可刪減段落，建議精簡 |
-| F4 | 字數嚴重不足 | Draft 低於目標字數 30% 以上 | Medium | 識別需擴充段落，建議補充 |
-| F5 | 引用格式全錯 | citation_compliance 發現 > 50% 格式錯誤 | High | 全面重跑 citation phase |
-| F6 | 雙語摘要品質差 | 中英文摘要邏輯不一致 | Medium | abstract_bilingual 重跑 |
-| F7 | Peer Review 拒稿 | peer_reviewer 給出 Reject 判決 | High | 分析拒稿原因，建議重大修訂或重構 |
-| F8 | Plan mode 不收斂 | > 15 輪對話未完成所有章節 | Medium | 建議跳到 outline-only mode |
-| F9 | Handoff 材料不完整 | 來自 deep-research 但缺關鍵材料 | Low | 列出缺失項，建議補充或重跑 |
-| F10 | 使用者中途放棄 | 明確表示不想繼續 | Low | 儲存已完成的 Chapter Plan |
-| F11 | Desk-Reject 退稿 | 期刊編輯未送審直接退回 | High | 分類退稿原因，選擇復原策略 |
-| F12 | 研討會論文轉期刊失敗 | 研討會論文擴展為期刊論文遭拒 | Medium | 確保 30-50% 新內容 + 正確引用 |
+| F1 | Insufficient research foundation | Plan mode Step 0 finds no RQ / no data | High | Recommend running `deep-research` first |
+| F2 | Wrong paper structure selected | structure_architect finds RQ-structure mismatch | Medium | Return to Phase 2, suggest alternative structures |
+| F3 | Severely over word count | Draft exceeds target word count by 30% or more | Medium | Identify sections to cut, suggest condensing |
+| F4 | Severely under word count | Draft is 30% or more below target word count | Medium | Identify sections to expand, suggest additions |
+| F5 | Citation format entirely wrong | citation_compliance finds > 50% format errors | High | Completely re-run citation phase |
+| F6 | Poor bilingual abstract quality | Chinese and English abstracts have inconsistent logic | Medium | Re-run abstract_bilingual |
+| F7 | Peer review rejection | peer_reviewer issues a Reject verdict | High | Analyze rejection reasons, recommend major revision or restructuring |
+| F8 | Plan mode does not converge | > 15 rounds of dialogue without completing all chapters | Medium | Suggest switching to outline-only mode |
+| F9 | Incomplete handoff materials | From deep-research but missing key materials | Low | List missing items, suggest supplementing or re-running |
+| F10 | User abandons midway | Explicitly states unwillingness to continue | Low | Save completed Chapter Plan |
+| F11 | Desk-reject | Journal editor rejects without sending to reviewers | High | Classify rejection cause, select recovery strategy |
+| F12 | Conference-to-journal conversion failure | Conference paper expansion to journal article rejected | Medium | Ensure 30-50% new content + proper citation |
 
 ---
 
-## 詳細處理策略
+## Detailed Handling Strategies
 
-### F1: 研究基礎不足
+### F1: Insufficient Research Foundation
 
-**觸發時機**：Plan mode 的 Step 0（Research Readiness Check）或 Full mode 的 Phase 0
+**Trigger Timing**: Plan mode Step 0 (Research Readiness Check) or Full mode Phase 0
 
-**偵測指標**：
-- 使用者無法用一句話描述研究問題
-- 沒有任何文獻基礎
-- 對研究方法沒有概念
-- 主題過於廣泛且無法聚焦
+**Detection Indicators**:
+- User cannot describe their research question in one sentence
+- No literature foundation
+- No concept of research methods
+- Topic is too broad and cannot be focused
 
-**處理流程**：
+**Handling Process**:
 ```
-1. 肯定使用者的研究興趣
-2. 具體說明目前缺少什麼
-3. 建議使用 deep-research（socratic mode）
-4. 說明 deep-research 完成後可以回來繼續
-5. 如果使用者堅持繼續，切換為 outline-only mode（低風險）
-```
-
-**回應範本**：
-```
-你的研究主題很有趣，但我注意到目前還缺少明確的研究問題和文獻基礎。
-
-建議你先使用 deep-research 工具來：
-1. 系統性地搜尋和整理相關文獻
-2. 聚焦出可研究的問題
-3. 初步了解可能的研究方法
-
-完成後帶著材料回來，我們就能更有效率地寫出高品質的論文。
+1. Affirm the user's research interest
+2. Specifically explain what is currently missing
+3. Recommend using deep-research (socratic mode)
+4. Explain that they can come back to continue after deep-research is completed
+5. If the user insists on continuing, switch to outline-only mode (low risk)
 ```
 
----
-
-### F2: 論文結構選錯
-
-**觸發時機**：Phase 2（structure_architect_agent）
-
-**偵測指標**：
-- RQ 是因果型問題但選了 Literature Review 結構
-- 沒有數據卻選了 IMRaD
-- 主題適合 Case Study 但選了 Policy Brief
-- 字數目標與結構不匹配（如 3000 字 IMRaD）
-
-**處理流程**：
+**Response Template**:
 ```
-1. 指出 RQ 和結構的不匹配之處
-2. 解釋為什麼不匹配
-3. 建議 1-2 個替代結構
-4. 說明替代結構如何更好地回答 RQ
-5. 退回 Phase 2 讓使用者重新選擇
+Your research topic is very interesting, but I notice that a clear research question
+and literature foundation are still missing.
+
+I recommend you first use the deep-research tool to:
+1. Systematically search and organize relevant literature
+2. Focus on a researchable question
+3. Gain a preliminary understanding of possible research methods
+
+Once completed, bring the materials back and we can produce a high-quality paper
+more efficiently.
 ```
 
 ---
 
-### F3: 字數嚴重超標
+### F2: Wrong Paper Structure Selected
 
-**觸發時機**：Phase 4（draft_writer_agent 完成後）
+**Trigger Timing**: Phase 2 (structure_architect_agent)
 
-**偵測指標**：
-- 實際字數 > 目標字數 x 1.3
+**Detection Indicators**:
+- RQ is a causal question but a Literature Review structure was selected
+- No data but IMRaD was selected
+- Topic suits a Case Study but Policy Brief was selected
+- Word count target and structure are mismatched (e.g., 3000-word IMRaD)
 
-**處理流程**：
+**Handling Process**:
 ```
-1. 列出每個章節的實際字數 vs 目標字數
-2. 識別超標最嚴重的章節
-3. 建議刪減策略：
-   a. 合併重複論點
-   b. 精簡文獻回顧（保留核心文獻）
-   c. 移除過度詳細的方法描述
-   d. 壓縮 Discussion 中重複的文獻對話
-4. 不主動刪減，讓使用者決定
-```
-
----
-
-### F4: 字數嚴重不足
-
-**觸發時機**：Phase 4（draft_writer_agent 完成後）
-
-**偵測指標**：
-- 實際字數 < 目標字數 x 0.7
-
-**處理流程**：
-```
-1. 列出每個章節的實際字數 vs 目標字數
-2. 識別不足最嚴重的章節
-3. 建議擴充策略：
-   a. 增加文獻回顧的深度和廣度
-   b. 補充更多證據和範例
-   c. 擴展 Discussion（更多文獻對話）
-   d. 增加方法論的細節描述
-4. 提供具體的擴充方向
+1. Point out the mismatch between RQ and structure
+2. Explain why they are mismatched
+3. Suggest 1-2 alternative structures
+4. Explain how the alternative structures better answer the RQ
+5. Return to Phase 2 to let the user re-select
 ```
 
 ---
 
-### F5: 引用格式全錯
+### F3: Severely Over Word Count
 
-**觸發時機**：Phase 5a（citation_compliance_agent）
+**Trigger Timing**: Phase 4 (after draft_writer_agent completes)
 
-**偵測指標**：
-- 引用格式錯誤率 > 50%
-- 系統性錯誤（如全部缺 DOI、全部用錯格式）
+**Detection Indicators**:
+- Actual word count > target word count x 1.3
 
-**處理流程**：
+**Handling Process**:
 ```
-1. 分析錯誤模式（系統性 vs 零散）
-2. 如果是系統性錯誤：
-   a. 識別根本原因（使用者可能選錯了引用格式）
-   b. 確認正確的引用格式
-   c. 全面重跑 citation phase
-3. 如果是零散錯誤：
-   a. 逐一修正
-   b. 產出修正報告
-```
-
----
-
-### F6: 雙語摘要品質差
-
-**觸發時機**：Phase 5b（abstract_bilingual_agent）
-
-**偵測指標**：
-- 中英文摘要涵蓋的重點不一致
-- 某一語言的摘要遺漏了重要發現
-- 關鍵詞中英文不對應
-- 字數嚴重偏離標準
-
-**處理流程**：
-```
-1. 比對中英文摘要的結構和涵蓋面
-2. 列出不一致之處
-3. 以論文實際內容為基準重寫
-4. 確保兩個版本獨立撰寫但涵蓋相同重點
+1. List actual word count vs. target word count for each chapter
+2. Identify the most over-count chapters
+3. Suggest reduction strategies:
+   a. Merge duplicate arguments
+   b. Condense the literature review (keep core literature)
+   c. Remove overly detailed method descriptions
+   d. Compress repeated literature dialogue in Discussion
+4. Do not proactively delete; let the user decide
 ```
 
 ---
 
-### F7: Peer Review 拒稿
+### F4: Severely Under Word Count
 
-**觸發時機**：Phase 6（peer_reviewer_agent 給出 Reject）
+**Trigger Timing**: Phase 4 (after draft_writer_agent completes)
 
-**偵測指標**：
-- 五維度評分中有 2 項以上低於 60 分
-- 存在致命缺陷（邏輯斷裂、核心證據缺失、方法論嚴重瑕疵）
+**Detection Indicators**:
+- Actual word count < target word count x 0.7
 
-**處理流程**：
+**Handling Process**:
 ```
-1. 列出所有被標記為 Critical 的問題
-2. 分類問題性質：
-   a. 可修復（寫作、格式、小邏輯問題） → 建議 Major Revision
-   b. 結構性問題（論點架構需重組） → 退回 Phase 3 重構
-   c. 根本性問題（RQ 不可行、數據不足） → 退回 Phase 0 重新評估
-3. 產出修訂路線圖
-4. 使用者確認後執行修訂
-```
-
-**注意**：2 輪修訂仍為 Reject 時，建議使用者：
-- 諮詢領域專家
-- 重新思考研究設計
-- 考慮更換目標期刊（降低要求）
-
----
-
-### F8: Plan Mode 不收斂
-
-**觸發時機**：Plan mode 對話超過 15 輪
-
-**偵測指標**：
-- 使用者反覆修改同一章節的方向
-- 無法做出明確決定
-- 討論偏離論文主題
-
-**處理流程**：
-```
-1. 暫停並歸納目前已確定的內容
-2. 列出已完成和未完成的章節
-3. 提供兩個選項：
-   a. 跳到 outline-only mode（直接產出大綱）
-   b. 繼續對話（但縮小每次討論範圍）
-4. 儲存已完成的 Chapter Plan
+1. List actual word count vs. target word count for each chapter
+2. Identify the most deficient chapters
+3. Suggest expansion strategies:
+   a. Increase the depth and breadth of the literature review
+   b. Add more evidence and examples
+   c. Expand Discussion (more literature dialogue)
+   d. Add more detail to methodology descriptions
+4. Provide specific expansion directions
 ```
 
 ---
 
-### F9: Handoff 材料不完整
+### F5: Citation Format Entirely Wrong
 
-**觸發時機**：intake_agent 偵測到 deep-research 材料但不完整
+**Trigger Timing**: Phase 5a (citation_compliance_agent)
 
-**偵測指標**：
-- 有 RQ 但缺 Annotated Bibliography
-- 有 Bibliography 但缺 Synthesis Report
-- 有 INSIGHT Collection 但部分 INSIGHT 不完整
+**Detection Indicators**:
+- Citation format error rate > 50%
+- Systematic errors (e.g., all missing DOIs, all using wrong format)
 
-**處理流程**：
+**Handling Process**:
 ```
-1. 列出已收到和缺失的材料
-2. 評估缺失材料的影響：
-   a. 缺 Bibliography → 需要 Phase 1（literature_strategist）
-   b. 缺 Synthesis → 可以繼續，Phase 3 額外處理
-   c. 缺 Methodology Blueprint → 需要 Phase 0 補問
-3. 建議：
-   a. 回 deep-research 補完
-   b. 或在 academic-paper 中補充（增加 Phase 0 訪談問題）
+1. Analyze error patterns (systematic vs. scattered)
+2. If systematic errors:
+   a. Identify root cause (user may have selected the wrong citation format)
+   b. Confirm the correct citation format
+   c. Completely re-run citation phase
+3. If scattered errors:
+   a. Fix one by one
+   b. Produce a correction report
 ```
 
 ---
 
-### F10: 使用者中途放棄
+### F6: Poor Bilingual Abstract Quality
 
-**觸發時機**：使用者明確表示不想繼續
+**Trigger Timing**: Phase 5b (abstract_bilingual_agent)
 
-**偵測指標**：
-- 「算了」「不寫了」「太複雜」「我再想想」
-- 長時間無回應後表示放棄
+**Detection Indicators**:
+- Chinese and English abstracts cover different key points
+- One language version omits important findings
+- Keywords do not correspond between Chinese and English
+- Word count seriously deviates from standards
 
-**處理流程**：
+**Handling Process**:
 ```
-1. 尊重使用者的決定
-2. 儲存已完成的所有產出：
+1. Compare the structure and coverage of Chinese and English abstracts
+2. List inconsistencies
+3. Rewrite based on the actual paper content as the standard
+4. Ensure both versions are independently written but cover the same key points
+```
+
+---
+
+### F7: Peer Review Rejection
+
+**Trigger Timing**: Phase 6 (peer_reviewer_agent issues Reject)
+
+**Detection Indicators**:
+- Two or more of the five dimensions scored below 60
+- Fatal flaws exist (logical breakdowns, missing core evidence, serious methodology flaws)
+
+**Handling Process**:
+```
+1. List all issues flagged as Critical
+2. Classify the nature of the problems:
+   a. Fixable (writing, formatting, minor logic issues) → Recommend Major Revision
+   b. Structural issues (argument architecture needs reorganization) → Return to Phase 3 for restructuring
+   c. Fundamental issues (RQ infeasible, insufficient data) → Return to Phase 0 for re-evaluation
+3. Produce a revision roadmap
+4. Execute revision after user confirmation
+```
+
+**Note**: If still Reject after 2 rounds of revision, recommend the user to:
+- Consult domain experts
+- Rethink the research design
+- Consider switching target journals (lower the bar)
+
+---
+
+### F8: Plan Mode Does Not Converge
+
+**Trigger Timing**: Plan mode dialogue exceeds 15 rounds
+
+**Detection Indicators**:
+- User repeatedly modifies the direction of the same chapter
+- Unable to make definitive decisions
+- Discussion drifts off the paper topic
+
+**Handling Process**:
+```
+1. Pause and summarize what has been determined so far
+2. List completed and uncompleted chapters
+3. Provide two options:
+   a. Jump to outline-only mode (directly produce an outline)
+   b. Continue dialogue (but narrow the scope of each discussion)
+4. Save the completed Chapter Plan
+```
+
+---
+
+### F9: Incomplete Handoff Materials
+
+**Trigger Timing**: intake_agent detects deep-research materials but they are incomplete
+
+**Detection Indicators**:
+- Has RQ but missing Annotated Bibliography
+- Has Bibliography but missing Synthesis Report
+- Has INSIGHT Collection but some INSIGHTs are incomplete
+
+**Handling Process**:
+```
+1. List received and missing materials
+2. Assess the impact of missing materials:
+   a. Missing Bibliography → Need Phase 1 (literature_strategist)
+   b. Missing Synthesis → Can continue, Phase 3 handles it additionally
+   c. Missing Methodology Blueprint → Need Phase 0 supplementary questions
+3. Recommend:
+   a. Return to deep-research to complete the missing parts
+   b. Or supplement within academic-paper (add Phase 0 interview questions)
+```
+
+---
+
+### F10: User Abandons Midway
+
+**Trigger Timing**: User explicitly states unwillingness to continue
+
+**Detection Indicators**:
+- "Forget it" / "Not writing anymore" / "Too complicated" / "Let me think about it"
+- Abandons after prolonged unresponsiveness
+
+**Handling Process**:
+```
+1. Respect the user's decision
+2. Save all completed outputs:
    - Paper Configuration Record
-   - Chapter Plan（已完成部分）
+   - Chapter Plan (completed portions)
    - INSIGHT Collection
-   - 任何已完成的草稿段落
-3. 告知使用者可以隨時帶著這些材料回來繼續
-4. 不主動勸說繼續（但可以提供鼓勵）
+   - Any completed draft sections
+3. Inform the user they can come back anytime with these materials to continue
+4. Do not actively persuade them to continue (but encouragement is fine)
 ```
 
-**儲存格式**：
+**Save Format**:
 ```markdown
-## Academic Paper — 暫存紀錄
+## Academic Paper — Saved Record
 
-**主題**：{topic}
-**進度**：Phase {N} / Step {M}
-**已完成**：
+**Topic**: {topic}
+**Progress**: Phase {N} / Step {M}
+**Completed**:
 - [x] Paper Configuration Record
-- [x/partial] Chapter Plan (完成 {N}/{total} 章節)
+- [x/partial] Chapter Plan (completed {N}/{total} chapters)
 - [ ] Draft
 - [ ] Citation check
 - [ ] Peer review
 
-**接續方式**：帶著本紀錄重新啟動 academic-paper，可從 Phase {N} 繼續
+**How to Resume**: Bring this record and restart academic-paper; can continue from Phase {N}
 ```
 
 ---
 
-## 失敗路徑之間的關聯
+## Relationships Between Failure Paths
 
 ```
-F1 (研究基礎不足) → 建議 deep-research → 回來後可能遇到 F9 (材料不完整)
-F2 (結構選錯) → 退回 Phase 2 → 可能連帶影響 F3/F4 (字數問題)
-F5 (引用全錯) → 可能是 F2 的下游效應（選錯格式）
-F7 (拒稿) → 分析後可能需要退回到 F2 (結構) 或 F1 (基礎)
-F8 (不收斂) → 可能演變為 F10 (放棄)
+F1 (Insufficient research foundation) → Recommend deep-research → May encounter F9 (incomplete materials) upon return
+F2 (Wrong structure) → Return to Phase 2 → May cascading affect F3/F4 (word count issues)
+F5 (All citations wrong) → May be a downstream effect of F2 (wrong format selected)
+F7 (Rejection) → Analysis may require returning to F2 (structure) or F1 (foundation)
+F8 (Non-convergence) → May evolve into F10 (abandonment)
 ```
 
 ### F11: Desk-Reject Recovery
@@ -327,18 +329,18 @@ F8 (不收斂) → 可能演變為 F10 (放棄)
 
 ---
 
-## 預防措施
+## Preventive Measures
 
-| 失敗路徑 | 預防措施 |
+| Failure Path | Preventive Measure |
 |---------|---------|
-| F1 | Phase 0 / Step 0 嚴格檢查研究準備程度 |
-| F2 | structure_architect 交叉比對 RQ 和結構的匹配度 |
-| F3/F4 | draft_writer 每完成一節就檢查字數進度 |
-| F5 | draft_writer 在撰寫時就使用正確格式 |
-| F6 | abstract_bilingual 以論文內容為基準獨立撰寫 |
-| F7 | argument_builder 在 Phase 3 就做論點壓力測試 |
-| F8 | socratic_mentor 設定每章節對話上限 |
-| F9 | intake_agent 在偵測 handoff 時就完整檢查材料 |
-| F10 | 保持對話節奏，避免讓使用者感到疲累 |
-| F11 | Phase 7 產出 cover letter 時研究目標期刊 scope；format_agent 嚴格遵守格式 |
-| F12 | intake_agent 偵測是否為研討會論文擴展；提早計算新內容比例 |
+| F1 | Phase 0 / Step 0 strictly checks research readiness |
+| F2 | structure_architect cross-validates the match between RQ and structure |
+| F3/F4 | draft_writer checks word count progress after completing each section |
+| F5 | draft_writer uses the correct format during writing |
+| F6 | abstract_bilingual writes independently based on the paper content as the standard |
+| F7 | argument_builder stress-tests arguments in Phase 3 |
+| F8 | socratic_mentor sets a dialogue cap per chapter |
+| F9 | intake_agent performs a complete materials check when detecting a handoff |
+| F10 | Maintain dialogue rhythm to avoid user fatigue |
+| F11 | Phase 7 researches target journal scope when producing the cover letter; format_agent strictly follows formatting rules |
+| F12 | intake_agent detects whether this is a conference paper expansion; calculate new content ratio early |
