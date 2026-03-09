@@ -66,7 +66,7 @@
 
 | 設定 | 功能說明 | 啟用方式 | 官方文件 |
 |------|---------|---------|---------|
-| **Agent Team** | 產生子代理（subagent）平行執行研究、撰寫、審查 — 多 Agent pipeline 的核心機制 | 設定 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`（研究預覽） | [Subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agents) · [CLI Reference](https://docs.anthropic.com/en/docs/claude-code/cli-reference) |
+| **Agent Team** | 產生子代理（subagent）平行執行研究、撰寫、審查 — 多 Agent pipeline 的核心機制 | 設定 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`（研究預覽） | [Agent Teams](https://code.claude.com/docs/en/agent-teams) |
 | **Ralph Loop** | 在長時間 pipeline 階段保持 session 持續運作，讓 Claude 能自主執行而不會逾時中斷 | 使用 `/ralph-loop` 啟動 | [Plugin README](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop) |
 | **Skip Permissions** | 跳過每次工具使用的確認提示，實現全 pipeline 不中斷的自主執行 | 啟動時加上 `claude --dangerously-skip-permissions` | [Permissions](https://docs.anthropic.com/en/docs/claude-code/cli-reference) · [Advanced Usage](https://docs.anthropic.com/en/docs/claude-code/advanced) |
 

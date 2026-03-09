@@ -67,7 +67,7 @@ For the best experience with these skills, enable the following Claude Code feat
 
 | Setting | What it does | How to enable | Docs |
 |---------|-------------|---------------|------|
-| **Agent Team** | Spawns subagents for parallel research, writing, and review — critical for multi-agent pipelines | Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` (research preview) | [Subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agents) · [CLI Reference](https://docs.anthropic.com/en/docs/claude-code/cli-reference) |
+| **Agent Team** | Spawns subagents for parallel research, writing, and review — critical for multi-agent pipelines | Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` (research preview) | [Agent Teams](https://code.claude.com/docs/en/agent-teams) |
 | **Ralph Loop** | Keeps the session alive during long-running pipeline stages so Claude can work autonomously without timing out | Use `/ralph-loop` to activate | [Plugin README](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop) |
 | **Skip Permissions** | Bypasses per-tool confirmation prompts, enabling uninterrupted autonomous execution across all pipeline stages | Launch with `claude --dangerously-skip-permissions` | [Permissions](https://docs.anthropic.com/en/docs/claude-code/cli-reference) · [Advanced Usage](https://docs.anthropic.com/en/docs/claude-code/advanced) |
 
