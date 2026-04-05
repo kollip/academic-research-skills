@@ -36,7 +36,8 @@ A suite of Claude Code skills for rigorous academic research, paper writing, pee
 - Evidence hierarchy respected (meta-analyses > RCTs > cohort > case reports > expert opinion)
 - Contradictions disclosed with evidence quality comparison
 - AI disclosure in all reports
-- Default output language matches user input (Traditional Chinese or English)
+- Default output language matches user input (Traditional Chinese, Japanese, or English)
+- Japanese output: use formal academic style (「である」調), appropriate kanji for technical terms, and established Japanese academic conventions
 
 ## Full Academic Pipeline
 

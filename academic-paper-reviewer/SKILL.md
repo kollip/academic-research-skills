@@ -1,6 +1,6 @@
 ---
 name: academic-paper-reviewer
-description: "Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (EIC + 3 peer reviewers + Devil's Advocate) with field-specific expertise. Supports full review, re-review (verification), quick assessment, methodology focus, and Socratic guided modes. Triggers on: review paper, peer review, manuscript review, referee report, review my paper, critique paper, simulate review, editorial review."
+description: "Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (EIC + 3 peer reviewers + Devil's Advocate) with field-specific expertise. Supports full review, re-review (verification), quick assessment, methodology focus, and Socratic guided modes. Triggers on: review paper, peer review, manuscript review, referee report, review my paper, critique paper, simulate review, editorial review, 審查論文, 同儕審查, 模擬審查, 論文をレビュー, 査読, 査読して, 論文を審査, 原稿レビュー, 査読レポート, 論文を批評, 査読シミュレーション, 編集レビュー, ピアレビュー."
 metadata:
   version: "1.4"
   last_updated: "2026-03-08"
@@ -46,6 +46,10 @@ Review this paper: [paste paper or provide file]
 
 **English**: review paper, peer review, manuscript review, referee report, review my paper, critique paper, simulate review, editorial review
 
+**繁體中文**: 審查論文, 同儕審查, 稿件審查, 審稿報告, 模擬審查, 編輯審查
+
+**日本語**: 論文をレビュー, 論文をレビューして, 査読, 査読して, 査読をお願い, 原稿レビュー, 査読レポート, 論文を批評, 査読シミュレーション, 編集レビュー, ピアレビュー, 論文を審査して, この論文を評価して
+
 ### Non-Trigger Scenarios
 
 | Scenario | Skill to Use |
@@ -56,15 +60,16 @@ Review this paper: [paste paper or provide file]
 
 ### Quick Mode Selection Guide
 
-| Your Situation | Recommended Mode |
+| Your Situation あなたの状況 | Recommended Mode |
 |----------------|-----------------|
-| Need comprehensive review (first submission) | full |
-| Checking if revisions addressed comments | re-review |
-| Quick quality assessment (15 min) | quick |
-| Focus only on methods/statistics | methodology-focus |
-| Want to learn by doing (guided review) | guided |
+| Need comprehensive review (first submission) / 包括的なレビューが必要（初回投稿） | full |
+| Checking if revisions addressed comments / 修正が査読コメントに対応しているか確認 | re-review |
+| Quick quality assessment (15 min) / 簡易品質評価（15分） | quick |
+| Focus only on methods/statistics / 方法論・統計のみに焦点 | methodology-focus |
+| Want to learn by doing (guided review) / 対話しながらレビューを学びたい | guided |
 
 Not sure? Use `full` for pre-submission review, `re-review` for post-revision verification.
+迷ったら？投稿前なら `full`、修正後の確認なら `re-review` を使いましょう。
 
 ---
 

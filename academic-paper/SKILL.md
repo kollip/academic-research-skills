@@ -1,6 +1,6 @@
 ---
 name: academic-paper
-description: "Academic paper writing skill with 12-agent pipeline. v2.5: Style Calibration (learn author's writing voice from past papers) + Writing Quality Check (writing quality checklist for natural prose). Supports IMRaD, literature review, theoretical, case study, policy brief, and conference paper structures. APA 7.0 (default), Chicago, MLA, IEEE, Vancouver citation formats. Bilingual abstracts (zh-TW + EN). Multi-format output (LaTeX, DOCX, PDF, Markdown). Triggers on: write paper, academic paper, paper outline, write abstract, revise paper, check citations, convert to LaTeX, guide my paper, parse reviews, revision roadmap, 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 檢查引用, 引導我寫論文, 帶我規劃論文, 逐章規劃, 論文架構, 審查意見, 修訂路線圖."
+description: "Academic paper writing skill with 12-agent pipeline. v2.5: Style Calibration (learn author's writing voice from past papers) + Writing Quality Check (writing quality checklist for natural prose). Supports IMRaD, literature review, theoretical, case study, policy brief, and conference paper structures. APA 7.0 (default), Chicago, MLA, IEEE, Vancouver citation formats. Bilingual abstracts (zh-TW + EN). Multi-format output (LaTeX, DOCX, PDF, Markdown). Triggers on: write paper, academic paper, paper outline, write abstract, revise paper, check citations, convert to LaTeX, guide my paper, parse reviews, revision roadmap, 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 檢查引用, 引導我寫論文, 帶我規劃論文, 逐章規劃, 論文架構, 審查意見, 修訂路線圖, 論文を書く, 論文を書いて, 学術論文, 論文のアウトライン, 要旨を書く, アブストラクト, 論文を修正, 引用チェック, LaTeXに変換, 論文の書き方を教えて, 査読コメント, 修正ロードマップ, 論文構成, 論文執筆."
 metadata:
   version: "2.5"
   last_updated: "2026-03-27"
@@ -50,6 +50,8 @@ Write a paper on the impact of declining birth rates on private university manag
 
 **繁體中文**: 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 文獻回顧論文, 檢查引用, 轉 LaTeX, 轉換格式, 研討會論文, 期刊文章, 學位論文, 研究論文, 引導我寫論文, 幫我規劃論文, 逐步寫論文, 寫方法論, 寫討論, 審查意見, 修訂路線圖, 幫我修改, 我收到審查意見, 轉換引用格式
 
+**日本語**: 論文を書く, 論文を書いて, 学術論文, 論文のアウトライン, 論文の構成, 要旨を書く, アブストラクトを書く, 論文を修正, 論文を直して, 文献レビュー論文, 引用をチェック, 引用確認, LaTeXに変換, フォーマット変換, 学会論文, 学術誌論文, ジャーナル論文, 学位論文, 修士論文, 博士論文, 卒業論文, 研究論文, 論文の書き方を教えて, 論文の構成を一緒に考えて, 段階的に論文を書きたい, 方法論を書く, 考察を書く, 査読コメント, 査読意見, 修正ロードマップ, 論文を修正して, 査読コメントが来た, 引用形式を変換
+
 ### Plan Mode Activation
 
 Activate `plan` mode (Socratic chapter-by-chapter guidance) when the user's **intent** matches any of the following patterns, **regardless of language**. Detect meaning, not exact keywords.
@@ -65,7 +67,7 @@ Activate `plan` mode (Socratic chapter-by-chapter guidance) when the user's **in
 **Default rule**: When intent is ambiguous between `plan` and `full`, **prefer `plan`** — it is safer to guide a user who needs help than to produce a paper they can't use. The user can always switch to `full` later.
 
 **Example triggers** (illustrative, not exhaustive):
-"guide my paper", "help me plan my paper", "I don't know how to start", 「引導我寫論文」「幫我規劃論文」, or equivalent in any language
+"guide my paper", "help me plan my paper", "I don't know how to start", 「引導我寫論文」「幫我規劃論文」, 「論文の書き方を教えて」「論文の構成を一緒に考えて」, or equivalent in any language
 
 ### Does NOT Trigger
 
@@ -82,7 +84,7 @@ Activate `plan` mode (Socratic chapter-by-chapter guidance) when the user's **in
 | Primary output | Publishable paper draft | Research report |
 | Structure | Journal-ready (IMRaD, etc.) | APA 7.0 report |
 | Citation | Multi-format (APA/Chicago/MLA/IEEE/Vancouver) | APA 7.0 only |
-| Abstract | Bilingual (zh-TW + EN) | Single language |
+| Abstract | Multilingual (zh-TW/JA + EN) | Single language |
 | Peer review | Simulated 5-dimension review | Editorial review |
 | Output format | LaTeX/DOCX/PDF/Markdown | Markdown only |
 | Revision loop | Max 2 rounds with targeted feedback | Max 2 rounds |

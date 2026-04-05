@@ -1,6 +1,6 @@
 ---
 name: academic-pipeline
-description: "Orchestrator for the full academic research pipeline: research -> write -> integrity check -> review -> revise -> re-review -> re-revise -> final integrity check -> finalize. Coordinates deep-research, academic-paper, and academic-paper-reviewer into a seamless 9-stage workflow with mandatory integrity verification, two-stage peer review, and reproducible quality gates. Triggers on: academic pipeline, research to paper, full paper workflow, paper pipeline, end-to-end paper, research-to-publication, complete paper workflow."
+description: "Orchestrator for the full academic research pipeline: research -> write -> integrity check -> review -> revise -> re-review -> re-revise -> final integrity check -> finalize. Coordinates deep-research, academic-paper, and academic-paper-reviewer into a seamless 9-stage workflow with mandatory integrity verification, two-stage peer review, and reproducible quality gates. Triggers on: academic pipeline, research to paper, full paper workflow, paper pipeline, end-to-end paper, research-to-publication, complete paper workflow, 學術流水線, 研究到論文, 完整論文流程, 学術パイプライン, 研究から論文, 論文作成ワークフロー, 論文パイプライン, エンドツーエンド論文, 研究から出版まで, 論文の一貫作成."
 metadata:
   version: "2.7"
   last_updated: "2026-03-27"
@@ -29,18 +29,21 @@ A lightweight orchestrator that manages the complete academic pipeline from rese
 **Full workflow (from scratch):**
 ```
 I want to write a research paper on the impact of AI on higher education quality assurance
+AIが高等教育の質保証に与える影響について研究論文を書きたい
 ```
 --> academic-pipeline launches, starting from Stage 1 (RESEARCH)
 
 **Mid-entry (existing paper):**
 ```
 I already have a paper, help me review it
+論文はもうあるので、レビューしてほしい
 ```
 --> academic-pipeline detects mid-entry, starting from Stage 2.5 (INTEGRITY)
 
 **Revision mode (received reviewer feedback):**
 ```
 I received reviewer comments, help me revise
+査読コメントが来たので、修正を手伝ってほしい
 ```
 --> academic-pipeline detects, starting from Stage 4 (REVISE)
 
@@ -58,6 +61,10 @@ I received reviewer comments, help me revise
 ### Trigger Keywords
 
 **English**: academic pipeline, research to paper, full paper workflow, paper pipeline, end-to-end paper, research-to-publication, complete paper workflow
+
+**繁體中文**: 學術流水線, 研究到論文, 完整論文流程, 論文流水線, 端到端論文, 研究到出版
+
+**日本語**: 学術パイプライン, 研究から論文, 論文作成ワークフロー, 論文パイプライン, エンドツーエンド論文, 研究から出版まで, 論文の一貫作成, 研究から論文まで全部やって, 論文を最初から最後まで
 
 ### Non-Trigger Scenarios
 
